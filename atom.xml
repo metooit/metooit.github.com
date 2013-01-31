@@ -4,7 +4,7 @@
   <title><![CDATA[K.I.S.S]]></title>
   <link href="http://metooit.github.com/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-01-31T09:27:46+08:00</updated>
+  <updated>2013-01-31T09:29:38+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metoo]]></name>
@@ -18,7 +18,7 @@
     <link href="http://metooit.github.com/blog/2013/01/31/codeblock/"/>
     <updated>2013-01-31T09:07:00+08:00</updated>
     <id>http://metooit.github.com/blog/2013/01/31/codeblock</id>
-    <content type="html"><![CDATA[<p>{ %</p>
+    <content type="html"><![CDATA[
 
 <figure class='code'><figcaption><span>browser.py </span><a href='https://github.com/webpy/webpy/blob/master/test/browser.py'>webpy </a></figcaption> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
