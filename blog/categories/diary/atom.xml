@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: diary | K.I.S.S]]></title>
+  <link href="http://metooit.github.com/blog/categories/diary/atom.xml" rel="self"/>
+  <link href="http://metooit.github.com/"/>
+  <updated>2013-01-31T10:21:08+08:00</updated>
+  <id>http://metooit.github.com/</id>
+  <author>
+    <name><![CDATA[metoo]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Hello World!]]></title>
+    <link href="http://metooit.github.com/blog/2013/01/30/hello-world/"/>
+    <updated>2013-01-30T21:56:00+08:00</updated>
+    <id>http://metooit.github.com/blog/2013/01/30/hello-world</id>
+    <content type="html"><![CDATA[<p>Hello World!
+This is a personal blog! I am a person that love programming so much, yet
+i'm not a geek, i am working hard to be one!
+:-)</p>
+]]></content>
+  </entry>
+  
+</feed>
