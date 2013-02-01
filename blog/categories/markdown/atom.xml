@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Markdown | K.I.S.S]]></title>
   <link href="http://metooit.github.com/blog/categories/markdown/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-02-01T08:36:17+08:00</updated>
+  <updated>2013-02-01T10:56:22+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -22,7 +22,9 @@
 
 <hr />
 
-<p>偶然间发现了<code>github</code>上的一个项目叫做<a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">markdown-here</a>写得很简洁，以后可以打印一份来参考，这里呢，为了练习一下<code>Markdown</code>的语法，我就不复制粘贴了，直接在这里打一份好了。</p>
+<p>偶然间发现了<code>github</code>上的一个项目叫做<a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">markdown-here</a>写得很简洁，以后可以打印一份来参考，这里呢，为了练习一下<code>Markdown</code>的语法，我就不复制粘贴了，直接在这里打一份好了。就当是<code>Markdown</code>的练习了。</p>
+
+<h1>Headers</h1>
 
 <hr />
 
@@ -87,6 +89,8 @@
 
 <h2>Alt-H2</h2>
 
+<h1>Emphasis</h1>
+
 <hr />
 
 <p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>emphasis </span></figcaption>
@@ -98,12 +102,17 @@
 </span><span class='line'>Strong emphasis, aka bold, with &lt;strong>asterisks&lt;/strong> or &lt;strong>underscores&lt;/strong>
 </span><span class='line'>Combined emphasis with &lt;strong>asterisks and &lt;em>underscores&lt;/em>&lt;/strong>.
 </span><span class='line'>Strikethrough uses two tildes. &lt;del>Scratch this.&lt;/del></span></code></pre></td></tr></table></div></figure></notextile></div>
-Emphasis, aka italics, with <em>asterisks</em> or <em>underscores</em>.
-Strong emphasis, aka bold, with <strong>asterisks</strong> or <strong>underscores</strong>
-Combined emphasis with <strong>asterisks and <em>underscores</em></strong>.
-Strikethrough uses two tildes. <del>Scratch this.</del></p>
+Emphasis, aka italics, with <em>asterisks</em> or <em>underscores</em>.</p>
+
+<p>Strong emphasis, aka bold, with <strong>asterisks</strong> or <strong>underscores</strong></p>
+
+<p>Combined emphasis with <strong>asterisks and <em>underscores</em></strong>.</p>
+
+<p>Strikethrough uses two tildes. <del>Scratch this.</del></p>
 
 <hr />
+
+<h1>Lists</h1>
 
 <p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>lists </span></figcaption>
 <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -158,6 +167,8 @@ Strikethrough uses two tildes. <del>Scratch this.</del></p>
 
 <hr />
 
+<h1>Links</h1>
+
 <p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>links </span></figcaption>
 <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -174,13 +185,427 @@ Strikethrough uses two tildes. <del>Scratch this.</del></p>
 </span><span class='line'>
 </span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
-<p><a href="https://www.google.com">I'm an inline-style link</a>
-[I'm a reference-style link][Arbitrary case-insensitive reference text]
-<a href="http://slashdot.org">You can use numbers for reference-style link definitions</a>
-Or leave it empty and use the <a href="http://www.reddit.com">link text itself</a>
-Some tex to show that the reference links can follow later.</p>
+<p><a href="https://www.google.com">I'm an inline-style link</a></p>
+
+<p>[I'm a reference-style link][Arbitrary case-insensitive reference text]</p>
+
+<p><a href="http://slashdot.org">You can use numbers for reference-style link definitions</a></p>
+
+<p>Or leave it empty and use the <a href="http://www.reddit.com">link text itself</a></p>
+
+<p>Some tex to show that the reference links can follow later.</p>
 
 <hr />
+
+<h1>Images</h1>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Here is our logo(hover to see the title text):&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>Inline-style:
+</span><span class='line'>&lt;img src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png%20%22Logo%20Title%20Text%201" alt="alt-text" />&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>Reference-style:
+</span><span class='line'>&lt;img src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" title="Logo Title Text 2" alt="alt-text" />&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Here is our logo(hover to see the title text):</p>
+
+<p>Inline-style:
+<img src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png%20%22Logo%20Title%20Text%201" alt="alt-text" /></p>
+
+<p>Reference-style:
+<img src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" title="Logo Title Text 2" alt="alt-text" /></p>
+
+<hr />
+
+<h1>Code and syntax highlighting</h1>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Inline &lt;code>code&lt;/code> has &lt;code>back-ticks around&lt;/code> it</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Inline <code>code</code> has <code>back-ticks around</code> it</p>
+
+<p>Blocks of code are either fenced by lines with three back-ticks ````` , or are indented with four space.</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>highlighting </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;code>javascript
+</span><span class='line'>var s = "JavaScript syntax highlighting";
+</span><span class='line'>alert(s);
+</span><span class='line'>&lt;/code>
+</span><span class='line'>&lt;code>python
+</span><span class='line'>s = "python syntax hightlighting"
+</span><span class='line'>print s
+</span><span class='line'>&lt;/code>&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>&lt;code>
+</span><span class='line'>No language indicated, so no syntax highlighting.
+</span><span class='line'>But let's throw in a &lt;b&gt;tag&lt;/b&gt;
+</span><span class='line'>&lt;/code></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p><code>javascript
+var s = "JavaScript syntax highlighting";
+alert(s);
+</code>
+<code>python
+s = "python syntax hightlighting"
+print s
+</code></p>
+
+<p><code>
+No language indicated, so no syntax highlighting.
+But let's throw in a &lt;b&gt;tag&lt;/b&gt;
+</code></p>
+
+<hr />
+
+<h1>Tables</h1>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>tables </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Colons can be used to align columns.&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;table>
+</span><span class='line'>&lt;thead>
+</span><span class='line'>&lt;tr>
+</span><span class='line'>&lt;th>&lt;/th>
+</span><span class='line'>&lt;th> Tables        &lt;/th>
+</span><span class='line'>&lt;th align="center"> Are           &lt;/th>
+</span><span class='line'>&lt;th align="right"> Coo l &lt;/th>
+</span><span class='line'>&lt;/tr>
+</span><span class='line'>&lt;/thead>
+</span><span class='line'>&lt;tbody>
+</span><span class='line'>&lt;tr>
+</span><span class='line'>&lt;td>&lt;/td>
+</span><span class='line'>&lt;td> col 3 is      &lt;/td>
+</span><span class='line'>&lt;td align="center"> right-aligned &lt;/td>
+</span><span class='line'>&lt;td align="right"> $1600 |&lt;/td>
+</span><span class='line'>&lt;/tr>
+</span><span class='line'>&lt;tr>
+</span><span class='line'>&lt;td>&lt;/td>
+</span><span class='line'>&lt;td> col 2 is      &lt;/td>
+</span><span class='line'>&lt;td align="center"> centered      &lt;/td>
+</span><span class='line'>&lt;td align="right">   $12 |&lt;/td>
+</span><span class='line'>&lt;/tr>
+</span><span class='line'>&lt;tr>
+</span><span class='line'>&lt;td>&lt;/td>
+</span><span class='line'>&lt;td> zebra stripes &lt;/td>
+</span><span class='line'>&lt;td align="center"> are neat      &lt;/td>
+</span><span class='line'>&lt;td align="right">    $1 |&lt;/td>
+</span><span class='line'>&lt;/tr>
+</span><span class='line'>&lt;/tbody>
+</span><span class='line'>&lt;/table>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>&lt;p>The outer pipes (|) are optional, and you don't need to make the raw Markdown line up prettily. You can also use inline Markdown.&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;table>
+</span><span class='line'>&lt;thead>
+</span><span class='line'>&lt;tr>
+</span><span class='line'>&lt;th>Markdown &lt;/th>
+</span><span class='line'>&lt;th> Less &lt;/th>
+</span><span class='line'>&lt;th> Pretty&lt;/th>
+</span><span class='line'>&lt;/tr>
+</span><span class='line'>&lt;/thead>
+</span><span class='line'>&lt;tbody>
+</span><span class='line'>&lt;tr>
+</span><span class='line'>&lt;td>&lt;em>Still&lt;/em> &lt;/td>
+</span><span class='line'>&lt;td> &lt;code>renders&lt;/code> &lt;/td>
+</span><span class='line'>&lt;td> &lt;strong>nicely&lt;/strong>&lt;/td>
+</span><span class='line'>&lt;/tr>
+</span><span class='line'>&lt;tr>
+</span><span class='line'>&lt;td>1 &lt;/td>
+</span><span class='line'>&lt;td> 2 &lt;/td>
+</span><span class='line'>&lt;td> 3&lt;/td>
+</span><span class='line'>&lt;/tr>
+</span><span class='line'>&lt;/tbody>
+</span><span class='line'>&lt;/table>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Colons can be used to align columns.</p>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th> Tables        </th>
+<th align="center"> Are           </th>
+<th align="right"> Coo l </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td> col 3 is      </td>
+<td align="center"> right-aligned </td>
+<td align="right"> $1600 |</td>
+</tr>
+<tr>
+<td></td>
+<td> col 2 is      </td>
+<td align="center"> centered      </td>
+<td align="right">   $12 |</td>
+</tr>
+<tr>
+<td></td>
+<td> zebra stripes </td>
+<td align="center"> are neat      </td>
+<td align="right">    $1 |</td>
+</tr>
+</tbody>
+</table>
+
+
+<p>The outer pipes (|) are optional, and you don't need to make the raw Markdown line up prettily. You can also use inline Markdown.</p>
+
+<table>
+<thead>
+<tr>
+<th>Markdown </th>
+<th> Less </th>
+<th> Pretty</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Still</em> </td>
+<td> <code>renders</code> </td>
+<td> <strong>nicely</strong></td>
+</tr>
+<tr>
+<td>1 </td>
+<td> 2 </td>
+<td> 3</td>
+</tr>
+</tbody>
+</table>
+
+
+<hr />
+
+<h1>Blockquotes</h1>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>blockquotes </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;blockquote>&lt;p>Blockquotes are very handy in email to emulate reply text.
+</span><span class='line'>This line is part of the same quote.&lt;/p>&lt;/blockquote>
+</span><span class='line'>
+</span><span class='line'>&lt;p>Quote break&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;blockquote>&lt;p>This is a very long line . This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Blockquotes are very handy in email to emulate reply text.
+This line is part of the same quote.</p></blockquote>
+
+<p>Quote break</p>
+
+<p>This is a very long line . This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .</p>
+
+<hr />
+
+<h1>Inline HTML</h1>
+
+<p>You can also use raw HTML in your <code>Markdown</code>.</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>inline-html </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;dl>
+</span><span class='line'>  &lt;dt>Definition list&lt;/dt>
+</span><span class='line'>  &lt;dd>Is something people use sometimes.&lt;/dd>
+</span><span class='line'>
+</span><span class='line'>  &lt;dt>Markdown in HTML&lt;/dt>
+</span><span class='line'>  &lt;dd>Does *not* work **very** well. Use HTML &lt;em>tags&lt;/em>.&lt;/dd>
+</span><span class='line'>&lt;/dl>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<dl>
+  <dt>Definition list</dt>
+  <dd>Is something people use sometimes.</dd>
+
+  <dt>Markdown in HTML</dt>
+  <dd>Does *not* work **very** well. Use HTML <em>tags</em>.</dd>
+</dl>
+
+
+<hr />
+
+<h1>Horizontal Rule</h1>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>horizontal-rule </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Three or more...&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;hr />
+</span><span class='line'>
+</span><span class='line'>&lt;p>Hyphens&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;hr />
+</span><span class='line'>
+</span><span class='line'>&lt;p>Asterisks&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;hr />
+</span><span class='line'>
+</span><span class='line'>&lt;p>Underscores</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Three or more...</p>
+
+<hr />
+
+<p>Hyphens</p>
+
+<p>Asterisks</p>
+
+<hr />
+
+<p>Underscores</p>
+
+<hr />
+
+<h1>Line Breaks</h1>
+
+<p>My basic recommendation for learning how line breaks work is to experiment and discover -- hit <Enter> once (i.e., insert one newline), then hit it twice (i.e., insert two newlines), see what happens. You'll soon learn to get what you want. "Markdown Toggle" is your friend.</p>
+
+<p>Here are some things to try out:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>line-breaks </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Here's a line for us to start with.&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>This line is separated from the one above by two newlines, so it will be a &lt;em>separate paragraph&lt;/em>.&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>This line is also a separate paragraph, but...
+</span><span class='line'>This line is only separated by a single newline, so it's a separate line in the &lt;em>same paragraph&lt;/em>.</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Here's a line for us to start with.</p>
+
+<p>This line is separated from the one above by two newlines, so it will be a <em>separate paragraph</em>.</p>
+
+<p>This line is also a separate paragraph, but...
+This line is only separated by a single newline, so it's a separate line in the <em>same paragraph</em>.</p>
 ]]></content>
   </entry>
   
