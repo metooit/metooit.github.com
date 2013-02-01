@@ -4,7 +4,7 @@
   <title><![CDATA[Category: vim | K.I.S.S]]></title>
   <link href="http://metooit.github.com/blog/categories/vim/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-02-01T20:53:58+08:00</updated>
+  <updated>2013-02-01T20:55:57+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -37,58 +37,9 @@
 <li><code>leader</code>+<code>cc</code>:                  仅注释。（普通模式下是注释当前行，可视模式下是注释选中的文字）</li>
 <li><code>leader</code>+<code>c</code>+<code>Space</code>:           注释或者取消注释。</li>
 <li><code>leader</code>+'cs':                  性感的注释。
-更多详细的内容在文档中，<code>help NERDCommenter</code>:
-The following key mappings are provided by default (there is also a menu
-with items corresponding to all the mappings below):</li>
+更多详细的内容在文档中，<code>help NERDCommenter</code></li>
 </ul>
 
-
-<p>[count]|<Leader>|cc |NERDComComment|
-Comment out the current line or text selected in visual mode.</p>
-
-<p>[count]|<Leader>|cn |NERDComNestedComment|
-Same as |<Leader>|cc but forces nesting.</p>
-
-<p>[count]|<Leader>|c<space> |NERDComToggleComment|
-Toggles the comment state of the selected line(s). If the topmost selected
-line is commented, all selected lines are uncommented and vice versa.</p>
-
-<p>[count]|<Leader>|cm |NERDComMinimalComment|
-Comments the given lines using only one set of multipart delimiters.</p>
-
-<p>[count]|<Leader>|ci |NERDComInvertComment|
-Toggles the comment state of the selected line(s) individually.</p>
-
-<p>[count]|<Leader>|cs |NERDComSexyComment|
-Comments out the selected lines ``sexily''</p>
-
-<p>[count]|<Leader>|cy |NERDComYankComment|
-Same as |<Leader>|cc except that the commented line(s) are yanked first.</p>
-
-<p>|<Leader>|c$ |NERDComEOLComment|
-Comments the current line from the cursor to the end of line.</p>
-
-<p>|<Leader>|cA |NERDComAppendComment|
-Adds comment delimiters to the end of line and goes into insert mode between
-them.</p>
-
-<p>|NERDComInsertComment|
-Adds comment delimiters at the current cursor position and inserts between.
-Disabled by default.</p>
-
-<p>|<Leader>|ca |NERDComAltDelim|
-Switches to the alternative set of delimiters.</p>
-
-<p>[count]|<Leader>|cl
-[count]|<Leader>|cb    |NERDComAlignedComment|
-Same as |NERDComComment| except that the delimiters are aligned down the
-left side (|<Leader>|cl) or both sides (|<Leader>|cb).</p>
-
-<p>[count]|<Leader>|cu |NERDComUncommentLine|
-Uncomments the selected line(s).</p>
-
-<p>With the optional repeat.vim plugin (vimscript #2136), the mappings can also
-be repeated via |.|</p>
 
 <hr />
 
