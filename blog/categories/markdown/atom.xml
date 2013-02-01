@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Markdown | K.I.S.S]]></title>
   <link href="http://metooit.github.com/blog/categories/markdown/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-02-01T08:28:52+08:00</updated>
+  <updated>2013-02-01T08:36:17+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -18,15 +18,11 @@
     <link href="http://metooit.github.com/blog/2013/02/01/markdown-cheat-sheet/"/>
     <updated>2013-02-01T07:37:00+08:00</updated>
     <id>http://metooit.github.com/blog/2013/02/01/markdown-cheat-sheet</id>
-    <content type="html"><![CDATA[<p>大早上一起来忽然想起来要解决一点问题，然后就求助google，结果问题没有解决，却
-解决了我另一件烦心的事儿，那就是<code>Markdown</code>的语法问题，本来就很在意写博客的格
-式，但是不会<code>Markdown</code>的语法，我不会排版啊，汗……</p>
+    <content type="html"><![CDATA[<p>大早上一起来忽然想起来要解决一点问题，然后就求助google，结果问题没有解决，却解决了我另一件烦心的事儿，那就是<code>Markdown</code>的语法问题，本来就很在意写博客的格式，但是不会<code>Markdown</code>的语法，我不会排版啊，汗……</p>
 
 <hr />
 
-<p>偶然间发现了<code>github</code>上的一个项目叫做<a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">markdown-here</a>
-写得很简洁，以后可以打印一份来参考，这里呢，为了练习一下<code>Markdown</code>的语法，我
-就不复制粘贴了，直接在这里打一份好了。</p>
+<p>偶然间发现了<code>github</code>上的一个项目叫做<a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">markdown-here</a>写得很简洁，以后可以打印一份来参考，这里呢，为了练习一下<code>Markdown</code>的语法，我就不复制粘贴了，直接在这里打一份好了。</p>
 
 <hr />
 
@@ -93,7 +89,8 @@
 
 <hr />
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>emphasis </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -108,7 +105,8 @@ Strikethrough uses two tildes. <del>Scratch this.</del></p>
 
 <hr />
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>lists </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -160,7 +158,8 @@ Strikethrough uses two tildes. <del>Scratch this.</del></p>
 
 <hr />
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>links </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
