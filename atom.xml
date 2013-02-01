@@ -4,7 +4,7 @@
   <title><![CDATA[K.I.S.S]]></title>
   <link href="http://metooit.github.com/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-02-01T11:37:24+08:00</updated>
+  <updated>2013-02-01T18:40:23+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -232,42 +232,20 @@
 
 <p>Blocks of code are either fenced by lines with three back-ticks &#8220;&#8220;` , or are indented with four space.</p>
 
-<figure class='code'><figcaption><span>highlighting </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;div class='bogus-wrapper'>&lt;notextile>&lt;figure class='code'>&lt;figcaption>&lt;span>&lt;/span>&lt;/figcaption>&lt;div class="highlight">&lt;table>&lt;tr>&lt;td class="gutter">&lt;pre class="line-numbers">&lt;span class='line-number'>1&lt;/span>
-</span><span class='line'>&lt;span class='line-number'>2&lt;/span>
-</span><span class='line'>&lt;/pre>&lt;/td>&lt;td class='code'>&lt;pre>&lt;code class='javascript'>&lt;span class='line'>&lt;span class="kd">var&lt;/span> &lt;span class="nx">s&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&quot;JavaScript syntax highlighting&quot;&lt;/span>&lt;span class="p">;&lt;/span>
-</span><span class='line'>&lt;/span>&lt;span class='line'>&lt;span class="nx">alert&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">s&lt;/span>&lt;span class="p">);&lt;/span>
-</span><span class='line'>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>&lt;/div>&lt;/figure>&lt;/notextile>&lt;/div>
-</span><span class='line'>&lt;div class='bogus-wrapper'>&lt;notextile>&lt;figure class='code'>&lt;figcaption>&lt;span>&lt;/span>&lt;/figcaption>&lt;div class="highlight">&lt;table>&lt;tr>&lt;td class="gutter">&lt;pre class="line-numbers">&lt;span class='line-number'>1&lt;/span>
-</span><span class='line'>&lt;span class='line-number'>2&lt;/span>
-</span><span class='line'>&lt;/pre>&lt;/td>&lt;td class='code'>&lt;pre>&lt;code class='python'>&lt;span class='line'>&lt;span class="n">s&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s">&quot;python syntax hightlighting&quot;&lt;/span>
-</span><span class='line'>&lt;/span>&lt;span class='line'>&lt;span class="k">print&lt;/span> &lt;span class="n">s&lt;/span>
-</span><span class='line'>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>&lt;/div>&lt;/figure>&lt;/notextile>&lt;/div>
-</span><span class='line'>
-</span><span class='line'>&lt;div class='bogus-wrapper'>&lt;notextile>&lt;figure class='code'>&lt;figcaption>&lt;span>&lt;/span>&lt;/figcaption>&lt;div class="highlight">&lt;table>&lt;tr>&lt;td class="gutter">&lt;pre class="line-numbers">&lt;span class='line-number'>1&lt;/span>
-</span><span class='line'>&lt;span class='line-number'>2&lt;/span>
-</span><span class='line'>&lt;/pre>&lt;/td>&lt;td class='code'>&lt;pre>&lt;code class='python'>&lt;span class='line'>&lt;span class="n">No&lt;/span> &lt;span class="n">language&lt;/span> &lt;span class="n">indicated&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">so&lt;/span> &lt;span class="n">no&lt;/span> &lt;span class="n">syntax&lt;/span> &lt;span class="n">highlighting&lt;/span>&lt;span class="o">.&lt;/span>
-</span><span class='line'>&lt;/span>&lt;span class='line'>&lt;span class="n">But&lt;/span> &lt;span class="n">let&lt;/span>&lt;span class="s">&#39;s throw in a &lt;b&gt;tag&lt;/b&gt;&lt;/span>
-</span><span class='line'>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>&lt;/div>&lt;/figure>&lt;/notextile>&lt;/div></span></code></pre></td></tr></table></div></figure>
+<pre><code>```javascript
+var s = "JavaScript syntax highlighting";
+alert(s);
+```
+```python
+s = "python syntax hightlighting"
+print s
+```
 
-
-
+```
+No language indicated, so no syntax highlighting.
+But let's throw in a &lt;b&gt;tag&lt;/b&gt;
+```
+</code></pre>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
