@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: memo | K.I.S.S]]></title>
+  <link href="http://metooit.github.com/blog/categories/memo/atom.xml" rel="self"/>
+  <link href="http://metooit.github.com/"/>
+  <updated>2013-02-01T20:22:45+08:00</updated>
+  <id>http://metooit.github.com/</id>
+  <author>
+    <name><![CDATA[metooit]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Vim 快捷键备忘]]></title>
+    <link href="http://metooit.github.com/blog/2013/02/01/vim-tips-to-remember/"/>
+    <updated>2013-02-01T19:25:00+08:00</updated>
+    <id>http://metooit.github.com/blog/2013/02/01/vim-tips-to-remember</id>
+    <content type="html"><![CDATA[<h1>插件篇</h1>
+
+<h2>NERDTree</h2>
+
+<p>快速启动NERDTree:               <code>leader</code>+<code>e</code>
+显示与隐藏NERDTree：            <code>Ctrl</code>+<code>E</code>
+NERDTree查找模式：              <code>leader</code>+<code>e</code> 或者 <code>leader</code>+<code>nt</code></p>
+]]></content>
+  </entry>
+  
+</feed>
