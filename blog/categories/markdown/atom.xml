@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Markdown | K.I.S.S]]></title>
+  <link href="http://metooit.github.com/blog/categories/markdown/atom.xml" rel="self"/>
+  <link href="http://metooit.github.com/"/>
+  <updated>2013-02-01T08:28:52+08:00</updated>
+  <id>http://metooit.github.com/</id>
+  <author>
+    <name><![CDATA[metooit]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Markdown Cheat Sheet]]></title>
+    <link href="http://metooit.github.com/blog/2013/02/01/markdown-cheat-sheet/"/>
+    <updated>2013-02-01T07:37:00+08:00</updated>
+    <id>http://metooit.github.com/blog/2013/02/01/markdown-cheat-sheet</id>
+    <content type="html"><![CDATA[<p>大早上一起来忽然想起来要解决一点问题，然后就求助google，结果问题没有解决，却
+解决了我另一件烦心的事儿，那就是<code>Markdown</code>的语法问题，本来就很在意写博客的格
+式，但是不会<code>Markdown</code>的语法，我不会排版啊，汗……</p>
+
+<hr />
+
+<p>偶然间发现了<code>github</code>上的一个项目叫做<a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">markdown-here</a>
+写得很简洁，以后可以打印一份来参考，这里呢，为了练习一下<code>Markdown</code>的语法，我
+就不复制粘贴了，直接在这里打一份好了。</p>
+
+<hr />
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>headers</span><a href='https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet'>Markdown-Cheatsheet </a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;h1>H1&lt;/h1>
+</span><span class='line'>
+</span><span class='line'>&lt;h2>H2&lt;/h2>
+</span><span class='line'>
+</span><span class='line'>&lt;h3>H3&lt;/h3>
+</span><span class='line'>
+</span><span class='line'>&lt;h4>H4&lt;/h4>
+</span><span class='line'>
+</span><span class='line'>&lt;h5>H5&lt;/h5>
+</span><span class='line'>
+</span><span class='line'>&lt;h6>H6&lt;/h6>
+</span><span class='line'>
+</span><span class='line'>&lt;p>或者，你可以选择underline-style来标记H1和H2&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;h1>Alt-H1&lt;/h1>
+</span><span class='line'>
+</span><span class='line'>&lt;h2>Alt-H2&lt;/h2>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<h1>H1</h1>
+
+<h2>H2</h2>
+
+<h3>H3</h3>
+
+<h4>H4</h4>
+
+<h5>H5</h5>
+
+<h6>H6</h6>
+
+<p>或者，你可以选择underline-style来标记H1和H2</p>
+
+<h1>Alt-H1</h1>
+
+<h2>Alt-H2</h2>
+
+<hr />
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Emphasis, aka italics, with &lt;em>asterisks&lt;/em> or &lt;em>underscores&lt;/em>.
+</span><span class='line'>Strong emphasis, aka bold, with &lt;strong>asterisks&lt;/strong> or &lt;strong>underscores&lt;/strong>
+</span><span class='line'>Combined emphasis with &lt;strong>asterisks and &lt;em>underscores&lt;/em>&lt;/strong>.
+</span><span class='line'>Strikethrough uses two tildes. &lt;del>Scratch this.&lt;/del></span></code></pre></td></tr></table></div></figure></notextile></div>
+Emphasis, aka italics, with <em>asterisks</em> or <em>underscores</em>.
+Strong emphasis, aka bold, with <strong>asterisks</strong> or <strong>underscores</strong>
+Combined emphasis with <strong>asterisks and <em>underscores</em></strong>.
+Strikethrough uses two tildes. <del>Scratch this.</del></p>
+
+<hr />
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>1. First ordered list item
+</span><span class='line'>2. Another item
+</span><span class='line'>   * Unordered sub-list
+</span><span class='line'>1. Actual numbers don't matter, just that it's a number
+</span><span class='line'>   1. Ordered sub-list
+</span><span class='line'>4. And another itme.&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>Some text that should be alignede with the above item.
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;ul>
+</span><span class='line'>&lt;li>Undered list can use asterisks&lt;/li>
+</span><span class='line'>&lt;li>Or minuses&lt;/li>
+</span><span class='line'>&lt;li>Or pluses</span></code></pre></td></tr></table></div></figure></notextile></div></li>
+<li>First ordered list item</li>
+<li>Another item
+
+<ul>
+<li>Unordered sub-list</li>
+</ul>
+</li>
+<li>Actual numbers don't matter, just that it's a number
+
+<ol>
+<li>Ordered sub-list</li>
+</ol>
+</li>
+<li><p>And another itme.</p>
+
+<p> Some text that should be alignede with the above item.</p></li>
+<li><p>Undered list can use asterisks</p></li>
+<li>Or minuses</li>
+<li>Or pluses</li>
+</ul>
+
+
+<hr />
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;a href="https://www.google.com">I'm an inline-style link&lt;/a>
+</span><span class='line'>[I'm a reference-style link][Arbitrary case-insensitive reference text]
+</span><span class='line'>&lt;a href="http://slashdot.org">You can use numbers for reference-style link definitions&lt;/a>
+</span><span class='line'>Or leave it empty and use the &lt;a href="http://www.reddit.com">link text itself&lt;/a>
+</span><span class='line'>Some tex to show that the reference links can follow later.&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p><a href="https://www.google.com">I'm an inline-style link</a>
+[I'm a reference-style link][Arbitrary case-insensitive reference text]
+<a href="http://slashdot.org">You can use numbers for reference-style link definitions</a>
+Or leave it empty and use the <a href="http://www.reddit.com">link text itself</a>
+Some tex to show that the reference links can follow later.</p>
+
+<hr />
+]]></content>
+  </entry>
+  
+</feed>

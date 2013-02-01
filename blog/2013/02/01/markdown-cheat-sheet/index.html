@@ -1,0 +1,317 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Markdown Cheat Sheet - K.I.S.S</title>
+	<meta name="author" content="metooit">
+
+	
+	<meta name="description" content="大早上一起来忽然想起来要解决一点问题，然后就求助google，结果问题没有解决，却
+解决了我另一件烦心的事儿，那就是Markdown的语法问题，本来就很在意写博客的格
+式，但是不会Markdown的语法，我不会排版啊，汗…… 偶然间发现了github上的一个项目叫做markdown-here &hellip;">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="K.I.S.S" type="application/atom+xml">
+	<link rel="canonical" href="">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	
+</head>
+
+<body>
+	<header id="header" class="inner"><h1><a href="/">K.I.S.S</a></h1>
+<nav id="main-nav"><ul class="main">
+    <li><a href="/">Blog</a></li>
+    <li><a href="/blog/archives">Archives</a></li>
+    <li><a href="/"}>About</a></li>
+</ul>
+</nav>
+<nav id="mobile-nav">
+	<div class="alignleft menu">
+		<a class="button">Menu</a>
+		<div class="container"><ul class="main">
+    <li><a href="/">Blog</a></li>
+    <li><a href="/blog/archives">Archives</a></li>
+    <li><a href="/"}>About</a></li>
+</ul>
+</div>
+	</div>
+	<div class="alignright search">
+		<a class="button"></a>
+		<div class="container">
+			<form action="http://google.com/search" method="get">
+				<input type="text" name="q" results="0">
+				<input type="hidden" name="q" value="site:metooit.github.com">
+			</form>
+		</div>
+	</div>
+</nav>
+<nav id="sub-nav" class="alignright">
+	<div class="social">
+		
+		
+		
+		<a class="twitter" href="http://twitter.com/metooit" title="Twitter">Twitter</a>
+		
+		
+		<a class="github" href="https://github.com/metooit" title="GitHub">GitHub</a>
+		
+    
+		
+		
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+	</div>
+	<form class="search" action="http://google.com/search" method="get">
+		<input class="alignright" type="text" name="q" results="0">
+		<input type="hidden" name="q" value="site:metooit.github.com">
+	</form>
+</nav>
+
+</header>
+	
+		
+<div id="banner" class="inner">
+	<div class="container">
+		<ul class="feed"></ul>
+	</div>
+	<small><a href="http://twitter.com/metooit">metooit</a> @ <a href="http://twitter.com">Twitter</a></small>
+	<div class="loading">Loading...</div>
+</div>
+<script src="/javascripts/twitter.js"></script>
+<script type="text/javascript">
+	(function($){
+		$('#banner').getTwitterFeed('metooit', 4, true);
+	})(jQuery);
+</script>
+
+	
+	<div id="content" class="inner"><article class="post">
+	<h2 class="title">Markdown Cheat Sheet</h2>
+	<div class="entry-content"><p>大早上一起来忽然想起来要解决一点问题，然后就求助google，结果问题没有解决，却
+解决了我另一件烦心的事儿，那就是<code>Markdown</code>的语法问题，本来就很在意写博客的格
+式，但是不会<code>Markdown</code>的语法，我不会排版啊，汗……</p>
+
+<hr />
+
+<p>偶然间发现了<code>github</code>上的一个项目叫做<a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">markdown-here</a>
+写得很简洁，以后可以打印一份来参考，这里呢，为了练习一下<code>Markdown</code>的语法，我
+就不复制粘贴了，直接在这里打一份好了。</p>
+
+<hr />
+
+<figure class='code'><figcaption><span>headers</span><a href='https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet'>Markdown-Cheatsheet </a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># H1
+</span><span class='line'>## H2
+</span><span class='line'>### H3
+</span><span class='line'>#### H4
+</span><span class='line'>##### H5
+</span><span class='line'>###### H6
+</span><span class='line'>
+</span><span class='line'>或者，你可以选择underline-style来标记H1和H2
+</span><span class='line'>
+</span><span class='line'>Alt-H1
+</span><span class='line'>======
+</span><span class='line'>
+</span><span class='line'>Alt-H2
+</span><span class='line'>------</span></code></pre></td></tr></table></div></figure>
+
+
+<h1>H1</h1>
+
+<h2>H2</h2>
+
+<h3>H3</h3>
+
+<h4>H4</h4>
+
+<h5>H5</h5>
+
+<h6>H6</h6>
+
+<p>或者，你可以选择underline-style来标记H1和H2</p>
+
+<h1>Alt-H1</h1>
+
+<h2>Alt-H2</h2>
+
+<hr />
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Emphasis, aka italics, with *asterisks* or _underscores_.
+</span><span class='line'>Strong emphasis, aka bold, with **asterisks** or __underscores__
+</span><span class='line'>Combined emphasis with **asterisks and _underscores_**.
+</span><span class='line'>Strikethrough uses two tildes. ~~Scratch this.~~</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Emphasis, aka italics, with <em>asterisks</em> or <em>underscores</em>.
+Strong emphasis, aka bold, with <strong>asterisks</strong> or <strong>underscores</strong>
+Combined emphasis with <strong>asterisks and <em>underscores</em></strong>.
+Strikethrough uses two tildes. <del>Scratch this.</del></p>
+
+<hr />
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>1. First ordered list item
+</span><span class='line'>2. Another item
+</span><span class='line'>   * Unordered sub-list
+</span><span class='line'>1. Actual numbers don't matter, just that it's a number
+</span><span class='line'>   1. Ordered sub-list
+</span><span class='line'>4. And another itme.
+</span><span class='line'>
+</span><span class='line'>    Some text that should be alignede with the above item.
+</span><span class='line'>
+</span><span class='line'>* Undered list can use asterisks
+</span><span class='line'>- Or minuses
+</span><span class='line'>+ Or pluses</span></code></pre></td></tr></table></div></figure>
+
+
+<ol>
+<li>First ordered list item</li>
+<li>Another item
+
+<ul>
+<li>Unordered sub-list</li>
+</ul>
+</li>
+<li>Actual numbers don&#8217;t matter, just that it&#8217;s a number
+
+<ol>
+<li>Ordered sub-list</li>
+</ol>
+</li>
+<li><p>And another itme.</p>
+
+<p> Some text that should be alignede with the above item.</p></li>
+<li><p>Undered list can use asterisks</p></li>
+<li>Or minuses</li>
+<li>Or pluses</li>
+</ol>
+
+
+<hr />
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[I'm an inline-style link](https://www.google.com)
+</span><span class='line'>[I'm a reference-style link][Arbitrary case-insensitive reference text]
+</span><span class='line'>[You can use numbers for reference-style link definitions][1]
+</span><span class='line'>Or leave it empty and use the [link text itself][]
+</span><span class='line'>Some tex to show that the reference links can follow later.
+</span><span class='line'>
+</span><span class='line'>[arbitrary case insensive refeence text]: https://www.mozilla.org
+</span><span class='line'>[1]: http://slashdot.org
+</span><span class='line'>[link text itself]: http://www.reddit.com</span></code></pre></td></tr></table></div></figure>
+
+
+<p><a href="https://www.google.com">I&#8217;m an inline-style link</a>
+[I&#8217;m a reference-style link][Arbitrary case-insensitive reference text]
+<a href="http://slashdot.org">You can use numbers for reference-style link definitions</a>
+Or leave it empty and use the <a href="http://www.reddit.com">link text itself</a>
+Some tex to show that the reference links can follow later.</p>
+
+<hr />
+</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-02-01T07:37:00+08:00" pubdate data-updated="true">Feb 1<span>st</span>, 2013</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/markdown/'>Markdown</a>, <a class='category' href='/blog/categories/github/'>github</a>
+
+
+</div>
+	
+</div></article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+	<a class="addthis_counter addthis_pill_style"></a>
+	</div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
+
+
+</div>
+	<footer id="footer" class="inner">Copyright &copy; 2013
+
+    metooit
+
+<br />
+Powered by <a href="http://octopress.org/">Octopress</a> - Theme by <a href="http://zespia.tw/Octopress-Theme-Slash/index_tw.html">Slash</a>
+</footer>
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+
+
+
+
+</body>
+</html>
