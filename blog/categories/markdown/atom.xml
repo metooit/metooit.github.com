@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Markdown | K.I.S.S]]></title>
   <link href="http://metooit.github.com/blog/categories/markdown/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-02-01T10:56:22+08:00</updated>
+  <updated>2013-02-01T11:11:18+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -221,7 +221,7 @@ Emphasis, aka italics, with <em>asterisks</em> or <em>underscores</em>.</p>
 <p>Here is our logo(hover to see the title text):</p>
 
 <p>Inline-style:
-<img src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png%20%22Logo%20Title%20Text%201" alt="alt-text" /></p>
+<img src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" title="Logo Title Text 1" alt="alt-text" /></p>
 
 <p>Reference-style:
 <img src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" title="Logo Title Text 2" alt="alt-text" /></p>
