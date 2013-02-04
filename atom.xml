@@ -4,7 +4,7 @@
   <title><![CDATA[K.I.S.S]]></title>
   <link href="http://metooit.github.com/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-02-02T19:49:36+08:00</updated>
+  <updated>2013-02-04T18:35:21+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -12,6 +12,34 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[学习 Git]]></title>
+    <link href="http://metooit.github.com/blog/2013/02/04/learning-git/"/>
+    <updated>2013-02-04T12:59:00+08:00</updated>
+    <id>http://metooit.github.com/blog/2013/02/04/learning-git</id>
+    <content type="html"><![CDATA[<p>寒假里的日子，有点让人觉得不知到要做什么，我很怕自己浪费时间，所以觉得要学会自己找事情做，然后我觉得有必要认真的学习一下git。Google了一下，找到了这个<a href="http://learn.github.com/p/intro.html">git官方学习指南</a>，我就照着这个先看一看git吧。：-）</p>
+
+<h1>首先，看一下我的git版本吧：</h1>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ git --version</span></code></pre></td></tr></table></div></figure>
+
+
+<p>git version 1.7.10.4
+这应该是最新的版本了吧。</p>
+
+<h1>然后，如何取得帮助呢？</h1>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ git log --help
+</span><span class='line'>$ git help log</span></code></pre></td></tr></table></div></figure>
+
+
+<p><img class="git" src="http://metooit.github.com/pictures/git-lang.png" title="git-lang git-lang" ></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Vim 快捷键备忘]]></title>
