@@ -4,7 +4,7 @@
   <title><![CDATA[K.I.S.S]]></title>
   <link href="http://metooit.github.com/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-02-04T19:03:49+08:00</updated>
+  <updated>2013-02-04T22:39:17+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -19,6 +19,8 @@
     <updated>2013-02-04T12:59:00+08:00</updated>
     <id>http://metooit.github.com/blog/2013/02/04/learning-git</id>
     <content type="html"><![CDATA[<p>寒假里的日子，有点让人觉得不知到要做什么，我很怕自己浪费时间，所以觉得要学会自己找事情做，然后我觉得有必要认真的学习一下git。Google了一下，找到了这个<a href="http://learn.github.com/p/intro.html">git官方学习指南</a>，我就照着这个先看一看git吧。：-）</p>
+
+<hr />
 
 <h3>关于Git</h3>
 
@@ -53,9 +55,90 @@
 </ul>
 
 
+<hr />
+
 <h3>Git的初始化设置</h3>
 
 <p>第一次使用Git时，首先要学会设置好一些东西，比如名字和邮件地址。设置的命令是<code>git config</code>,如果加上<code>--global</code>,这个命令会将设置信息存储在<code>~/.gitconfig</code>。</p>
+
+<figure class='code'><figcaption><span>git-config </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ git -config --global user.name "your name here"
+</span><span class='line'>$ git -config --global user.email "your email here"</span></code></pre></td></tr></table></div></figure>
+
+
+<p>git也可以设定用户默认的文本编辑器，比如emacs</p>
+
+<figure class='code'><figcaption><span>git-editor </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ git -config --global core.editor 'emacs'</span></code></pre></td></tr></table></div></figure>
+
+
+<p>可以运行以下命令来查看当前的设置情况：</p>
+
+<figure class='code'><figcaption><span>git-check </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git config user.name</span></code></pre></td></tr></table></div></figure>
+
+
+<p>或者呢，你可以自己查看，git首先会读取<code>/etc/gitconfig</code>,然后再读取<code>~/.gitconfig</code>，最后是<code>.git/config</code>。</p>
+
+<hr />
+
+<h3>初始化新的repo</h3>
+
+<p>要初始化一个repo，在相应目录中使用<code>git init</code>。</p>
+
+<figure class='code'><figcaption><span>repo-init </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ mkdir myproject
+</span><span class='line'>$ cd myproject
+</span><span class='line'>$ git init</span></code></pre></td></tr></table></div></figure>
+
+
+<p>现在我们建立了一个新的code repo，在这个目录中拥有自己的<code>.git</code>目录，有一些自己的设置。
+然后我们可以用</p>
+
+<figure class='code'><figcaption><span>add-commit </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ git add .
+</span><span class='line'>$ git commit -m "initial commit"</span></code></pre></td></tr></table></div></figure>
+
+
+<p>现在我们拥有了一个新的project，其中有一个commit，如何查看这个项目的状态呢？</p>
+
+<figure class='code'><figcaption><span>git-log </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ git log</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<h3>克隆一个git repo</h3>
+
+<p>git可以和多个端口链接，其中最常使用的是<code>ssh</code>、<code>http</code>、<code>git protocol</code>。其格式是 <code>git clone [url]</code>, 其中的<code>url</code>的格式是<code>git://(hostname)/(path).git</code>。</p>
+
+<figure class='code'><figcaption><span>git-clone </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ git clone git://github.com/schacon/mungit.git
+</span><span class='line'>$ cd mungit
+</span><span class='line'>$ ls</span></code></pre></td></tr></table></div></figure>
+
+
+<p>同样，在很多的情况下，你也可以使用http来clone：</p>
+
+<figure class='code'><figcaption><span>git-clone </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ git clone http://github.com/schacon/mungit.git</span></code></pre></td></tr></table></div></figure>
+
+
+
 ]]></content>
   </entry>
   
