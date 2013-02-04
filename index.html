@@ -136,8 +136,8 @@ $ git --version &hellip;">
 <li>几乎可以离线工作，并且很快（相对与SVN来说）</li>
 <li>安装体积小</li>
 <li>基于snapshot（快照），而不是changesets
-<img class="git" src="/pictures/snapshots.png" title="snapshots" >
-如果要更加深入的了解git，请看<a href="http://eagain.net/articles/git-for-computer-scientists/">Git for Computer Scitentists</a></li>
+<img class="git" src="/pictures/snapshots.png" title="snapshots" ></li>
+<li>如果要更加深入的了解git，请看<a href="http://eagain.net/articles/git-for-computer-scientists/">Git for Computer Scitentists</a></li>
 <li>分支的代价更小，合并方便</li>
 </ul>
 
@@ -225,7 +225,34 @@ $ git --version &hellip;">
 </pre></td><td class='code'><pre><code class=''><span class='line'>$ git clone http://github.com/schacon/mungit.git</span></code></pre></td></tr></table></div></figure>
 
 
+<hr />
 
+<h3>通常的工作流程</h3>
+
+<p>现在该设置的都设置好了，项目也会建了，然后做什么呢？
+通常的工作流程是：
+* 修改文件
+* 看看你改变了什么
+* 阶段性的看看你希望commit的改变
+* commit你的阶段性成果
+* 重新来过……
+最简单的工作流程是：
+* 修改文件
+* commit你的改变
+* 重复……
+最简单的example：
+Edit files, <code>git commit -a</code>, repeat.</p>
+
+<p>用到了<code>staging area</code>:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ git status</span></code></pre></td></tr></table></div></figure>
+
+
+<p>然后我们可以看到一个<code>changed but not updated</code>区域，这里的文件就是<code>unstaged</code>的文件。你必须stage一个文件，然后再commit。
+<img class="git" src="/pictures/localoperations.png" title="localoperations" >
+Git用户使用<code>git add</code>命令来既tracking文件也stage changes。
+如果在staging阶段你不仅想看到什么文件被修改了或者staged，并且比较文件可以使用<code>git diff</code>.</p>
 
 		
 		
