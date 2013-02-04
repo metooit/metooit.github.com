@@ -4,7 +4,7 @@
   <title><![CDATA[K.I.S.S]]></title>
   <link href="http://metooit.github.com/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-02-04T18:35:21+08:00</updated>
+  <updated>2013-02-04T19:03:49+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -20,7 +20,9 @@
     <id>http://metooit.github.com/blog/2013/02/04/learning-git</id>
     <content type="html"><![CDATA[<p>寒假里的日子，有点让人觉得不知到要做什么，我很怕自己浪费时间，所以觉得要学会自己找事情做，然后我觉得有必要认真的学习一下git。Google了一下，找到了这个<a href="http://learn.github.com/p/intro.html">git官方学习指南</a>，我就照着这个先看一看git吧。：-）</p>
 
-<h1>首先，看一下我的git版本吧：</h1>
+<h3>关于Git</h3>
+
+<h4>首先，看一下我的git版本吧：</h4>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>$ git --version</span></code></pre></td></tr></table></div></figure>
@@ -29,7 +31,7 @@
 <p>git version 1.7.10.4
 这应该是最新的版本了吧。</p>
 
-<h1>然后，如何取得帮助呢？</h1>
+<h4>然后，如何取得帮助呢？</h4>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -37,7 +39,23 @@
 </span><span class='line'>$ git help log</span></code></pre></td></tr></table></div></figure>
 
 
-<p><img class="git" src="http://metooit.github.com/pictures/git-lang.png" title="git-lang git-lang" ></p>
+<p><img class="git" src="http://metooit.github.com/pictures/git-lang.png" title="git-lang" ></p>
+
+<h4>Git的特点：</h4>
+
+<ul>
+<li>几乎可以离线工作，并且很快（相对与SVN来说）</li>
+<li>安装体积小</li>
+<li>基于snapshot（快照），而不是changesets
+<img class="git" src="http://metooit.github.com/pictures/snapshots.png" title="snapshots" >
+如果要更加深入的了解git，请看<a href="http://eagain.net/articles/git-for-computer-scientists/">Git for Computer Scitentists</a></li>
+<li>分支的代价更小，合并方便</li>
+</ul>
+
+
+<h3>Git的初始化设置</h3>
+
+<p>第一次使用Git时，首先要学会设置好一些东西，比如名字和邮件地址。设置的命令是<code>git config</code>,如果加上<code>--global</code>,这个命令会将设置信息存储在<code>~/.gitconfig</code>。</p>
 ]]></content>
   </entry>
   
