@@ -4,7 +4,7 @@
   <title><![CDATA[K.I.S.S]]></title>
   <link href="http://metooit.github.com/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-02-06T23:11:53+08:00</updated>
+  <updated>2013-02-06T23:12:55+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -123,10 +123,14 @@
 
 <hr />
 
-<p>在<a href="http://ruby-china.org">Ruby-China</a>逛了一圈之后，作为一个新手，我决定看一看它的<a href="http://ruby-china.org/wiki">wiki</a>看一看有什么好的学习资源，简单翻看之后还真是收获不小。
-* 首先，<a href="http://saito.im/slide/ruby-new.html"><code>Ruby</code>语言新手教程</a>让我大体上体验了一下<code>Ruby</code>，这种幻灯片式的tutorial让人感觉简单明了，虽然不是很深入，我还时觉得这个是一个很好的学习资源。
-* 然后，看到了<a href="http://ruby-china.org/wiki/start_leaning_rails">几篇文章</a>，关于Ruby， Ruby on rails, 先学习哪个呢？具体到每个人可能并不一样吧，所以我就先学习一下<code>Ruby</code>的语法，在看的过程中对比<code>Python</code>，然后立刻就学着用rails 建立一些小项目吧。
-* 最后，算是一点意外的惊喜吧，我前两天写<code>Git</code>的两篇文章，其实这里就有一些关于<code>Git</code>学习的资料。</p>
+<p>在<a href="http://ruby-china.org">Ruby-China</a>逛了一圈之后，作为一个新手，我决定看一看它的<a href="http://ruby-china.org/wiki">wiki</a>看一看有什么好的学习资源，简单翻看之后还真是收获不小。</p>
+
+<ul>
+<li>首先，<a href="http://saito.im/slide/ruby-new.html"><code>Ruby</code>语言新手教程</a>让我大体上体验了一下<code>Ruby</code>，这种幻灯片式的tutorial让人感觉简单明了，虽然不是很深入，我还时觉得这个是一个很好的学习资源。</li>
+<li>然后，看到了<a href="http://ruby-china.org/wiki/start_leaning_rails">几篇文章</a>，关于Ruby， Ruby on rails, 先学习哪个呢？具体到每个人可能并不一样吧，所以我就先学习一下<code>Ruby</code>的语法，在看的过程中对比<code>Python</code>，然后立刻就学着用rails 建立一些小项目吧。</li>
+<li>最后，算是一点意外的惊喜吧，我前两天写<code>Git</code>的两篇文章，其实这里就有一些关于<code>Git</code>学习的资料。</li>
+</ul>
+
 ]]></content>
   </entry>
   
