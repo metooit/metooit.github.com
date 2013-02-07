@@ -4,7 +4,7 @@
   <title><![CDATA[K.I.S.S]]></title>
   <link href="http://metooit.github.com/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-02-07T20:05:57+08:00</updated>
+  <updated>2013-02-07T20:52:03+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -12,6 +12,23 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[想对算法做点什么]]></title>
+    <link href="http://metooit.github.com/blog/2013/02/07/something-i-want-to-write-about-algorithms/"/>
+    <updated>2013-02-07T20:23:00+08:00</updated>
+    <id>http://metooit.github.com/blog/2013/02/07/something-i-want-to-write-about-algorithms</id>
+    <content type="html"><![CDATA[<p>今天的收获不小，其一就是收获了一种思维模式<code>if...then...</code>，也就是“想要做什么……那么要……”，以前我总是想要做什么、做什么，可是呢，行动力不够就不能真正的去做些什么，所以我觉得是到了改变的时候了。</p>
+
+<hr />
+
+<p>最近在看<a href="http://book.douban.com/subject/1885170/">《算法导论》</a>，看算法的目的是为了进一步学习好编程，虽然有时候看得有点头晕，但是我觉得收获还是很大的。光看书肯定是不行的，所以必须用算法做点什么才能够更有趣吧，所以我就有了这个想法 『用算法做点什么呢』。</p>
+
+<hr />
+
+<p>（未完待续……）</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[What is functional programming?]]></title>
