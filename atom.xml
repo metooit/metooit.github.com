@@ -4,7 +4,7 @@
   <title><![CDATA[K.I.S.S]]></title>
   <link href="http://metooit.github.com/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-02-07T19:29:29+08:00</updated>
+  <updated>2013-02-07T20:05:57+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -377,7 +377,9 @@ Edit files, <code>git commit -a</code>, repeat.</p>
     <link href="http://metooit.github.com/blog/2013/02/01/vim-tips-to-remember/"/>
     <updated>2013-02-01T19:25:00+08:00</updated>
     <id>http://metooit.github.com/blog/2013/02/01/vim-tips-to-remember</id>
-    <content type="html"><![CDATA[<h1>插件篇</h1>
+    <content type="html"><![CDATA[<p>Vim 是我最最常用的文本编辑器， 我想要在这里记录一下<code>Vim</code>的快捷键，我会不定期地加入我经常使用或者新发现的快捷键， 没办法， 好记性不如烂笔头， 希望我能在不断的使用和温习中逐渐越来越熟练吧 :)</p>
+
+<h1>插件篇</h1>
 
 <h2>NERDTree</h2>
 
@@ -432,7 +434,8 @@ Edit files, <code>git commit -a</code>, repeat.</p>
     <id>http://metooit.github.com/blog/2013/02/01/markdown-cheat-sheet</id>
     <content type="html"><![CDATA[<p>大早上一起来忽然想起来要解决一点问题，然后就求助google，结果问题没有解决，却解决了我另一件烦心的事儿，那就是<code>Markdown</code>的语法问题，本来就很在意写博客的格式，但是不会<code>Markdown</code>的语法，我不会排版啊，汗……</p>
 
-<hr />
+<!-- more -->
+
 
 <p>偶然间发现了<code>github</code>上的一个项目叫做<a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">markdown-here</a>写得很简洁，以后可以打印一份来参考，这里呢，为了练习一下<code>Markdown</code>的语法，我就不复制粘贴了，直接在这里打一份好了。就当是<code>Markdown</code>的练习了。</p>
 
@@ -921,7 +924,8 @@ This line is only separated by a single newline, so it&#8217;s a separate line i
     <content type="html"><![CDATA[<p><code>2012</code>还是过去了，作为一个成功跨入新纪元的人类，我由衷感到庆幸和激动，不得不说，我感到了自己身上肩负某种伟大的使命，哈哈，也许
 还是心有余悸，我觉得至少应该写下点什么来记录这过去的<code>2012</code>以让后代的考古学家们能有所收获，这也许是冥冥中的伟大使命吧～</p>
 
-<hr />
+<!-- more -->
+
 
 <h1>前言：</h1>
 
@@ -991,7 +995,7 @@ This line is only separated by a single newline, so it&#8217;s a separate line i
     <link href="http://metooit.github.com/blog/2013/01/31/codeblock/"/>
     <updated>2013-01-31T09:07:00+08:00</updated>
     <id>http://metooit.github.com/blog/2013/01/31/codeblock</id>
-    <content type="html"><![CDATA[
+    <content type="html"><![CDATA[<p>测试一下语法高亮的功能：</p>
 
 <figure class='code'><figcaption><span>browser.py </span><a href='https://github.com/webpy/webpy/blob/master/test/browser.py'>webpy </a></figcaption> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>

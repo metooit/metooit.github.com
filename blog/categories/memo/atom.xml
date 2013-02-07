@@ -4,7 +4,7 @@
   <title><![CDATA[Category: memo | K.I.S.S]]></title>
   <link href="http://metooit.github.com/blog/categories/memo/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-02-07T19:29:29+08:00</updated>
+  <updated>2013-02-07T20:05:57+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -18,7 +18,9 @@
     <link href="http://metooit.github.com/blog/2013/02/01/vim-tips-to-remember/"/>
     <updated>2013-02-01T19:25:00+08:00</updated>
     <id>http://metooit.github.com/blog/2013/02/01/vim-tips-to-remember</id>
-    <content type="html"><![CDATA[<h1>插件篇</h1>
+    <content type="html"><![CDATA[<p>Vim 是我最最常用的文本编辑器， 我想要在这里记录一下<code>Vim</code>的快捷键，我会不定期地加入我经常使用或者新发现的快捷键， 没办法， 好记性不如烂笔头， 希望我能在不断的使用和温习中逐渐越来越熟练吧 :)</p>
+
+<h1>插件篇</h1>
 
 <h2>NERDTree</h2>
 

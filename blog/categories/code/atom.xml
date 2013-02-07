@@ -4,7 +4,7 @@
   <title><![CDATA[Category: code | K.I.S.S]]></title>
   <link href="http://metooit.github.com/blog/categories/code/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-02-07T19:29:29+08:00</updated>
+  <updated>2013-02-07T20:05:57+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -18,7 +18,8 @@
     <link href="http://metooit.github.com/blog/2013/01/31/codeblock/"/>
     <updated>2013-01-31T09:07:00+08:00</updated>
     <id>http://metooit.github.com/blog/2013/01/31/codeblock</id>
-    <content type="html"><![CDATA[<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>browser.py </span><a href='https://github.com/webpy/webpy/blob/master/test/browser.py'>webpy </a></figcaption> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+    <content type="html"><![CDATA[<p>测试一下语法高亮的功能：
+<div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>browser.py </span><a href='https://github.com/webpy/webpy/blob/master/test/browser.py'>webpy </a></figcaption> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
