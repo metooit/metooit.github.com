@@ -3,11 +3,14 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>继续学习Ruby - K.I.S.S</title>
+	<title>『Python3 程序开发指南』 阅读笔记 - K.I.S.S</title>
 	<meta name="author" content="metooit">
 
 	
-	<meta name="description" content="今天翻看了一下阳志平的网络日志，偶然发现了他很推崇Ruby，然后我就发现了这篇文章Ruby 闲话一二, 看后了解了一下Ruby的处境和氛围， 就像《黑客与画家》里面说的， 编程语言很重要！ Ruby 是优美的，简单的，符合K.I.S.S原则，那我就觉得Ruby是一门好的语言。所以我想要了解它。 &hellip;">
+	<meta name="description" content="数据类型 1.1 标识符与关键字： 不要使用预定义标识符对自定义标识符进行命名 dir() 函数可以返回对象的属性列表
+不带参数是返回python的内置属性列表, 调用方式为 dir(__builtins__)
+大写字母引导的是异常名，而其他的是函数名和数据类型名
+关于下滑线的使用：应该避免使用 &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -17,7 +20,7 @@
 
 	<link href="/atom.xml" rel="alternate" title="K.I.S.S" type="application/atom+xml">
 	
-	<link rel="canonical" href="http://metooit.github.com/blog/2013/02/07/continue-learning-ruby/">
+	<link rel="canonical" href="http://metooit.github.com/blog/2013/02/08/notes-for-programming-in-python-3/">
 	<link href="/favicon.png" rel="shortcut icon">
 	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
 	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
@@ -106,27 +109,161 @@
 			
 			<div class="mid-col-container">
 				<div id="content" class="inner"><article class="post">
-	<h1 class="title">继续学习Ruby</h1>
-	<div class="entry-content"><p>今天翻看了一下阳志平的网络日志，偶然发现了他很推崇<code>Ruby</code>，然后我就发现了这篇文章<a href="http://www.yangzhiping.com/tech/ruby-worldmap-1.html">Ruby 闲话一二</a>, 看后了解了一下<code>Ruby</code>的处境和氛围， 就像《黑客与画家》里面说的， 编程语言很重要！ <code>Ruby</code> 是优美的，简单的，符合K.I.S.S原则，那我就觉得<code>Ruby</code>是一门好的语言。所以我想要了解它。</p>
+	<h1 class="title">『Python3 程序开发指南』 阅读笔记</h1>
+	<div class="entry-content"><h2>数据类型</h2>
 
-<hr />
+<h3>1.1 标识符与关键字：</h3>
 
-<p>如何学习一门编程语言呢？ 这个问题或许是很多新手程序员的心声，当然我也有过曾经的疑问，找到一种快速学会编程语言的方法可能是很多人想要的，<a href="http://www.yangzhiping.com/tech/learn-program-psychology.html">在学习区刻意练习</a>或许不是最聪明的方法，但是可能是真正想要学会编程的人应该有的一种执着和毅力，阳老师的这篇文章使我受益匪浅，如果想要去做好一件事情，那就用百分之百的热情和努力去做吧！相信自己能够成功的！我觉得这篇文章好还有另外的原因，就是觉得这篇文章说的话击中了我的弱点：</p>
+<ul>
+<li>不要使用预定义标识符对自定义标识符进行命名
 
-<blockquote><ul>
-<li>提升行动力 : 把自己的思维模式改成 if &#8230; then &#8230;</li>
-<li>编程是个人行为 ： 不要忙于社交， 聊天， 发帖， 下载盗版学习资源， 争议语言好坏等等
-真的， 如果我想学会<code>Ruby</code>，那就从一点以滴开始努力吧！</li>
+<blockquote><p>dir() 函数可以返回对象的属性列表
+不带参数是返回<code>python</code>的内置属性列表, 调用方式为  <code>dir(__builtins__)</code>
+大写字母引导的是异常名，而其他的是函数名和数据类型名</p></blockquote></li>
+<li>关于下滑线的使用：应该避免使用
+
+<h3>1.2 Integral 类型：</h3>
+
+<code>Python</code>提供了两种<code>Integral</code>类型，即int 和 bool。0与<code>false</code>都表示<code>false</code>， 其他任意数和<code>true</code>都表示<code>true</code>。
+
+<h4>1.2.1 整数：</h4></li>
+<li>十进制：xxxx</li>
+<li>二进制: 0bxxxx</li>
+<li>八进制: 0oxxxx</li>
+<li>十六进制： 0xxxxx
+
+<blockquote><p>数值操作符与函数
+语法 | 描述
+x + y | 相加
+x - y | 相减
+x * y | 相乘
+x / y | 相除
+x // y | 舍弃小数部分， 使得结果总为整数 （参见round()）
+x % y | 取余
+x <strong> y | 计算x的y次幂， （参见pow()函数）
+abs(x) | 取得绝对值
+divmod(x, y) | 以二元组形式返回商和余数
+pow(x, y) | 同 </strong>
+pow(x, y, z) | (x ** y) % z
+round(x, n) | x 四舍五入后的n 位整数</p></blockquote></li>
 </ul>
-</blockquote>
 
-<hr />
 
-<p>昨天我写了关于<code>Ruby</code>的<a href="http://metooit.github.com/blog/2013/02/06/get-to-know-ruby/">Get to know Ruby</a>,今天才发现了阳老师的这篇文章：<a href="http://www.yangzhiping.com/tech/why-ruby-text.html">为什么是<code>Ruby</code></a>, 发现比我写的要简练有力的多，同时覆盖的面也要广的多。</p>
+<blockquote><p>整数转换函数
+bin(i) | 返回i的二进制表示
+hex(i) | 返回i的十六进制表示
+int(x) | 将x转换为整数对象
+oct(i) | 返回i的八进制表示
+int(s, base) | 可以指定基数</p>
 
-<hr />
+<p>逻辑与位操作
+| ^ &amp; &lt;&lt; >> ~</p></blockquote>
 
-<p>好了，关于文章的收获就是这些。</p>
+<h4>1.2.2 布尔型：</h4>
+
+<p>True False 是python的两个内置的布尔型对象。</p>
+
+<h3>1.3 浮点类型：</h3>
+
+<h4>1.3.1 浮点数：</h4>
+
+<h4>1.3.2 复数类型：</h4>
+
+<p>复数的两个部分都以属性名的形式存在，分别为real , imag.</p>
+
+<figure class='code'><figcaption><span>literal  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">z</span> <span class="o">=</span> <span class="o">-</span><span class="mf">89.5</span> <span class="o">+</span> <span class="mf">2.125j</span>
+</span><span class='line'><span class="n">z</span><span class="o">.</span><span class="n">real</span><span class="p">(),</span> <span class="n">z</span><span class="o">.</span><span class="n">imag</span><span class="p">()</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><code>conjugate()</code>函数用于改变虚数部分的符号，共轭。 要使用复数先要导入<code>cmath</code>模块，该函数提供了<code>math</code>函数中大多数三角函数和对数函数的复数版。</p>
+
+<h4>1.3.3 十进制数字：</h4>
+
+<p>decimal模块， 需要是再help()吧。现在没有必要记住那么多的函数，况且我也记不住啊！</p>
+
+<h3>1.4 字符串：</h3>
+
+<p>由于.py文件默认使用UTF-8编码，我们可以在字符串字面值中写入任意的Unicode字符放置在字符串内。例如：</p>
+
+<figure class='code'><figcaption><span>euros  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">euros</span> <span class="o">=</span> <span class="s">&quot;</span><span class="se">\N{euro sign}\u20AC\U000020AC</span><span class="s">&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>如果需要知道字符串中莫个特定字符的Unicode字元，可以使用内置的<code>ord()</code>函数。</p>
+
+<figure class='code'><figcaption><span>ord  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="nb">ord</span><span class="p">(</span><span class="n">euros</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</span><span class='line'><span class="nb">hex</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">euros</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>类似的也可以用内置的chr()函数将有效字元的任意整数转换成相应的Unicode字符。</p>
+
+<h4>1.4.1 比较字符串：</h4>
+
+<h4>1.4.2 字符串的分片与步距：</h4>
+
+<h4>1.4.3 字符串操作与方法：</h4>
+
+<p>参见help(str)。
+如果我们需要在某个字符串中找到另一个字符串所在的位置，有两种方法：
+* str.index(), 该方法返回字符串的索引位置，或者在失败时产生一个<code>ValueErr</code>异常。
+* str.find(), 该方法返回字符产的所以位置， 或者在失败时返回-1</p>
+
+<h4>1.4.4 使用<code>str.format()</code>方法进行字符串的格式化：</h4>
+
+<ul>
+<li>字段名：</li>
+</ul>
+
+
+<figure class='code'><figcaption><span>format  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="s">&quot;{who} turned {age} this year.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">who</span><span class="o">=</span><span class="s">&quot;she&quot;</span><span class="p">,</span> <span class="n">age</span><span class="o">=</span><span class="mi">88</span><span class="p">)</span>
+</span><span class='line'><span class="s">&quot;The {who} was {0} last week.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="n">who</span><span class="o">=</span><span class="s">&quot;boy&quot;</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>另外， 字段名可以引用集合数据类型，比如列表：</p>
+
+<figure class='code'><figcaption><span>format2  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">stock</span> <span class="o">=</span> <span class="p">[</span><span class="s">&quot;paper&quot;</span><span class="p">,</span> <span class="s">&quot;envelopes&quot;</span><span class="p">,</span> <span class="s">&quot;notepads&quot;</span><span class="p">,</span> <span class="s">&quot;paper clips&quot;</span><span class="p">]</span>
+</span><span class='line'><span class="s">&quot;We have {0[1]} and {0[2]} in stock.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">stock</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>其中， 0是引用的位置参数， {0[1]}代表的是sotck参数的第二个数据项。
+python3.1 开始， 忽略字段名成为可能。</p>
+
+<figure class='code'><figcaption><span>format3  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">element</span> <span class="o">=</span> <span class="s">&quot;Sliver&quot;</span>
+</span><span class='line'><span class="n">number</span> <span class="o">=</span> <span class="mi">47</span>
+</span><span class='line'><span class="s">&quot;Element {number} is {element}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="nb">locals</span><span class="p">())</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>函数<code>locals()</code>返回还在作用范围内的局部变量，**用于映射拆分。
+* 转换：</p>
+
+<blockquote><p>s 用于强制使用字符串形式
+r 用于强制使用表象形式
+a 用于强制使用表象形式，仅限于ASCII字符。
+* 格式规约：
+这个以后再看吧……</p></blockquote>
 </div>
 
 </article>
@@ -176,8 +313,8 @@ Powered by <a href="http://octopress.org/">Octopress</a>
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://metooit.github.com/blog/2013/02/07/continue-learning-ruby/';
-        var disqus_url = 'http://metooit.github.com/blog/2013/02/07/continue-learning-ruby/';
+        var disqus_identifier = 'http://metooit.github.com/blog/2013/02/08/notes-for-programming-in-python-3/';
+        var disqus_url = 'http://metooit.github.com/blog/2013/02/08/notes-for-programming-in-python-3/';
         var disqus_script = 'embed.js';
       
     (function () {

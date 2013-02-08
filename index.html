@@ -7,7 +7,10 @@
 	<meta name="author" content="metooit">
 
 	
-	<meta name="description" content="今天的收获不小，其一就是收获了一种思维模式if...then...，也就是“想要做什么……那么要……”，以前我总是想要做什么、做什么，可是呢，行动力不够就不能真正的去做些什么，所以我觉得是到了改变的时候了。 最近在看《算法导论》，看算法的目的是为了进一步学习好编程，虽然有时候看得有点头晕， &hellip;">
+	<meta name="description" content="数据类型 1.1 标识符与关键字： 不要使用预定义标识符对自定义标识符进行命名 dir() 函数可以返回对象的属性列表
+不带参数是返回python的内置属性列表, 调用方式为 dir(__builtins__)
+大写字母引导的是异常名，而其他的是函数名和数据类型名
+关于下滑线的使用：应该避免使用 &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -75,11 +78,11 @@
 </nav>
 </br>
 
-<!--<embed type='application/x-shockwave-flash' src='/javascripts/tagcloud.swf'width='100%' height='250' bgcolor='#ffffff' id='tagcloudflash' name='tagcloudflash' quality='high' allowscriptaccess='always'flashvars="tcolor=0x00aa00&amp;tcolor2=0x00dd00&amp;hicolor=0xff3333&amp;tspeed=100&amp;distr=true&amp;mode=tags&amp;tagcloud=%3Ctags%3E%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Falgorithms-%27+style%3D%27font-size%3A+23.333333333333336%25%27%3EAlgorithms%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fcode%27+style%3D%27font-size%3A+23.333333333333336%25%27%3Ecode%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fdiary%27+style%3D%27font-size%3A+36.66666666666667%25%27%3Ediary%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fgit%27+style%3D%27font-size%3A+36.66666666666667%25%27%3Egit%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fgithub%27+style%3D%27font-size%3A+50.0%25%27%3Egithub%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flearn%27+style%3D%27font-size%3A+50.0%25%27%3Elearn%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flearn-%27+style%3D%27font-size%3A+23.333333333333336%25%27%3ELearn%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fmarkdown%27+style%3D%27font-size%3A+23.333333333333336%25%27%3EMarkdown%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fmemo%27+style%3D%27font-size%3A+23.333333333333336%25%27%3Ememo%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fprogramming%27+style%3D%27font-size%3A+23.333333333333336%25%27%3Eprogramming%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fprogramming%27+style%3D%27font-size%3A+36.66666666666667%25%27%3EProgramming%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fprogramming-%27+style%3D%27font-size%3A+23.333333333333336%25%27%3EProgramming%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fruby-%27+style%3D%27font-size%3A+36.66666666666667%25%27%3ERuby%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fsummary%27+style%3D%27font-size%3A+23.333333333333336%25%27%3Esummary%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fvim%27+style%3D%27font-size%3A+23.333333333333336%25%27%3Evim%3C%2Fa%3E+%3C%2Ftags%3E">-->
+<!--<embed type='application/x-shockwave-flash' src='/javascripts/tagcloud.swf'width='100%' height='250' bgcolor='#ffffff' id='tagcloudflash' name='tagcloudflash' quality='high' allowscriptaccess='always'flashvars="tcolor=0x00aa00&amp;tcolor2=0x00dd00&amp;hicolor=0xff3333&amp;tspeed=100&amp;distr=true&amp;mode=tags&amp;tagcloud=%3Ctags%3E%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Falgorithms-%27+style%3D%27font-size%3A+23.333333333333336%25%27%3EAlgorithms%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fcode%27+style%3D%27font-size%3A+23.333333333333336%25%27%3Ecode%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fdiary%27+style%3D%27font-size%3A+36.66666666666667%25%27%3Ediary%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fgit%27+style%3D%27font-size%3A+36.66666666666667%25%27%3Egit%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fgithub%27+style%3D%27font-size%3A+50.0%25%27%3Egithub%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flearn%27+style%3D%27font-size%3A+50.0%25%27%3Elearn%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flearn-%27+style%3D%27font-size%3A+23.333333333333336%25%27%3ELearn%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fmarkdown%27+style%3D%27font-size%3A+23.333333333333336%25%27%3EMarkdown%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fmemo%27+style%3D%27font-size%3A+23.333333333333336%25%27%3Ememo%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fnote%27+style%3D%27font-size%3A+36.66666666666667%25%27%3ENote%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fprogramming%27+style%3D%27font-size%3A+36.66666666666667%25%27%3EProgramming%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fprogramming%27+style%3D%27font-size%3A+23.333333333333336%25%27%3Eprogramming%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fprogramming-%27+style%3D%27font-size%3A+23.333333333333336%25%27%3EProgramming%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fpython-%27+style%3D%27font-size%3A+23.333333333333336%25%27%3EPython%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Frails-%27+style%3D%27font-size%3A+23.333333333333336%25%27%3ERails%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fruby-%27+style%3D%27font-size%3A+50.0%25%27%3ERuby%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fsummary%27+style%3D%27font-size%3A+23.333333333333336%25%27%3Esummary%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fvim%27+style%3D%27font-size%3A+23.333333333333336%25%27%3Evim%3C%2Fa%3E+%3C%2Ftags%3E">-->
 <!--
 <section>
   <h1>Tag Cloud</h1>
-    <span id="tag-cloud"><embed type='application/x-shockwave-flash' src='/javascripts/tagcloud.swf'width='100%' height='250' bgcolor='#f2f2f2' id='tagcloudflash' name='tagcloudflash' quality='high' allowscriptaccess='always'flashvars="tcolor=0x333333&amp;tcolor2=0x333333&amp;hicolor=0x000000&amp;tspeed=100&amp;distr=true&amp;mode=tags&amp;tagcloud=%3Ctags%3E%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Falgorithms-%27+style%3D%27font-size%3A+23.333333333333336%25%27%3EAlgorithms%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fcode%27+style%3D%27font-size%3A+23.333333333333336%25%27%3Ecode%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fdiary%27+style%3D%27font-size%3A+36.66666666666667%25%27%3Ediary%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fgit%27+style%3D%27font-size%3A+36.66666666666667%25%27%3Egit%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fgithub%27+style%3D%27font-size%3A+50.0%25%27%3Egithub%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flearn%27+style%3D%27font-size%3A+50.0%25%27%3Elearn%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flearn-%27+style%3D%27font-size%3A+23.333333333333336%25%27%3ELearn%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fmarkdown%27+style%3D%27font-size%3A+23.333333333333336%25%27%3EMarkdown%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fmemo%27+style%3D%27font-size%3A+23.333333333333336%25%27%3Ememo%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fprogramming%27+style%3D%27font-size%3A+23.333333333333336%25%27%3Eprogramming%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fprogramming%27+style%3D%27font-size%3A+36.66666666666667%25%27%3EProgramming%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fprogramming-%27+style%3D%27font-size%3A+23.333333333333336%25%27%3EProgramming%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fruby-%27+style%3D%27font-size%3A+36.66666666666667%25%27%3ERuby%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fsummary%27+style%3D%27font-size%3A+23.333333333333336%25%27%3Esummary%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fvim%27+style%3D%27font-size%3A+23.333333333333336%25%27%3Evim%3C%2Fa%3E+%3C%2Ftags%3E"></span>
+    <span id="tag-cloud"><embed type='application/x-shockwave-flash' src='/javascripts/tagcloud.swf'width='100%' height='250' bgcolor='#f2f2f2' id='tagcloudflash' name='tagcloudflash' quality='high' allowscriptaccess='always'flashvars="tcolor=0x333333&amp;tcolor2=0x333333&amp;hicolor=0x000000&amp;tspeed=100&amp;distr=true&amp;mode=tags&amp;tagcloud=%3Ctags%3E%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Falgorithms-%27+style%3D%27font-size%3A+23.333333333333336%25%27%3EAlgorithms%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fcode%27+style%3D%27font-size%3A+23.333333333333336%25%27%3Ecode%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fdiary%27+style%3D%27font-size%3A+36.66666666666667%25%27%3Ediary%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fgit%27+style%3D%27font-size%3A+36.66666666666667%25%27%3Egit%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fgithub%27+style%3D%27font-size%3A+50.0%25%27%3Egithub%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flearn%27+style%3D%27font-size%3A+50.0%25%27%3Elearn%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flearn-%27+style%3D%27font-size%3A+23.333333333333336%25%27%3ELearn%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fmarkdown%27+style%3D%27font-size%3A+23.333333333333336%25%27%3EMarkdown%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fmemo%27+style%3D%27font-size%3A+23.333333333333336%25%27%3Ememo%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fnote%27+style%3D%27font-size%3A+36.66666666666667%25%27%3ENote%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fprogramming%27+style%3D%27font-size%3A+36.66666666666667%25%27%3EProgramming%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fprogramming%27+style%3D%27font-size%3A+23.333333333333336%25%27%3Eprogramming%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fprogramming-%27+style%3D%27font-size%3A+23.333333333333336%25%27%3EProgramming%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fpython-%27+style%3D%27font-size%3A+23.333333333333336%25%27%3EPython%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Frails-%27+style%3D%27font-size%3A+23.333333333333336%25%27%3ERails%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fruby-%27+style%3D%27font-size%3A+50.0%25%27%3ERuby%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fsummary%27+style%3D%27font-size%3A+23.333333333333336%25%27%3Esummary%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fvim%27+style%3D%27font-size%3A+23.333333333333336%25%27%3Evim%3C%2Fa%3E+%3C%2Ftags%3E"></span>
 </section>
 
 -->
@@ -106,6 +109,233 @@
 			
 			<div class="mid-col-container">
 				<div id="content" class="inner">
+
+
+    <article class="post">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-02-08T12:17:00+08:00" pubdate data-updated="true">Feb 8<span>th</span>, 2013</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/note/'>Note</a>, <a class='category' href='/blog/categories/python-/'>Python,</a>
+
+
+</div>
+		
+	</div>
+	<h1 class="title"><a href="/blog/2013/02/08/notes-for-programming-in-python-3/">『Python3 程序开发指南』 阅读笔记</a></h1>
+	<div class="entry-content">
+		<h2>数据类型</h2>
+
+<h3>1.1 标识符与关键字：</h3>
+
+<ul>
+<li>不要使用预定义标识符对自定义标识符进行命名
+
+<blockquote><p>dir() 函数可以返回对象的属性列表
+不带参数是返回<code>python</code>的内置属性列表, 调用方式为  <code>dir(__builtins__)</code>
+大写字母引导的是异常名，而其他的是函数名和数据类型名</p></blockquote></li>
+<li>关于下滑线的使用：应该避免使用
+
+<h3>1.2 Integral 类型：</h3>
+
+<code>Python</code>提供了两种<code>Integral</code>类型，即int 和 bool。0与<code>false</code>都表示<code>false</code>， 其他任意数和<code>true</code>都表示<code>true</code>。
+
+<h4>1.2.1 整数：</h4></li>
+<li>十进制：xxxx</li>
+<li>二进制: 0bxxxx</li>
+<li>八进制: 0oxxxx</li>
+<li>十六进制： 0xxxxx
+
+<blockquote><p>数值操作符与函数
+语法 | 描述
+x + y | 相加
+x - y | 相减
+x * y | 相乘
+x / y | 相除
+x // y | 舍弃小数部分， 使得结果总为整数 （参见round()）
+x % y | 取余
+x <strong> y | 计算x的y次幂， （参见pow()函数）
+abs(x) | 取得绝对值
+divmod(x, y) | 以二元组形式返回商和余数
+pow(x, y) | 同 </strong>
+pow(x, y, z) | (x ** y) % z
+round(x, n) | x 四舍五入后的n 位整数</p></blockquote></li>
+</ul>
+
+
+<blockquote><p>整数转换函数
+bin(i) | 返回i的二进制表示
+hex(i) | 返回i的十六进制表示
+int(x) | 将x转换为整数对象
+oct(i) | 返回i的八进制表示
+int(s, base) | 可以指定基数</p>
+
+<p>逻辑与位操作
+| ^ &amp; &lt;&lt; >> ~</p></blockquote>
+
+<h4>1.2.2 布尔型：</h4>
+
+<p>True False 是python的两个内置的布尔型对象。</p>
+
+<h3>1.3 浮点类型：</h3>
+
+<h4>1.3.1 浮点数：</h4>
+
+<h4>1.3.2 复数类型：</h4>
+
+<p>复数的两个部分都以属性名的形式存在，分别为real , imag.</p>
+
+<figure class='code'><figcaption><span>literal  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">z</span> <span class="o">=</span> <span class="o">-</span><span class="mf">89.5</span> <span class="o">+</span> <span class="mf">2.125j</span>
+</span><span class='line'><span class="n">z</span><span class="o">.</span><span class="n">real</span><span class="p">(),</span> <span class="n">z</span><span class="o">.</span><span class="n">imag</span><span class="p">()</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><code>conjugate()</code>函数用于改变虚数部分的符号，共轭。 要使用复数先要导入<code>cmath</code>模块，该函数提供了<code>math</code>函数中大多数三角函数和对数函数的复数版。</p>
+
+<h4>1.3.3 十进制数字：</h4>
+
+<p>decimal模块， 需要是再help()吧。现在没有必要记住那么多的函数，况且我也记不住啊！</p>
+
+<h3>1.4 字符串：</h3>
+
+<p>由于.py文件默认使用UTF-8编码，我们可以在字符串字面值中写入任意的Unicode字符放置在字符串内。例如：</p>
+
+<figure class='code'><figcaption><span>euros  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">euros</span> <span class="o">=</span> <span class="s">&quot;</span><span class="se">\N{euro sign}\u20AC\U000020AC</span><span class="s">&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>如果需要知道字符串中莫个特定字符的Unicode字元，可以使用内置的<code>ord()</code>函数。</p>
+
+<figure class='code'><figcaption><span>ord  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="nb">ord</span><span class="p">(</span><span class="n">euros</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</span><span class='line'><span class="nb">hex</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">euros</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>类似的也可以用内置的chr()函数将有效字元的任意整数转换成相应的Unicode字符。</p>
+
+<h4>1.4.1 比较字符串：</h4>
+
+<h4>1.4.2 字符串的分片与步距：</h4>
+
+<h4>1.4.3 字符串操作与方法：</h4>
+
+<p>参见help(str)。
+如果我们需要在某个字符串中找到另一个字符串所在的位置，有两种方法：
+* str.index(), 该方法返回字符串的索引位置，或者在失败时产生一个<code>ValueErr</code>异常。
+* str.find(), 该方法返回字符产的所以位置， 或者在失败时返回-1</p>
+
+<h4>1.4.4 使用<code>str.format()</code>方法进行字符串的格式化：</h4>
+
+<ul>
+<li>字段名：</li>
+</ul>
+
+
+<figure class='code'><figcaption><span>format  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="s">&quot;{who} turned {age} this year.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">who</span><span class="o">=</span><span class="s">&quot;she&quot;</span><span class="p">,</span> <span class="n">age</span><span class="o">=</span><span class="mi">88</span><span class="p">)</span>
+</span><span class='line'><span class="s">&quot;The {who} was {0} last week.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="n">who</span><span class="o">=</span><span class="s">&quot;boy&quot;</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>另外， 字段名可以引用集合数据类型，比如列表：</p>
+
+<figure class='code'><figcaption><span>format2  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">stock</span> <span class="o">=</span> <span class="p">[</span><span class="s">&quot;paper&quot;</span><span class="p">,</span> <span class="s">&quot;envelopes&quot;</span><span class="p">,</span> <span class="s">&quot;notepads&quot;</span><span class="p">,</span> <span class="s">&quot;paper clips&quot;</span><span class="p">]</span>
+</span><span class='line'><span class="s">&quot;We have {0[1]} and {0[2]} in stock.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">stock</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>其中， 0是引用的位置参数， {0[1]}代表的是sotck参数的第二个数据项。
+python3.1 开始， 忽略字段名成为可能。</p>
+
+<figure class='code'><figcaption><span>format3  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">element</span> <span class="o">=</span> <span class="s">&quot;Sliver&quot;</span>
+</span><span class='line'><span class="n">number</span> <span class="o">=</span> <span class="mi">47</span>
+</span><span class='line'><span class="s">&quot;Element {number} is {element}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="nb">locals</span><span class="p">())</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>函数<code>locals()</code>返回还在作用范围内的局部变量，**用于映射拆分。
+* 转换：</p>
+
+<blockquote><p>s 用于强制使用字符串形式
+r 用于强制使用表象形式
+a 用于强制使用表象形式，仅限于ASCII字符。
+* 格式规约：
+这个以后再看吧……</p></blockquote>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-02-08T11:58:00+08:00" pubdate data-updated="true">Feb 8<span>th</span>, 2013</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/note/'>Note</a>, <a class='category' href='/blog/categories/rails-/'>Rails,</a>, <a class='category' href='/blog/categories/ruby-/'>Ruby,</a>
+
+
+</div>
+		
+	</div>
+	<h1 class="title"><a href="/blog/2013/02/08/notes-for-reading-the-railsguides/">RailsGuides 阅读笔记</a></h1>
+	<div class="entry-content">
+		<p><a href="http://guides.ruby.tw/rails3/getting_started.html">RailsGuides</a>是Ruby on Rails 官方网站上的一个tutorial， 下面是我通过阅读学习所做的一些笔记。</p>
+
+<hr />
+
+<p>刚刚准备信心满满地开始看得时候，打开网页的第一条是<code>前提条件</code>：好吧，<code>Rails</code>是一套<code>Ruby</code>的web框架，如果对<code>Ruby</code>一无所知就学习<code>Rails</code>，学习曲线会很陡峭。 于是，我决定还是先看一看它提供的文档。</p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -380,233 +610,6 @@
 <li>最后，算是一点意外的惊喜吧，我前两天写<code>Git</code>的两篇文章，其实这里就有一些关于<code>Git</code>学习的资料。</li>
 </ul>
 
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<div class="meta">
-		<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-02-05T00:46:00+08:00" pubdate data-updated="true">Feb 5<span>th</span>, 2013</time></div>
-		<div class="tags">
-
-
-	<a class='category' href='/blog/categories/git/'>git</a>, <a class='category' href='/blog/categories/github/'>github</a>, <a class='category' href='/blog/categories/learn/'>learn</a>
-
-
-</div>
-		
-	</div>
-	<h1 class="title"><a href="/blog/2013/02/05/dive-into-git/">继续学习 Git</a></h1>
-	<div class="entry-content">
-		<p>我可不想做标题党，我当时可是真的想要认认真真地读一遍英文文档，然后好好总结一下，所以才斗胆写了一句“深入学习 Git”。</p>
-
-<hr />
-
-<p>直到我发现了这个<a href="http://rogerdudler.github.com/git-guide/index.zh.html">Git简易指南</a></p>
-
-<hr />
-
-<p>我忽然觉得整个世界都美好了，居然写的这么清晰易懂（当然也有中文的因素在里面），但是这篇文档无论从结构还是排版配图，都是很养眼的啊，所以我也就没有必要劳神费思在想去dive了，我觉得只要够用就好，所以就先好好的看一下这篇文档好了。我把文章的名字改成<code>继续学习 Git</code>了。囧</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<div class="meta">
-		<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-02-04T12:59:00+08:00" pubdate data-updated="true">Feb 4<span>th</span>, 2013</time></div>
-		<div class="tags">
-
-
-	<a class='category' href='/blog/categories/git/'>git</a>, <a class='category' href='/blog/categories/github/'>github</a>, <a class='category' href='/blog/categories/learn/'>learn</a>
-
-
-</div>
-		
-	</div>
-	<h1 class="title"><a href="/blog/2013/02/04/learning-git/">学习 Git</a></h1>
-	<div class="entry-content">
-		<p>寒假里的日子，有点让人觉得不知到要做什么，我很怕自己浪费时间，所以觉得要学会自己找事情做，然后我觉得有必要认真的学习一下git。Google了一下，找到了这个<a href="http://learn.github.com/p/intro.html">git官方学习指南</a>，我就照着这个先看一看git吧。：-）</p>
-
-<hr />
-
-<h3>关于Git</h3>
-
-<h4>首先，看一下我的git版本吧：</h4>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ git --version</span></code></pre></td></tr></table></div></figure>
-
-
-<p>git version 1.7.10.4
-这应该是最新的版本了吧。</p>
-
-<h4>然后，如何取得帮助呢？</h4>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ git log --help
-</span><span class='line'>$ git help log</span></code></pre></td></tr></table></div></figure>
-
-
-<p><img class="git" src="/pictures/git-lang.png" title="git-lang" ></p>
-
-<h4>Git的特点：</h4>
-
-<ul>
-<li>几乎可以离线工作，并且很快（相对与SVN来说）</li>
-<li>安装体积小</li>
-<li>基于snapshot（快照），而不是changesets
-<img class="git" src="/pictures/snapshots.png" title="snapshots" ></li>
-<li>如果要更加深入的了解git，请看<a href="http://eagain.net/articles/git-for-computer-scientists/">Git for Computer Scitentists</a></li>
-<li>分支的代价更小，合并方便</li>
-</ul>
-
-
-<hr />
-
-<h3>Git的初始化设置</h3>
-
-<p>第一次使用Git时，首先要学会设置好一些东西，比如名字和邮件地址。设置的命令是<code>git config</code>,如果加上<code>--global</code>,这个命令会将设置信息存储在<code>~/.gitconfig</code>。</p>
-
-<figure class='code'><figcaption><span>git-config </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ git -config --global user.name "your name here"
-</span><span class='line'>$ git -config --global user.email "your email here"</span></code></pre></td></tr></table></div></figure>
-
-
-<p>git也可以设定用户默认的文本编辑器，比如emacs</p>
-
-<figure class='code'><figcaption><span>git-editor </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ git -config --global core.editor 'emacs'</span></code></pre></td></tr></table></div></figure>
-
-
-<p>可以运行以下命令来查看当前的设置情况：</p>
-
-<figure class='code'><figcaption><span>git-check </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>git config user.name</span></code></pre></td></tr></table></div></figure>
-
-
-<p>或者呢，你可以自己查看，git首先会读取<code>/etc/gitconfig</code>,然后再读取<code>~/.gitconfig</code>，最后是<code>.git/config</code>。</p>
-
-<hr />
-
-<h3>初始化新的repo</h3>
-
-<p>要初始化一个repo，在相应目录中使用<code>git init</code>。</p>
-
-<figure class='code'><figcaption><span>repo-init </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ mkdir myproject
-</span><span class='line'>$ cd myproject
-</span><span class='line'>$ git init</span></code></pre></td></tr></table></div></figure>
-
-
-<p>现在我们建立了一个新的code repo，在这个目录中拥有自己的<code>.git</code>目录，有一些自己的设置。
-然后我们可以用</p>
-
-<figure class='code'><figcaption><span>add-commit </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ git add .
-</span><span class='line'>$ git commit -m "initial commit"</span></code></pre></td></tr></table></div></figure>
-
-
-<p>现在我们拥有了一个新的project，其中有一个commit，如何查看这个项目的状态呢？</p>
-
-<figure class='code'><figcaption><span>git-log </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ git log</span></code></pre></td></tr></table></div></figure>
-
-
-<hr />
-
-<h3>克隆一个git repo</h3>
-
-<p>git可以和多个端口链接，其中最常使用的是<code>ssh</code>、<code>http</code>、<code>git protocol</code>。其格式是 <code>git clone [url]</code>, 其中的<code>url</code>的格式是<code>git://(hostname)/(path).git</code>。</p>
-
-<figure class='code'><figcaption><span>git-clone </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ git clone git://github.com/schacon/mungit.git
-</span><span class='line'>$ cd mungit
-</span><span class='line'>$ ls</span></code></pre></td></tr></table></div></figure>
-
-
-<p>同样，在很多的情况下，你也可以使用http来clone：</p>
-
-<figure class='code'><figcaption><span>git-clone </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ git clone http://github.com/schacon/mungit.git</span></code></pre></td></tr></table></div></figure>
-
-
-<hr />
-
-<h3>通常的工作流程</h3>
-
-<p>现在该设置的都设置好了，项目也会建了，然后做什么呢？
-通常的工作流程是：
-* 修改文件
-* 看看你改变了什么
-* 阶段性的看看你希望commit的改变
-* commit你的阶段性成果
-* 重新来过……
-最简单的工作流程是：
-* 修改文件
-* commit你的改变
-* 重复……
-最简单的example：
-Edit files, <code>git commit -a</code>, repeat.</p>
-
-<p>用到了<code>staging area</code>:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ git status</span></code></pre></td></tr></table></div></figure>
-
-
-<p>然后我们可以看到一个<code>changed but not updated</code>区域，这里的文件就是<code>unstaged</code>的文件。你必须stage一个文件，然后再commit。</p>
-
-<p><img class="git" src="/pictures/localoperations.png" title="localoperations" ></p>
-
-<p>Git用户使用<code>git add</code>命令来既tracking文件也stage changes。
-如果在staging阶段你不仅想看到什么文件被修改了或者staged，并且比较文件可以使用<code>git diff</code>.</p>
 
 		
 		

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ruby, | K.I.S.S]]></title>
   <link href="http://metooit.github.com/blog/categories/ruby-/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-02-07T20:52:03+08:00</updated>
+  <updated>2013-02-08T18:58:52+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -12,6 +12,19 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[RailsGuides 阅读笔记]]></title>
+    <link href="http://metooit.github.com/blog/2013/02/08/notes-for-reading-the-railsguides/"/>
+    <updated>2013-02-08T11:58:00+08:00</updated>
+    <id>http://metooit.github.com/blog/2013/02/08/notes-for-reading-the-railsguides</id>
+    <content type="html"><![CDATA[<p><a href="http://guides.ruby.tw/rails3/getting_started.html">RailsGuides</a>是Ruby on Rails 官方网站上的一个tutorial， 下面是我通过阅读学习所做的一些笔记。</p>
+
+<hr />
+
+<p>刚刚准备信心满满地开始看得时候，打开网页的第一条是<code>前提条件</code>：好吧，<code>Rails</code>是一套<code>Ruby</code>的web框架，如果对<code>Ruby</code>一无所知就学习<code>Rails</code>，学习曲线会很陡峭。 于是，我决定还是先看一看它提供的文档。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[继续学习Ruby]]></title>
