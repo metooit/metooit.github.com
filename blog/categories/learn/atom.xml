@@ -4,7 +4,7 @@
   <title><![CDATA[Category: learn | K.I.S.S]]></title>
   <link href="http://metooit.github.com/blog/categories/learn/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-02-08T22:10:09+08:00</updated>
+  <updated>2013-02-08T22:30:54+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -12,6 +12,174 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Learning Ruby in Process 1]]></title>
+    <link href="http://metooit.github.com/blog/2013/02/08/learning-ruby-in-process-1/"/>
+    <updated>2013-02-08T19:26:00+08:00</updated>
+    <id>http://metooit.github.com/blog/2013/02/08/learning-ruby-in-process-1</id>
+    <content type="html"><![CDATA[<ul>
+<li>对于一个字符串中每个字元的遍历：（迭代器 -> <code>iterator</code>）
+<div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>iterator1  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="s2">&quot;abc&quot;</span><span class="o">.</span><span class="n">each_byte</span><span class="p">{</span> <span class="o">|</span><span class="n">c</span><span class="o">|</span> <span class="nb">printf</span> <span class="s2">&quot;&amp;lt;%c&gt;&quot;</span><span class="p">,</span> <span class="n">c</span> <span class="p">};</span> <span class="nb">print</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+each_byte是字符串中处理每个字元的迭代器。</li>
+</ul>
+
+
+<p>如果是用循环语句来实现的话：
+<div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>iterator2  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">004</span><span class="p">:</span><span class="mi">0</span><span class="o">&gt;</span> <span class="k">while</span> <span class="n">i</span> <span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span> <span class="n">s</span><span class="o">.</span><span class="n">length</span>
+</span><span class='line'><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">005</span><span class="p">:</span><span class="mi">1</span><span class="o">&gt;</span> <span class="nb">printf</span> <span class="s2">&quot;&amp;lt;%c&gt;&quot;</span><span class="p">,</span> <span class="n">s</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span> <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+</span><span class='line'><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">006</span><span class="p">:</span><span class="mi">1</span><span class="o">&gt;</span> <span class="k">end</span><span class="p">;</span> <span class="nb">print</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<ul>
+<li><p><code>retry</code>意思是重新开始循环， 而<code>redo</code>意思是当前循环重新做一次迭代。
+举例来说：
+<div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>retry  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">c</span> <span class="o">=</span> <span class="mi">0</span>
+</span><span class='line'><span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="mi">0</span><span class="o">.</span><span class="n">.</span><span class="mi">4</span>
+</span><span class='line'>  <span class="nb">print</span> <span class="n">i</span>
+</span><span class='line'>  <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">2</span> <span class="ow">and</span> <span class="n">c</span> <span class="o">==</span> <span class="mi">0</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;pre&gt;&lt;code&gt;  c = 1</span>
+</span><span class='line'><span class="sr">  print &quot;\n&quot;</span>
+</span><span class='line'><span class="sr">  retry</span>
+</span><span class='line'><span class="sr">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;</span><span class="sr">/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;  end</span>
+</span><span class='line'><span class="sr">end</span>
+</span><span class='line'><span class="sr">print &quot;\n&quot;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+再试试换成<code>redo</code>呢？</p></li>
+<li><p><code>Ruby</code>的方法可以接受参数：与传统的语言一样， 用括号扩起来， 而且在不引起歧义的情况下，可以省略括号。 有一个特别的参数叫做<code>self</code>。</p></li>
+<li><p>新建立一个类别的对象 ClassName.new</p></li>
+<li><p><code>Ruby</code>中有继承， 可以重写父类的方法， 如果要增强父类中的方法， 而不是完全替换， 可以用<code>super</code>关键字。</p></li>
+<li><p><code>Access Control</code>： 1. 在对象外部定义的函数不能直接由对象来调用 2. 在对象内部定义的函数不能直接被外部调用， 可以将函数变成私有的<code>private: 函数名</code>。</p></li>
+<li><p>关于module：</p>
+
+<blockquote><p>module 没有实例
+module 没有子类别
+module 由module...end定义</p></blockquote></li>
+<li><p><code>::</code>算子会向<code>module</code>查询常数的值， 如果不用这个就要 <code>include</code>。</p></li>
+<li><p><code>procedure object</code>程序对象：
+<div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>procedure  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">&lt;</span><span class="sr">/p&gt;&lt;/</span><span class="n">li</span><span class="o">&gt;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="sr">/ul&gt;</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;irb(main):033:0&gt; quux = Proc.new {</span>
+</span><span class='line'><span class="sr">irb(main):034:1&lt;em&gt; puts &quot;QUUXQUUX&quot;</span>
+</span><span class='line'><span class="sr">irb(main):035:1&gt; }</span>
+</span><span class='line'><span class="sr">=&gt; #&amp;lt;Proc:0x9e1eee4@(irb):33&gt;</span>
+</span><span class='line'><span class="sr">irb(main):036:0&gt; quux.call</span>
+</span><span class='line'><span class="sr">QUUXQUUX</span>
+</span><span class='line'><span class="sr">=&gt; nil</span>
+</span><span class='line'><span class="sr">irb(main):037:0&gt; def run(p)</span>
+</span><span class='line'><span class="sr">irb(main):038:1&gt; puts &quot;About to call a procedure&quot;</span>
+</span><span class='line'><span class="sr">irb(main):039:1&gt; p.call</span>
+</span><span class='line'><span class="sr">irb(main):040:1&gt; puts &quot;Procedure finished&quot;</span>
+</span><span class='line'><span class="sr">irb(main):041:1&gt; end</span>
+</span><span class='line'><span class="sr">=&gt; nil</span>
+</span><span class='line'><span class="sr">irb(main):042:0&gt; run quux</span>
+</span><span class='line'><span class="sr">About to call a procedure</span>
+</span><span class='line'><span class="sr">QUUXQUUX</span>
+</span><span class='line'><span class="sr">Procedure finished</span>
+</span><span class='line'><span class="sr">=&gt; nil&lt;/em</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>利用<code>trap</code>方法， 我们可以针对任何系统信号指派不同的应对措施。
+<div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>trap  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">047</span><span class="p">:</span><span class="mi">0</span><span class="o">&gt;</span> <span class="n">inthandler</span> <span class="o">=</span> <span class="no">Proc</span><span class="o">.</span><span class="n">new</span> <span class="p">{</span> <span class="nb">puts</span> <span class="s2">&quot;Press ^C was paused&quot;</span> <span class="p">}</span>
+</span><span class='line'><span class="o">=&gt;</span> <span class="c1">#&amp;lt;Proc:0x9c08614@(irb):47&gt;</span>
+</span><span class='line'><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">04</span><span class="mi">8</span><span class="p">:</span><span class="mi">0</span><span class="o">&gt;</span> <span class="nb">trap</span> <span class="s2">&quot;SIGINT&quot;</span><span class="p">,</span> <span class="n">inthandler</span>
+</span><span class='line'><span class="o">=&gt;</span> <span class="c1">#&amp;lt;Proc:0x9c86e24@(irb):44&gt;</span>
+</span><span class='line'><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">04</span><span class="mi">9</span><span class="p">:</span><span class="mi">0</span><span class="o">&gt;</span> <span class="no">Press</span> <span class="o">^</span><span class="n">C</span> <span class="n">was</span> <span class="n">paused</span>
+</span><span class='line'><span class="nb">exit</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<ul>
+<li>变量：通过识别标识符就能够区别变量。</li>
+</ul>
+
+
+<table>
+<thead>
+<tr>
+<th>符号   </th>
+<th align="right">   意义                        </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$      </td>
+<td align="right">   全局变量（globla variable） |</td>
+</tr>
+<tr>
+<td>@      </td>
+<td align="right">   实例变量（instance ariable）|</td>
+</tr>
+<tr>
+<td>[az]或_</td>
+<td align="right">   局部变量（local variable）  |</td>
+</tr>
+<tr>
+<td>[AZ]   </td>
+<td align="right">   常量                        |</td>
+</tr>
+</tbody>
+</table>
+
+
+<p>self 和 nil不能被初始化， 赋值。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Get to know Ruby]]></title>

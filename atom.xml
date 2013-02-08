@@ -4,7 +4,7 @@
   <title><![CDATA[K.I.S.S]]></title>
   <link href="http://metooit.github.com/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-02-08T22:10:09+08:00</updated>
+  <updated>2013-02-08T22:30:54+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -45,7 +45,7 @@
 
 <ul>
 <li><code>retry</code>意思是重新开始循环， 而<code>redo</code>意思是当前循环重新做一次迭代。
-距离来说：</li>
+举例来说：</li>
 </ul>
 
 
@@ -126,11 +126,62 @@ module 由module&#8230;end定义</p></blockquote></li>
 </span><span class='line'><span class="no">About</span> <span class="n">to</span> <span class="n">call</span> <span class="n">a</span> <span class="n">procedure</span>
 </span><span class='line'><span class="no">QUUXQUUX</span>
 </span><span class='line'><span class="no">Procedure</span> <span class="n">finished</span>
-</span><span class='line'><span class="o">=&gt;</span> <span class="kp">nil</span>
+</span><span class='line'><span class="o">=&gt;</span> <span class="kp">nil</span><span class="o">*</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
+<p>利用<code>trap</code>方法， 我们可以针对任何系统信号指派不同的应对措施。</p>
 
+<figure class='code'><figcaption><span>trap  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">047</span><span class="p">:</span><span class="mi">0</span><span class="o">&gt;</span> <span class="n">inthandler</span> <span class="o">=</span> <span class="no">Proc</span><span class="o">.</span><span class="n">new</span> <span class="p">{</span> <span class="nb">puts</span> <span class="s2">&quot;Press ^C was paused&quot;</span> <span class="p">}</span>
+</span><span class='line'><span class="o">=&gt;</span> <span class="c1">#&lt;Proc:0x9c08614@(irb):47&gt;</span>
+</span><span class='line'><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">04</span><span class="mi">8</span><span class="p">:</span><span class="mi">0</span><span class="o">&gt;</span> <span class="nb">trap</span> <span class="s2">&quot;SIGINT&quot;</span><span class="p">,</span> <span class="n">inthandler</span>
+</span><span class='line'><span class="o">=&gt;</span> <span class="c1">#&lt;Proc:0x9c86e24@(irb):44&gt;</span>
+</span><span class='line'><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">04</span><span class="mi">9</span><span class="p">:</span><span class="mi">0</span><span class="o">&gt;</span> <span class="no">Press</span> <span class="o">^</span><span class="n">C</span> <span class="n">was</span> <span class="n">paused</span>
+</span><span class='line'><span class="nb">exit</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>变量：通过识别标识符就能够区别变量。</li>
+</ul>
+
+
+<table>
+<thead>
+<tr>
+<th>符号   </th>
+<th align="right">   意义                        </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$      </td>
+<td align="right">   全局变量（globla variable） |</td>
+</tr>
+<tr>
+<td>@      </td>
+<td align="right">   实例变量（instance ariable）|</td>
+</tr>
+<tr>
+<td>[az]或_</td>
+<td align="right">   局部变量（local variable）  |</td>
+</tr>
+<tr>
+<td>[AZ]   </td>
+<td align="right">   常量                        |</td>
+</tr>
+</tbody>
+</table>
+
+
+<p>self 和 nil不能被初始化， 赋值。</p>
 ]]></content>
   </entry>
   
