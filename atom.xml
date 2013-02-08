@@ -4,7 +4,7 @@
   <title><![CDATA[K.I.S.S]]></title>
   <link href="http://metooit.github.com/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-02-08T22:30:54+08:00</updated>
+  <updated>2013-02-08T22:32:22+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -157,25 +157,25 @@ module 由module&#8230;end定义</p></blockquote></li>
 <thead>
 <tr>
 <th>符号   </th>
-<th align="right">   意义                        </th>
+<th align="right">   意义</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>$      </td>
-<td align="right">   全局变量（globla variable） |</td>
+<td align="right">   全局变量（globla variable）</td>
 </tr>
 <tr>
 <td>@      </td>
-<td align="right">   实例变量（instance ariable）|</td>
+<td align="right">   实例变量（instance ariable）</td>
 </tr>
 <tr>
 <td>[az]或_</td>
-<td align="right">   局部变量（local variable）  |</td>
+<td align="right">   局部变量（local variable）</td>
 </tr>
 <tr>
 <td>[AZ]   </td>
-<td align="right">   常量                        |</td>
+<td align="right">   常量</td>
 </tr>
 </tbody>
 </table>
