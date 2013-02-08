@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Programming, | K.I.S.S]]></title>
   <link href="http://metooit.github.com/blog/categories/programming-/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-02-08T22:33:45+08:00</updated>
+  <updated>2013-02-09T00:43:18+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -39,7 +39,7 @@ each_byte是字符串中处理每个字元的迭代器。</li>
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <ul>
-<li><p><code>retry</code>意思是重新开始循环， 而<code>redo</code>意思是当前循环重新做一次迭代。
+<li><code>retry</code>意思是重新开始循环， 而<code>redo</code>意思是当前循环重新做一次迭代。
 举例来说：
 <div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>retry  </span></figcaption>
  <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -58,18 +58,25 @@ each_byte是字符串中处理每个字元的迭代器。</li>
 </pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">c</span> <span class="o">=</span> <span class="mi">0</span>
 </span><span class='line'><span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="mi">0</span><span class="o">.</span><span class="n">.</span><span class="mi">4</span>
 </span><span class='line'>  <span class="nb">print</span> <span class="n">i</span>
-</span><span class='line'>  <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">2</span> <span class="ow">and</span> <span class="n">c</span> <span class="o">==</span> <span class="mi">0</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
+</span><span class='line'>  <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">2</span> <span class="ow">and</span> <span class="n">c</span> <span class="o">==</span> <span class="mi">0</span>
 </span><span class='line'>
-</span><span class='line'><span class="sr">&lt;pre&gt;&lt;code&gt;  c = 1</span>
-</span><span class='line'><span class="sr">  print &quot;\n&quot;</span>
-</span><span class='line'><span class="sr">  retry</span>
-</span><span class='line'><span class="sr">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;</span><span class="sr">/pre&gt;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span>  <span class="n">c</span> <span class="o">=</span> <span class="mi">1</span>
+</span><span class='line'>  <span class="nb">print</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
+</span><span class='line'>  <span class="k">retry</span>
+</span><span class='line'><span class="o">&lt;</span><span class="sr">/code&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
 </span><span class='line'>
-</span><span class='line'><span class="sr">&lt;p&gt;  end</span>
-</span><span class='line'><span class="sr">end</span>
-</span><span class='line'><span class="sr">print &quot;\n&quot;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'><span class="nb">print</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div>
 再试试换成<code>redo</code>呢？</p></li>
+</ul>
+
+
+<!-- more -->
+
+
+<ul>
 <li><p><code>Ruby</code>的方法可以接受参数：与传统的语言一样， 用括号扩起来， 而且在不引起歧义的情况下，可以省略括号。 有一个特别的参数叫做<code>self</code>。</p></li>
 <li><p>新建立一个类别的对象 ClassName.new</p></li>
 <li><p><code>Ruby</code>中有继承， 可以重写父类的方法， 如果要增强父类中的方法， 而不是完全替换， 可以用<code>super</code>关键字。</p></li>
@@ -178,6 +185,79 @@ module 由module...end定义</p></blockquote></li>
 
 
 <p>self 和 nil不能被初始化， 赋值。</p>
+
+<p><strong> 慎重使用全局变量， 可能引发不好纠正的错误
+</strong> 全局变量的优点是能够追踪。
+<div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>global_var  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">005</span><span class="p">:</span><span class="mi">0</span><span class="o">&gt;</span> <span class="nb">trace_var</span> <span class="p">:</span><span class="vg">$x</span><span class="p">,</span> <span class="no">Proc</span><span class="o">.</span><span class="n">new</span> <span class="p">{</span> <span class="nb">puts</span> <span class="s2">&quot;$x is now </span><span class="si">#{</span><span class="vg">$x</span><span class="si">}</span><span class="s2">&quot;</span> <span class="p">}</span>
+</span><span class='line'><span class="o">=&gt;</span> <span class="kp">nil</span>
+</span><span class='line'><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">006</span><span class="p">:</span><span class="mi">0</span><span class="o">&gt;</span> <span class="vg">$x</span> <span class="o">=</span> <span class="mi">5</span>
+</span><span class='line'><span class="vg">$x</span> <span class="n">is</span> <span class="n">now</span> <span class="mi">5</span>
+</span><span class='line'><span class="o">=&gt;</span> <span class="mi">5</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+<a href="http://guides.ruby.tw/ruby/globalvars.html">一个特别参数的表格</a></p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>instance_var  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">007</span><span class="p">:</span><span class="mi">0</span><span class="o">&gt;</span> <span class="k">class</span> <span class="nc">InstTest</span>
+</span><span class='line'><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">00</span><span class="mi">8</span><span class="p">:</span><span class="mi">1</span><span class="o">&gt;</span> <span class="k">def</span> <span class="nf">set_foo</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</span><span class='line'><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">00</span><span class="mi">9</span><span class="p">:</span><span class="mi">2</span><span class="o">&gt;</span> <span class="vi">@foo</span> <span class="o">=</span> <span class="n">n</span>
+</span><span class='line'><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">010</span><span class="p">:</span><span class="mi">2</span><span class="o">&gt;</span> <span class="k">end</span>
+</span><span class='line'><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">011</span><span class="p">:</span><span class="mi">1</span><span class="o">&gt;</span> <span class="k">def</span> <span class="nf">set_bar</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</span><span class='line'><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">012</span><span class="p">:</span><span class="mi">2</span><span class="o">&gt;</span> <span class="vi">@bar</span> <span class="o">=</span> <span class="n">n</span>
+</span><span class='line'><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">013</span><span class="p">:</span><span class="mi">2</span><span class="o">&gt;</span> <span class="k">end</span>
+</span><span class='line'><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">014</span><span class="p">:</span><span class="mi">1</span><span class="o">&gt;</span> <span class="k">end</span>
+</span><span class='line'><span class="o">=&gt;</span> <span class="kp">nil</span>
+</span><span class='line'><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">015</span><span class="p">:</span><span class="mi">0</span><span class="o">&gt;</span> <span class="n">i</span> <span class="o">=</span> <span class="no">InstTest</span><span class="o">.</span><span class="n">new</span>
+</span><span class='line'><span class="o">=&gt;</span> <span class="c1">#&amp;lt;InstTest:0x9220ad4&gt;</span>
+</span><span class='line'><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">016</span><span class="p">:</span><span class="mi">0</span><span class="o">&gt;</span> <span class="n">i</span><span class="o">.</span><span class="n">set_foo</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</span><span class='line'><span class="o">=&gt;</span> <span class="mi">2</span>
+</span><span class='line'><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">017</span><span class="p">:</span><span class="mi">0</span><span class="o">&gt;</span> <span class="n">i</span>
+</span><span class='line'><span class="o">=&gt;</span> <span class="c1">#&amp;lt;InstTest:0x9220ad4 @foo=2&gt;</span>
+</span><span class='line'><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">01</span><span class="mi">8</span><span class="p">:</span><span class="mi">0</span><span class="o">&gt;</span> <span class="n">i</span><span class="o">.</span><span class="n">set_bar</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+</span><span class='line'><span class="o">=&gt;</span> <span class="mi">4</span>
+</span><span class='line'><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">01</span><span class="mi">9</span><span class="p">:</span><span class="mi">0</span><span class="o">&gt;</span> <span class="n">i</span>
+</span><span class='line'><span class="o">=&gt;</span> <span class="c1">#&amp;lt;InstTest:0x9220ad4 @foo=2, @bar=4&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<blockquote><p>注意： 局部变量在初始化之前并没有nil值。
+局部变量作用域： Proc.new {...} lambda{...}  loop{...} def...end class...end  module...end</p></blockquote>
+
+<ul>
+<li><p>defined? 是用来检查识别符是否有定义的算子。</p></li>
+<li><p><code>rescue</code>救援， <code>fail</code>唤起一个意外， <code>ensure</code>确认。</p></li>
+<li><p><code>inspect</code>方法， 传回以合理方式描述对象的字串。to_s 转换为字符串。</p></li>
+<li><p><code>initialize</code>方法， 可以接受参数。（有一种弹性初始化的方式，就是传递参数同时赋初值）。</p></li>
+<li><p>statement delimiter ： -> <code>;</code>, 跨行用<code>\</code>.</p></li>
+<li><p>comment: <code>#</code> Or <code>=begin...=end</code></p></li>
+</ul>
+
+
+<blockquote><p>参考文献：
+<a href="http://guides.ruby.tw/ruby/index.html">Ruby使用手册</a></p></blockquote>
 ]]></content>
   </entry>
   
