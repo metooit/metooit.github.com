@@ -4,7 +4,7 @@
   <title><![CDATA[K.I.S.S]]></title>
   <link href="http://metooit.github.com/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-02-08T19:13:35+08:00</updated>
+  <updated>2013-02-08T22:10:09+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -12,6 +12,127 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Learning Ruby in Process 1]]></title>
+    <link href="http://metooit.github.com/blog/2013/02/08/learning-ruby-in-process-1/"/>
+    <updated>2013-02-08T19:26:00+08:00</updated>
+    <id>http://metooit.github.com/blog/2013/02/08/learning-ruby-in-process-1</id>
+    <content type="html"><![CDATA[<ul>
+<li>对于一个字符串中每个字元的遍历：（迭代器 -> <code>iterator</code>）</li>
+</ul>
+
+
+<figure class='code'><figcaption><span>iterator1  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="s2">&quot;abc&quot;</span><span class="o">.</span><span class="n">each_byte</span><span class="p">{</span> <span class="o">|</span><span class="n">c</span><span class="o">|</span> <span class="nb">printf</span> <span class="s2">&quot;&lt;%c&gt;&quot;</span><span class="p">,</span> <span class="n">c</span> <span class="p">};</span> <span class="nb">print</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>each_byte是字符串中处理每个字元的迭代器。</p>
+
+<p>如果是用循环语句来实现的话：</p>
+
+<figure class='code'><figcaption><span>iterator2  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">004</span><span class="p">:</span><span class="mi">0</span><span class="o">&gt;</span> <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">s</span><span class="o">.</span><span class="n">length</span>
+</span><span class='line'><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">005</span><span class="p">:</span><span class="mi">1</span><span class="o">&gt;</span> <span class="nb">printf</span> <span class="s2">&quot;&lt;%c&gt;&quot;</span><span class="p">,</span> <span class="n">s</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span> <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+</span><span class='line'><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">006</span><span class="p">:</span><span class="mi">1</span><span class="o">&gt;</span> <span class="k">end</span><span class="p">;</span> <span class="nb">print</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li><code>retry</code>意思是重新开始循环， 而<code>redo</code>意思是当前循环重新做一次迭代。
+距离来说：</li>
+</ul>
+
+
+<figure class='code'><figcaption><span>retry  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">c</span> <span class="o">=</span> <span class="mi">0</span>
+</span><span class='line'><span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="mi">0</span><span class="o">.</span><span class="n">.</span><span class="mi">4</span>
+</span><span class='line'>    <span class="nb">print</span> <span class="n">i</span>
+</span><span class='line'>    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">2</span> <span class="ow">and</span> <span class="n">c</span> <span class="o">==</span> <span class="mi">0</span>
+</span><span class='line'>        <span class="n">c</span> <span class="o">=</span> <span class="mi">1</span>
+</span><span class='line'>        <span class="nb">print</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
+</span><span class='line'>        <span class="k">retry</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'><span class="nb">print</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>再试试换成<code>redo</code>呢？</p>
+
+<ul>
+<li><p><code>Ruby</code>的方法可以接受参数：与传统的语言一样， 用括号扩起来， 而且在不引起歧义的情况下，可以省略括号。 有一个特别的参数叫做<code>self</code>。</p></li>
+<li><p>新建立一个类别的对象 ClassName.new</p></li>
+<li><p><code>Ruby</code>中有继承， 可以重写父类的方法， 如果要增强父类中的方法， 而不是完全替换， 可以用<code>super</code>关键字。</p></li>
+<li><p><code>Access Control</code>： 1. 在对象外部定义的函数不能直接由对象来调用 2. 在对象内部定义的函数不能直接被外部调用， 可以将函数变成私有的<code>private: 函数名</code>。</p></li>
+<li><p>关于module：</p>
+
+<blockquote><p>module 没有实例
+module 没有子类别
+module 由module&#8230;end定义</p></blockquote></li>
+<li><p><code>::</code>算子会向<code>module</code>查询常数的值， 如果不用这个就要 <code>include</code>。</p></li>
+<li><p><code>procedure object</code>程序对象：</p></li>
+</ul>
+
+
+<figure class='code'><figcaption><span>procedure  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">033</span><span class="p">:</span><span class="mi">0</span><span class="o">&gt;</span> <span class="n">quux</span> <span class="o">=</span> <span class="no">Proc</span><span class="o">.</span><span class="n">new</span> <span class="p">{</span>
+</span><span class='line'><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">034</span><span class="p">:</span><span class="mi">1</span><span class="o">*</span> <span class="nb">puts</span> <span class="s2">&quot;QUUXQUUX&quot;</span>
+</span><span class='line'><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">035</span><span class="p">:</span><span class="mi">1</span><span class="o">&gt;</span> <span class="p">}</span>
+</span><span class='line'><span class="o">=&gt;</span> <span class="c1">#&lt;Proc:0x9e1eee4@(irb):33&gt;</span>
+</span><span class='line'><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">036</span><span class="p">:</span><span class="mi">0</span><span class="o">&gt;</span> <span class="n">quux</span><span class="o">.</span><span class="n">call</span>
+</span><span class='line'><span class="no">QUUXQUUX</span>
+</span><span class='line'><span class="o">=&gt;</span> <span class="kp">nil</span>
+</span><span class='line'><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">037</span><span class="p">:</span><span class="mi">0</span><span class="o">&gt;</span> <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="nb">p</span><span class="p">)</span>
+</span><span class='line'><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">03</span><span class="mi">8</span><span class="p">:</span><span class="mi">1</span><span class="o">&gt;</span> <span class="nb">puts</span> <span class="s2">&quot;About to call a procedure&quot;</span>
+</span><span class='line'><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">03</span><span class="mi">9</span><span class="p">:</span><span class="mi">1</span><span class="o">&gt;</span> <span class="nb">p</span><span class="o">.</span><span class="n">call</span>
+</span><span class='line'><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">040</span><span class="p">:</span><span class="mi">1</span><span class="o">&gt;</span> <span class="nb">puts</span> <span class="s2">&quot;Procedure finished&quot;</span>
+</span><span class='line'><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">041</span><span class="p">:</span><span class="mi">1</span><span class="o">&gt;</span> <span class="k">end</span>
+</span><span class='line'><span class="o">=&gt;</span> <span class="kp">nil</span>
+</span><span class='line'><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">042</span><span class="p">:</span><span class="mi">0</span><span class="o">&gt;</span> <span class="n">run</span> <span class="n">quux</span>
+</span><span class='line'><span class="no">About</span> <span class="n">to</span> <span class="n">call</span> <span class="n">a</span> <span class="n">procedure</span>
+</span><span class='line'><span class="no">QUUXQUUX</span>
+</span><span class='line'><span class="no">Procedure</span> <span class="n">finished</span>
+</span><span class='line'><span class="o">=&gt;</span> <span class="kp">nil</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[『Python3 程序开发指南』 阅读笔记]]></title>
@@ -56,69 +177,69 @@
 <tr>
 <th></th>
 <th> 语法         </th>
-<th align="center"> 描述                                             </th>
+<th align="center"> 描述                                              </th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td></td>
 <td> x + y        </td>
-<td align="center"> 相加                                             </td>
+<td align="center"> 相加                                              |</td>
 </tr>
 <tr>
 <td></td>
 <td> x - y        </td>
-<td align="center"> 相减                                             </td>
+<td align="center"> 相减                                              |</td>
 </tr>
 <tr>
 <td></td>
 <td> x * y        </td>
-<td align="center"> 相乘                                             </td>
+<td align="center"> 相乘                                              |</td>
 </tr>
 <tr>
 <td></td>
 <td> x / y        </td>
-<td align="center"> 相除                                             </td>
+<td align="center"> 相除                                              |</td>
 </tr>
 <tr>
 <td></td>
 <td> x // y       </td>
-<td align="center"> 舍弃小数部分， 使得结果总为整数 （参见round()）  </td>
+<td align="center"> 舍弃小数部分， 使得结果总为整数 （参见round()）   |</td>
 </tr>
 <tr>
 <td></td>
 <td> x % y        </td>
-<td align="center"> 取余                                             </td>
+<td align="center"> 取余                                              |</td>
 </tr>
 <tr>
 <td></td>
 <td> x ** y       </td>
-<td align="center"> 计算x的y次幂， （参见pow()函数）                 </td>
+<td align="center"> 计算x的y次幂， （参见pow()函数）                  |</td>
 </tr>
 <tr>
 <td></td>
 <td> abs(x)       </td>
-<td align="center"> 取得绝对值                                       </td>
+<td align="center"> 取得绝对值                                        |</td>
 </tr>
 <tr>
 <td></td>
 <td> divmod(x, y) </td>
-<td align="center"> 以二元组形式返回商和余数                         </td>
+<td align="center"> 以二元组形式返回商和余数                          |</td>
 </tr>
 <tr>
 <td></td>
 <td> pow(x, y)    </td>
-<td align="center"> 同 **                                            </td>
+<td align="center"> 同 **                                             |</td>
 </tr>
 <tr>
 <td></td>
 <td> pow(x, y, z) </td>
-<td align="center"> (x ** y) % z                                     </td>
+<td align="center"> (x ** y) % z                                      |</td>
 </tr>
 <tr>
 <td></td>
 <td> round(x, n)  </td>
-<td align="center"> x 四舍五入后的n 位整数                           </td>
+<td align="center"> x 四舍五入后的n 位整数                            |</td>
 </tr>
 </tbody>
 </table>
