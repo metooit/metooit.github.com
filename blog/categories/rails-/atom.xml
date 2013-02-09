@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Rails, | K.I.S.S]]></title>
   <link href="http://metooit.github.com/blog/categories/rails-/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-02-09T10:35:15+08:00</updated>
+  <updated>2013-02-09T11:07:49+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -57,6 +57,34 @@
 <li>使用URLs来代表资源（Resourses）</li>
 </ul>
 
+
+<h2>2. 建立Rails项目：</h2>
+
+<ul>
+<li>rails new <code>项目名称</code></li>
+<li>cd <code>项目名称</code></li>
+</ul>
+
+
+<blockquote><p>注： 每个目录以及文件的作用参见<a href="http://guides.ruby.tw/rails3/getting_started.html">这里</a></p></blockquote>
+
+<ul>
+<li>安装必须的<code>gems</code>：这里是一个简单的项目，所以直接 bundle install</li>
+<li>设定数据库： 在这个目录下-> <code>config/database.yml</code></li>
+<li>建立数据库： rake db:create</li>
+</ul>
+
+
+<blockquote><p>注：<code>rake</code>是<code>Rails</code>中广泛运用的通用型命令行工具。查看所有可用的命令可以<code>rake -T</code>。</p></blockquote>
+
+<h2>3. Hello Rails</h2>
+
+<h3>3.1 启动<code>Rails</code>服务器：</h3>
+
+<p><code>rails server</code>启动<code>Mongrel</code>服务器，当然也可以用其他服务器。</p>
+
+<blockquote><p>浏览器访问 <code>http://localhost:3000</code>,可以看到rails预设的网页。
+<img src="/pictures/rails-server-start.png" width="800" height="600" title="rails-server-start rails-server-start" ></p></blockquote>
 ]]></content>
   </entry>
   
