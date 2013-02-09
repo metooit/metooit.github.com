@@ -4,7 +4,7 @@
   <title><![CDATA[K.I.S.S]]></title>
   <link href="http://metooit.github.com/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-02-09T16:19:22+08:00</updated>
+  <updated>2013-02-09T16:59:07+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -659,6 +659,10 @@ a 用于强制使用表象形式，仅限于ASCII字符。
 </span><span class='line'>==  CreatePosts: migrated (0.0019s) ===========================================</span></code></pre></td></tr></table></div></figure>
 
 
+<ul>
+<li>增加超链接： 利用官方的<code>link_to</code>方法来增加一个文章列表的超链接。
+<img src="http://metooit.github.com/pictures/link_to.png" title="link_to" ></li>
+</ul>
 
 ]]></content>
   </entry>
