@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Rails, | K.I.S.S]]></title>
   <link href="http://metooit.github.com/blog/categories/rails-/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-02-09T17:18:30+08:00</updated>
+  <updated>2013-02-09T23:30:01+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -180,6 +180,130 @@
 </span><span class='line'>&lt;p>end</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p><img src="/pictures/validation.png" title="validation" ></p>
+
+<ul>
+<li><p>使用Console: console可以在<code>terminal</code>中执行代码。
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ rails console</span></code></pre></td></tr></table></div></figure></notextile></div></p></li>
+<li><p>列出所有文章：
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>def index
+</span><span class='line'>  @posts = Post.all&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>  respond_to do |format|&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>format.html # index.html.erb
+</span><span class='line'>format.json { render json: @posts }
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p>  end
+</span><span class='line'>end</span></code></pre></td></tr></table></div></figure></notextile></div></p></li>
+</ul>
+
+
+<p>其中的<code>@posts</code>在app/views/posts/index.html中：
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;h1>Listing posts&lt;/h1>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>&lt;table>
+</span><span class='line'>  &lt;tr>
+</span><span class='line'>    &lt;th>Name&lt;/th>
+</span><span class='line'>    &lt;th>String&lt;/th>
+</span><span class='line'>    &lt;th>Title&lt;/th>
+</span><span class='line'>    &lt;th>String&lt;/th>
+</span><span class='line'>    &lt;th>Content&lt;/th>
+</span><span class='line'>    &lt;th>Text&lt;/th>
+</span><span class='line'>    &lt;th>&lt;/th>
+</span><span class='line'>    &lt;th>&lt;/th>
+</span><span class='line'>    &lt;th>&lt;/th>
+</span><span class='line'>  &lt;/tr>
+</span><span class='line'>
+</span><span class='line'>&lt;% @posts.each do |post| %>
+</span><span class='line'>  &lt;tr>
+</span><span class='line'>    &lt;td>&lt;%= post.name %>&lt;/td>
+</span><span class='line'>    &lt;td>&lt;%= post.string %>&lt;/td>
+</span><span class='line'>    &lt;td>&lt;%= post.title %>&lt;/td>
+</span><span class='line'>    &lt;td>&lt;%= post.string %>&lt;/td>
+</span><span class='line'>    &lt;td>&lt;%= post.content %>&lt;/td>
+</span><span class='line'>    &lt;td>&lt;%= post.text %>&lt;/td>
+</span><span class='line'>    &lt;td>&lt;%= link_to 'Show', post %>&lt;/td>
+</span><span class='line'>    &lt;td>&lt;%= link_to 'Edit', edit_post_path(post) %>&lt;/td>
+</span><span class='line'>    &lt;td>&lt;%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>&lt;/td>
+</span><span class='line'>  &lt;/tr>
+</span><span class='line'>&lt;% end %>
+</span><span class='line'>&lt;/table>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>&lt;br />
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>&lt;p>&lt;%= link_to 'New Post', new_post_path %></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<ul>
+<li><p>定制Layout的版型：
+<code>layouts</code>使用来包裹<code>views</code>的。app/views/layouts/application.html.erb定制输出的样式。</p></li>
+<li><p>新建文档：：
+app/views/posts/new.html.erb</p></li>
+</ul>
+
+
+<p>&lt;%= render 'form' =%>是第一次遇到<code>partials</code>。<code>partials</code>是一个HTML和Ruby的代码片段。可以在其他地方重复使用。</p>
+
+<p>表单内容在 views/posts/<em>form.html.erb</em> 档案中。</p>
 ]]></content>
   </entry>
   
