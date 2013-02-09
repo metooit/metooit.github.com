@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Rails, | K.I.S.S]]></title>
   <link href="http://metooit.github.com/blog/categories/rails-/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-02-09T13:00:41+08:00</updated>
+  <updated>2013-02-09T16:19:22+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -122,7 +122,31 @@
 </ul>
 
 
-<p><img src="/pictures/hello-rails.png" title="rails 800 600 hello-rails hello-rails" ></p>
+<p><img src="/pictures/hello-rails.png" title="hello-rails" ></p>
+
+<h2>4. 使用scaffolding快速上手：</h2>
+
+<h2>5. 建立<code>Resource</code>:</h2>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ rails generate scaffold Post name:string title:string content:text</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p><img src="/pictures/scaffold-form.png" title="scaffold-form scaffold-form" ></p>
+
+<ul>
+<li>然后执行Migration
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ rake db:migration</span></code></pre></td></tr></table></div></figure></notextile></div>
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>==  CreatePosts: migrating ====================================================
+</span><span class='line'>-- create_table(:posts)
+</span><span class='line'> -> 0.0018s
+</span><span class='line'>==  CreatePosts: migrated (0.0019s) ===========================================</span></code></pre></td></tr></table></div></figure></notextile></div></li>
+</ul>
+
 ]]></content>
   </entry>
   
