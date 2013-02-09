@@ -331,16 +331,49 @@
 </ul>
 
 
-<blockquote><p>注：<code>rake</code>是<code>Rails</code>中广泛运用的通用型命令行工具。查看所有可用的命令可以<code>rake -T</code>。</p></blockquote>
+<blockquote><p>注：<code>rake</code>是<code>Rails</code>中广泛运用的通用型命令行工具。查看所有可用的命令可以<code>rake -T</code>。</p>
+
+<p>这里要记录一个遇到的问题：
+我在创建数据库的时候遇到了一个问题：“could not find a javascript runtime”
+那么肯定是没有<code>javascript</code>的运行环境了，安装了一个<code>Node.js</code>
+安装过程参考<a href="https://github.com/joyent/node">项目主页</a></p></blockquote>
 
 <h2>3. Hello Rails</h2>
 
 <h3>3.1 启动<code>Rails</code>服务器：</h3>
 
-<p><code>rails server</code>启动<code>Mongrel</code>服务器，当然也可以用其他服务器。</p>
+<p><code>rails server</code>启动<code>Mongrel(WEBrick)</code>服务器，当然也可以用其他服务器。</p>
 
 <blockquote><p>浏览器访问 <code>http://localhost:3000</code>,可以看到rails预设的网页。
-<img src="/pictures/rails-server-start.png" width="800" height="600" title="rails-server-start rails-server-start" ></p></blockquote>
+<img src="/pictures/rails-server-start.png" width="800" height="600" title="rails-server-start rails-server-start" >
+关闭服务器的话使用<code>Ctrl-c</code>
+如果是production mode的话，修改任何档案都必须重启服务器才会有效果。</p></blockquote>
+
+<h3>3.2 Say &#8220;hello&#8221; to Rails</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ rails generate controller home index</span></code></pre></td></tr></table></div></figure>
+
+
+<p>在app/views/home/index.html.erb中加入：</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;h1>Hello Rails&lt;/h1></span></code></pre></td></tr></table></div></figure>
+
+
+<p>下面设定首页：
+* 删除预设的档案：</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ rm public/index.html</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>然后， 告诉<code>Rails</code>我真正的首页在哪里：编辑config/routes.rb。</li>
+</ul>
+
+
+<p><img src="/pictures/hello-rails.png" title="rails 800 600 hello-rails hello-rails" ></p>
 
 		
 		
