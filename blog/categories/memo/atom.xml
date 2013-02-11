@@ -4,7 +4,7 @@
   <title><![CDATA[Category: memo | K.I.S.S]]></title>
   <link href="http://metooit.github.com/blog/categories/memo/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-02-09T23:34:44+08:00</updated>
+  <updated>2013-02-12T00:05:13+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -65,6 +65,32 @@
 
 
 <hr />
+
+<h1>技巧篇：</h1>
+
+<ul>
+<li>不退出<code>vim</code>进入<code>shell</code>，使用<code>:shell</code>，工作结束后，再用命令<code>exit</code>回到<code>vim</code>。</li>
+<li>直接再<code>vim</code>中运行命令<code>:!*comand*</code>, 同时可以结合使用<code>:r</code>来将运行命令的结果插入到<code>vim</code>中。</li>
+<li>大小写转换可以用<code>shift+~</code></li>
+<li><p><code>Ctrl</code>:</p>
+
+<pre><code>  ** `Ctrl+u` 向前翻半屏
+  ** `Ctrl+d` 向后翻半屏
+  ** `Ctrl+f` 向后翻一屏
+  ** `Ctrl+b` 向前翻一屏
+  ** `Ctrl+u` 删除输入模式下输入的文本
+</code></pre></li>
+<li><p><code>nz``&lt;Enter&gt;</code>将第n行滚至屏幕顶部</p></li>
+<li><code>R</code>替换当前字符至其后的字符，一直到按下<code>&lt;ESC&gt;</code>键。</li>
+<li><code>S</code>删除指定数目的行，并以所输入的文本替代之。</li>
+<li><code>/patten</code> 向文件尾部搜索</li>
+<li><code>?patten</code> 向文件首部搜索</li>
+<li><code>N</code>反方向搜索</li>
+<li><code>s/word1/word2/g</code> 当前行中word1用word2代替</li>
+<li><code>n1,n2s/word1/word2/g</code> n1到n2的所有行中的word1用word2代替</li>
+<li><code>g/word1/s//word2/g</code> 全文替换</li>
+</ul>
+
 ]]></content>
   </entry>
   

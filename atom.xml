@@ -4,7 +4,7 @@
   <title><![CDATA[K.I.S.S]]></title>
   <link href="http://metooit.github.com/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-02-09T23:34:44+08:00</updated>
+  <updated>2013-02-12T00:05:13+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -12,6 +12,15 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Learn Algorithms : Sort --- Quick Sort]]></title>
+    <link href="http://metooit.github.com/blog/2013/02/11/learn-algorithms-sort-quick-sort/"/>
+    <updated>2013-02-11T09:52:00+08:00</updated>
+    <id>http://metooit.github.com/blog/2013/02/11/learn-algorithms-sort-quick-sort</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Happy New Year]]></title>
@@ -573,6 +582,9 @@ a 用于强制使用表象形式，仅限于ASCII字符。
 * Convention Over Configuration
 * REST</p>
 
+<!-- more -->
+
+
 <h3>1.1 MVC架构：</h3>
 
 <ul>
@@ -829,6 +841,13 @@ app/views/posts/new.html.erb</p></li>
 <p>&lt;%= render &#8216;form&#8217; =%>是第一次遇到<code>partials</code>。<code>partials</code>是一个HTML和Ruby的代码片段。可以在其他地方重复使用。</p>
 
 <p>表单内容在 views/posts/<em>form.html.erb</em> 档案中。</p>
+
+<ul>
+<li>好吧， 下面是一些功能的实现， 我需要好好静下心来看一看。</li>
+</ul>
+
+
+<p><a href="http://guides.rubyonrails.org/getting_started.html">RailsGuides English</a></p>
 ]]></content>
   </entry>
   
@@ -1260,6 +1279,32 @@ Edit files, <code>git commit -a</code>, repeat.</p>
 
 
 <hr />
+
+<h1>技巧篇：</h1>
+
+<ul>
+<li>不退出<code>vim</code>进入<code>shell</code>，使用<code>:shell</code>，工作结束后，再用命令<code>exit</code>回到<code>vim</code>。</li>
+<li>直接再<code>vim</code>中运行命令<code>:!*comand*</code>, 同时可以结合使用<code>:r</code>来将运行命令的结果插入到<code>vim</code>中。</li>
+<li>大小写转换可以用<code>shift+~</code></li>
+<li><p><code>Ctrl</code>:</p>
+
+<pre><code>  ** `Ctrl+u` 向前翻半屏
+  ** `Ctrl+d` 向后翻半屏
+  ** `Ctrl+f` 向后翻一屏
+  ** `Ctrl+b` 向前翻一屏
+  ** `Ctrl+u` 删除输入模式下输入的文本
+</code></pre></li>
+<li><p><code>nz``&lt;Enter&gt;</code>将第n行滚至屏幕顶部</p></li>
+<li><code>R</code>替换当前字符至其后的字符，一直到按下<code>&lt;ESC&gt;</code>键。</li>
+<li><code>S</code>删除指定数目的行，并以所输入的文本替代之。</li>
+<li><code>/patten</code> 向文件尾部搜索</li>
+<li><code>?patten</code> 向文件首部搜索</li>
+<li><code>N</code>反方向搜索</li>
+<li><code>s/word1/word2/g</code> 当前行中word1用word2代替</li>
+<li><code>n1,n2s/word1/word2/g</code> n1到n2的所有行中的word1用word2代替</li>
+<li><code>g/word1/s//word2/g</code> 全文替换</li>
+</ul>
+
 ]]></content>
   </entry>
   
