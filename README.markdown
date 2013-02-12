@@ -6,6 +6,8 @@
 
 It is based on [Octopress](http://octopress.org). I like Octopress! It is really awesome! To write blog in the hacker way.
 
+{% img /pictures/background.jpg  %}
+
 ---
 
 This blog is used to:
