@@ -4,7 +4,7 @@
   <title><![CDATA[K.I.S.S]]></title>
   <link href="http://metooit.github.com/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-02-12T10:22:23+08:00</updated>
+  <updated>2013-02-12T10:24:39+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -118,10 +118,34 @@
 </ul>
 
 
-<p>| 小于x的部分   | 大于x的部分   | 无限制    | 主元x   |
-| &#8212;&#8212;&#8212;&#8212;- | ：&#8212;&#8212;&#8212;&#8211; | ：&#8212;&#8212;  | ：&#8212;&#8211; |
-| <code>X``X``X``X</code>  | <code>X``X``X``X</code>  | <code>X``X``X</code> | <code>X</code>     |
-| <code>p</code>      <code>i</code>  |               | <code>j</code>       | <code>r</code>     |</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th> 小于x的部分    </th>
+<th align="left"> 大于x的部分    </th>
+<th align="left"> 无限制      </th>
+<th align="left"> 主元x   </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td> <code>X``X``X``X</code>   </td>
+<td align="left"> <code>X``X``X``X</code>   </td>
+<td align="left"> <code>X``X``X</code>   </td>
+<td align="left"> <code>X</code>     |</td>
+</tr>
+<tr>
+<td></td>
+<td> <code>p</code>      <code>i</code>   </td>
+<td align="left">                </td>
+<td align="left"> <code>j</code>         </td>
+<td align="left"> <code>r</code>     |</td>
+</tr>
+</tbody>
+</table>
+
 
 <blockquote><p>3 ~ 6 行的循环对人以数组下标 <code>k</code>：会按照 <code>k</code> 与 <code>p</code> <code>i</code> <code>j</code> <code>r</code> 的关系将其放在对应的位置。</p></blockquote>
 ]]></content>
