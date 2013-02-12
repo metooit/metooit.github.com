@@ -250,14 +250,14 @@
 <td> <code>X  X  X  X</code>   </td>
 <td align="left"> <code>X  X  X  X</code>   </td>
 <td align="left"> <code>X  X  X</code>   </td>
-<td align="left"> <code>X</code>     |</td>
+<td align="left"> <code>X</code></td>
 </tr>
 <tr>
 <td></td>
-<td> <code>p        i</code>   </td>
-<td align="left">                </td>
-<td align="left"> <code>j</code>         </td>
-<td align="left"> <code>r</code>     |</td>
+<td> <code>p--------i</code>   </td>
+<td align="left"> <code>----------</code>   </td>
+<td align="left"> <code>j------</code>   </td>
+<td align="left"> <code>r</code></td>
 </tr>
 </tbody>
 </table>
@@ -276,6 +276,111 @@
 <p><img src="/pictures/quick-sort-demo.jpg" title="quick-sort-demo" ></p>
 
 <hr />
+
+<h3>快速排序算法的实现：</h3>
+
+<h4>C 语言实现：</h4>
+
+<ul>
+<li>第一步： 先要实现算法的核心部分， PARTITION 过程的实现：</li>
+</ul>
+
+
+<figure class='code'><figcaption><span>quick-sort  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class='c'><span class='line'><span class="kt">int</span> <span class="nf">partition</span><span class="p">(</span><span class="kt">int</span> <span class="n">array</span><span class="p">[],</span> <span class="kt">int</span> <span class="n">left</span><span class="p">,</span> <span class="kt">int</span> <span class="n">right</span><span class="p">,</span> <span class="kt">int</span> <span class="n">pivot_index</span><span class="p">)</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="kt">int</span> <span class="n">pivot_value</span> <span class="o">=</span> <span class="n">array</span><span class="p">[</span><span class="n">pivot_index</span><span class="p">];</span>
+</span><span class='line'>    <span class="kt">int</span> <span class="n">store_index</span> <span class="o">=</span> <span class="n">left</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+</span><span class='line'>    <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="n">left</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">right</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+</span><span class='line'>        <span class="k">if</span> <span class="p">(</span><span class="n">array</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">pivot_value</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>            <span class="n">store_index</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+</span><span class='line'>            <span class="n">swap</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">store_index</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>    <span class="n">swap</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">store_index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">right</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">return</span> <span class="n">store_index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>依照算法导论上的伪代码可以写出上述的代码，该过程主要实现了传入的数组对应标号的分治过程。通过分治过程可以把数组<code>array</code>中从<code>left</code>到<code>right</code>的
+元素以<code>pivot_index</code>为标号的元素为基准分成两部分。</p>
+
+<ul>
+<li>第二步： 实现QUICKSORT的主过程：</li>
+</ul>
+
+
+<figure class='code'><figcaption><span>quick-sort-2  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='c'><span class='line'><span class="kt">void</span> <span class="nf">quicksort</span><span class="p">(</span><span class="kt">int</span> <span class="n">array</span><span class="p">[],</span> <span class="kt">int</span> <span class="n">left</span><span class="p">,</span> <span class="kt">int</span> <span class="n">right</span><span class="p">)</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="kt">int</span> <span class="n">pivot_index</span> <span class="o">=</span> <span class="n">right</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="n">left</span> <span class="o">&lt;</span> <span class="n">right</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="n">pivot_index</span> <span class="o">=</span> <span class="n">partition</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">,</span> <span class="n">pivot_index</span><span class="p">);</span>
+</span><span class='line'>        <span class="n">quicksort</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">left</span><span class="p">,</span> <span class="n">pivot_index</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
+</span><span class='line'>        <span class="n">quicksort</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">pivot_index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">right</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>同样是依照算法导论上的实现过程， 我们可以实现快速排序的算法， 其中用到了递归调用， 通过递归调用把数组的每一部分排好序。 注意：由于是原址排
+序， 我们就不用再分配新的存储空间，直接在原数组上排序即可。</p>
+
+<ul>
+<li>第三步： 细节问题：</li>
+</ul>
+
+
+<figure class='code'><figcaption><span>swap  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='c'><span class='line'><span class="kt">void</span> <span class="nf">swap</span><span class="p">(</span><span class="kt">int</span> <span class="n">array</span><span class="p">[],</span> <span class="kt">int</span> <span class="n">left</span><span class="p">,</span> <span class="kt">int</span> <span class="n">right</span><span class="p">)</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="kt">int</span> <span class="n">temp</span><span class="p">;</span>
+</span><span class='line'>    <span class="n">temp</span> <span class="o">=</span> <span class="n">array</span><span class="p">[</span><span class="n">left</span><span class="p">];</span>
+</span><span class='line'>    <span class="n">array</span><span class="p">[</span><span class="n">left</span><span class="p">]</span> <span class="o">=</span> <span class="n">array</span><span class="p">[</span><span class="n">right</span><span class="p">];</span>
+</span><span class='line'>    <span class="n">array</span><span class="p">[</span><span class="n">right</span><span class="p">]</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>这个程序就很简单了， 实现了数组元素的互换。</p>
+
+<p><img src="/pictures/quick-sort-test.png" title="quick-sort-test" ></p>
 
 		
 		
