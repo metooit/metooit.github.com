@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Learn | K.I.S.S]]></title>
   <link href="http://metooit.github.com/blog/categories/learn/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-02-12T00:05:13+08:00</updated>
+  <updated>2013-02-12T10:05:29+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -18,7 +18,98 @@
     <link href="http://metooit.github.com/blog/2013/02/11/learn-algorithms-sort-quick-sort/"/>
     <updated>2013-02-11T09:52:00+08:00</updated>
     <id>http://metooit.github.com/blog/2013/02/11/learn-algorithms-sort-quick-sort</id>
-    <content type="html"><![CDATA[
+    <content type="html"><![CDATA[<p>前面提到过要系统地学习一下算法， 今天就先从一个排序算法开始。<em>快速排序</em></p>
+
+<hr />
+
+<h3>快速排序基本性能分析：</h3>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th> 最坏情况时间复杂度    </th>
+<th align="left"> 期望时间复杂度   </th>
+<th align="left"> 空间复杂度   </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td> O(n<sup>2)</sup>                </td>
+<td align="left"> O(nlgn)          </td>
+<td align="left"> O(nlgn)      |</td>
+</tr>
+</tbody>
+</table>
+
+
+<ul>
+<li>特点：
+
+<blockquote><ol>
+<li>虽然最坏情况的时间复杂度很差， 但是快速排序通常是实际排序中应用最好的选择， 因为它的平均性能比较好。</li>
+<li>它能进行<em>原址排序</em>。</li>
+<li>快速排序使用了<em>分治思想</em>。</li>
+</ol>
+</blockquote></li>
+</ul>
+
+
+<h3>快速排序的描述：</h3>
+
+<ul>
+<li><p>快速排序分为三个部分： 分解==>解决==>合并</p></li>
+<li><p>问题的前提： 对一个典型的数组 A[p..r] 进行排序。</p></li>
+<li><p>排序过程：</p>
+
+<blockquote><ol>
+<li>分解： 将数组 A[p..r] 划分为两个数组 A[p..q-1] 和 A[q+1..r]， 使得 A[p..q-1] 中的每一个元素都小于等于 A[q]， 而 A[q+1..r] 中的每一个元
+素都大于A[q].</li>
+<li>解决： 递归调用快速排序， 对两个子数组进行排序。</li>
+<li>合并： 以为子数组都是原址排序的，  所以不需要合并操作： 数组 A[p..r] 已经有序。</li>
+</ol>
+</blockquote></li>
+</ul>
+
+
+<h3>快速排序伪代码实现：</h3>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>QUICKSORT(A, p, r)
+</span><span class='line'>1 if p &lt; r
+</span><span class='line'>2       q = PARTITION(A, p, r)
+</span><span class='line'>3       QUICKSORT(A, p, q - 1)
+</span><span class='line'>4       QUICKSORT(A, q + 1, r)</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<ul>
+<li><p>为了排序一个数组的全部， 初始调用的是 QUICKSORT(A, 1, A.length)。</p></li>
+<li><p>算法的关键部分是 <em>PARTITION</em> 过程， 它实现了对子数组 A[p...r] 的原址重排。</p></li>
+</ul>
+
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>PARTITION(A, p, r)
+</span><span class='line'>1  x = A[r]
+</span><span class='line'>2  i = p - 1
+</span><span class='line'>3  for j = p to r - 1
+</span><span class='line'>4       do if A[j] &lt;= x
+</span><span class='line'>5             then i = i + 1
+</span><span class='line'>6                  exchange A[i] with A[j]
+</span><span class='line'>7  exchange A[i + 1] with A[r]
+</span><span class='line'>8  return i + 1</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 ]]></content>
   </entry>
   
