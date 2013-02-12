@@ -4,7 +4,7 @@
   <title><![CDATA[K.I.S.S]]></title>
   <link href="http://metooit.github.com/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-02-12T16:50:06+08:00</updated>
+  <updated>2013-02-12T16:55:53+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -1667,6 +1667,9 @@ Edit files, <code>git commit -a</code>, repeat.</p>
 
 
 <p>偶然间发现了<code>github</code>上的一个项目叫做<a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">markdown-here</a>写得很简洁，以后可以打印一份来参考，这里呢，为了练习一下<code>Markdown</code>的语法，我就不复制粘贴了，直接在这里打一份好了。就当是<code>Markdown</code>的练习了。</p>
+
+<p>Tue Feb 12 16:54:10 CST 2013
+好吧， 我打上这个时间是想说： 今天我又发现了一个<code>Markdown-Cheatsheet</code>, <a href="http://daringfireball.net/projects/markdown/syntax">here is the</a></p>
 
 <h1>Headers</h1>
 
