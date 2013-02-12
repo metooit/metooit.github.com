@@ -4,7 +4,7 @@
   <title><![CDATA[K.I.S.S]]></title>
   <link href="http://metooit.github.com/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-02-12T10:32:16+08:00</updated>
+  <updated>2013-02-12T10:33:58+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -151,11 +151,13 @@
 
 <ul>
 <li><p>快速排序算法的正确性证明参见算法导论（第三版） 96页。</p></li>
-<li><p>一个例子：
-对<code>2 8 7 1 3 5 6 4</code> 数组进行排序
-<img src="http://metooit.github.com/pictures/quick-sort-demo.jpg" title="quick-sort-demo" ></p></li>
+<li><p>一个例子：</p></li>
 </ul>
 
+
+<p>对<code>2 8 7 1 3 5 6 4</code> 数组进行排序</p>
+
+<p><img src="http://metooit.github.com/pictures/quick-sort-demo.jpg" title="quick-sort-demo" ></p>
 
 <hr />
 ]]></content>
