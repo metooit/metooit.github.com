@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Sort, | K.I.S.S]]></title>
   <link href="http://metooit.github.com/blog/categories/sort-/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-02-12T16:28:24+08:00</updated>
+  <updated>2013-02-12T16:40:05+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -314,6 +314,12 @@
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p><img src="/pictures/quick-sort-python.png" title="quick-sort-python" ></p>
+
+<p>进一步对python版本进行测试：</p>
+
+<p><img src="/pictures/quick-sort-python2.png" title="quick-sort-python2" ></p>
+
+<p>看来还是python 要简洁不少啊！感慨一下～</p>
 ]]></content>
   </entry>
   
