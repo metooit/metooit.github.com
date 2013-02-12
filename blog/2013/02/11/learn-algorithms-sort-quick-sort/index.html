@@ -203,13 +203,14 @@
 
 
 <ul>
-<li><code>PARTITION</code>过程总是选择一个 x=A[r] 作为主元， 并围绕它来进行子数组的划分 A[p..r]， 随着程序的进行， 数组可能被划分为四个区域。
-| 小于x的部分   | 大于x的部分   | 无限制    | 主元x   |
-| &#8212;&#8212;&#8212;&#8212;- | ：&#8212;&#8212;&#8212;&#8211; | ：&#8212;&#8212;  | ：&#8212;&#8211; |
-| <code>X``X``X``X</code>  | <code>X``X``X``X</code>  | <code>X``X``X</code> | <code>X</code>     |
-| <code>p</code>      <code>i</code>  |               | <code>j</code>       | <code>r</code>     |</li>
+<li><code>PARTITION</code>过程总是选择一个 x=A[r] 作为主元， 并围绕它来进行子数组的划分 A[p..r]， 随着程序的进行， 数组可能被划分为四个区域。</li>
 </ul>
 
+
+<p>| 小于x的部分   | 大于x的部分   | 无限制    | 主元x   |
+| &#8212;&#8212;&#8212;&#8212;- | ：&#8212;&#8212;&#8212;&#8211; | ：&#8212;&#8212;  | ：&#8212;&#8211; |
+| <code>X``X``X``X</code>  | <code>X``X``X``X</code>  | <code>X``X``X</code> | <code>X</code>     |
+| <code>p</code>      <code>i</code>  |               | <code>j</code>       | <code>r</code>     |</p>
 
 <blockquote><p>3 ~ 6 行的循环对人以数组下标 <code>k</code>：会按照 <code>k</code> 与 <code>p</code> <code>i</code> <code>j</code> <code>r</code> 的关系将其放在对应的位置。</p></blockquote>
 </div>
