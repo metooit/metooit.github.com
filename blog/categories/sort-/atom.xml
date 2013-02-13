@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Sort, | K.I.S.S]]></title>
   <link href="http://metooit.github.com/blog/categories/sort-/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-02-13T11:29:51+08:00</updated>
+  <updated>2013-02-13T11:33:51+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -227,7 +227,7 @@
 </span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="p">}</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
-<p><a href="/pictures/insertion_sort.png">!Insertion_sort</a></p>
+<p><img src="/pictures/insertion_sort.png" title="Insertion_sort" ></p>
 
 <hr />
 

@@ -4,7 +4,7 @@
   <title><![CDATA[K.I.S.S]]></title>
   <link href="http://metooit.github.com/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-02-13T11:29:51+08:00</updated>
+  <updated>2013-02-13T11:33:51+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -216,7 +216,7 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p><a href="http://metooit.github.com/pictures/insertion_sort.png">!Insertion_sort</a></p>
+<p><img src="http://metooit.github.com/pictures/insertion_sort.png" title="Insertion_sort" ></p>
 
 <hr />
 
