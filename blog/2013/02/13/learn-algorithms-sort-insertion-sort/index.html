@@ -3,11 +3,12 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Blog Archives - K.I.S.S</title>
+	<title>Learn Algorithms : Sort --- Insertion Sort - K.I.S.S</title>
 	<meta name="author" content="metooit">
 
 	
-	<meta name="description" content="2013 Feb 13 Algorithms,, Learn, Sort, Learn Algorithms : Sort &#8212; Merge Sort Feb 13 Algorithms,, Learn, Sort, Learn Algorithms : Sort &#8212; &hellip;">
+	<meta name="description" content="今天认真地把《算法导论》上其他的排序算法整理一下， 当然从最开始介绍的 插入排序 开始了。 插入排序基本性能分析： 最坏情况时间复杂度 期望时间复杂度 空间复杂度 O(n2) O(n2) 插入排序的特点： 对于少量的元素， 它是一个非常有效的算法。
+该算法原址排序输入的数： &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -17,7 +18,7 @@
 
 	<link href="/atom.xml" rel="alternate" title="K.I.S.S" type="application/atom+xml">
 	
-	<link rel="canonical" href="http://metooit.github.com/blog/archives/">
+	<link rel="canonical" href="http://metooit.github.com/blog/2013/02/13/learn-algorithms-sort-insertion-sort/">
 	<link href="/favicon.png" rel="shortcut icon">
 	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
 	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
@@ -105,352 +106,141 @@
 
 			
 			<div class="mid-col-container">
-				<div id="content" class="inner">
-	
+				<div id="content" class="inner"><article class="post">
+	<h1 class="title">Learn Algorithms : Sort --- Insertion Sort</h1>
+	<div class="entry-content"><p>今天认真地把《算法导论》上其他的排序算法整理一下， 当然从最开始介绍的 <em>插入排序</em> 开始了。</p>
+
+<hr />
+
+<h3>插入排序基本性能分析：</h3>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th> 最坏情况时间复杂度    </th>
+<th align="left"> 期望时间复杂度   </th>
+<th align="left"> 空间复杂度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td> O(n<sup>2)</sup>                </td>
+<td align="left"> O(n<sup>2)</sup>           </td>
+<td></td>
+</tr>
+</tbody>
+</table>
 
 
-	
-	
-	<section class="archives"><h1 class="year">2013</h1>
+<ul>
+<li>插入排序的特点：
 
-<article>
-	<div class="meta">
-		<span class="date">Feb 13</span>
-		<br>
-		<span class="tags">
-
-
-	<a class='category' href='/blog/categories/algorithms-/'>Algorithms,</a>, <a class='category' href='/blog/categories/learn/'>Learn</a>, <a class='category' href='/blog/categories/sort-/'>Sort,</a>
+<blockquote><ol>
+<li>对于少量的元素， 它是一个非常有效的算法。</li>
+<li>该算法原址排序输入的数： 算法在数组A中重排这些数， 在任何时候， 最多只有常数个数字存储在数组外面。</li>
+</ol>
+</blockquote></li>
+</ul>
 
 
-</span>
-	    
-	</div>
-	<h1 class="title"><a href="/blog/2013/02/13/learn-algorithms-sort-mergesort/">Learn Algorithms : Sort &#8212; Merge Sort</a></h1>
+<!-- more -->
+
+
+<h3>插入排序的伪代码实现：</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>INSERTION-SORT(A)
+</span><span class='line'>1   for j = 2 to A.length
+</span><span class='line'>2       key = A[j]
+</span><span class='line'>3       // Insert A[j] into the  sorted sequence A[1..j-1]
+</span><span class='line'>4       i = j - 1
+</span><span class='line'>5       while i > 0 and A[i] > key
+</span><span class='line'>6           A[i + 1] = A[i]
+</span><span class='line'>7           i = i - 1
+</span><span class='line'>8       A[i + 1] = key</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>插入排序的C语言实现：</h3>
+
+<figure class='code'><figcaption><span>insertion_sort    insertion_sort </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='c'><span class='line'><span class="kt">void</span> <span class="nf">insertion_sort</span><span class="p">(</span><span class="kt">int</span> <span class="n">array</span><span class="p">[],</span> <span class="kt">int</span> <span class="n">length</span><span class="p">)</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="kt">int</span> <span class="n">store_index</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">for</span><span class="p">(</span><span class="n">store_index</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">store_index</span> <span class="o">&lt;</span> <span class="n">length</span><span class="p">;</span> <span class="o">++</span><span class="n">store_index</span><span class="p">)</span>
+</span><span class='line'>    <span class="p">{</span>
+</span><span class='line'>        <span class="kt">int</span> <span class="n">store_key</span> <span class="o">=</span> <span class="n">array</span><span class="p">[</span><span class="n">store_index</span><span class="p">];</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="kt">int</span> <span class="n">sort_index</span> <span class="o">=</span> <span class="n">store_index</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+</span><span class='line'>        <span class="k">while</span> <span class="p">(</span><span class="n">sort_index</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="n">array</span><span class="p">[</span><span class="n">sort_index</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">store_key</span><span class="p">)</span>
+</span><span class='line'>        <span class="p">{</span>
+</span><span class='line'>            <span class="n">array</span><span class="p">[</span><span class="n">sort_index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">array</span><span class="p">[</span><span class="n">sort_index</span><span class="p">];</span>
+</span><span class='line'>            <span class="n">sort_index</span> <span class="o">=</span> <span class="n">sort_index</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>        <span class="n">array</span><span class="p">[</span><span class="n">sort_index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">store_key</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><a href="/pictures/insertion_sort.png">!Insertion_sort</a></p>
+
+<hr />
+
+<ul>
+<li>后记： 虽然这些东西的实现过程相对简单， 文章也没有什么分量， 但是将这些点滴总结在一起也是一个学习的过程吧， 所以要坚持下去～～</li>
+</ul>
+
+</div>
+
 </article>
 
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
 	
-
-
-<article>
-	<div class="meta">
-		<span class="date">Feb 13</span>
-		<br>
-		<span class="tags">
-
-
-	<a class='category' href='/blog/categories/algorithms-/'>Algorithms,</a>, <a class='category' href='/blog/categories/learn/'>Learn</a>, <a class='category' href='/blog/categories/sort-/'>Sort,</a>
-
-
-</span>
-	    
-	</div>
-	<h1 class="title"><a href="/blog/2013/02/13/learn-algorithms-sort-insertion-sort/">Learn Algorithms : Sort &#8212; Insertion Sort</a></h1>
-</article>
-
 	
-
-
-<article>
-	<div class="meta">
-		<span class="date">Feb 11</span>
-		<br>
-		<span class="tags">
-
-
-	<a class='category' href='/blog/categories/algorithms-/'>Algorithms,</a>, <a class='category' href='/blog/categories/learn/'>Learn</a>, <a class='category' href='/blog/categories/sort-/'>Sort,</a>
-
-
-</span>
-	    
-	</div>
-	<h1 class="title"><a href="/blog/2013/02/11/learn-algorithms-sort-quick-sort/">Learn Algorithms : Sort &#8212; Quick Sort</a></h1>
-</article>
-
+	<a class="addthis_button_tweet"></a>
 	
-
-
-<article>
-	<div class="meta">
-		<span class="date">Feb  9</span>
-		<br>
-		<span class="tags">
-
-
-	<a class='category' href='/blog/categories/life/'>Life</a>
-
-
-</span>
-	    
-	</div>
-	<h1 class="title"><a href="/blog/2013/02/09/happy-new-year/">Happy New Year</a></h1>
-</article>
-
 	
-
-
-<article>
-	<div class="meta">
-		<span class="date">Feb  8</span>
-		<br>
-		<span class="tags">
-
-
-	<a class='category' href='/blog/categories/programming-/'>Programming,</a>, <a class='category' href='/blog/categories/ruby-/'>Ruby,</a>, <a class='category' href='/blog/categories/learn/'>learn</a>
-
-
-</span>
-	    
-	</div>
-	<h1 class="title"><a href="/blog/2013/02/08/learning-ruby-in-process-1/">Learning Ruby in Process 1</a></h1>
-</article>
-
+	<a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
 	
-
-
-<article>
-	<div class="meta">
-		<span class="date">Feb  8</span>
-		<br>
-		<span class="tags">
-
-
-	<a class='category' href='/blog/categories/note/'>Note</a>, <a class='category' href='/blog/categories/python-/'>Python,</a>
-
-
-</span>
-	    
+	<a class="addthis_counter addthis_pill_style"></a>
 	</div>
-	<h1 class="title"><a href="/blog/2013/02/08/notes-for-programming-in-python-3/">『Python3 程序开发指南』 阅读笔记</a></h1>
-</article>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
 
-	
 
 
-<article>
-	<div class="meta">
-		<span class="date">Feb  8</span>
-		<br>
-		<span class="tags">
-
-
-	<a class='category' href='/blog/categories/note/'>Note</a>, <a class='category' href='/blog/categories/rails-/'>Rails,</a>, <a class='category' href='/blog/categories/ruby-/'>Ruby,</a>
-
-
-</span>
-	    
-	</div>
-	<h1 class="title"><a href="/blog/2013/02/08/notes-for-reading-the-railsguides/">RailsGuides 阅读笔记</a></h1>
-</article>
-
-	
-
-
-<article>
-	<div class="meta">
-		<span class="date">Feb  7</span>
-		<br>
-		<span class="tags">
-
-
-	<a class='category' href='/blog/categories/algorithms-/'>Algorithms,</a>, <a class='category' href='/blog/categories/programming/'>Programming</a>
-
-
-</span>
-	    
-	</div>
-	<h1 class="title"><a href="/blog/2013/02/07/something-i-want-to-write-about-algorithms/">想对算法做点什么</a></h1>
-</article>
-
-	
-
-
-<article>
-	<div class="meta">
-		<span class="date">Feb  7</span>
-		<br>
-		<span class="tags">
-
-
-	<a class='category' href='/blog/categories/programming/'>programming</a>
-
-
-</span>
-	    
-	</div>
-	<h1 class="title"><a href="/blog/2013/02/07/what-is-functional-programming/">What is functional programming?</a></h1>
-</article>
-
-	
-
-
-<article>
-	<div class="meta">
-		<span class="date">Feb  7</span>
-		<br>
-		<span class="tags">
-
-
-	<a class='category' href='/blog/categories/learn-/'>Learn,</a>, <a class='category' href='/blog/categories/programming/'>Programming</a>, <a class='category' href='/blog/categories/ruby-/'>Ruby,</a>
-
-
-</span>
-	    
-	</div>
-	<h1 class="title"><a href="/blog/2013/02/07/continue-learning-ruby/">继续学习Ruby</a></h1>
-</article>
-
-	
-
-
-<article>
-	<div class="meta">
-		<span class="date">Feb  6</span>
-		<br>
-		<span class="tags">
-
-
-	<a class='category' href='/blog/categories/programming-/'>Programming,</a>, <a class='category' href='/blog/categories/ruby-/'>Ruby,</a>, <a class='category' href='/blog/categories/learn/'>learn</a>
-
-
-</span>
-	    
-	</div>
-	<h1 class="title"><a href="/blog/2013/02/06/get-to-know-ruby/">Get to know Ruby</a></h1>
-</article>
-
-	
-
-
-<article>
-	<div class="meta">
-		<span class="date">Feb  5</span>
-		<br>
-		<span class="tags">
-
-
-	<a class='category' href='/blog/categories/git/'>git</a>, <a class='category' href='/blog/categories/github/'>github</a>, <a class='category' href='/blog/categories/learn/'>learn</a>
-
-
-</span>
-	    
-	</div>
-	<h1 class="title"><a href="/blog/2013/02/05/dive-into-git/">继续学习 Git</a></h1>
-</article>
-
-	
-
-
-<article>
-	<div class="meta">
-		<span class="date">Feb  4</span>
-		<br>
-		<span class="tags">
-
-
-	<a class='category' href='/blog/categories/git/'>git</a>, <a class='category' href='/blog/categories/github/'>github</a>, <a class='category' href='/blog/categories/learn/'>learn</a>
-
-
-</span>
-	    
-	</div>
-	<h1 class="title"><a href="/blog/2013/02/04/learning-git/">学习 Git</a></h1>
-</article>
-
-	
-
-
-<article>
-	<div class="meta">
-		<span class="date">Feb  1</span>
-		<br>
-		<span class="tags">
-
-
-	<a class='category' href='/blog/categories/memo/'>memo</a>, <a class='category' href='/blog/categories/vim/'>vim</a>
-
-
-</span>
-	    
-	</div>
-	<h1 class="title"><a href="/blog/2013/02/01/vim-tips-to-remember/">Vim 快捷键备忘</a></h1>
-</article>
-
-	
-
-
-<article>
-	<div class="meta">
-		<span class="date">Feb  1</span>
-		<br>
-		<span class="tags">
-
-
-	<a class='category' href='/blog/categories/markdown/'>Markdown</a>, <a class='category' href='/blog/categories/github/'>github</a>
-
-
-</span>
-	    
-	</div>
-	<h1 class="title"><a href="/blog/2013/02/01/markdown-cheat-sheet/">Markdown Cheat Sheet</a></h1>
-</article>
-
-	
-
-
-<article>
-	<div class="meta">
-		<span class="date">Jan 31</span>
-		<br>
-		<span class="tags">
-
-
-	<a class='category' href='/blog/categories/diary/'>diary</a>, <a class='category' href='/blog/categories/summary/'>summary</a>
-
-
-</span>
-	    
-	</div>
-	<h1 class="title"><a href="/blog/2013/01/31/summary-for-year-2012/">2012个人总结</a></h1>
-</article>
-
-	
-
-
-<article>
-	<div class="meta">
-		<span class="date">Jan 31</span>
-		<br>
-		<span class="tags">
-
-
-	<a class='category' href='/blog/categories/code/'>code</a>
-
-
-</span>
-	    
-	</div>
-	<h1 class="title"><a href="/blog/2013/01/31/codeblock/">Codeblock Test</a></h1>
-</article>
-
-	
-
-
-<article>
-	<div class="meta">
-		<span class="date">Jan 30</span>
-		<br>
-		<span class="tags">
-
-
-	<a class='category' href='/blog/categories/diary/'>diary</a>
-
-
-</span>
-	    
-	</div>
-	<h1 class="title"><a href="/blog/2013/01/30/hello-world/">Hello World!</a></h1>
-</article>
+<section id="comment">
+    <h1 class="title">Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</section>
 </div>
 			</div>
 			<footer id="footer" class="inner">Copyright &copy; 2013
@@ -474,7 +264,10 @@ Powered by <a href="http://octopress.org/">Octopress</a>
       var disqus_shortname = 'metooit';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://metooit.github.com/blog/2013/02/13/learn-algorithms-sort-insertion-sort/';
+        var disqus_url = 'http://metooit.github.com/blog/2013/02/13/learn-algorithms-sort-insertion-sort/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
