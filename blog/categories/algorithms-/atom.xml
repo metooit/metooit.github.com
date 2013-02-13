@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Algorithms, | K.I.S.S]]></title>
   <link href="http://metooit.github.com/blog/categories/algorithms-/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-02-13T11:26:04+08:00</updated>
+  <updated>2013-02-13T11:28:38+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -35,9 +35,9 @@
 <h5>分治模式在每一层的递归时都有三个步骤：</h5>
 
 <ul>
-<li><h2>分解##原问题为若干子问题</h2></li>
-<li><h2>解决##这些子问题， 递归地求解各个子问题。</h2></li>
-<li><h2>合并##这些子问题的解为原问题的解。</h2></li>
+<li><h2>分解  原问题为若干子问题</h2></li>
+<li><h2>解决  这些子问题， 递归地求解各个子问题。</h2></li>
+<li><h2>合并  这些子问题的解为原问题的解。</h2></li>
 </ul>
 
 
