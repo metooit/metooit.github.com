@@ -237,15 +237,132 @@
 </span><span class='line'>17          j = j + 1</span></code></pre></td></tr></table></div></figure>
 
 
+<p>归并排序的主程序：</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>MERGE_SORT(A, p, r)
+</span><span class='line'>1   if p &lt; r
+</span><span class='line'>2       q = [(p + r) / 2]
+</span><span class='line'>3       MERGE_SORT(A, p, q)
+</span><span class='line'>4       MERGE_SORT(A, q+1, r)
+</span><span class='line'>5       MERGE(A, p, q, r)</span></code></pre></td></tr></table></div></figure>
+
+
 <h3>归并排序的C语言实现：</h3>
+
+<p>首先， 实现算法的核心部分：也就是合并数组的过程， 这个过程实现如下：</p>
 
 <figure class='code'><figcaption><span>insertion_sort    insertion_sort </span></figcaption>
  <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='c'><span class='line'>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+</pre></td><td class='code'><pre><code class='c'><span class='line'><span class="cm">/*</span>
+</span><span class='line'><span class="cm"> * method: merge_arrays</span>
+</span><span class='line'><span class="cm"> * dercription : 将传入的两个子数组 sub_array_a 和 sub_array_b 合并， 并将结果存入到结果数组 result_array 中。</span>
+</span><span class='line'><span class="cm"> * 其中的传入的另外两个参数分别表示两部分数组的大小。</span>
+</span><span class='line'><span class="cm"> */</span>
+</span><span class='line'><span class="k">static</span> <span class="kt">void</span> <span class="nf">merge_arrays</span><span class="p">(</span><span class="kt">int</span> <span class="n">sub_array_a</span><span class="p">[],</span> <span class="kt">int</span> <span class="n">sub_array_b</span><span class="p">[],</span> <span class="kt">int</span> <span class="n">result_array</span><span class="p">[],</span> <span class="kt">int</span> <span class="n">array_a_size</span><span class="p">,</span> <span class="kt">int</span> <span class="n">array_b_size</span><span class="p">)</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="kt">int</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">k</span><span class="p">;</span>
+</span><span class='line'>    <span class="n">i</span> <span class="o">=</span> <span class="n">j</span> <span class="o">=</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">while</span><span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">array_a_size</span> <span class="o">&amp;&amp;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">array_b_size</span><span class="p">)</span>
+</span><span class='line'>    <span class="p">{</span>
+</span><span class='line'>        <span class="k">if</span><span class="p">(</span><span class="n">sub_array_a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">sub_array_b</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
+</span><span class='line'>            <span class="n">result_array</span><span class="p">[</span><span class="n">k</span><span class="o">++</span><span class="p">]</span> <span class="o">=</span> <span class="n">sub_array_a</span><span class="p">[</span><span class="n">i</span><span class="o">++</span><span class="p">];</span>
+</span><span class='line'>        <span class="k">else</span>
+</span><span class='line'>            <span class="n">result_array</span><span class="p">[</span><span class="n">k</span><span class="o">++</span><span class="p">]</span> <span class="o">=</span> <span class="n">sub_array_b</span><span class="p">[</span><span class="n">j</span><span class="o">++</span><span class="p">];</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="c1">// 两个子数组中谁先被拷贝完就把另外没有拷贝完的数组放到结果数组 result_array 的最后面。</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">==</span> <span class="n">array_a_size</span><span class="p">)</span>
+</span><span class='line'>        <span class="n">copy_subsequence</span><span class="p">(</span><span class="n">sub_array_b</span><span class="p">,</span> <span class="n">result_array</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">array_b_size</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">array_a_size</span> <span class="o">+</span> <span class="n">array_b_size</span><span class="p">);</span>
+</span><span class='line'>    <span class="k">else</span>
+</span><span class='line'>        <span class="n">copy_subsequence</span><span class="p">(</span><span class="n">sub_array_a</span><span class="p">,</span> <span class="n">result_array</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">array_a_size</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">array_a_size</span> <span class="o">+</span> <span class="n">array_b_size</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>主过程的实现：</p>
+
+<figure class='code'><figcaption><span>MERGE_SORT    MERGE_SORT </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+</pre></td><td class='code'><pre><code class='c'><span class='line'><span class="kt">void</span> <span class="nf">merge_sort</span><span class="p">(</span><span class="kt">int</span> <span class="n">result_array</span><span class="p">[],</span> <span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="kt">int</span> <span class="n">half</span><span class="p">;</span>
+</span><span class='line'>    <span class="kt">int</span> <span class="o">*</span><span class="n">sub_array_a</span><span class="p">,</span> <span class="o">*</span><span class="n">sub_array_b</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="n">half</span> <span class="o">=</span> <span class="n">n</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="n">sub_array_a</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="o">*</span><span class="n">half</span><span class="p">);</span>
+</span><span class='line'>        <span class="n">sub_array_b</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="n">half</span><span class="p">));</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="n">copy_subsequence</span><span class="p">(</span><span class="n">result_array</span><span class="p">,</span> <span class="n">sub_array_a</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">half</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">half</span><span class="p">);</span>
+</span><span class='line'>        <span class="n">copy_subsequence</span><span class="p">(</span><span class="n">result_array</span><span class="p">,</span> <span class="n">sub_array_b</span><span class="p">,</span> <span class="n">half</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">n</span><span class="o">-</span><span class="n">half</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="n">merge_sort</span><span class="p">(</span><span class="n">sub_array_a</span><span class="p">,</span> <span class="n">half</span><span class="p">);</span>
+</span><span class='line'>        <span class="n">merge_sort</span><span class="p">(</span><span class="n">sub_array_b</span><span class="p">,</span> <span class="n">n</span><span class="o">-</span><span class="n">half</span><span class="p">);</span>
+</span><span class='line'>        <span class="n">merge_arrays</span><span class="p">(</span><span class="n">sub_array_a</span><span class="p">,</span> <span class="n">sub_array_b</span><span class="p">,</span> <span class="n">result_array</span><span class="p">,</span> <span class="n">half</span><span class="p">,</span> <span class="n">n</span><span class="o">-</span><span class="n">half</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="n">free</span><span class="p">(</span><span class="n">sub_array_a</span><span class="p">);</span>
+</span><span class='line'>        <span class="n">free</span><span class="p">(</span><span class="n">sub_array_b</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
 <hr />
+
+<p>完成后的结果：
+<img src="/pictures/merge_sort.png" title="merge_sort" ></p>
 </div>
 
 </article>
