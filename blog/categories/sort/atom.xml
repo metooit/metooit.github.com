@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Sort | K.I.S.S]]></title>
   <link href="http://metooit.github.com/blog/categories/sort/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-02-13T22:22:27+08:00</updated>
+  <updated>2013-02-13T22:32:53+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -24,15 +24,15 @@
 
 <p>计数排序假设n个输入元素中的每一个都是在0到k区间内的一个整数， 其中k为某个整数。</p>
 
-<h1>计数排序的基本思想：</h1>
+<h2>计数排序的基本思想：</h2>
 
 <p>对于每一个输入元素x， 确定小于x的元素的个数。 利用这一信息， 可以直接把该元素放到它在输出数组的位置上了。当几个元素相同时， 需要略做修改。 因为不能把他们放在数组的同一个位置上。</p>
 
-<h1>计数排序的前提条件：</h1>
+<h2>计数排序的前提条件：</h2>
 
 <p>假设输入的数组为A[1..n], A.length = n。</p>
 
-<h1>计数排序基本性能分析：</h1>
+<h2>计数排序基本性能分析：</h2>
 
 <table>
 <thead>
@@ -68,9 +68,9 @@
 <!-- more -->
 
 
-<h1>计数排序的描述：</h1>
+<h2>计数排序的描述：</h2>
 
-<h1>计数排序伪代码实现：</h1>
+<h2>计数排序伪代码实现：</h2>
 
 <p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -101,7 +101,7 @@
 
 <p><img src="/pictures/counting-sort.jpg" title="COUNTING-SORT" ></p>
 
-<h1>计数排序的C语言实现：</h1>
+<h2>计数排序的C语言实现：</h2>
 
 <p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>counting-sort    counting-sort </span></figcaption>
  <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -185,6 +185,8 @@
 <li>发现一个更加cool的东西， 可视化的<a href="http://www.cs.usfca.edu/~galles/visualization/CountingSort.html">counting sort</a></li>
 </ul>
 
+
+<p>本来想写一下Python的版本的， 结果搜索到了<a href="http://rosettacode.org/wiki/Sorting_algorithms/Counting_sort">这个</a>, 想死的心都有了。</p>
 ]]></content>
   </entry>
   
