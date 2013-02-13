@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Sort, | K.I.S.S]]></title>
   <link href="http://metooit.github.com/blog/categories/sort-/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-02-13T17:35:27+08:00</updated>
+  <updated>2013-02-13T17:37:51+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -279,7 +279,7 @@
 <hr />
 
 <p>完成后的结果：
-<img src="/pictures/merge_sort.png" title="merge_sort" ></p>
+<img src="/pictures/merge_sort.png" title="merge-sort" ></p>
 ]]></content>
   </entry>
   
