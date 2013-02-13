@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Learn | K.I.S.S]]></title>
   <link href="http://metooit.github.com/blog/categories/learn/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-02-13T17:45:22+08:00</updated>
+  <updated>2013-02-13T22:22:27+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -22,17 +22,17 @@
 
 <hr />
 
-<h3>分治法：</h3>
+<h1>分治法：</h1>
 
-<h4>算法的递归性：</h4>
+<h2>算法的递归性：</h2>
 
 <p>递归性是指为了解决一个给定的问题， 算法一次或多次地调用自身， 以解决紧密相关的若干子问题。</p>
 
-<h4>算法的思想：</h4>
+<h2>算法的思想：</h2>
 
 <p>运用递归来解决问题的算法通常典型地遵守<code>分治法</code>的思想： 将原问题分解为几个规模较小的子问题， 然后递归地求解这些子问题， 最后合并这些子问题的解来建立原问题的解。</p>
 
-<h5>分治模式在每一层的递归时都有三个步骤：</h5>
+<h3>分治模式在每一层的递归时都有三个步骤：</h3>
 
 <ul>
 <li><h2>分解:</h2>
@@ -49,7 +49,7 @@
 
 <hr />
 
-<h3>归并排序基本性能分析：</h3>
+<h1>归并排序基本性能分析：</h1>
 
 <table>
 <thead>
@@ -85,7 +85,7 @@
 <!-- more -->
 
 
-<h3>归并排序的实现过程：</h3>
+<h1>归并排序的实现过程：</h1>
 
 <ul>
 <li>分解： 将待排序的n个元素的序列分解问n/2的两个子序列。</li>
@@ -94,11 +94,11 @@
 </ul>
 
 
-<h3>归并排序的前提条件：</h3>
+<h1>归并排序的前提条件：</h1>
 
 <p>排序数组 A[p..r]。该数组分解后产生<code>A[p..q]</code>和<code>A[q+1, r]</code>两个部分，其中p &lt; q &lt; r</p>
 
-<h3>归并排序的特点：</h3>
+<h1>归并排序的特点：</h1>
 
 <ul>
 <li>归并排序的<em>关键</em>是“合并”步骤中将两个已经排序的序列合并的操作。也就是<code>MERGE</code>的过程。该过程需要<code>O(n)</code>的时间。其中 <code>n = r - p + 1</code>.</li>
@@ -106,7 +106,7 @@
 </ul>
 
 
-<h3>归并排序的伪代码实现：</h3>
+<h1>归并排序的伪代码实现：</h1>
 
 <p><code>MERGE</code>过程的实现：</p>
 
@@ -161,7 +161,7 @@
 </span><span class='line'>4       MERGE_SORT(A, q+1, r)
 </span><span class='line'>5       MERGE(A, p, q, r)</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
-<h3>归并排序的C语言实现：</h3>
+<h1>归并排序的C语言实现：</h1>
 
 <p>首先， 实现算法的核心部分：也就是合并数组的过程， 这个过程实现如下：</p>
 
@@ -284,7 +284,7 @@
 
 <hr />
 
-<h3>Python 语言的实现过程：</h3>
+<h1>Python 语言的实现过程：</h1>
 
 <p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>MERGE_SORT    Merge </span></figcaption>
  <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -363,7 +363,7 @@
 </span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
-<p>结果截图：</p>
+<h2>结果截图：</h2>
 
 <p><img src="/pictures/merge-sort-py.png" title="MERGE_SORT" ></p>
 
