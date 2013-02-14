@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Algorithms, | K.I.S.S]]></title>
   <link href="http://metooit.github.com/blog/categories/algorithms-/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-02-14T17:37:33+08:00</updated>
+  <updated>2013-02-14T17:39:34+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -42,8 +42,8 @@
 
 <p>用编程来实现：</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>language:c </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>radix-sort    radix-sort </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -96,59 +96,60 @@
 <span class='line-number'>51</span>
 <span class='line-number'>52</span>
 <span class='line-number'>53</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>// 找到数组中的最大元素
-</span><span class='line'>int maxElement(int *L, int length){&lt;/p>
+</pre></td><td class='code'><pre><code class='c'><span class='line'><span class="c1">// 找到数组中的最大元素</span>
+</span><span class='line'><span class="kt">int</span> <span class="nf">maxElement</span><span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="n">L</span><span class="p">,</span> <span class="kt">int</span> <span class="n">length</span><span class="p">){</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
 </span><span class='line'>
-</span><span class='line'>&lt;pre>&lt;code>int i, k=0,mov;
-</span><span class='line'>for(i=0; i&lt;length; i++){
-</span><span class='line'>    if(L[i] &gt; k){
-</span><span class='line'>        k = L[i];
-</span><span class='line'>        mov++;
-</span><span class='line'>    }
-</span><span class='line'>}
-</span><span class='line'>return k;
-</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="kt">int</span> <span class="n">i</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">mov</span><span class="p">;</span>
+</span><span class='line'><span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+</span><span class='line'>    <span class="k">if</span><span class="p">(</span><span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="n">k</span><span class="p">){</span>
+</span><span class='line'>        <span class="n">k</span> <span class="o">=</span> <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+</span><span class='line'>        <span class="n">mov</span><span class="o">++</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="k">return</span> <span class="n">k</span><span class="p">;</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
 </span><span class='line'>
-</span><span class='line'>&lt;p>}&lt;/p>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="p">}</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
 </span><span class='line'>
-</span><span class='line'>&lt;p>void radixSort(int *L, int length){&lt;/p>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="kt">void</span> <span class="n">radixSort</span><span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="n">L</span><span class="p">,</span> <span class="kt">int</span> <span class="n">length</span><span class="p">){</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
 </span><span class='line'>
-</span><span class='line'>&lt;pre>&lt;code>int d = 10;
-</span><span class='line'>int i, j, k=maxElement(L,length);
-</span><span class='line'>int *temp_array, *result, mult;
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="kt">int</span> <span class="n">d</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+</span><span class='line'><span class="kt">int</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="n">maxElement</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="n">length</span><span class="p">);</span>
+</span><span class='line'><span class="kt">int</span> <span class="o">*</span><span class="n">temp_array</span><span class="p">,</span> <span class="o">*</span><span class="n">result</span><span class="p">,</span> <span class="n">mult</span><span class="p">;</span>
 </span><span class='line'>
-</span><span class='line'>/*分配临时数组存储相同大小的元素的个数*/
-</span><span class='line'>temp_array = (int *) malloc(k*sizeof(int));
-</span><span class='line'>/*分配数组c用来存储排序后的数组*/
-</span><span class='line'>result = (int *) malloc(length * sizeof(int));
-</span><span class='line'>mult=1;
+</span><span class='line'><span class="cm">/*分配临时数组存储相同大小的元素的个数*/</span>
+</span><span class='line'><span class="n">temp_array</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="p">)</span> <span class="n">malloc</span><span class="p">(</span><span class="n">k</span><span class="o">*</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">));</span>
+</span><span class='line'><span class="cm">/*分配数组c用来存储排序后的数组*/</span>
+</span><span class='line'><span class="n">result</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="p">)</span> <span class="n">malloc</span><span class="p">(</span><span class="n">length</span> <span class="o">*</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">));</span>
+</span><span class='line'><span class="n">mult</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
 </span><span class='line'>
-</span><span class='line'>/*用计数排序作为稳定的排序算法, 分别对每一位进行排序。*/
-</span><span class='line'>for(j=0; j&lt;d; j++){
+</span><span class='line'><span class="cm">/*用计数排序作为稳定的排序算法, 分别对每一位进行排序。*/</span>
+</span><span class='line'><span class="k">for</span><span class="p">(</span><span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">j</span><span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">d</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">){</span>
 </span><span class='line'>
-</span><span class='line'>    for(i=0; i&lt;=k; i++)
-</span><span class='line'>        temp_array[i]=0;
+</span><span class='line'>    <span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="o">=</span><span class="n">k</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+</span><span class='line'>        <span class="n">temp_array</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
 </span><span class='line'>
-</span><span class='line'>    for(i=0; i&lt;length; i++)
-</span><span class='line'>        temp_array[L[i] % (10 * mult)]++;
+</span><span class='line'>    <span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+</span><span class='line'>        <span class="n">temp_array</span><span class="p">[</span><span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">%</span> <span class="p">(</span><span class="mi">10</span> <span class="o">*</span> <span class="n">mult</span><span class="p">)]</span><span class="o">++</span><span class="p">;</span>
 </span><span class='line'>
 </span><span class='line'>
-</span><span class='line'>    for(i=1; i&lt;=k; i++)
-</span><span class='line'>        temp_array[i] = temp_array[i] + temp_array[i-1];
+</span><span class='line'>    <span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="o">=</span><span class="n">k</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+</span><span class='line'>        <span class="n">temp_array</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">temp_array</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">temp_array</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">];</span>
 </span><span class='line'>
-</span><span class='line'>    for(i=length-1; i&gt;=0; i--){
-</span><span class='line'>        result[temp_array[L[i]%(10*mult)]-1] = L[i];
-</span><span class='line'>        temp_array[L[i]%(10*mult)]--;
-</span><span class='line'>    }
+</span><span class='line'>    <span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="n">length</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">--</span><span class="p">){</span>
+</span><span class='line'>        <span class="n">result</span><span class="p">[</span><span class="n">temp_array</span><span class="p">[</span><span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">%</span><span class="p">(</span><span class="mi">10</span><span class="o">*</span><span class="n">mult</span><span class="p">)]</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+</span><span class='line'>        <span class="n">temp_array</span><span class="p">[</span><span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">%</span><span class="p">(</span><span class="mi">10</span><span class="o">*</span><span class="n">mult</span><span class="p">)]</span><span class="o">--</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
 </span><span class='line'>
-</span><span class='line'>    for(i=0; i&lt;length; i++){
-</span><span class='line'>        L[i] = result[i];
-</span><span class='line'>    }
-</span><span class='line'>    mult *= 10;
-</span><span class='line'>}
-</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>    <span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+</span><span class='line'>        <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="n">mult</span> <span class="o">*=</span> <span class="mi">10</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
 </span><span class='line'>
-</span><span class='line'>&lt;p>}</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <h2>基数排序的结果验证：</h2>
 
