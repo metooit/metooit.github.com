@@ -7,8 +7,7 @@
 	<meta name="author" content="metooit">
 
 	
-	<meta name="description" content="堆排序 用到了 堆 这种数据结构， 所以我也要再次复习一下堆了。 堆： 二叉堆是一个数组， 它可以被看成近似的完全二叉树， 树上的每一个节点对应数组中的一个元素。除了底层之外， 树是完全满的， 从左到右填充。
-堆的数组A包含有两个属性： A.length 表示数组元素的个数， A. &hellip;">
+	<meta name="description" content="基数排序是老式卡片排序机上的算法，为了保证基数排序的正确性， 一位数排序的算法必须是稳定的。 关于排序的稳定性： 排序的稳定性是指： 如果存在具有多个相同排序码的记录， 经过排序后，这些排序码的相对次序仍然保持不变。 ** 插入排序、 冒泡排序、 归并排序、 桶排序、 基数排序 &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -76,11 +75,11 @@
 </nav>
 </br>
 
-<!--<embed type='application/x-shockwave-flash' src='/javascripts/tagcloud.swf'width='100%' height='250' bgcolor='#ffffff' id='tagcloudflash' name='tagcloudflash' quality='high' allowscriptaccess='always'flashvars="tcolor=0x00aa00&amp;tcolor2=0x00dd00&amp;hicolor=0xff3333&amp;tspeed=100&amp;distr=true&amp;mode=tags&amp;tagcloud=%3Ctags%3E%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Falgorithms-%27+style%3D%27font-size%3A+50.0%25%27%3EAlgorithms%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fcode%27+style%3D%27font-size%3A+16.666666666666668%25%27%3Ecode%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fdiary%27+style%3D%27font-size%3A+23.333333333333336%25%27%3Ediary%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fgit%27+style%3D%27font-size%3A+23.333333333333336%25%27%3Egit%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fgithub%27+style%3D%27font-size%3A+30.0%25%27%3Egithub%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flearn%27+style%3D%27font-size%3A+30.0%25%27%3ELearn%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flearn%27+style%3D%27font-size%3A+36.66666666666667%25%27%3Elearn%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flearn-%27+style%3D%27font-size%3A+16.666666666666668%25%27%3ELearn%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flife%27+style%3D%27font-size%3A+16.666666666666668%25%27%3ELife%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flinux%27+style%3D%27font-size%3A+16.666666666666668%25%27%3ELinux%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fmarkdown%27+style%3D%27font-size%3A+16.666666666666668%25%27%3EMarkdown%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fmemo%27+style%3D%27font-size%3A+16.666666666666668%25%27%3Ememo%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fnote%27+style%3D%27font-size%3A+23.333333333333336%25%27%3ENote%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fprogramming%27+style%3D%27font-size%3A+16.666666666666668%25%27%3Eprogramming%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fprogramming%27+style%3D%27font-size%3A+23.333333333333336%25%27%3EProgramming%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fprogramming-%27+style%3D%27font-size%3A+23.333333333333336%25%27%3EProgramming%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fpython-%27+style%3D%27font-size%3A+16.666666666666668%25%27%3EPython%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Frails-%27+style%3D%27font-size%3A+16.666666666666668%25%27%3ERails%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fruby-%27+style%3D%27font-size%3A+36.66666666666667%25%27%3ERuby%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fscreen-%27+style%3D%27font-size%3A+16.666666666666668%25%27%3EScreen%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fsort%27+style%3D%27font-size%3A+23.333333333333336%25%27%3ESort%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fsort-%27+style%3D%27font-size%3A+30.0%25%27%3ESort%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fsummary%27+style%3D%27font-size%3A+16.666666666666668%25%27%3Esummary%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fvim%27+style%3D%27font-size%3A+16.666666666666668%25%27%3Evim%3C%2Fa%3E+%3C%2Ftags%3E">-->
+<!--<embed type='application/x-shockwave-flash' src='/javascripts/tagcloud.swf'width='100%' height='250' bgcolor='#ffffff' id='tagcloudflash' name='tagcloudflash' quality='high' allowscriptaccess='always'flashvars="tcolor=0x00aa00&amp;tcolor2=0x00dd00&amp;hicolor=0xff3333&amp;tspeed=100&amp;distr=true&amp;mode=tags&amp;tagcloud=%3Ctags%3E%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Falgorithms-%27+style%3D%27font-size%3A+50.0%25%27%3EAlgorithms%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fcode%27+style%3D%27font-size%3A+15.714285714285715%25%27%3Ecode%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fdiary%27+style%3D%27font-size%3A+21.42857142857143%25%27%3Ediary%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fgit%27+style%3D%27font-size%3A+21.42857142857143%25%27%3Egit%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fgithub%27+style%3D%27font-size%3A+27.142857142857142%25%27%3Egithub%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flearn%27+style%3D%27font-size%3A+27.142857142857142%25%27%3ELearn%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flearn%27+style%3D%27font-size%3A+32.85714285714286%25%27%3Elearn%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flearn-%27+style%3D%27font-size%3A+15.714285714285715%25%27%3ELearn%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flife%27+style%3D%27font-size%3A+15.714285714285715%25%27%3ELife%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flinux%27+style%3D%27font-size%3A+15.714285714285715%25%27%3ELinux%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fmarkdown%27+style%3D%27font-size%3A+15.714285714285715%25%27%3EMarkdown%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fmemo%27+style%3D%27font-size%3A+15.714285714285715%25%27%3Ememo%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fnote%27+style%3D%27font-size%3A+21.42857142857143%25%27%3ENote%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fprogramming%27+style%3D%27font-size%3A+15.714285714285715%25%27%3Eprogramming%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fprogramming%27+style%3D%27font-size%3A+21.42857142857143%25%27%3EProgramming%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fprogramming-%27+style%3D%27font-size%3A+21.42857142857143%25%27%3EProgramming%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fpython-%27+style%3D%27font-size%3A+15.714285714285715%25%27%3EPython%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Frails-%27+style%3D%27font-size%3A+15.714285714285715%25%27%3ERails%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fruby-%27+style%3D%27font-size%3A+32.85714285714286%25%27%3ERuby%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fscreen-%27+style%3D%27font-size%3A+15.714285714285715%25%27%3EScreen%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fsort%27+style%3D%27font-size%3A+27.142857142857142%25%27%3ESort%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fsort-%27+style%3D%27font-size%3A+27.142857142857142%25%27%3ESort%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fsummary%27+style%3D%27font-size%3A+15.714285714285715%25%27%3Esummary%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fvim%27+style%3D%27font-size%3A+15.714285714285715%25%27%3Evim%3C%2Fa%3E+%3C%2Ftags%3E">-->
 <!--
 <section>
   <h1>Tag Cloud</h1>
-    <span id="tag-cloud"><embed type='application/x-shockwave-flash' src='/javascripts/tagcloud.swf'width='100%' height='250' bgcolor='#f2f2f2' id='tagcloudflash' name='tagcloudflash' quality='high' allowscriptaccess='always'flashvars="tcolor=0x333333&amp;tcolor2=0x333333&amp;hicolor=0x000000&amp;tspeed=100&amp;distr=true&amp;mode=tags&amp;tagcloud=%3Ctags%3E%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Falgorithms-%27+style%3D%27font-size%3A+50.0%25%27%3EAlgorithms%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fcode%27+style%3D%27font-size%3A+16.666666666666668%25%27%3Ecode%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fdiary%27+style%3D%27font-size%3A+23.333333333333336%25%27%3Ediary%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fgit%27+style%3D%27font-size%3A+23.333333333333336%25%27%3Egit%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fgithub%27+style%3D%27font-size%3A+30.0%25%27%3Egithub%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flearn%27+style%3D%27font-size%3A+30.0%25%27%3ELearn%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flearn%27+style%3D%27font-size%3A+36.66666666666667%25%27%3Elearn%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flearn-%27+style%3D%27font-size%3A+16.666666666666668%25%27%3ELearn%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flife%27+style%3D%27font-size%3A+16.666666666666668%25%27%3ELife%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flinux%27+style%3D%27font-size%3A+16.666666666666668%25%27%3ELinux%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fmarkdown%27+style%3D%27font-size%3A+16.666666666666668%25%27%3EMarkdown%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fmemo%27+style%3D%27font-size%3A+16.666666666666668%25%27%3Ememo%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fnote%27+style%3D%27font-size%3A+23.333333333333336%25%27%3ENote%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fprogramming%27+style%3D%27font-size%3A+16.666666666666668%25%27%3Eprogramming%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fprogramming%27+style%3D%27font-size%3A+23.333333333333336%25%27%3EProgramming%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fprogramming-%27+style%3D%27font-size%3A+23.333333333333336%25%27%3EProgramming%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fpython-%27+style%3D%27font-size%3A+16.666666666666668%25%27%3EPython%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Frails-%27+style%3D%27font-size%3A+16.666666666666668%25%27%3ERails%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fruby-%27+style%3D%27font-size%3A+36.66666666666667%25%27%3ERuby%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fscreen-%27+style%3D%27font-size%3A+16.666666666666668%25%27%3EScreen%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fsort%27+style%3D%27font-size%3A+23.333333333333336%25%27%3ESort%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fsort-%27+style%3D%27font-size%3A+30.0%25%27%3ESort%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fsummary%27+style%3D%27font-size%3A+16.666666666666668%25%27%3Esummary%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fvim%27+style%3D%27font-size%3A+16.666666666666668%25%27%3Evim%3C%2Fa%3E+%3C%2Ftags%3E"></span>
+    <span id="tag-cloud"><embed type='application/x-shockwave-flash' src='/javascripts/tagcloud.swf'width='100%' height='250' bgcolor='#f2f2f2' id='tagcloudflash' name='tagcloudflash' quality='high' allowscriptaccess='always'flashvars="tcolor=0x333333&amp;tcolor2=0x333333&amp;hicolor=0x000000&amp;tspeed=100&amp;distr=true&amp;mode=tags&amp;tagcloud=%3Ctags%3E%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Falgorithms-%27+style%3D%27font-size%3A+50.0%25%27%3EAlgorithms%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fcode%27+style%3D%27font-size%3A+15.714285714285715%25%27%3Ecode%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fdiary%27+style%3D%27font-size%3A+21.42857142857143%25%27%3Ediary%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fgit%27+style%3D%27font-size%3A+21.42857142857143%25%27%3Egit%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fgithub%27+style%3D%27font-size%3A+27.142857142857142%25%27%3Egithub%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flearn%27+style%3D%27font-size%3A+27.142857142857142%25%27%3ELearn%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flearn%27+style%3D%27font-size%3A+32.85714285714286%25%27%3Elearn%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flearn-%27+style%3D%27font-size%3A+15.714285714285715%25%27%3ELearn%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flife%27+style%3D%27font-size%3A+15.714285714285715%25%27%3ELife%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flinux%27+style%3D%27font-size%3A+15.714285714285715%25%27%3ELinux%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fmarkdown%27+style%3D%27font-size%3A+15.714285714285715%25%27%3EMarkdown%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fmemo%27+style%3D%27font-size%3A+15.714285714285715%25%27%3Ememo%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fnote%27+style%3D%27font-size%3A+21.42857142857143%25%27%3ENote%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fprogramming%27+style%3D%27font-size%3A+15.714285714285715%25%27%3Eprogramming%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fprogramming%27+style%3D%27font-size%3A+21.42857142857143%25%27%3EProgramming%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fprogramming-%27+style%3D%27font-size%3A+21.42857142857143%25%27%3EProgramming%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fpython-%27+style%3D%27font-size%3A+15.714285714285715%25%27%3EPython%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Frails-%27+style%3D%27font-size%3A+15.714285714285715%25%27%3ERails%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fruby-%27+style%3D%27font-size%3A+32.85714285714286%25%27%3ERuby%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fscreen-%27+style%3D%27font-size%3A+15.714285714285715%25%27%3EScreen%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fsort%27+style%3D%27font-size%3A+27.142857142857142%25%27%3ESort%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fsort-%27+style%3D%27font-size%3A+27.142857142857142%25%27%3ESort%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fsummary%27+style%3D%27font-size%3A+15.714285714285715%25%27%3Esummary%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fvim%27+style%3D%27font-size%3A+15.714285714285715%25%27%3Evim%3C%2Fa%3E+%3C%2Ftags%3E"></span>
 </section>
 
 -->
@@ -107,6 +106,162 @@
 			
 			<div class="mid-col-container">
 				<div id="content" class="inner">
+
+
+    <article class="post">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-02-14T14:48:00+08:00" pubdate data-updated="true">Feb 14<span>th</span>, 2013</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/algorithms-/'>Algorithms,</a>, <a class='category' href='/blog/categories/sort/'>Sort</a>
+
+
+</div>
+		
+	</div>
+	<h1 class="title"><a href="/blog/2013/02/14/learning-algorithms-sort-radix-sort/">Learning Algorithms : Sort &#8212; Radix Sort</a></h1>
+	<div class="entry-content">
+		<p><em>基数排序</em>是老式卡片排序机上的算法，为了保证基数排序的正确性， 一位数排序的算法必须是稳定的。</p>
+
+<p><img src="/pictures/radix-sort.jpg" title="" ></p>
+
+<h2>关于排序的稳定性：</h2>
+
+<ul>
+<li>排序的稳定性是指： 如果存在具有多个相同排序码的记录， 经过排序后，这些排序码的相对次序仍然保持不变。</li>
+</ul>
+
+
+<p>** 插入排序、 冒泡排序、 归并排序、 桶排序、 基数排序 都是稳定的排序算法</p>
+
+<p>** 不稳定的排序算法: 选择排序、 堆排序、 shell排序、 快速排序都是不稳定的排序</p>
+
+<h2>基数排序的实现过程：</h2>
+
+<p><img src="/pictures/radix-sort2.jpg"></p>
+
+<p>用编程来实现：</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>// 找到数组中的最大元素
+</span><span class='line'>int maxElement(int *L, int length){
+</span><span class='line'>    int i, k=0,mov;
+</span><span class='line'>    for(i=0; i&lt;length; i++){
+</span><span class='line'>        if(L[i] > k){
+</span><span class='line'>            k = L[i];
+</span><span class='line'>            mov++;
+</span><span class='line'>        }
+</span><span class='line'>    }
+</span><span class='line'>    return k;
+</span><span class='line'>}
+</span><span class='line'>
+</span><span class='line'>void radixSort(int *L, int length){
+</span><span class='line'>    int d = 10;
+</span><span class='line'>    int i, j, k=maxElement(L,length);
+</span><span class='line'>    int *temp_array, *result, mult;
+</span><span class='line'>
+</span><span class='line'>    /*分配临时数组存储相同大小的元素的个数*/
+</span><span class='line'>    temp_array = (int *) malloc(k*sizeof(int));
+</span><span class='line'>    /*分配数组c用来存储排序后的数组*/
+</span><span class='line'>    result = (int *) malloc(length * sizeof(int));
+</span><span class='line'>    mult=1;
+</span><span class='line'>
+</span><span class='line'>    /*用计数排序作为稳定的排序算法, 分别对每一位进行排序。*/
+</span><span class='line'>    for(j=0; j&lt;d; j++){
+</span><span class='line'>
+</span><span class='line'>        for(i=0; i&lt;=k; i++)
+</span><span class='line'>            temp_array[i]=0;
+</span><span class='line'>
+</span><span class='line'>        for(i=0; i&lt;length; i++)
+</span><span class='line'>            temp_array[L[i] % (10 * mult)]++;
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>        for(i=1; i&lt;=k; i++)
+</span><span class='line'>            temp_array[i] = temp_array[i] + temp_array[i-1];
+</span><span class='line'>
+</span><span class='line'>        for(i=length-1; i>=0; i--){
+</span><span class='line'>            result[temp_array[L[i]%(10*mult)]-1] = L[i];
+</span><span class='line'>            temp_array[L[i]%(10*mult)]--;
+</span><span class='line'>        }
+</span><span class='line'>
+</span><span class='line'>        for(i=0; i&lt;length; i++){
+</span><span class='line'>            L[i] = result[i];
+</span><span class='line'>        }
+</span><span class='line'>        mult *= 10;
+</span><span class='line'>    }
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>基数排序的结果验证：</h2>
+
+<p><img src="/pictures/radix-sort3.png"></p>
+
+<p><img src="/pictures/radix-sort-final.png"></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -496,78 +651,6 @@
 
 		
 		<a href="/blog/2013/02/13/learn-algorithms-sort-insertion-sort/" class="more-link">Read on &rarr;</a>
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<div class="meta">
-		<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-02-11T09:52:00+08:00" pubdate data-updated="true">Feb 11<span>th</span>, 2013</time></div>
-		<div class="tags">
-
-
-	<a class='category' href='/blog/categories/algorithms-/'>Algorithms,</a>, <a class='category' href='/blog/categories/learn/'>Learn</a>, <a class='category' href='/blog/categories/sort-/'>Sort,</a>
-
-
-</div>
-		
-	</div>
-	<h1 class="title"><a href="/blog/2013/02/11/learn-algorithms-sort-quick-sort/">Learn Algorithms : Sort &#8212; Quick Sort</a></h1>
-	<div class="entry-content">
-		<p>前面提到过要系统地学习一下算法， 今天就先从一个排序算法开始。<em>快速排序</em></p>
-
-<hr />
-
-<h3>快速排序基本性能分析：</h3>
-
-<table>
-<thead>
-<tr>
-<th></th>
-<th> 最坏情况时间复杂度    </th>
-<th align="left"> 期望时间复杂度   </th>
-<th align="left"> 空间复杂度   </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td> O(n<sup>2)</sup>                </td>
-<td align="left"> O(nlgn)          </td>
-<td align="left"> O(nlgn)      |</td>
-</tr>
-</tbody>
-</table>
-
-
-<ul>
-<li>特点：
-
-<blockquote><ol>
-<li>虽然最坏情况的时间复杂度很差， 但是快速排序通常是实际排序中应用最好的选择， 因为它的平均性能比较好。</li>
-<li>它能进行<em>原址排序</em>。</li>
-<li>快速排序使用了<em>分治思想</em>。</li>
-</ol>
-</blockquote></li>
-</ul>
-
-
-
-		
-		<a href="/blog/2013/02/11/learn-algorithms-sort-quick-sort/" class="more-link">Read on &rarr;</a>
 	</div>
 
 </article>

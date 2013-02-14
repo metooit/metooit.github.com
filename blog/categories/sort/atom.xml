@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Sort | K.I.S.S]]></title>
   <link href="http://metooit.github.com/blog/categories/sort/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-02-14T14:42:16+08:00</updated>
+  <updated>2013-02-14T17:34:29+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -12,6 +12,147 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Learning Algorithms : Sort --- Radix Sort]]></title>
+    <link href="http://metooit.github.com/blog/2013/02/14/learning-algorithms-sort-radix-sort/"/>
+    <updated>2013-02-14T14:48:00+08:00</updated>
+    <id>http://metooit.github.com/blog/2013/02/14/learning-algorithms-sort-radix-sort</id>
+    <content type="html"><![CDATA[<p><em>基数排序</em>是老式卡片排序机上的算法，为了保证基数排序的正确性， 一位数排序的算法必须是稳定的。</p>
+
+<p><img src="/pictures/radix-sort.jpg" title="" ></p>
+
+<h2>关于排序的稳定性：</h2>
+
+<ul>
+<li>排序的稳定性是指： 如果存在具有多个相同排序码的记录， 经过排序后，这些排序码的相对次序仍然保持不变。</li>
+</ul>
+
+
+<p>** 插入排序、 冒泡排序、 归并排序、 桶排序、 基数排序 都是稳定的排序算法</p>
+
+<p>** 不稳定的排序算法: 选择排序、 堆排序、 shell排序、 快速排序都是不稳定的排序</p>
+
+<h2>基数排序的实现过程：</h2>
+
+<p><img src="/pictures/radix-sort2.jpg"></p>
+
+<p>用编程来实现：</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>// 找到数组中的最大元素
+</span><span class='line'>int maxElement(int *L, int length){&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>int i, k=0,mov;
+</span><span class='line'>for(i=0; i&lt;length; i++){
+</span><span class='line'>    if(L[i] &gt; k){
+</span><span class='line'>        k = L[i];
+</span><span class='line'>        mov++;
+</span><span class='line'>    }
+</span><span class='line'>}
+</span><span class='line'>return k;
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p>}&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>void radixSort(int *L, int length){&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>int d = 10;
+</span><span class='line'>int i, j, k=maxElement(L,length);
+</span><span class='line'>int *temp_array, *result, mult;
+</span><span class='line'>
+</span><span class='line'>/*分配临时数组存储相同大小的元素的个数*/
+</span><span class='line'>temp_array = (int *) malloc(k*sizeof(int));
+</span><span class='line'>/*分配数组c用来存储排序后的数组*/
+</span><span class='line'>result = (int *) malloc(length * sizeof(int));
+</span><span class='line'>mult=1;
+</span><span class='line'>
+</span><span class='line'>/*用计数排序作为稳定的排序算法, 分别对每一位进行排序。*/
+</span><span class='line'>for(j=0; j&lt;d; j++){
+</span><span class='line'>
+</span><span class='line'>    for(i=0; i&lt;=k; i++)
+</span><span class='line'>        temp_array[i]=0;
+</span><span class='line'>
+</span><span class='line'>    for(i=0; i&lt;length; i++)
+</span><span class='line'>        temp_array[L[i] % (10 * mult)]++;
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>    for(i=1; i&lt;=k; i++)
+</span><span class='line'>        temp_array[i] = temp_array[i] + temp_array[i-1];
+</span><span class='line'>
+</span><span class='line'>    for(i=length-1; i&gt;=0; i--){
+</span><span class='line'>        result[temp_array[L[i]%(10*mult)]-1] = L[i];
+</span><span class='line'>        temp_array[L[i]%(10*mult)]--;
+</span><span class='line'>    }
+</span><span class='line'>
+</span><span class='line'>    for(i=0; i&lt;length; i++){
+</span><span class='line'>        L[i] = result[i];
+</span><span class='line'>    }
+</span><span class='line'>    mult *= 10;
+</span><span class='line'>}
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p>}</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<h2>基数排序的结果验证：</h2>
+
+<p><img src="/pictures/radix-sort3.png"></p>
+
+<p><img src="/pictures/radix-sort-final.png"></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Learning Algorithms : Sort --- Heap Sort]]></title>

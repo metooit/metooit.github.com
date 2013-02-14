@@ -4,7 +4,7 @@
   <title><![CDATA[Category: memo | K.I.S.S]]></title>
   <link href="http://metooit.github.com/blog/categories/memo/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-02-14T14:42:16+08:00</updated>
+  <updated>2013-02-14T17:34:29+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -89,6 +89,21 @@
 <li><code>s/word1/word2/g</code> 当前行中word1用word2代替</li>
 <li><code>n1,n2s/word1/word2/g</code> n1到n2的所有行中的word1用word2代替</li>
 <li><code>g/word1/s//word2/g</code> 全文替换</li>
+</ul>
+
+
+<h1>偶尔用到但是很实用篇：</h1>
+
+<ul>
+<li><code>:%s/\s\+$//</code> 删除每行的多余空格。
+
+<blockquote><p>说到多余的空格，其实还有挺多要说的：
+行首 $  +++>
+行尾 ^  +++>
+空格 \s  +++>
+  +++>
+行首空格： \s+$  +++>
+行尾空格： ^+\s  +++></p></blockquote></li>
 </ul>
 
 ]]></content>
