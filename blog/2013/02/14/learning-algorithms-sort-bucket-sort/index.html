@@ -207,14 +207,12 @@
 <span class='line-number'>40</span>
 <span class='line-number'>41</span>
 <span class='line-number'>42</span>
-<span class='line-number'>43</span>
 </pre></td><td class='code'><pre><code class='c'><span class='line'><span class="cm">/*桶排序的主过程：*/</span>
 </span><span class='line'><span class="kt">void</span> <span class="nf">bucketSort</span><span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="n">array</span><span class="p">,</span> <span class="kt">int</span> <span class="n">length</span><span class="p">)</span>
 </span><span class='line'><span class="p">{</span>
 </span><span class='line'>    <span class="kt">int</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 </span><span class='line'>
 </span><span class='line'>    <span class="kt">int</span> <span class="n">max</span> <span class="o">=</span> <span class="n">maxElement</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">length</span><span class="p">);</span>
-</span><span class='line'>    <span class="c1">// 二级指针的作用？</span>
 </span><span class='line'>    <span class="k">struct</span> <span class="n">node</span> <span class="o">**</span><span class="n">bucket</span> <span class="o">=</span> <span class="p">(</span><span class="k">struct</span> <span class="n">node</span> <span class="o">**</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="n">length</span> <span class="o">*</span> <span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">node</span> <span class="o">*</span><span class="p">));</span>
 </span><span class='line'>    <span class="k">struct</span> <span class="n">node</span> <span class="o">*</span><span class="n">p</span><span class="p">;</span>
 </span><span class='line'>
