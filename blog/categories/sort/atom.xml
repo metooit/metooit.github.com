@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Sort | K.I.S.S]]></title>
   <link href="http://metooit.github.com/blog/categories/sort/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-02-14T14:12:45+08:00</updated>
+  <updated>2013-02-14T14:15:22+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -67,11 +67,11 @@
 <!-- more -->
 
 
-<p><img src="/pictures/heapsort_2.png" title="" ></p>
+<p><img src="/pictures/heapSort_2.png" title="" ></p>
 
-<p><img src="/pictures/heapsort_3.png"></p>
+<p><img src="/pictures/heapSort_3.png"></p>
 
-<p><img src="/pictures/heapsort_4.png" title="" ></p>
+<p><img src="/pictures/heapSort_4.png" title="" ></p>
 
 <h3>维护最大堆的性质：</h3>
 
