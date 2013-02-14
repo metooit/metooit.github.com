@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Sort | K.I.S.S]]></title>
   <link href="http://metooit.github.com/blog/categories/sort/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-02-14T17:34:29+08:00</updated>
+  <updated>2013-02-14T17:36:28+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -34,6 +34,9 @@
 <p>** 不稳定的排序算法: 选择排序、 堆排序、 shell排序、 快速排序都是不稳定的排序</p>
 
 <h2>基数排序的实现过程：</h2>
+
+<!-- more -->
+
 
 <p><img src="/pictures/radix-sort2.jpg"></p>
 
