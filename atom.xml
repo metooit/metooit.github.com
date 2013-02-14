@@ -4,7 +4,7 @@
   <title><![CDATA[K.I.S.S]]></title>
   <link href="http://metooit.github.com/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-02-13T22:32:53+08:00</updated>
+  <updated>2013-02-14T14:12:45+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -12,6 +12,273 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Learning Algorithms : Sort --- Heap Sort]]></title>
+    <link href="http://metooit.github.com/blog/2013/02/14/learning-algorithms-sort-heap-sort/"/>
+    <updated>2013-02-14T10:52:00+08:00</updated>
+    <id>http://metooit.github.com/blog/2013/02/14/learning-algorithms-sort-heap-sort</id>
+    <content type="html"><![CDATA[<p><em>堆排序</em> 用到了 <em>堆</em> 这种数据结构， 所以我也要再次复习一下堆了。</p>
+
+<hr />
+
+<h2>堆：</h2>
+
+<ul>
+<li><code>二叉堆</code>是一个数组， 它可以被看成近似的完全二叉树， 树上的每一个节点对应数组中的一个元素。除了<code>底层</code>之外， 树是完全满的， 从左到右填充。</li>
+<li>堆的数组A包含有两个属性： <strong> A.length 表示数组元素的个数， </strong> A.heap_size 表示有多少个堆元素在数组中。 A[1..A.heap-size]存放堆的有效数据。</li>
+</ul>
+
+
+<p>堆中的一个节点<code>i</code>的数据结构：</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>PARENT(i)
+</span><span class='line'>1   return [i/2]
+</span><span class='line'>
+</span><span class='line'>LEFT(i)
+</span><span class='line'>1   return 2i
+</span><span class='line'>
+</span><span class='line'>Right(i)
+</span><span class='line'>1   return 2i + 1</span></code></pre></td></tr></table></div></figure>
+
+
+<p><img src="http://metooit.github.com/pictures/heap-i.png" title="heap-i" ></p>
+
+<ul>
+<li>二叉堆可以分为两种形式，： 最大堆和最小堆。 <strong> 最大堆的性质 ——> A[PARENT(i)] > A[i] </strong> 最小堆性质相反。</li>
+<li>在堆排序算法中， 我们使用的是最大堆， 最小堆通常用来构造优先队列。</li>
+<li>堆中一个节点的高度是指该节点到叶结点最长简单路径上的边数。</li>
+<li>堆结构上的一些基本操作的运行时间基本上与堆的高度成正比， 时间复杂度为 O(lgn).</li>
+<li>堆上的一些基本操作：
+
+<blockquote><p>1 MAX-HEAPIFY: 维护最大堆性质的关键。
+2 BUILD-MAX-HEAP: 构造最大堆。
+3 HEAPSORT: 原址排序 O(nlgn)
+4 MAX-HEAP-INSERT HEAP-EXTRACT-MAX &#8230;</p></blockquote></li>
+</ul>
+
+
+<!-- more -->
+
+
+<p><img src="http://metooit.github.com/pictures/heapsort_2.png" title="" ></p>
+
+<p><img src="http://metooit.github.com/pictures/heapsort_3.png"></p>
+
+<p><img src="http://metooit.github.com/pictures/heapsort_4.png" title="" ></p>
+
+<h3>维护最大堆的性质：</h3>
+
+<p>前面说过， 维护最大堆性质的关键就是要MAX-HEAPIFY:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>MAX-HEAPIFY(A, i)
+</span><span class='line'>    l = LEFT(i)
+</span><span class='line'>    r = RIGHT(i)
+</span><span class='line'>    if l &lt;= A.heap-size and A[l] > A[i]
+</span><span class='line'>        largest = l
+</span><span class='line'>    else largest = i
+</span><span class='line'>
+</span><span class='line'>    if r &lt;= A.heap-size and A[r] > A[largest]
+</span><span class='line'>        largest = r
+</span><span class='line'>    if largest != i
+</span><span class='line'>        exchange A[i] with A[largest]
+</span><span class='line'>        MAX-HEAPIFY(A, largest)</span></code></pre></td></tr></table></div></figure>
+
+
+<p>树高为h的结点执行此过程的时间复杂度为O(h).</p>
+
+<h3>建堆：</h3>
+
+<p>我们可以用自底向上的方法利用MAX-HEAPIFY过程来将一个大小为A.length的数组A[1..n]转化成一个最大堆。子数组A([n/2]+1..n)中的元素都是树的叶结点。</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>BUILD-MAX-HEAP(A)
+</span><span class='line'>    A.heap-size = A.length
+</span><span class='line'>    for i = [A.length/2] downto 1
+</span><span class='line'>        MAX-HEAPIFY(A, i)</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>建堆的时间复杂度为O(h), 即可以在线性时间内把一个无序数组建成一个最大堆。</li>
+</ul>
+
+
+<h2>堆排序算法：</h2>
+
+<h3>堆排序基本性能分析：</h3>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th> 最坏情况时间复杂度    </th>
+<th align="left"> 期望时间复杂度   </th>
+<th align="left"> 空间复杂度   </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td> O(nlgn)               </td>
+<td align="left"> O(nlgn)          </td>
+<td align="left"> O(nlgn)      |</td>
+</tr>
+</tbody>
+</table>
+
+
+<ul>
+<li>特点：
+
+<blockquote><ol>
+<li>与<em>插入排序</em>相同， 但是与<em>归并排序</em>不同的是， 堆排序同样具有空间原址性 ： 任何时候只需要常数个额外的元素空间存储临时的数据。</li>
+</ol>
+</blockquote></li>
+</ul>
+
+
+<h3>堆排序伪代码实现：</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>HEAPSORT(A)
+</span><span class='line'>    BUILD-MAX-HEAP(A)
+</span><span class='line'>    for i = A.length downto 2
+</span><span class='line'>        exchange A[1] with A[i]
+</span><span class='line'>        A.heap-size -= 1
+</span><span class='line'>        MAX-HEAPIFY(A, 1)</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>堆排序的C语言实现：</h3>
+
+<figure class='code'><figcaption><span>Heapsort      </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+</pre></td><td class='code'><pre><code class='c'><span class='line'><span class="kt">void</span> <span class="nf">swap</span> <span class="p">(</span> <span class="kt">int</span><span class="o">*</span> <span class="n">v</span><span class="p">,</span> <span class="kt">int</span> <span class="n">i</span><span class="p">,</span> <span class="kt">int</span> <span class="n">j</span> <span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="kt">int</span> <span class="n">aux</span> <span class="o">=</span> <span class="n">v</span> <span class="p">[</span><span class="n">i</span><span class="p">];</span>
+</span><span class='line'>  <span class="n">v</span> <span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span> <span class="p">[</span><span class="n">j</span><span class="p">];</span>
+</span><span class='line'>  <span class="n">v</span> <span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">aux</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="cm">/*</span>
+</span><span class='line'><span class="cm"> * 维护最大堆的性质的 maxHeapify 过程</span>
+</span><span class='line'><span class="cm"> */</span>
+</span><span class='line'><span class="kt">void</span> <span class="nf">maxHeapify</span><span class="p">(</span><span class="kt">int</span><span class="o">*</span> <span class="n">array</span><span class="p">,</span> <span class="kt">int</span> <span class="n">pos</span><span class="p">,</span> <span class="kt">int</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>   <span class="kt">int</span> <span class="n">max</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">pos</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">right</span> <span class="o">=</span> <span class="n">max</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>   <span class="k">if</span> <span class="p">(</span><span class="n">max</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="k">if</span> <span class="p">(</span> <span class="n">right</span> <span class="o">&lt;</span> <span class="n">n</span> <span class="o">&amp;&amp;</span> <span class="n">array</span><span class="p">[</span><span class="n">max</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">array</span><span class="p">[</span><span class="n">right</span><span class="p">])</span>
+</span><span class='line'>         <span class="n">max</span> <span class="o">=</span> <span class="n">right</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="k">if</span> <span class="p">(</span><span class="n">array</span><span class="p">[</span><span class="n">max</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">array</span><span class="p">[</span><span class="n">pos</span><span class="p">])</span> <span class="p">{</span>
+</span><span class='line'>        <span class="n">swap</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">max</span><span class="p">,</span> <span class="n">pos</span><span class="p">);</span>
+</span><span class='line'>        <span class="n">maxHeapify</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">max</span><span class="p">,</span> <span class="n">n</span><span class="p">);</span>
+</span><span class='line'>     <span class="p">}</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="cm">/*</span>
+</span><span class='line'><span class="cm"> * 建立最大堆的过程</span>
+</span><span class='line'><span class="cm"> */</span>
+</span><span class='line'><span class="kt">void</span> <span class="nf">buildMaxHeap</span><span class="p">(</span><span class="kt">int</span><span class="o">*</span> <span class="n">array</span><span class="p">,</span> <span class="kt">int</span> <span class="n">size</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="n">size</span><span class="o">/</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">--</span><span class="p">)</span>
+</span><span class='line'>        <span class="n">maxHeapify</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">i</span> <span class="p">,</span> <span class="n">size</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="cm">/*</span>
+</span><span class='line'><span class="cm"> * 堆排序的过程</span>
+</span><span class='line'><span class="cm"> */</span>
+</span><span class='line'><span class="kt">void</span> <span class="nf">heapSort</span><span class="p">(</span><span class="kt">int</span><span class="o">*</span> <span class="n">array</span><span class="p">,</span> <span class="kt">int</span> <span class="n">size</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>   <span class="n">buildMaxHeap</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">size</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>   <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">size</span><span class="p">;</span>
+</span><span class='line'>   <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>   <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="n">size</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">--</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="n">swap</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">i</span> <span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</span><span class='line'>      <span class="n">maxHeapify</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">--</span><span class="n">n</span><span class="p">);</span>
+</span><span class='line'>   <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>堆排序的结果验证：</h3>
+
+<p><img src="http://metooit.github.com/pictures/heapsort-result.png" title="heapsort-result" ></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Learn Algorithms : Sort -- Counting Sort]]></title>
@@ -201,6 +468,8 @@
 <li><code>Ctrl + a</code> + <code>p</code>  上一个窗口（previous window）</li>
 <li><code>Ctrl + a</code> + <code>"</code>  从列表中选择窗口（choose from the list）</li>
 <li><code>Ctrl + a</code> + <code>Ctrl +a</code> 上一个查看过的窗口</li>
+<li><code>Ctrl + a</code> + <code>k</code> 移除窗口</li>
+<li><code>Ctrl + a</code> + <code>Space</code> 下一个窗口（Next window）</li>
 </ul>
 
 
@@ -3048,18 +3317,6 @@ This line is only separated by a single newline, so it&#8217;s a separate line i
 
 
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Hello World!]]></title>
-    <link href="http://metooit.github.com/blog/2013/01/30/hello-world/"/>
-    <updated>2013-01-30T21:56:00+08:00</updated>
-    <id>http://metooit.github.com/blog/2013/01/30/hello-world</id>
-    <content type="html"><![CDATA[<p>Hello World!
-This is a personal blog! I am a person that love programming so much, yet
-i&#8217;m not a geek, i am working hard to be one!
-:-)</p>
 ]]></content>
   </entry>
   

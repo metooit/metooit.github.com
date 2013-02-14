@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Linux | K.I.S.S]]></title>
   <link href="http://metooit.github.com/blog/categories/linux/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-02-13T22:32:53+08:00</updated>
+  <updated>2013-02-14T14:12:45+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -28,6 +28,8 @@
 <li><code>Ctrl + a</code> + <code>p</code>  上一个窗口（previous window）</li>
 <li><code>Ctrl + a</code> + <code>"</code>  从列表中选择窗口（choose from the list）</li>
 <li><code>Ctrl + a</code> + <code>Ctrl +a</code> 上一个查看过的窗口</li>
+<li><code>Ctrl + a</code> + <code>k</code> 移除窗口</li>
+<li><code>Ctrl + a</code> + <code>Space</code> 下一个窗口（Next window）</li>
 </ul>
 
 
