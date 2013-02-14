@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Algorithms, | K.I.S.S]]></title>
   <link href="http://metooit.github.com/blog/categories/algorithms-/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-02-14T17:39:34+08:00</updated>
+  <updated>2013-02-14T22:37:11+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -12,6 +12,86 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Learning Algorithms : Sort --- Bucket Sort]]></title>
+    <link href="http://metooit.github.com/blog/2013/02/14/learning-algorithms-sort-bucket-sort/"/>
+    <updated>2013-02-14T21:03:00+08:00</updated>
+    <id>http://metooit.github.com/blog/2013/02/14/learning-algorithms-sort-bucket-sort</id>
+    <content type="html"><![CDATA[<p><em>桶排序</em> 假设输入数据服从均匀分布， 平均情况下它的时间代价为O(n). 桶排序将[0..1) 的区间划分为了n个大小相同的子区间， 或称为桶(Bucket). 然后将n个输入数分别放到各个桶中。 先对每个桶中的数据进行排序， 然后遍历每个桶， 依照次序把各个桶中的元素列出来即可。</p>
+
+<hr />
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th> 最坏情况时间复杂度    </th>
+<th align="left"> 期望时间复杂度   </th>
+<th align="left"> 空间复杂度   </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td> O(n<sup>2)</sup>                </td>
+<td align="left"> O(n)             </td>
+<td align="left"> O(n)</td>
+</tr>
+</tbody>
+</table>
+
+
+<ul>
+<li>特点：</li>
+</ul>
+
+
+<h3>桶排序伪代码实现：</h3>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>BUCKET-SORT(A)&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>n = A.length
+</span><span class='line'>let B[0..n-1] be a new array
+</span><span class='line'>for i = 0 to n - 1
+</span><span class='line'>    make B[i] an empty list
+</span><span class='line'>for i = 1 to n
+</span><span class='line'>    insert A[i] into list B[nA[i]]
+</span><span class='line'>for i = 0 to n - 1
+</span><span class='line'>    sort list B[i] with insertion sort
+</span><span class='line'>concatenate the lists B[0], B[1] ... B[n-1] together in order
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p><img src="/pictures/Bucket-Sort.png" title="" ></p>
+
+<h3>桶排序的C语言实现：</h3>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Bucket-Sort      </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='c'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Learning Algorithms : Sort --- Radix Sort]]></title>
@@ -1073,159 +1153,6 @@
 <p><img src="/pictures/merge-sort-py.png" title="MERGE_SORT" ></p>
 
 <p>好吧， 归并排序就告一段落啦。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Learn Algorithms : Sort --- Insertion Sort]]></title>
-    <link href="http://metooit.github.com/blog/2013/02/13/learn-algorithms-sort-insertion-sort/"/>
-    <updated>2013-02-13T09:24:00+08:00</updated>
-    <id>http://metooit.github.com/blog/2013/02/13/learn-algorithms-sort-insertion-sort</id>
-    <content type="html"><![CDATA[<p>今天认真地把《算法导论》上其他的排序算法整理一下， 当然从最开始介绍的 <em>插入排序</em> 开始了。</p>
-
-<hr />
-
-<h3>插入排序基本性能分析：</h3>
-
-<table>
-<thead>
-<tr>
-<th></th>
-<th> 最坏情况时间复杂度    </th>
-<th align="left"> 期望时间复杂度   </th>
-<th align="left"> 空间复杂度</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td> O(n<sup>2)</sup>                </td>
-<td align="left"> O(n<sup>2)</sup>           </td>
-<td align="left"> O(n)</td>
-</tr>
-</tbody>
-</table>
-
-
-<ul>
-<li>插入排序的特点：
-
-<blockquote><ol>
-<li>对于少量的元素， 它是一个非常有效的算法。</li>
-<li>该算法原址排序输入的数： 算法在数组A中重排这些数， 在任何时候， 最多只有常数个数字存储在数组外面。</li>
-</ol>
-</blockquote></li>
-</ul>
-
-
-<!-- more -->
-
-
-<h3>插入排序的伪代码实现：</h3>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>INSERTION-SORT(A)
-</span><span class='line'>1   for j = 2 to A.length
-</span><span class='line'>2       key = A[j]
-</span><span class='line'>3       // Insert A[j] into the  sorted sequence A[1..j-1]
-</span><span class='line'>4       i = j - 1
-</span><span class='line'>5       while i > 0 and A[i] > key
-</span><span class='line'>6           A[i + 1] = A[i]
-</span><span class='line'>7           i = i - 1
-</span><span class='line'>8       A[i + 1] = key</span></code></pre></td></tr></table></div></figure></notextile></div></p>
-
-<h3>插入排序的C语言实现：</h3>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>insertion_sort    insertion_sort </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-</pre></td><td class='code'><pre><code class='c'><span class='line'><span class="kt">void</span> <span class="nf">insertion_sort</span><span class="p">(</span><span class="kt">int</span> <span class="n">array</span><span class="p">[],</span> <span class="kt">int</span> <span class="n">length</span><span class="p">)</span>
-</span><span class='line'><span class="p">{</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="kt">int</span> <span class="n">store_index</span><span class="p">;</span>
-</span><span class='line'><span class="k">for</span><span class="p">(</span><span class="n">store_index</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">store_index</span> <span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span> <span class="n">length</span><span class="p">;</span> <span class="o">++</span><span class="n">store_index</span><span class="p">)</span>
-</span><span class='line'><span class="p">{</span>
-</span><span class='line'>    <span class="kt">int</span> <span class="n">store_key</span> <span class="o">=</span> <span class="n">array</span><span class="p">[</span><span class="n">store_index</span><span class="p">];</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="kt">int</span> <span class="n">sort_index</span> <span class="o">=</span> <span class="n">store_index</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
-</span><span class='line'>    <span class="k">while</span> <span class="p">(</span><span class="n">sort_index</span> <span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="o">-</span><span class="mi">1</span> <span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span> <span class="n">array</span><span class="p">[</span><span class="n">sort_index</span><span class="p">]</span> <span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="n">store_key</span><span class="p">)</span>
-</span><span class='line'>    <span class="p">{</span>
-</span><span class='line'>        <span class="n">array</span><span class="p">[</span><span class="n">sort_index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">array</span><span class="p">[</span><span class="n">sort_index</span><span class="p">];</span>
-</span><span class='line'>        <span class="n">sort_index</span> <span class="o">=</span> <span class="n">sort_index</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'>    <span class="n">array</span><span class="p">[</span><span class="n">sort_index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">store_key</span><span class="p">;</span>
-</span><span class='line'><span class="p">}</span>
-</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
-
-<p><img src="/pictures/insertion_sort.png" title="Insertion_sort" ></p>
-
-<hr />
-
-<h3>插入排序的Python实现：</h3>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>insertion_sort     insertion_sort </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="k">def</span> <span class="nf">sort</span><span class="p">(</span><span class="n">seq</span><span class="p">):</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">seq</span><span class="p">)):</span>
-</span><span class='line'>    <span class="n">item</span> <span class="o">=</span> <span class="n">seq</span><span class="p">[</span><span class="n">n</span><span class="p">]</span>
-</span><span class='line'>    <span class="n">hole</span> <span class="o">=</span> <span class="n">n</span>
-</span><span class='line'>    <span class="k">while</span> <span class="n">hole</span> <span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">seq</span><span class="p">[</span><span class="n">hole</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="n">item</span><span class="p">:</span>
-</span><span class='line'>        <span class="n">seq</span><span class="p">[</span><span class="n">hole</span><span class="p">]</span> <span class="o">=</span> <span class="n">seq</span><span class="p">[</span><span class="n">hole</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
-</span><span class='line'>        <span class="n">hole</span> <span class="o">=</span> <span class="n">hole</span> <span class="o">-</span> <span class="mi">1</span>
-</span><span class='line'>    <span class="n">seq</span><span class="p">[</span><span class="n">hole</span><span class="p">]</span> <span class="o">=</span> <span class="n">item</span>
-</span><span class='line'><span class="k">return</span> <span class="n">seq</span>
-</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
-
-<p><img src="/pictures/insertion_sort2.png" title="insertion_sort2" ></p>
-
-<ul>
-<li>后记： 虽然这些东西的实现过程相对简单， 文章也没有什么分量， 但是将这些点滴总结在一起也是一个学习的过程吧， 所以要坚持下去～～</li>
-</ul>
-
 ]]></content>
   </entry>
   

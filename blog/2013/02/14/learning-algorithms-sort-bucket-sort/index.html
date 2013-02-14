@@ -3,11 +3,11 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Category: Linux - K.I.S.S</title>
+	<title>Learning Algorithms : Sort --- Bucket Sort - K.I.S.S</title>
 	<meta name="author" content="metooit">
 
 	
-	<meta name="description" content="Category: Linux">
+	<meta name="description" content="桶排序 假设输入数据服从均匀分布， 平均情况下它的时间代价为O(n). 桶排序将[0..1) 的区间划分为了n个大小相同的子区间， 或称为桶(Bucket). 然后将n个输入数分别放到各个桶中。 先对每个桶中的数据进行排序， 然后遍历每个桶， 依照次序把各个桶中的元素列出来即可。 &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -17,7 +17,7 @@
 
 	<link href="/atom.xml" rel="alternate" title="K.I.S.S" type="application/atom+xml">
 	
-	<link rel="canonical" href="http://metooit.github.comblog/categories/linux/">
+	<link rel="canonical" href="http://metooit.github.com/blog/2013/02/14/learning-algorithms-sort-bucket-sort/">
 	<link href="/favicon.png" rel="shortcut icon">
 	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
 	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
@@ -105,30 +105,97 @@
 
 			
 			<div class="mid-col-container">
-				<div id="content" class="inner">
-	
+				<div id="content" class="inner"><article class="post">
+	<h1 class="title">Learning Algorithms : Sort --- Bucket Sort</h1>
+	<div class="entry-content"><p><em>桶排序</em> 假设输入数据服从均匀分布， 平均情况下它的时间代价为O(n). 桶排序将[0..1) 的区间划分为了n个大小相同的子区间， 或称为桶(Bucket). 然后将n个输入数分别放到各个桶中。 先对每个桶中的数据进行排序， 然后遍历每个桶， 依照次序把各个桶中的元素列出来即可。</p>
+
+<hr />
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th> 最坏情况时间复杂度    </th>
+<th align="left"> 期望时间复杂度   </th>
+<th align="left"> 空间复杂度   </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td> O(n<sup>2)</sup>                </td>
+<td align="left"> O(n)             </td>
+<td align="left"> O(n)</td>
+</tr>
+</tbody>
+</table>
 
 
-	
-	
-	<section class="archives"><h1 class="year">2013</h1>
-
-<article>
-	<div class="meta">
-		<span class="date">Feb 13</span>
-		<br>
-		<span class="tags">
+<ul>
+<li>特点：</li>
+</ul>
 
 
-	<a class='category' href='/blog/categories/linux/'>Linux</a>, <a class='category' href='/blog/categories/screen-/'>Screen,</a>
+<h3>桶排序伪代码实现：</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>BUCKET-SORT(A)
+</span><span class='line'>    n = A.length
+</span><span class='line'>    let B[0..n-1] be a new array
+</span><span class='line'>    for i = 0 to n - 1
+</span><span class='line'>        make B[i] an empty list
+</span><span class='line'>    for i = 1 to n
+</span><span class='line'>        insert A[i] into list B[nA[i]]
+</span><span class='line'>    for i = 0 to n - 1
+</span><span class='line'>        sort list B[i] with insertion sort
+</span><span class='line'>    concatenate the lists B[0], B[1] ... B[n-1] together in order</span></code></pre></td></tr></table></div></figure>
 
 
-</span>
-	    
-	</div>
-	<h1 class="title"><a href="/blog/2013/02/13/the-useage-of-screen/">The useage of SCREEN</a></h1>
+<p><img src="/pictures/Bucket-Sort.png" title="" ></p>
+
+<h3>桶排序的C语言实现：</h3>
+
+<figure class='code'><figcaption><span>Bucket-Sort      </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='c'><span class='line'>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+
 </article>
 
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+	<a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+	
+	<a class="addthis_counter addthis_pill_style"></a>
+	</div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
+
+
+
+<section id="comment">
+    <h1 class="title">Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</section>
 </div>
 			</div>
 			<footer id="footer" class="inner">Copyright &copy; 2013
@@ -152,7 +219,10 @@ Powered by <a href="http://octopress.org/">Octopress</a>
       var disqus_shortname = 'metooit';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://metooit.github.com/blog/2013/02/14/learning-algorithms-sort-bucket-sort/';
+        var disqus_url = 'http://metooit.github.com/blog/2013/02/14/learning-algorithms-sort-bucket-sort/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
