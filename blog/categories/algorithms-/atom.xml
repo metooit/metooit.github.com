@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Algorithms, | K.I.S.S]]></title>
   <link href="http://metooit.github.com/blog/categories/algorithms-/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-02-15T17:13:59+08:00</updated>
+  <updated>2013-02-15T17:17:45+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -21,6 +21,8 @@
     <content type="html"><![CDATA[<p>显然， 这是一篇水文， 这只是一个患有强迫症的人的需求 ： 必须把自己知道的东西都列在一起才算完整。 我今天就是来完成这一步的， 将我知道的另外几个排序算法罗列在这里， 也许很多算法都没有必要再说但是呢…… 但是……</p>
 
 <hr />
+
+<p>这里有一个<a href="http://caterpillar.onlyfun.net/Gossip/AlgorithmGossip/SelectionInsertionBubble.htm">选择插入冒泡排序的比较</a></p>
 
 <h2>首先冒泡排序：</h2>
 
