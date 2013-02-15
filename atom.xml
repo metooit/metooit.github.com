@@ -4,7 +4,7 @@
   <title><![CDATA[K.I.S.S]]></title>
   <link href="http://metooit.github.com/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-02-15T14:00:22+08:00</updated>
+  <updated>2013-02-15T17:13:59+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -12,6 +12,157 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Learning Algorithms : Sort --- Bubble. etc]]></title>
+    <link href="http://metooit.github.com/blog/2013/02/15/learning-algorithms-sort-bubble-etc/"/>
+    <updated>2013-02-15T16:18:00+08:00</updated>
+    <id>http://metooit.github.com/blog/2013/02/15/learning-algorithms-sort-bubble-etc</id>
+    <content type="html"><![CDATA[<p>显然， 这是一篇水文， 这只是一个患有强迫症的人的需求 ： 必须把自己知道的东西都列在一起才算完整。 我今天就是来完成这一步的， 将我知道的另外几个排序算法罗列在这里， 也许很多算法都没有必要再说但是呢…… 但是……</p>
+
+<hr />
+
+<h2>首先冒泡排序：</h2>
+
+<h3>冒泡排序基本性能分析：</h3>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th> 最坏情况时间复杂度    </th>
+<th align="left"> 期望时间复杂度   </th>
+<th align="left"> 空间复杂度   </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td> O(n<sup>2)</sup>                </td>
+<td align="left"> O(n<sup>2)</sup>           </td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+
+<figure class='code'><figcaption><span>bubble-sort      </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+</pre></td><td class='code'><pre><code class='c'><span class='line'><span class="kt">void</span> <span class="nf">bubbleSort</span><span class="p">(</span><span class="kt">int</span><span class="o">*</span> <span class="n">array</span><span class="p">,</span> <span class="kt">int</span> <span class="n">length</span><span class="p">){</span>
+</span><span class='line'>    <span class="kt">int</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">;</span>
+</span><span class='line'>    <span class="kt">int</span> <span class="n">temp</span><span class="p">;</span>
+</span><span class='line'>    <span class="kt">int</span> <span class="n">flag</span><span class="p">;</span>
+</span><span class='line'>    <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">do</span><span class="p">{</span>
+</span><span class='line'>        <span class="n">flag</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span><span class='line'>        <span class="k">for</span><span class="p">(</span><span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">j</span><span class="o">&lt;</span><span class="n">length</span><span class="o">-</span><span class="n">i</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">){</span>
+</span><span class='line'>            <span class="k">if</span><span class="p">(</span><span class="n">array</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">&gt;</span><span class="n">array</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]){</span>
+</span><span class='line'>                    <span class="n">temp</span> <span class="o">=</span> <span class="n">array</span><span class="p">[</span><span class="n">j</span><span class="p">];</span>
+</span><span class='line'>                    <span class="n">array</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">array</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">];</span>
+</span><span class='line'>                    <span class="n">array</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
+</span><span class='line'>                <span class="n">flag</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</span><span class='line'>            <span class="p">}</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>        <span class="n">display</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="mi">6</span><span class="p">);</span>
+</span><span class='line'>        <span class="n">i</span><span class="o">++</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span><span class="k">while</span><span class="p">(</span><span class="n">flag</span><span class="p">);</span>
+</span><span class='line'>    <span class="k">return</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>*</p>
+
+<p><img src="http://metooit.github.com/pictures/bubble-sort-c.png" title="" ></p>
+
+<p>Python 实现方法：</p>
+
+<figure class='code'><figcaption><span>bubble-sort      </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="k">def</span> <span class="nf">bubble</span><span class="p">(</span><span class="n">lst</span><span class="p">):</span>
+</span><span class='line'>    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">val1</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">lst</span><span class="p">):</span>
+</span><span class='line'>        <span class="k">for</span> <span class="n">j</span><span class="p">,</span> <span class="n">val2</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">lst</span><span class="p">):</span>
+</span><span class='line'>            <span class="k">if</span> <span class="n">lst</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">lst</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span>
+</span><span class='line'>               <span class="n">lst</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">lst</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">lst</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">lst</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+</span><span class='line'>    <span class="k">return</span> <span class="n">lst</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>选择排序：</h2>
+
+<h3>选择排序基本性能分析：</h3>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th> 最坏情况时间复杂度    </th>
+<th align="left"> 期望时间复杂度   </th>
+<th align="left"> 空间复杂度   </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td> O(n<sup>2)</sup>                </td>
+<td align="left">                  </td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+
+<figure class='code'><figcaption><span>selectionsort      </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="k">def</span> <span class="nf">selectionsort</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
+</span><span class='line'>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">L</span><span class="p">)):</span>
+</span><span class='line'>        <span class="n">minor</span> <span class="o">=</span> <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+</span><span class='line'>        <span class="n">minor_pos</span> <span class="o">=</span> <span class="n">i</span>
+</span><span class='line'>        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">L</span><span class="p">)):</span>
+</span><span class='line'>            <span class="k">if</span> <span class="n">l</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">minor</span><span class="p">:</span>
+</span><span class='line'>                <span class="n">minor</span> <span class="o">=</span> <span class="n">l</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+</span><span class='line'>                <span class="n">minor_pos</span> <span class="o">=</span> <span class="n">j</span>
+</span><span class='line'>        <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">L</span><span class="p">[</span><span class="n">minor_pos</span><span class="p">]</span> <span class="o">=</span> <span class="n">minor</span><span class="p">,</span> <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+</span><span class='line'>    <span class="k">return</span> <span class="n">L</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Learning Algorithms : Sort --- Bucket Sort]]></title>
@@ -845,6 +996,8 @@
 <li><code>Ctrl + a</code> + <code>:remove</code> 移除区域。</li>
 </ul>
 
+
+<p>今天<code>Emacs</code>快捷键按顺手了忽然间按到了 <code>Ctrl + a</code> + <code>o</code> 居然可以切换窗口内的区域， 不错不错， 记录之～</p>
 ]]></content>
   </entry>
   
@@ -2989,498 +3142,6 @@ Edit files, <code>git commit -a</code>, repeat.</p>
 行尾空格： ^+\s  +++></p></blockquote></li>
 </ul>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Markdown Cheat Sheet]]></title>
-    <link href="http://metooit.github.com/blog/2013/02/01/markdown-cheat-sheet/"/>
-    <updated>2013-02-01T07:37:00+08:00</updated>
-    <id>http://metooit.github.com/blog/2013/02/01/markdown-cheat-sheet</id>
-    <content type="html"><![CDATA[<p>大早上一起来忽然想起来要解决一点问题，然后就求助google，结果问题没有解决，却解决了我另一件烦心的事儿，那就是<code>Markdown</code>的语法问题，本来就很在意写博客的格式，但是不会<code>Markdown</code>的语法，我不会排版啊，汗……</p>
-
-<!-- more -->
-
-
-<p>偶然间发现了<code>github</code>上的一个项目叫做<a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">markdown-here</a>写得很简洁，以后可以打印一份来参考，这里呢，为了练习一下<code>Markdown</code>的语法，我就不复制粘贴了，直接在这里打一份好了。就当是<code>Markdown</code>的练习了。</p>
-
-<p>Tue Feb 12 16:54:10 CST 2013
-好吧， 我打上这个时间是想说： 今天我又发现了一个<code>Markdown-Cheatsheet</code>, <a href="http://daringfireball.net/projects/markdown/syntax">here is the</a></p>
-
-<h1>Headers</h1>
-
-<hr />
-
-<figure class='code'><figcaption><span>headers</span><a href='https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet'>Markdown-Cheatsheet </a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'># H1
-</span><span class='line'>## H2
-</span><span class='line'>### H3
-</span><span class='line'>#### H4
-</span><span class='line'>##### H5
-</span><span class='line'>###### H6
-</span><span class='line'>
-</span><span class='line'>或者，你可以选择underline-style来标记H1和H2
-</span><span class='line'>
-</span><span class='line'>Alt-H1
-</span><span class='line'>======
-</span><span class='line'>
-</span><span class='line'>Alt-H2
-</span><span class='line'>------</span></code></pre></td></tr></table></div></figure>
-
-
-<h1>H1</h1>
-
-<h2>H2</h2>
-
-<h3>H3</h3>
-
-<h4>H4</h4>
-
-<h5>H5</h5>
-
-<h6>H6</h6>
-
-<p>或者，你可以选择underline-style来标记H1和H2</p>
-
-<h1>Alt-H1</h1>
-
-<h2>Alt-H2</h2>
-
-<h1>Emphasis</h1>
-
-<hr />
-
-<figure class='code'><figcaption><span>emphasis </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>Emphasis, aka italics, with *asterisks* or _underscores_.
-</span><span class='line'>Strong emphasis, aka bold, with **asterisks** or __underscores__
-</span><span class='line'>Combined emphasis with **asterisks and _underscores_**.
-</span><span class='line'>Strikethrough uses two tildes. ~~Scratch this.~~</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Emphasis, aka italics, with <em>asterisks</em> or <em>underscores</em>.</p>
-
-<p>Strong emphasis, aka bold, with <strong>asterisks</strong> or <strong>underscores</strong></p>
-
-<p>Combined emphasis with <strong>asterisks and <em>underscores</em></strong>.</p>
-
-<p>Strikethrough uses two tildes. <del>Scratch this.</del></p>
-
-<hr />
-
-<h1>Lists</h1>
-
-<figure class='code'><figcaption><span>lists </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>1. First ordered list item
-</span><span class='line'>2. Another item
-</span><span class='line'>   * Unordered sub-list
-</span><span class='line'>1. Actual numbers don't matter, just that it's a number
-</span><span class='line'>   1. Ordered sub-list
-</span><span class='line'>4. And another itme.
-</span><span class='line'>
-</span><span class='line'>    Some text that should be alignede with the above item.
-</span><span class='line'>
-</span><span class='line'>* Undered list can use asterisks
-</span><span class='line'>- Or minuses
-</span><span class='line'>+ Or pluses</span></code></pre></td></tr></table></div></figure>
-
-
-<ol>
-<li>First ordered list item</li>
-<li>Another item
-
-<ul>
-<li>Unordered sub-list</li>
-</ul>
-</li>
-<li>Actual numbers don&#8217;t matter, just that it&#8217;s a number
-
-<ol>
-<li>Ordered sub-list</li>
-</ol>
-</li>
-<li><p>And another itme.</p>
-
-<p> Some text that should be alignede with the above item.</p></li>
-<li><p>Undered list can use asterisks</p></li>
-<li>Or minuses</li>
-<li>Or pluses</li>
-</ol>
-
-
-<hr />
-
-<h1>Links</h1>
-
-<figure class='code'><figcaption><span>links </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>[I'm an inline-style link](https://www.google.com)
-</span><span class='line'>[I'm a reference-style link][Arbitrary case-insensitive reference text]
-</span><span class='line'>[You can use numbers for reference-style link definitions][1]
-</span><span class='line'>Or leave it empty and use the [link text itself][]
-</span><span class='line'>Some tex to show that the reference links can follow later.
-</span><span class='line'>
-</span><span class='line'>[arbitrary case insensive refeence text]: https://www.mozilla.org
-</span><span class='line'>[1]: http://slashdot.org
-</span><span class='line'>[link text itself]: http://www.reddit.com</span></code></pre></td></tr></table></div></figure>
-
-
-<p><a href="https://www.google.com">I&#8217;m an inline-style link</a></p>
-
-<p>[I&#8217;m a reference-style link][Arbitrary case-insensitive reference text]</p>
-
-<p><a href="http://slashdot.org">You can use numbers for reference-style link definitions</a></p>
-
-<p>Or leave it empty and use the <a href="http://www.reddit.com">link text itself</a></p>
-
-<p>Some tex to show that the reference links can follow later.</p>
-
-<hr />
-
-<h1>Images</h1>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>Here is our logo(hover to see the title text):
-</span><span class='line'>
-</span><span class='line'>Inline-style:
-</span><span class='line'>![alt-text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1)
-</span><span class='line'>
-</span><span class='line'>Reference-style:
-</span><span class='line'>![alt-text][logo]
-</span><span class='line'>
-</span><span class='line'>[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Here is our logo(hover to see the title text):</p>
-
-<p>Inline-style:
-<img src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" title="Logo Title Text 1" alt="alt-text" /></p>
-
-<p>Reference-style:
-<img src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" title="Logo Title Text 2" alt="alt-text" /></p>
-
-<hr />
-
-<h1>Code and syntax highlighting</h1>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>Inline `code` has `back-ticks around` it</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Inline <code>code</code> has <code>back-ticks around</code> it</p>
-
-<p>Blocks of code are either fenced by lines with three back-ticks &#8220;&#8220;` , or are indented with four space.</p>
-
-<pre><code>```javascript
-var s = "JavaScript syntax highlighting";
-alert(s);
-```
-```python
-s = "python syntax hightlighting"
-print s
-```
-
-```
-No language indicated, so no syntax highlighting.
-But let's throw in a &lt;b&gt;tag&lt;/b&gt;
-```
-</code></pre>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">s</span> <span class="o">=</span> <span class="s2">&quot;JavaScript syntax highlighting&quot;</span><span class="p">;</span>
-</span><span class='line'><span class="nx">alert</span><span class="p">(</span><span class="nx">s</span><span class="p">);</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">s</span> <span class="o">=</span> <span class="s">&quot;python syntax hightlighting&quot;</span>
-</span><span class='line'><span class="k">print</span> <span class="n">s</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">No</span> <span class="n">language</span> <span class="n">indicated</span><span class="p">,</span> <span class="n">so</span> <span class="n">no</span> <span class="n">syntax</span> <span class="n">highlighting</span><span class="o">.</span>
-</span><span class='line'><span class="n">But</span> <span class="n">let</span><span class="s">&#39;s throw in a &lt;b&gt;tag&lt;/b&gt;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<hr />
-
-<h1>Tables</h1>
-
-<figure class='code'><figcaption><span>tables </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>Colons can be used to align columns.
-</span><span class='line'>
-</span><span class='line'>| Tables        | Are           | Coo l |
-</span><span class='line'>| ------------- |:-------------:| -----:|
-</span><span class='line'>| col 3 is      | right-aligned | $1600 |
-</span><span class='line'>| col 2 is      | centered      |   $12 |
-</span><span class='line'>| zebra stripes | are neat      |    $1 |
-</span><span class='line'>
-</span><span class='line'>The outer pipes (|) are optional, and you don't need to make the raw Markdown line up prettily. You can also use inline Markdown.
-</span><span class='line'>
-</span><span class='line'>Markdown | Less | Pretty
-</span><span class='line'>--- | --- | ---
-</span><span class='line'>*Still* | `renders` | **nicely**
-</span><span class='line'>1 | 2 | 3</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Colons can be used to align columns.</p>
-
-<table>
-<thead>
-<tr>
-<th></th>
-<th> Tables        </th>
-<th align="center"> Are           </th>
-<th align="right"> Coo l </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td> col 3 is      </td>
-<td align="center"> right-aligned </td>
-<td align="right"> $1600 |</td>
-</tr>
-<tr>
-<td></td>
-<td> col 2 is      </td>
-<td align="center"> centered      </td>
-<td align="right">   $12 |</td>
-</tr>
-<tr>
-<td></td>
-<td> zebra stripes </td>
-<td align="center"> are neat      </td>
-<td align="right">    $1 |</td>
-</tr>
-</tbody>
-</table>
-
-
-<p>The outer pipes (|) are optional, and you don&#8217;t need to make the raw Markdown line up prettily. You can also use inline Markdown.</p>
-
-<table>
-<thead>
-<tr>
-<th>Markdown </th>
-<th> Less </th>
-<th> Pretty</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><em>Still</em> </td>
-<td> <code>renders</code> </td>
-<td> <strong>nicely</strong></td>
-</tr>
-<tr>
-<td>1 </td>
-<td> 2 </td>
-<td> 3</td>
-</tr>
-</tbody>
-</table>
-
-
-<hr />
-
-<h1>Blockquotes</h1>
-
-<figure class='code'><figcaption><span>blockquotes </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>>Blockquotes are very handy in email to emulate reply text.
-</span><span class='line'>>This line is part of the same quote.
-</span><span class='line'>
-</span><span class='line'>Quote break
-</span><span class='line'>
-</span><span class='line'>>This is a very long line . This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .</span></code></pre></td></tr></table></div></figure>
-
-
-<blockquote><p>Blockquotes are very handy in email to emulate reply text.
-This line is part of the same quote.</p></blockquote>
-
-<p>Quote break</p>
-
-<p>This is a very long line . This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .This is a very long line .</p>
-
-<hr />
-
-<h1>Inline HTML</h1>
-
-<p>You can also use raw HTML in your <code>Markdown</code>.</p>
-
-<figure class='code'><figcaption><span>inline-html </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;dl>
-</span><span class='line'>  &lt;dt>Definition list&lt;/dt>
-</span><span class='line'>  &lt;dd>Is something people use sometimes.&lt;/dd>
-</span><span class='line'>
-</span><span class='line'>  &lt;dt>Markdown in HTML&lt;/dt>
-</span><span class='line'>  &lt;dd>Does *not* work **very** well. Use HTML &lt;em>tags&lt;/em>.&lt;/dd>
-</span><span class='line'>&lt;/dl></span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<dl>
-  <dt>Definition list</dt>
-  <dd>Is something people use sometimes.</dd>
-
-  <dt>Markdown in HTML</dt>
-  <dd>Does *not* work **very** well. Use HTML <em>tags</em>.</dd>
-</dl>
-
-
-<hr />
-
-<h1>Horizontal Rule</h1>
-
-<figure class='code'><figcaption><span>horizontal-rule </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>Three or more...
-</span><span class='line'>
-</span><span class='line'>---
-</span><span class='line'>
-</span><span class='line'>Hyphens
-</span><span class='line'>
-</span><span class='line'>***
-</span><span class='line'>
-</span><span class='line'>Asterisks
-</span><span class='line'>
-</span><span class='line'>___
-</span><span class='line'>
-</span><span class='line'>Underscores</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Three or more&#8230;</p>
-
-<hr />
-
-<p>Hyphens</p>
-
-<p>Asterisks</p>
-
-<hr />
-
-<p>Underscores</p>
-
-<hr />
-
-<h1>Line Breaks</h1>
-
-<p>My basic recommendation for learning how line breaks work is to experiment and discover &#8211; hit <Enter> once (i.e., insert one newline), then hit it twice (i.e., insert two newlines), see what happens. You&#8217;ll soon learn to get what you want. &#8220;Markdown Toggle&#8221; is your friend.</p>
-
-<p>Here are some things to try out:</p>
-
-<figure class='code'><figcaption><span>line-breaks </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>Here's a line for us to start with.
-</span><span class='line'>
-</span><span class='line'>This line is separated from the one above by two newlines, so it will be a *separate paragraph*.
-</span><span class='line'>
-</span><span class='line'>This line is also a separate paragraph, but...
-</span><span class='line'>This line is only separated by a single newline, so it's a separate line in the *same paragraph*.</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Here&#8217;s a line for us to start with.</p>
-
-<p>This line is separated from the one above by two newlines, so it will be a <em>separate paragraph</em>.</p>
-
-<p>This line is also a separate paragraph, but&#8230;
-This line is only separated by a single newline, so it&#8217;s a separate line in the <em>same paragraph</em>.</p>
 ]]></content>
   </entry>
   
