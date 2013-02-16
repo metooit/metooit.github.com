@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Algorithms | K.I.S.S]]></title>
   <link href="http://metooit.github.com/blog/categories/algorithms/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-02-16T20:13:33+08:00</updated>
+  <updated>2013-02-16T20:15:40+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -37,10 +37,13 @@
 <h3>2.1 如何按序打印二叉树：</h3>
 
 <ul>
-<li><p>二叉搜索树的性质决定了我们可以通过简单的<code>递归算法</code>来按顺序打印出二叉树的所有关键字。这种方法称作是<code>中序遍历</code>（inorder tree walk）
-<strong> 中序遍历： 输出的子树根的关键字位于其左子树关键字和右子树关键字之间
-</strong> 先序遍历： 输出的根的关键字在其左右子树关键字之前
-** 后序遍历： 输出的根的关键字在其左右子树关键字之后</p></li>
+<li><p>二叉搜索树的性质决定了我们可以通过简单的<code>递归算法</code>来按顺序打印出二叉树的所有关键字。这种方法称作是<code>中序遍历</code>（inorder tree walk）</p>
+
+<p>** 中序遍历： 输出的子树根的关键字位于其左子树关键字和右子树关键字之间</p>
+
+<p>** 先序遍历： 输出的根的关键字在其左右子树关键字之前</p>
+
+<p>** 后序遍历： 输出的根的关键字在其左右子树关键字之后</p></li>
 <li><p>伪代码实现：
 <div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
