@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Algorithms | K.I.S.S]]></title>
+  <link href="http://metooit.github.com/blog/categories/algorithms/atom.xml" rel="self"/>
+  <link href="http://metooit.github.com/"/>
+  <updated>2013-02-16T20:13:33+08:00</updated>
+  <id>http://metooit.github.com/</id>
+  <author>
+    <name><![CDATA[metooit]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Binary Search Tree]]></title>
+    <link href="http://metooit.github.com/blog/2013/02/16/binary-search-tree/"/>
+    <updated>2013-02-16T13:04:00+08:00</updated>
+    <id>http://metooit.github.com/blog/2013/02/16/binary-search-tree</id>
+    <content type="html"><![CDATA[<h2>Introduction:</h2>
+
+<p>二叉搜索树上的基本操作所花费的时间与树的高度成正比。对于一个有<code>n</code>个结点的二叉搜索树来说， 基本操作的最坏运行时间为<code>O(lgn)</code>。</p>
+
+<h2>1. 二叉搜索树的概念：</h2>
+
+<ul>
+<li>一棵二叉搜索树是以一棵二叉树来组织的</li>
+<li>树可以用一个链表的数据结构来表示， 其中的每一个结点就是一个对象</li>
+<li>除了<code>key</code> 和 <code>卫星数据</code> 外， 每一个结点还包含了属性 <code>left</code> <code>right</code> 和 <code>p</code>。 如果相应的属性不存在， 那么它的值就是<code>NIL</code>。 根结点是树中唯一一个父指针为NIL的结点。</li>
+<li>对于任何节点x， 它的左子树中的关键字最大不能大于x.key, 右子树中的关键字最小不能小于x.key</li>
+</ul>
+
+
+<h2>2. 二叉搜索树上的操作：</h2>
+
+<h3>2.1 如何按序打印二叉树：</h3>
+
+<ul>
+<li><p>二叉搜索树的性质决定了我们可以通过简单的<code>递归算法</code>来按顺序打印出二叉树的所有关键字。这种方法称作是<code>中序遍历</code>（inorder tree walk）
+<strong> 中序遍历： 输出的子树根的关键字位于其左子树关键字和右子树关键字之间
+</strong> 先序遍历： 输出的根的关键字在其左右子树关键字之前
+** 后序遍历： 输出的根的关键字在其左右子树关键字之后</p></li>
+<li><p>伪代码实现：
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>INORDER-TREE-WALK(x)
+</span><span class='line'>  if x != NIL&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>  INORDER-TREE-WALK(x.left)
+</span><span class='line'>  print x.key
+</span><span class='line'>  INORDER-TREE-WALK(x.right)
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p></li>
+<li><p>遍历打印一个有n个结点的二叉搜索树需要耗费O(n)的时间 （证明详见《算法导论（第三版）》）</p></li>
+</ul>
+
+
+<h3>2.2 查询二叉搜索树：</h3>
+
+<h4>2.2.1查找：</h4>
+
+<ul>
+<li>差找是指在一棵二叉搜索数中找到一个具有给定关键字的结点</li>
+<li>输入是一个指向树根的指针和一个关键字<code>k</code>, 如果结点存在则返回指向该关键字的指针，否则返回<code>NIL</code></li>
+<li>伪代码实现：
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>TREE-SEARCH(x, k)
+</span><span class='line'>  if x == NIL or k == x.key
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>  return x
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>  if x &lt; x.key
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>  return TREE-SEARCH(x.left, k)
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>  else
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>  return TREE-SEARCH(x.right, k)
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p></li>
+</ul>
+
+
+<p><img src="/pictures/BSTree.jpg" title="BSTree" ></p>
+
+<ul>
+<li><p>TREE-SEARCH 的运行时间为O(h) (h 是指树的高度)</p></li>
+<li><p>我们也可以不用递归， 用<code>while</code>循环来展开
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>ITERATIVE-TREE_SEARCH(x, k)
+</span><span class='line'>  whiel x != NIL and k != x.key&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>  if x &lt; x.key
+</span><span class='line'>      x = x.left
+</span><span class='line'>  else x = x.right
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p>  return x</span></code></pre></td></tr></table></div></figure></notextile></div></p></li>
+</ul>
+
+
+<h4>2.2.2 最大和最小关键字元素：</h4>
+
+<ul>
+<li><p>查找最小关键字的元素：
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>TREE-MINIMUM(x)
+</span><span class='line'>  while x.left != NIL&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>  x = x.left
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p>  return x</span></code></pre></td></tr></table></div></figure></notextile></div></p></li>
+<li><p>查找最大关键字的元素：
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>TREE-MAXIMUM(x)
+</span><span class='line'>  while x.right != NIL&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>  x = x.right
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p>  return x</span></code></pre></td></tr></table></div></figure></notextile></div></p></li>
+<li><p>这两个过程的运行时间为O(h)</p></li>
+</ul>
+
+
+<h4>2.2.3 后继和前驱：</h4>
+
+<ul>
+<li><p>伪代码的实现过程：
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>TREE-SUCCESSOR(x)
+</span><span class='line'>  if x.right != NIL&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>  return TREE-MINIMUM(x.right)
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>  y = x.p
+</span><span class='line'>  while y != NIL and x == y.right
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>  x = y
+</span><span class='line'>  y = y.p
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p></li>
+<li><p>两种情况：
+<strong> 如果结点x的右子树为非空，那么x的后继恰好是x右子树中的最左的结点
+</strong> 如果结点x的右子树非空并且有一个后继y， 那么y就是x的有左孩子的底层祖先， 并且它也是x的一个祖先， 为了找到y， 只需要简单地从x开始沿树而上直到遇到一个其双亲有左孩子的结点</p></li>
+<li><p>执行此过程的操作时间同样是O(h)</p></li>
+</ul>
+
+
+<h3>2.3 查找和删除：</h3>
+
+<h4>2.3.1 插入：</h4>
+
+<ul>
+<li><p>前提条件： 将一个新值v插入到一棵二叉搜索树T中， 以z作为输入， 其中z.key=v, z.left=NIL, z.right=NIL</p></li>
+<li><p>伪代码实现：
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>TREE-INSERT(T, z)
+</span><span class='line'>  y = NIL
+</span><span class='line'>  x = T.root
+</span><span class='line'>  while x != NIL&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>  y = x
+</span><span class='line'>  if z.key &lt; x.key
+</span><span class='line'>      x = x.left
+</span><span class='line'>  else
+</span><span class='line'>      x = x.right
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>  z.p = y
+</span><span class='line'>  if y == NIL
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>  T.root = z // tree T was empty
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>  elseif z.key &lt; y.key
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>  y.left = z
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>  else
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>  y.right = z
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p></li>
+</ul>
+
+
+<hr />
+
+<h3>References:</h3>
+
+<p><a href="http://www.qmatica.com/DataStructures/Trees/AVL/AVLTree.html">动画演示</a>
+<a href="http://cslibrary.stanford.edu/110/BinaryTrees.html">Binary Trees</a>
+<a href="http://lonelycoder.org/?p=142">A simple introduction to Binary Search Tree</a>
+<a href="http://www.wutianqi.com/?p=2430">《算法导论》学习笔记</a></p>
+]]></content>
+  </entry>
+  
+</feed>

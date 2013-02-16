@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Learn, | K.I.S.S]]></title>
   <link href="http://metooit.github.com/blog/categories/learn-/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-02-15T17:17:45+08:00</updated>
+  <updated>2013-02-16T20:13:33+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -12,6 +12,17 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Learn Ruby the hard way]]></title>
+    <link href="http://metooit.github.com/blog/2013/02/15/learn-ruby-the-hard-way/"/>
+    <updated>2013-02-15T19:23:00+08:00</updated>
+    <id>http://metooit.github.com/blog/2013/02/15/learn-ruby-the-hard-way</id>
+    <content type="html"><![CDATA[<p><a href="http://ruby.learncodethehardway.org/book/">Learn Ruby The Hard Way</a></p>
+
+<p>所谓笨方法学习就是通过不断地实践练习去学习一门新的知识， 但是这应该不算是笨的方法吧。 编程不是有一个一万小时定律吗？ 这应该是学习的正确方法吧。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[继续学习Ruby]]></title>
