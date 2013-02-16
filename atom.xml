@@ -4,7 +4,7 @@
   <title><![CDATA[K.I.S.S]]></title>
   <link href="http://metooit.github.com/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-02-16T20:16:55+08:00</updated>
+  <updated>2013-02-16T23:25:08+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -12,6 +12,29 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Talk to my heart]]></title>
+    <link href="http://metooit.github.com/blog/2013/02/16/talk-to-my-heart/"/>
+    <updated>2013-02-16T22:55:00+08:00</updated>
+    <id>http://metooit.github.com/blog/2013/02/16/talk-to-my-heart</id>
+    <content type="html"><![CDATA[<p>忽然觉得应该和自己好好聊一聊， 主要是有几点要提醒一下自己， 算是自我激励或者自我省查吧。</p>
+
+<ul>
+<li>第一点： 大多数时候当你决定做一件事情的时候， 要非常非常认真的去做， 要把这件事情当成一件大事去做</li>
+<li>第二点： 学习这件事情其实就是自己的事情， 学会这件事情也不是说说那么简单</li>
+<li>第三点： 兴趣是最好的老师， 但猎奇不是兴趣， 尝鲜也不是兴趣， 它们只是你在某个无聊的时候找的一些无用的事情来做罢了</li>
+<li>第四点： 学会掌控， 学会把握， 每一个结果都有它的原因， 每一次的成功都不是偶然， 所以你要努力尝试去掌控自己的人生</li>
+<li>第五点： 做有用的事情， do something that make sense, make difference. 说不好， 自己体会</li>
+<li>第六点： 坚持下去不容易， 保持下去有时候很容易， 但是， 你还年轻除了保持不住的青春年华之外其实你没有什么要保持的， 除了…… （比如自信？）， 所以， 大胆去尝试， 大胆去做吧， 做你想做的事</li>
+<li>第七点： 如果不是堕落， 其实做你想做的事还是挺难的， 因为有想法不是那么容易的一件事， 所以先要有想法， 然后付诸实施吧！</li>
+<li>第八点： 保持阳光的态度， 相信美好的东西</li>
+<li>第九点： 简单、执着</li>
+<li>第十点： 放轻松…… 再看一看前九点</li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Binary Search Tree]]></title>
@@ -3058,127 +3081,6 @@ app/views/posts/new.html.erb</p></li>
 <hr />
 
 <p>好了，关于文章的收获就是这些。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Get to know Ruby]]></title>
-    <link href="http://metooit.github.com/blog/2013/02/06/get-to-know-ruby/"/>
-    <updated>2013-02-06T20:58:00+08:00</updated>
-    <id>http://metooit.github.com/blog/2013/02/06/get-to-know-ruby</id>
-    <content type="html"><![CDATA[<p>这几天通过对<code>octopress</code>的了解，越来越觉得<code>Ruby</code>是一门很优美的语言，我虽然还没有下定决心学习它，但是要初步了解一下还是可以的，多看看总是不会有坏处的 ：-）</p>
-
-<hr />
-
-<h3>什么是Ruby?</h3>
-
-<p><a href="http://www.ruby-lang.org/zh_cn/">Ruby</a>的官方网站上是这样说的：Ruby是一种跨平台、面向对象、动态的编程语言。简单性， 一致性是<code>Ruby</code>推崇的思想。</p>
-
-<h4>Ruby思想：</h4>
-
-<p><code>Ruby</code>的发明者是一个日本人，<a href="http://www.rubyist.net/~matz/">松本行弘</a>.我看了他说过的话，<code>Ruby</code>的思想就是：自然，表面简单内部却很复杂。</p>
-
-<h4>Ruby成长：</h4>
-
-<p>看过<code>Ruby</code>的成长记，我不得不说这是开源运动的一个胜利。开源才能更自由，有这么多优秀的软件架构用<code>Ruby</code>写成，<code>Ruby</code>也会越来越受欢迎吧！</p>
-
-<h4>面向对象：</h4>
-
-<p><code>Ruby</code>从最开始就是要：比<code>Perl</code>更加强大，比<code>Python</code>更加面向对象。<code>Ruby</code>中所有东西都是对象。</p>
-
-<figure class='code'><figcaption><span>ruby-example1     </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="mi">5</span><span class="o">.</span><span class="n">times</span> <span class="p">{</span> <span class="nb">print</span> <span class="s2">&quot;I love Ruby!&quot;</span> <span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>据说这一句就说明了<code>Ruby</code>是一种纯『面向对象』的语言，这么说是要纯到什么程度呢？<code>Ruby</code>让所有类型都可以赋予方法和产生实例变量。具体的以后再好好体会吧！</p>
-
-<h4>灵活性：</h4>
-
-<p><code>Ruby</code>允许用户改变其核心，它试着不去妨碍程序员。比如，你可以定义如下函数以使用<code>plus</code>而不是<code>+</code>：</p>
-
-<figure class='code'><figcaption><span>ruby-example2  </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">Numberic</span>
-</span><span class='line'>    <span class="k">def</span> <span class="nf">plus</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-</span><span class='line'>        <span class="nb">self</span><span class="o">.</span><span class="n">+</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-</span><span class='line'>    <span class="k">end</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h4>Blocks 一个独特而强大的特性：</h4>
-
-<p>程序员可以给任意一个函数添加一个密封（closure）来表述这个函数如何工作。密封也被叫做代码块。这个特性也是<code>Lisp</code>文化融入<code>Ruby</code>的一个体现：</p>
-
-<figure class='code'><figcaption><span>ruby-example1  </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">search_engine</span> <span class="o">=</span>
-</span><span class='line'>    <span class="sx">%w[Google Yahoo MSN]</span><span class="o">.</span><span class="n">map</span> <span class="k">do</span> <span class="o">|</span><span class="n">engine</span><span class="o">|</span>
-</span><span class='line'>        <span class="s2">&quot;http://www.&quot;</span> <span class="o">+</span> <span class="n">engine</span><span class="o">.</span><span class="n">downcase</span> <span class="o">+</span> <span class="s2">&quot;.com&quot;</span>
-</span><span class='line'>    <span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>代码块在do&#8230;end 结构中。map函数将代码块应用一个词的列表中。</p>
-
-<h4><code>Ruby</code>“有意”只提供单继承：</h4>
-
-<p>这里这个“有意”是个什么意思呢？<code>Ruby</code>拥有模块，模块把许多方法放在一个类别里。类可以混合一个模块，得到这个模块提供的所有方法。比如所有提供<code>each</code>方法的类可以混合<code>Enumerable</code>模块，来调用这个模块所提供的所有方法。</p>
-
-<figure class='code'><figcaption><span>ruby-example1  </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">MyArray</span>
-</span><span class='line'>    <span class="kp">include</span> <span class="no">Enumerable</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h4><code>Ruby</code>的面貌：</h4>
-
-<p><code>Ruby</code>很少使用符号并且倾向于使用英文单词作为关键字。
-* var 可以是局部变量
-* @var 是一个实例变量
-* $var 是一个全局变量
-这些信号让程序员看清楚每一个变量的角色，增强了程序的可读性。</p>
-
-<h4>更多特性：</h4>
-
-<ul>
-<li>异常处理</li>
-<li>有一个真正表示清扫的垃圾收集器对象</li>
-<li>C 扩展方便</li>
-<li>动态调用库</li>
-<li>可提供不依赖操作系统的线程</li>
-<li>轻便
-&#8230;&#8230;</li>
-</ul>
-
-
-<hr />
-
-<p>阅读完<code>Ruby</code>的一些特性之后，我又看了一下<a href="http://www.ruby-lang.org/zh_cn/documentation/quickstart/">20分钟体验<code>Ruby</code></a>,感觉很简单，所以也没有必要多说了。</p>
-
-<hr />
-
-<p>在<a href="http://ruby-china.org">Ruby-China</a>逛了一圈之后，作为一个新手，我决定看一看它的<a href="http://ruby-china.org/wiki">wiki</a>看一看有什么好的学习资源，简单翻看之后还真是收获不小。</p>
-
-<ul>
-<li>首先，<a href="http://saito.im/slide/ruby-new.html"><code>Ruby</code>语言新手教程</a>让我大体上体验了一下<code>Ruby</code>，这种幻灯片式的tutorial让人感觉简单明了，虽然不是很深入，我还时觉得这个是一个很好的学习资源。</li>
-<li>然后，看到了<a href="http://ruby-china.org/wiki/start_leaning_rails">几篇文章</a>，关于Ruby， Ruby on rails, 先学习哪个呢？具体到每个人可能并不一样吧，所以我就先学习一下<code>Ruby</code>的语法，在看的过程中对比<code>Python</code>，然后立刻就学着用rails 建立一些小项目吧。</li>
-<li>最后，算是一点意外的惊喜吧，我前两天写<code>Git</code>的两篇文章，其实这里就有一些关于<code>Git</code>学习的资料。</li>
-</ul>
-
 ]]></content>
   </entry>
   
