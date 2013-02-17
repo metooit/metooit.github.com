@@ -4,7 +4,7 @@
   <title><![CDATA[K.I.S.S]]></title>
   <link href="http://metooit.github.com/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-02-16T23:25:08+08:00</updated>
+  <updated>2013-02-17T21:02:33+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -247,6 +247,316 @@
 </span><span class='line'>        y.left = z
 </span><span class='line'>    else
 </span><span class='line'>        y.right = z</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>TREE-INSERT 的运行时间为O(h)</li>
+</ul>
+
+
+<h4>2.3.2 删除：</h4>
+
+<ul>
+<li>一棵二叉搜索树中删除一个结点z的整个策略分为三种基本情况：</li>
+<li>如果z没有孩子结点， 那么只是简单地将它删除， 并且修改它的父结点， 用NIL作为孩子来替换z
+<img src="http://metooit.github.com/pictures/delete1.png" title="delete1" ></li>
+<li>如果z只有一个孩子， 那么将这个孩子提升到树中z的位置上， 并且修改z的父结点， 用z的孩子来替换z
+<img src="http://metooit.github.com/pictures/delete2.png" title="delete2" ></li>
+<li><p>如果z有两个孩子， 那么找到z的后继y（一定在z的右子树中）， 并且让y占据树中z的位置。 z的原来右子树部分成为y的新右子树， 并且z的左子树成为y的新的左子树。
+<img src="http://metooit.github.com/pictures/delete3.png" title="delete3" ></p></li>
+<li><p>从一棵二叉搜索树中删除一个结点，如果取指向T和z的指针作为输入：</p></li>
+<li>如果z没有左孩子， 那么用其右孩子来替换z， 这个右孩子可以是NIL也可以不是. 当z的右孩子是NIL时， 这种情况就是z只有一个孩子结点的情况。 当z的右孩子非NIL时， 这种情况就是z仅有一个孩子结点的情形， 该孩子是其右孩子。</li>
+<li>如果z仅有一个孩子并且为其左孩子时， 那么用左孩子来替换z</li>
+<li>否则， z两个孩子都有。 我们要查找z的后继y，这个后继位于z的右子树中并且没有左孩子。 现在需要将y移出原来的位置进行拼接， 并替换树中的z</li>
+<li><p>如果y是z的右孩子， 那么用y替换z， 并仅留下y的右孩子</p></li>
+<li><p>为了在二叉树中移动子树， 定义TRANSPLANT， 用另一棵子树替换一棵子树并且成为其双亲的孩子结点。</p></li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>TRANSPLANT(T, u, v)
+</span><span class='line'>    if u.p == NIL
+</span><span class='line'>        T.root = v
+</span><span class='line'>    elseif u == u.p.left
+</span><span class='line'>        u.p.left = v
+</span><span class='line'>    else u.p.right = v
+</span><span class='line'>    if v != NIL
+</span><span class='line'>        v.p = u.p</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>从二叉树中删除结点的过程伪代码：</li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>TREE-DELETE(T, z)
+</span><span class='line'>    if z.left = NIL
+</span><span class='line'>        TRANSPLANT(T, z, z.right)
+</span><span class='line'>    elseif z.right == NIL
+</span><span class='line'>        TRANSPLANT(T, z, z.left)
+</span><span class='line'>    else y = TREE-MINIMUM(z.right)
+</span><span class='line'>        if y.p != z
+</span><span class='line'>            TRANSPLANT(T, y, y.right)
+</span><span class='line'>            y.right = z.right
+</span><span class='line'>            y.right.p = y
+</span><span class='line'>        TRANSPLANT(T, z, y)
+</span><span class='line'>        y.left = z.left
+</span><span class='line'>        y.left.p = y</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>从一棵高度为h的二叉树上删除一个结点的时间代价为O(h)</li>
+</ul>
+
+
+<h3>源代码实现：</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+<span class='line-number'>71</span>
+<span class='line-number'>72</span>
+<span class='line-number'>73</span>
+<span class='line-number'>74</span>
+<span class='line-number'>75</span>
+<span class='line-number'>76</span>
+<span class='line-number'>77</span>
+<span class='line-number'>78</span>
+<span class='line-number'>79</span>
+<span class='line-number'>80</span>
+<span class='line-number'>81</span>
+<span class='line-number'>82</span>
+<span class='line-number'>83</span>
+<span class='line-number'>84</span>
+<span class='line-number'>85</span>
+<span class='line-number'>86</span>
+<span class='line-number'>87</span>
+<span class='line-number'>88</span>
+<span class='line-number'>89</span>
+<span class='line-number'>90</span>
+<span class='line-number'>91</span>
+<span class='line-number'>92</span>
+<span class='line-number'>93</span>
+<span class='line-number'>94</span>
+<span class='line-number'>95</span>
+<span class='line-number'>96</span>
+<span class='line-number'>97</span>
+<span class='line-number'>98</span>
+<span class='line-number'>99</span>
+<span class='line-number'>100</span>
+<span class='line-number'>101</span>
+<span class='line-number'>102</span>
+<span class='line-number'>103</span>
+<span class='line-number'>104</span>
+<span class='line-number'>105</span>
+<span class='line-number'>106</span>
+<span class='line-number'>107</span>
+<span class='line-number'>108</span>
+<span class='line-number'>109</span>
+<span class='line-number'>110</span>
+<span class='line-number'>111</span>
+<span class='line-number'>112</span>
+<span class='line-number'>113</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>/* Initialize the binary tree, generate the root node */
+</span><span class='line'>Tree_Node* TreeInit(Tree_Node_Key key)
+</span><span class='line'>{
+</span><span class='line'>    Tree_Node* Start = NULL;
+</span><span class='line'>    if ((Start = malloc(sizeof(Tree_Node))) == NULL)
+</span><span class='line'>    {
+</span><span class='line'>        fprintf(stderr, "Failed to initialize memory\n");
+</span><span class='line'>        exit(EXIT_FAILURE);
+</span><span class='line'>    }
+</span><span class='line'>    Start->key = key;
+</span><span class='line'>    Start->left = NULL;
+</span><span class='line'>    Start->right = NULL;
+</span><span class='line'>    return Start;
+</span><span class='line'>}
+</span><span class='line'>
+</span><span class='line'>/* Insert the given key to the Tree */
+</span><span class='line'>Tree_Node* TreeInsert(Tree_Node* Start, Tree_Node_Key key)
+</span><span class='line'>{
+</span><span class='line'>    if(Start == NULL) {
+</span><span class='line'>        return (TreeInit(key));
+</span><span class='line'>    }
+</span><span class='line'>    else {
+</span><span class='line'>        if(Start->key > key)
+</span><span class='line'>            Start->left = TreeInsert(Start->left, key);
+</span><span class='line'>        else
+</span><span class='line'>            Start->right = TreeInsert(Start->right, key);
+</span><span class='line'>        return Start;
+</span><span class='line'>    }
+</span><span class='line'>}
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>/* Find the node that contains the min key */
+</span><span class='line'>Tree_Node* TreeMinimum(Tree_Node* Start)
+</span><span class='line'>{
+</span><span class='line'>    while(Start->left != NULL)
+</span><span class='line'>    {
+</span><span class='line'>        Start = Start->left;
+</span><span class='line'>    }
+</span><span class='line'>    return Start;
+</span><span class='line'>}
+</span><span class='line'>
+</span><span class='line'>/* Find the node that contains the max key */
+</span><span class='line'>Tree_Node* TreeMaximum(Tree_Node* Start)
+</span><span class='line'>{
+</span><span class='line'>    while(Start->right != NULL)
+</span><span class='line'>    {
+</span><span class='line'>        Start = Start->right;
+</span><span class='line'>    }
+</span><span class='line'>    return Start;
+</span><span class='line'>}
+</span><span class='line'>
+</span><span class='line'>/* Print the tree in order */
+</span><span class='line'>void InorderPrintTree(Tree_Node* Start)
+</span><span class='line'>{
+</span><span class='line'>    if(Start == NULL)
+</span><span class='line'>        return;
+</span><span class='line'>    InorderPrintTree(Start->left);
+</span><span class='line'>    printf("%d ", Start->key);
+</span><span class='line'>    InorderPrintTree(Start->right);
+</span><span class='line'>    return;
+</span><span class='line'>}
+</span><span class='line'>
+</span><span class='line'>/* Print the tree in postorder */
+</span><span class='line'>void PostorderPrintTree(Tree_Node* Start)
+</span><span class='line'>{
+</span><span class='line'>    if(Start == NULL)
+</span><span class='line'>        return;
+</span><span class='line'>    PostorderPrintTree(Start->left);
+</span><span class='line'>    PostorderPrintTree(Start->right);
+</span><span class='line'>    printf("%d ", Start->key);
+</span><span class='line'>    return;
+</span><span class='line'>}
+</span><span class='line'>
+</span><span class='line'>/* Using recurse to free the tree */
+</span><span class='line'>void TreeFreeRecurse(Tree_Node* Start)
+</span><span class='line'>{
+</span><span class='line'>    if(Start == NULL)
+</span><span class='line'>        return;
+</span><span class='line'>    else {
+</span><span class='line'>        TreeFreeRecurse(Start->left);
+</span><span class='line'>        TreeFreeRecurse(Start->right);
+</span><span class='line'>    }
+</span><span class='line'>    free(Start->left);
+</span><span class='line'>    free(Start->right);
+</span><span class='line'>    return;
+</span><span class='line'>}
+</span><span class='line'>
+</span><span class='line'>/* Free the space of the tree */
+</span><span class='line'>void TreeFree(Tree_Node* Start)
+</span><span class='line'>{
+</span><span class='line'>    TreeFreeRecurse(Start);
+</span><span class='line'>    free(Start);
+</span><span class='line'>    return;
+</span><span class='line'>}
+</span><span class='line'>
+</span><span class='line'>/* Return the tree size */
+</span><span class='line'>int TreeSize(Tree_Node* Start)
+</span><span class='line'>{
+</span><span class='line'>    if (Start == NULL) return 0;
+</span><span class='line'>    else return 1 + TreeSize(Start->left) + TreeSize(Start->right);
+</span><span class='line'>}
+</span><span class='line'>
+</span><span class='line'>/* Return the max depth of the tree */
+</span><span class='line'>int TreeMaxDepth(Tree_Node* Start)
+</span><span class='line'>{
+</span><span class='line'>    if(Start == NULL)
+</span><span class='line'>        return 0;
+</span><span class='line'>
+</span><span class='line'>    if(TreeMaxDepth(Start->left) >= TreeMaxDepth(Start->right))
+</span><span class='line'>        return TreeMaxDepth(Start->left) + 1;
+</span><span class='line'>    else
+</span><span class='line'>        return TreeMaxDepth(Start->right) + 1;
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
 
 
 <hr />
