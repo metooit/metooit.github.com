@@ -4,7 +4,7 @@
   <title><![CDATA[K.I.S.S]]></title>
   <link href="http://metooit.github.com/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-02-18T15:16:35+08:00</updated>
+  <updated>2013-02-18T15:21:09+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -19,7 +19,7 @@
     <updated>2013-02-18T13:43:00+08:00</updated>
     <id>http://metooit.github.com/blog/2013/02/18/notes-for-learning-python-2</id>
     <content type="html"><![CDATA[<ul>
-<li><p>python的序列类型：</p>
+<li>python的序列类型：
 
 <ul>
 <li>元组： <code>,</code>
@@ -34,47 +34,89 @@
 <ul>
 <li>列表是可变的</li>
 <li>列表的方法，<code>help(list)</code></li>
-<li>任意可迭代的列表元组等都可以使用序列拆分操作符进行拆分<code>*</code>
-
-<blockquote><blockquote><blockquote><p>first, <em>rest = [1, 2, 3, 4, 5, 6]
-first, rest
-  (1, [2, 3, 4, 5, 6])
-first, </em>mid, last = [1, 2, 3, 4, 5, 6]
-first, mid, last
-  (1, [2, 3, 4, 5], 6)</p></blockquote></blockquote></blockquote></li>
-<li>下面两段代码等价：
-
-<blockquote><blockquote><blockquote><p>words[2:4] = []
-del words[2:4]</p></blockquote></blockquote></blockquote></li>
-<li>带步距的列表：
-
-<blockquote><blockquote><blockquote><p>x = [1,2,3,4,5,6,7,8,9,10]
-print(x[1::2])
-  [2, 4, 6, 8, 10]
-x[1::2] = [0] * len(x[1::2])
-print(x)
-  [1, 0, 3, 0, 5, 0, 7, 0, 9, 0]</p></blockquote></blockquote></blockquote></li>
-<li>列表内涵：
-
-<blockquote><blockquote><blockquote><p>leaps = [ y for y in range(1900, 1940)
-  &#8230; if(y % 4 == 0 and y % 100 != 0 or y % 400 == 0)]
-print(leaps)
-  [1904, 1908, 1912, 1916, 1920, 1924, 1928, 1932, 1936]</p></blockquote></blockquote></blockquote></li>
+<li>任意可迭代的列表元组等都可以使用序列拆分操作符进行拆分<code>*</code></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p>集合： <code>{}</code></p>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>>>> first, *rest = [1, 2, 3, 4, 5, 6]
+</span><span class='line'>>>> first, rest
+</span><span class='line'>(1, [2, 3, 4, 5, 6])
+</span><span class='line'>>>> first, *mid, last = [1, 2, 3, 4, 5, 6]
+</span><span class='line'>>>> first, mid, last
+</span><span class='line'>(1, [2, 3, 4, 5], 6)</span></code></pre></td></tr></table></div></figure>
+
+
+<pre><code>    * 下面两段代码等价：
+</code></pre>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>>>> words[2:4] = []
+</span><span class='line'>>>> del words[2:4]</span></code></pre></td></tr></table></div></figure>
+
+
+<pre><code>    * 带步距的列表：
+</code></pre>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>>>> x = [1,2,3,4,5,6,7,8,9,10]
+</span><span class='line'>>>> print(x[1::2])
+</span><span class='line'>[2, 4, 6, 8, 10]
+</span><span class='line'>>>> x[1::2] = [0] * len(x[1::2])
+</span><span class='line'>>>> print(x)
+</span><span class='line'>[1, 0, 3, 0, 5, 0, 7, 0, 9, 0]</span></code></pre></td></tr></table></div></figure>
+
+
+<pre><code>    * 列表内涵：
+</code></pre>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>>>> leaps = [ y for y in range(1900, 1940)
+</span><span class='line'>... if(y % 4 == 0 and y % 100 != 0 or y % 400 == 0)]
+</span><span class='line'>>>> print(leaps)
+</span><span class='line'>[1904, 1908, 1912, 1916, 1920, 1924, 1928, 1932, 1936]</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>集合： <code>{}</code>
 
 <ul>
 <li>集合是可变的</li>
 <li>集合的方法：<code>help(set)</code></li>
 <li>| &amp; \ ^ 操作</li>
-<li>集合内涵： >>> html = {x for x in files if x.lower().endswith((&#8220;.html&#8221;, &#8220;htm&#8221;))}</li>
-<li>固定集合</li>
+<li>集合内涵：</li>
 </ul>
 </li>
-<li><p>映射类型：</p>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>>>> html = {x for x in files if x.lower().endswith((".html", "htm"))}</span></code></pre></td></tr></table></div></figure>
+
+
+<pre><code>* 固定集合
+</code></pre>
+
+<ul>
+<li>映射类型：
 
 <ul>
 <li>字典：
