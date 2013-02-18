@@ -4,7 +4,7 @@
   <title><![CDATA[Category: git | K.I.S.S]]></title>
   <link href="http://metooit.github.com/blog/categories/git/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-02-17T21:02:33+08:00</updated>
+  <updated>2013-02-18T13:34:16+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -157,6 +157,11 @@ Edit files, <code>git commit -a</code>, repeat.</p>
 
 <p>Git用户使用<code>git add</code>命令来既tracking文件也stage changes。
 如果在staging阶段你不仅想看到什么文件被修改了或者staged，并且比较文件可以使用<code>git diff</code>.</p>
+
+<ul>
+<li><a href="https://github.com/MarkLodato/visual-git-guide">可视化学习</a></li>
+</ul>
+
 ]]></content>
   </entry>
   
