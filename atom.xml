@@ -4,7 +4,7 @@
   <title><![CDATA[K.I.S.S]]></title>
   <link href="http://metooit.github.com/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-02-18T13:34:16+08:00</updated>
+  <updated>2013-02-18T15:16:35+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -12,6 +12,87 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[『python 3 程序开发指南』读书笔记 2]]></title>
+    <link href="http://metooit.github.com/blog/2013/02/18/notes-for-learning-python-2/"/>
+    <updated>2013-02-18T13:43:00+08:00</updated>
+    <id>http://metooit.github.com/blog/2013/02/18/notes-for-learning-python-2</id>
+    <content type="html"><![CDATA[<ul>
+<li><p>python的序列类型：</p>
+
+<ul>
+<li>元组： <code>,</code>
+
+<ul>
+<li>不能替换删除其中的数据项。可以用list()转换函数将其转换为列表</li>
+<li>元组提供了两种方法： count()返回出现次数， index()返回出现位置。</li>
+</ul>
+</li>
+<li>列表： <code>[]</code>
+
+<ul>
+<li>列表是可变的</li>
+<li>列表的方法，<code>help(list)</code></li>
+<li>任意可迭代的列表元组等都可以使用序列拆分操作符进行拆分<code>*</code>
+
+<blockquote><blockquote><blockquote><p>first, <em>rest = [1, 2, 3, 4, 5, 6]
+first, rest
+  (1, [2, 3, 4, 5, 6])
+first, </em>mid, last = [1, 2, 3, 4, 5, 6]
+first, mid, last
+  (1, [2, 3, 4, 5], 6)</p></blockquote></blockquote></blockquote></li>
+<li>下面两段代码等价：
+
+<blockquote><blockquote><blockquote><p>words[2:4] = []
+del words[2:4]</p></blockquote></blockquote></blockquote></li>
+<li>带步距的列表：
+
+<blockquote><blockquote><blockquote><p>x = [1,2,3,4,5,6,7,8,9,10]
+print(x[1::2])
+  [2, 4, 6, 8, 10]
+x[1::2] = [0] * len(x[1::2])
+print(x)
+  [1, 0, 3, 0, 5, 0, 7, 0, 9, 0]</p></blockquote></blockquote></blockquote></li>
+<li>列表内涵：
+
+<blockquote><blockquote><blockquote><p>leaps = [ y for y in range(1900, 1940)
+  &#8230; if(y % 4 == 0 and y % 100 != 0 or y % 400 == 0)]
+print(leaps)
+  [1904, 1908, 1912, 1916, 1920, 1924, 1928, 1932, 1936]</p></blockquote></blockquote></blockquote></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>集合： <code>{}</code></p>
+
+<ul>
+<li>集合是可变的</li>
+<li>集合的方法：<code>help(set)</code></li>
+<li>| &amp; \ ^ 操作</li>
+<li>集合内涵： >>> html = {x for x in files if x.lower().endswith((&#8220;.html&#8221;, &#8220;htm&#8221;))}</li>
+<li>固定集合</li>
+</ul>
+</li>
+<li><p>映射类型：</p>
+
+<ul>
+<li>字典：
+
+<ul>
+<li>dict是一种无序的组合数据类型</li>
+<li>dict()可作为函数调用</li>
+<li>字典的键是独一无二的</li>
+<li>字典方法： help(dict)</li>
+<li>有序字典： >>> d = collections.OrderedDict([&#8216;z&#8217;, -4], (&#8216;e&#8217;, 19))</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Talk to my heart]]></title>
@@ -3363,34 +3444,6 @@ app/views/posts/new.html.erb</p></li>
 <li>可以进行热升级</li>
 </ul>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[继续学习Ruby]]></title>
-    <link href="http://metooit.github.com/blog/2013/02/07/continue-learning-ruby/"/>
-    <updated>2013-02-07T14:39:00+08:00</updated>
-    <id>http://metooit.github.com/blog/2013/02/07/continue-learning-ruby</id>
-    <content type="html"><![CDATA[<p>今天翻看了一下阳志平的网络日志，偶然发现了他很推崇<code>Ruby</code>，然后我就发现了这篇文章<a href="http://www.yangzhiping.com/tech/ruby-worldmap-1.html">Ruby 闲话一二</a>, 看后了解了一下<code>Ruby</code>的处境和氛围， 就像《黑客与画家》里面说的， 编程语言很重要！ <code>Ruby</code> 是优美的，简单的，符合K.I.S.S原则，那我就觉得<code>Ruby</code>是一门好的语言。所以我想要了解它。</p>
-
-<hr />
-
-<p>如何学习一门编程语言呢？ 这个问题或许是很多新手程序员的心声，当然我也有过曾经的疑问，找到一种快速学会编程语言的方法可能是很多人想要的，<a href="http://www.yangzhiping.com/tech/learn-program-psychology.html">在学习区刻意练习</a>或许不是最聪明的方法，但是可能是真正想要学会编程的人应该有的一种执着和毅力，阳老师的这篇文章使我受益匪浅，如果想要去做好一件事情，那就用百分之百的热情和努力去做吧！相信自己能够成功的！我觉得这篇文章好还有另外的原因，就是觉得这篇文章说的话击中了我的弱点：</p>
-
-<blockquote><ul>
-<li>提升行动力 : 把自己的思维模式改成 if &#8230; then &#8230;</li>
-<li>编程是个人行为 ： 不要忙于社交， 聊天， 发帖， 下载盗版学习资源， 争议语言好坏等等
-真的， 如果我想学会<code>Ruby</code>，那就从一点以滴开始努力吧！</li>
-</ul>
-</blockquote>
-
-<hr />
-
-<p>昨天我写了关于<code>Ruby</code>的<a href="http://metooit.github.com/blog/2013/02/06/get-to-know-ruby/">Get to know Ruby</a>,今天才发现了阳老师的这篇文章：<a href="http://www.yangzhiping.com/tech/why-ruby-text.html">为什么是<code>Ruby</code></a>, 发现比我写的要简练有力的多，同时覆盖的面也要广的多。</p>
-
-<hr />
-
-<p>好了，关于文章的收获就是这些。</p>
 ]]></content>
   </entry>
   
