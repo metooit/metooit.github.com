@@ -4,7 +4,7 @@
   <title><![CDATA[K.I.S.S]]></title>
   <link href="http://metooit.github.com/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-02-21T13:59:34+08:00</updated>
+  <updated>2013-02-22T01:41:17+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -12,6 +12,43 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Lovely Python]]></title>
+    <link href="http://metooit.github.com/blog/2013/02/21/lovely-python/"/>
+    <updated>2013-02-21T23:41:00+08:00</updated>
+    <id>http://metooit.github.com/blog/2013/02/21/lovely-python</id>
+    <content type="html"><![CDATA[<ul>
+<li><h1>-<em>- coding: encoding -</em>-</h1></li>
+<li><p>交互模式下， <code>_</code>代表上一个命令的返回值</p></li>
+<li><p>两个挨着的字符串会自动地合并到一起</p></li>
+<li><p>Python 的 String 不能被通过索引重新赋值</p></li>
+<li><p>s[:i] + s[i:] 相当于 s</p></li>
+<li><p>string 索引：
++&#8212;+&#8212;+&#8212;+&#8212;+&#8212;+
+| H | e | l | p | A |
++&#8212;+&#8212;+&#8212;+&#8212;+&#8212;+
+0   1   2   3   4   5
+-5  -4  -3  -2  -1</p></li>
+<li><p>通过分片操作可以实现list的： <code>替换</code>、 <code>删除</code>、 <code>插入</code>、 <code>清空</code></p></li>
+<li><p>没有returnd的操作其实也是有返回值的<code>None</code></p></li>
+<li><p>函数的默认值在运行过程中只被赋值一次</p></li>
+<li><p><code>*</code> 和 <code>**</code></p></li>
+<li><p><code>*</code> 可以解包list或者 tumple 作为函数传入的参数</p></li>
+<li><p><code>**</code> 可以解包出字典里的key</p></li>
+<li><p><code>lambda</code> 形式： 可以创建小的匿名的方法</p></li>
+<li><p><code>list</code> 可以被用作： &#8211;> <code>Stacks</code>(pop)  <code>Queues</code>(popleft)</p></li>
+<li><p>函数式编程工具：</p>
+
+<blockquote><p>三个内建的可被用在list中的函数： filter(), map(), reduce()</p></blockquote></li>
+<li><p>zip() 方便地矩阵转置</p></li>
+<li><p>如何读入系统参数： sys.argv[1]</p></li>
+<li><p><a href="http://docs.python.org/2/tutorial/inputoutput.html">print 表格</a></p></li>
+<li><p>&#8230;</p></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[最小生成树]]></title>
@@ -3563,23 +3600,6 @@ app/views/posts/new.html.erb</p></li>
 
 
 <p><a href="http://guides.rubyonrails.org/getting_started.html">RailsGuides English</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[想对算法做点什么]]></title>
-    <link href="http://metooit.github.com/blog/2013/02/07/something-i-want-to-write-about-algorithms/"/>
-    <updated>2013-02-07T20:23:00+08:00</updated>
-    <id>http://metooit.github.com/blog/2013/02/07/something-i-want-to-write-about-algorithms</id>
-    <content type="html"><![CDATA[<p>今天的收获不小，其一就是收获了一种思维模式<code>if...then...</code>，也就是“想要做什么……那么要……”，以前我总是想要做什么、做什么，可是呢，行动力不够就不能真正的去做些什么，所以我觉得是到了改变的时候了。</p>
-
-<hr />
-
-<p>最近在看<a href="http://book.douban.com/subject/1885170/">《算法导论》</a>，看算法的目的是为了进一步学习好编程，虽然有时候看得有点头晕，但是我觉得收获还是很大的。光看书肯定是不行的，所以必须用算法做点什么才能够更有趣吧，所以我就有了这个想法 『用算法做点什么呢』。</p>
-
-<hr />
-
-<p>（未完待续……）</p>
 ]]></content>
   </entry>
   

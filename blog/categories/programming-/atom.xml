@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Programming, | K.I.S.S]]></title>
   <link href="http://metooit.github.com/blog/categories/programming-/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-02-21T13:59:34+08:00</updated>
+  <updated>2013-02-22T01:41:17+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -12,6 +12,43 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Lovely Python]]></title>
+    <link href="http://metooit.github.com/blog/2013/02/21/lovely-python/"/>
+    <updated>2013-02-21T23:41:00+08:00</updated>
+    <id>http://metooit.github.com/blog/2013/02/21/lovely-python</id>
+    <content type="html"><![CDATA[<ul>
+<li><h1>-<em>- coding: encoding -</em>-</h1></li>
+<li><p>交互模式下， <code>_</code>代表上一个命令的返回值</p></li>
+<li><p>两个挨着的字符串会自动地合并到一起</p></li>
+<li><p>Python 的 String 不能被通过索引重新赋值</p></li>
+<li><p>s[:i] + s[i:] 相当于 s</p></li>
+<li><p>string 索引：
++---+---+---+---+---+
+| H | e | l | p | A |
++---+---+---+---+---+
+0   1   2   3   4   5
+-5  -4  -3  -2  -1</p></li>
+<li><p>通过分片操作可以实现list的： <code>替换</code>、 <code>删除</code>、 <code>插入</code>、 <code>清空</code></p></li>
+<li><p>没有returnd的操作其实也是有返回值的<code>None</code></p></li>
+<li><p>函数的默认值在运行过程中只被赋值一次</p></li>
+<li><p><code>*</code> 和 <code>**</code></p></li>
+<li><p><code>*</code> 可以解包list或者 tumple 作为函数传入的参数</p></li>
+<li><p><code>**</code> 可以解包出字典里的key</p></li>
+<li><p><code>lambda</code> 形式： 可以创建小的匿名的方法</p></li>
+<li><p><code>list</code> 可以被用作： --> <code>Stacks</code>(pop)  <code>Queues</code>(popleft)</p></li>
+<li><p>函数式编程工具：</p>
+
+<blockquote><p>三个内建的可被用在list中的函数： filter(), map(), reduce()</p></blockquote></li>
+<li><p>zip() 方便地矩阵转置</p></li>
+<li><p>如何读入系统参数： sys.argv[1]</p></li>
+<li><p><a href="http://docs.python.org/2/tutorial/inputoutput.html">print 表格</a></p></li>
+<li><p>...</p></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Learning Ruby in Process 1]]></title>
