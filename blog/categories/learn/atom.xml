@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Learn | K.I.S.S]]></title>
   <link href="http://metooit.github.com/blog/categories/learn/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-02-18T15:21:09+08:00</updated>
+  <updated>2013-02-21T13:59:34+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -19,7 +19,7 @@
     <updated>2013-02-18T13:43:00+08:00</updated>
     <id>http://metooit.github.com/blog/2013/02/18/notes-for-learning-python-2</id>
     <content type="html"><![CDATA[<ul>
-<li><p>python的序列类型：</p>
+<li>python的序列类型：
 
 <ul>
 <li>元组： <code>,</code>
@@ -34,60 +34,90 @@
 <ul>
 <li>列表是可变的</li>
 <li>列表的方法，<code>help(list)</code></li>
-<li>任意可迭代的列表元组等都可以使用序列拆分操作符进行拆分<code>*</code>
-<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<li>任意可迭代的列表元组等都可以使用序列拆分操作符进行拆分<code>*</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
 <span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;blockquote>&lt;blockquote>&lt;blockquote>&lt;p>first, &lt;em>rest = [1, 2, 3, 4, 5, 6]
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;blockquote>&lt;blockquote>&lt;blockquote>&lt;p>first, &lt;em>rest = [1, 2, 3, 4, 5, 6]
 </span><span class='line'>first, rest
 </span><span class='line'>(1, [2, 3, 4, 5, 6])
 </span><span class='line'>first, &lt;/em>mid, last = [1, 2, 3, 4, 5, 6]
 </span><span class='line'>first, mid, last
-</span><span class='line'>(1, [2, 3, 4, 5], 6)</span></code></pre></td></tr></table></div></figure></notextile></div></p></blockquote></blockquote></blockquote></li>
-<li>下面两段代码等价：
-<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</span><span class='line'>(1, [2, 3, 4, 5], 6)</span></code></pre></td></tr></table></div></figure></notextile></div></p></blockquote></blockquote></blockquote>
+
+<pre><code>    * 下面两段代码等价：
+</code></pre>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;blockquote>&lt;blockquote>&lt;blockquote>&lt;p>words[2:4] = []
-</span><span class='line'>del words[2:4]</span></code></pre></td></tr></table></div></figure></notextile></div></p></blockquote></blockquote></blockquote></li>
-<li>带步距的列表：
-<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;blockquote>&lt;blockquote>&lt;blockquote>&lt;p>words[2:4] = []
+</span><span class='line'>del words[2:4]</span></code></pre></td></tr></table></div></figure></notextile></div></p></blockquote></blockquote></blockquote>
+
+<pre><code>    * 带步距的列表：
+</code></pre>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
 <span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;blockquote>&lt;blockquote>&lt;blockquote>&lt;p>x = [1,2,3,4,5,6,7,8,9,10]
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;blockquote>&lt;blockquote>&lt;blockquote>&lt;p>x = [1,2,3,4,5,6,7,8,9,10]
 </span><span class='line'>print(x[1::2])
 </span><span class='line'>[2, 4, 6, 8, 10]
 </span><span class='line'>x[1::2] = [0] * len(x[1::2])
 </span><span class='line'>print(x)
-</span><span class='line'>[1, 0, 3, 0, 5, 0, 7, 0, 9, 0]</span></code></pre></td></tr></table></div></figure></notextile></div></p></blockquote></blockquote></blockquote></li>
-<li>列表内涵：
-<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</span><span class='line'>[1, 0, 3, 0, 5, 0, 7, 0, 9, 0]</span></code></pre></td></tr></table></div></figure></notextile></div></p></blockquote></blockquote></blockquote>
+
+<pre><code>    * 列表内涵：
+</code></pre>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;blockquote>&lt;blockquote>&lt;blockquote>&lt;p>leaps = [ y for y in range(1900, 1940)
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;blockquote>&lt;blockquote>&lt;blockquote>&lt;p>leaps = [ y for y in range(1900, 1940)
 </span><span class='line'>... if(y % 4 == 0 and y % 100 != 0 or y % 400 == 0)]
 </span><span class='line'>print(leaps)
-</span><span class='line'>[1904, 1908, 1912, 1916, 1920, 1924, 1928, 1932, 1936]</span></code></pre></td></tr></table></div></figure></notextile></div></p></blockquote></blockquote></blockquote></li>
-</ul>
-</li>
-</ul>
-</li>
+</span><span class='line'>[1904, 1908, 1912, 1916, 1920, 1924, 1928, 1932, 1936]</span></code></pre></td></tr></table></div></figure></notextile></div></p></blockquote></blockquote></blockquote>
+
+<ul>
 <li><p>集合： <code>{}</code></p>
 
 <ul>
 <li>集合是可变的</li>
 <li>集合的方法：<code>help(set)</code></li>
 <li>| &amp; \ ^ 操作</li>
-<li>集合内涵：
+<li>集合内涵：</li>
+<li>固定集合
 <div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>&lt;blockquote>&lt;blockquote>&lt;blockquote>&lt;p>html = {x for x in files if x.lower().endswith((".html", "htm"))}</span></code></pre></td></tr></table></div></figure></notextile></div></p></blockquote></blockquote></blockquote></li>
-<li>固定集合</li>
 </ul>
 </li>
 <li><p>映射类型：</p>
@@ -100,7 +130,9 @@
 <li>dict()可作为函数调用</li>
 <li>字典的键是独一无二的</li>
 <li>字典方法： help(dict)</li>
-<li>有序字典： >>> d = collections.OrderedDict(['z', -4], ('e', 19))</li>
+<li>有序字典：
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;blockquote>&lt;blockquote>&lt;blockquote>&lt;p>d = collections.OrderedDict(['z', -4], ('e', 19))</span></code></pre></td></tr></table></div></figure></notextile></div></p></blockquote></blockquote></blockquote></li>
 </ul>
 </li>
 </ul>

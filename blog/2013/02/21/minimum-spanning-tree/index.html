@@ -3,11 +3,12 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Category: Programming, - K.I.S.S</title>
+	<title>最小生成树 - K.I.S.S</title>
 	<meta name="author" content="metooit">
 
 	
-	<meta name="description" content="Category: Programming,">
+	<meta name="description" content="最小生成树的形成： 问题的前提： 假设有一个连通的无向图G=(V, E)和权重函数w: E->R, 我们希望找到图G中的一棵最小生成树。
+主要思想： 我们使用贪心策略来解决此问题。该策略在每个时刻生长最小生成树的一条边，并在整个过程中管理一个边的集合A， 其中A遵守以下循环不变式: 在每次循环之前 &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -17,7 +18,7 @@
 
 	<link href="/atom.xml" rel="alternate" title="K.I.S.S" type="application/atom+xml">
 	
-	<link rel="canonical" href="http://metooit.github.comblog/categories/programming-/">
+	<link rel="canonical" href="http://metooit.github.com/blog/2013/02/21/minimum-spanning-tree/">
 	<link href="/favicon.png" rel="shortcut icon">
 	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
 	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
@@ -105,49 +106,150 @@
 
 			
 			<div class="mid-col-container">
-				<div id="content" class="inner">
-	
+				<div id="content" class="inner"><article class="post">
+	<h1 class="title">最小生成树</h1>
+	<div class="entry-content"><h2>最小生成树的形成：</h2>
+
+<ul>
+<li>问题的前提： 假设有一个连通的无向图G=(V, E)和权重函数w: E->R, 我们希望找到图G中的一棵最小生成树。</li>
+<li>主要思想： 我们使用<code>贪心策略</code>来解决此问题。该策略在每个时刻生长最小生成树的一条边，并在整个过程中管理一个边的集合A， 其中A遵守以下循环不变式:
+
+<blockquote><p>在每次循环之前， A是某棵最小生成树的子集。</p></blockquote></li>
+</ul>
 
 
-	
-	
-	<section class="archives"><h1 class="year">2013</h1>
+<p>在每一步，选出一条变(u, v)加入到A中，使得A不违反循环不变式， 并且称这样的边为集合A的<code>安全边</code>。</p>
 
-<article>
-	<div class="meta">
-		<span class="date">Feb  8</span>
-		<br>
-		<span class="tags">
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>GENERIC-MST(G, v)
+</span><span class='line'>    A=NULL
+</span><span class='line'>    while A does not form a spnning tree
+</span><span class='line'>        find an edge(u, v)that is safe for A
+</span><span class='line'>        A=A&{(u, v)}</span></code></pre></td></tr></table></div></figure>
 
 
-	<a class='category' href='/blog/categories/programming-/'>Programming,</a>, <a class='category' href='/blog/categories/ruby-/'>Ruby,</a>, <a class='category' href='/blog/categories/learn/'>learn</a>
+<ul>
+<li>几个概念：
+
+<ul>
+<li>切割： 无向图G=(V, E)的一个切割(S, V-S)是集合V的一个划分， 边(u, v)的一端属于集合S， 另一端属于集合(V-S)</li>
+<li>尊重： 如果集合A中不存在横跨该切割的边， 则称该切割尊重集合A</li>
+<li>轻量级边： 在横跨一个集合所有的边中， 权重最小的边成为轻量级边</li>
+</ul>
+</li>
+</ul>
 
 
-</span>
-	    
-	</div>
-	<h1 class="title"><a href="/blog/2013/02/08/learning-ruby-in-process-1/">Learning Ruby in Process 1</a></h1>
+<h2>Kruskal 算法和 Prim 算法</h2>
+
+<h3>Kruskal:</h3>
+
+<p>主要思想： 在所有连接森林中两棵不同树的边里面， 找到权重最小的边(u, v)。该算法属于贪心算法。</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>MST-KRUSKAL(G, w)
+</span><span class='line'>    A=NULL
+</span><span class='line'>    for each vertex v &lt;- G.V
+</span><span class='line'>        MAKE-SET(v)
+</span><span class='line'>    sort the edges of G.E into nondecreasing order by weight w
+</span><span class='line'>    for each edge(u, v) &lt;- G.E taken in nondecreasing order by weight
+</span><span class='line'>        if FIND-SET(v) != FIND-SET(v)
+</span><span class='line'>            A = A &{(u, v)}
+</span><span class='line'>            UNION(u, v)
+</span><span class='line'>return A</span></code></pre></td></tr></table></div></figure>
+
+
+<p><img src="/pictures/kruskal.png" title="kruskal" ></p>
+
+<h3>Prim：</h3>
+
+<p>主要思想： Prim 算法所具有的一个性质是集合A中的边总是构成一棵树。这棵树从一个任意的根结点r开始， 一直长大到覆盖V中的所有结点时为止。算法每一步在A和A之外的结点的所有边中， 选择一条轻量级的边加入A中。并且加入的边也是对A安全的边。</p>
+
+<p><img src="/pictures/Prim.png" title="Prim" ></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>MST-PRIM(G, w, r)
+</span><span class='line'>for each u in G.V
+</span><span class='line'>    u:key = ...  // 将每个结点的key值设置为无穷（除了根结点r以外， 根结点r的key值设置为0, 以便该结点成为第一个被处理的结点）
+</span><span class='line'>    u:PI = NIL  // 将每个结点的父结点设置为NIL， 并对最小优先队列Q进行初始化， 使其包含图中所有的结点
+</span><span class='line'>r:key = 0
+</span><span class='line'>Q = G.V
+</span><span class='line'>while Q != NULL  // 找出横跨切割(V-Q, Q)的轻量级边的一个端点u
+</span><span class='line'>    u = EXTRACT-MIN(Q)
+</span><span class='line'>    for each v in G.Adj[u]
+</span><span class='line'>    if v in Q and w(u, v) &lt; v.key
+</span><span class='line'>        v.PI = u
+</span><span class='line'>        v.key = w(u, v)</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Prim 算法的运行时间取决于最小优先队列Q的实现方式。Prim 算法的总时间代价为O(ElgV), 从渐进意义上说它与Kruskal的运行时间相同。</p>
+
+<h2>Kruskal Prim 算法对比：</h2>
+
+<h4>效率对比：</h4>
+
+<ul>
+<li>稠密图： Prim > Kruskal</li>
+<li>稀疏图： Kruskal > Prim
+
+<h4>空间对比：</h4>
+
+<p>空间上，要根据数据的情况选择使用那种算法：</p></li>
+<li>点少边多时： Kruskal</li>
+<li>点多边少时： Prim</li>
+</ul>
+
+
+<p><img src="/pictures/historical_tragedy_thum.gif" title="" ></p>
+</div>
+
 </article>
 
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
 	
-
-
-<article>
-	<div class="meta">
-		<span class="date">Feb  6</span>
-		<br>
-		<span class="tags">
-
-
-	<a class='category' href='/blog/categories/programming-/'>Programming,</a>, <a class='category' href='/blog/categories/ruby-/'>Ruby,</a>, <a class='category' href='/blog/categories/learn/'>learn</a>
-
-
-</span>
-	    
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+	<a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+	
+	<a class="addthis_counter addthis_pill_style"></a>
 	</div>
-	<h1 class="title"><a href="/blog/2013/02/06/get-to-know-ruby/">Get to know Ruby</a></h1>
-</article>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
 
+
+
+<section id="comment">
+    <h1 class="title">Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</section>
 </div>
 			</div>
 			<footer id="footer" class="inner">Copyright &copy; 2013
@@ -171,7 +273,10 @@ Powered by <a href="http://octopress.org/">Octopress</a>
       var disqus_shortname = 'metooit';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://metooit.github.com/blog/2013/02/21/minimum-spanning-tree/';
+        var disqus_url = 'http://metooit.github.com/blog/2013/02/21/minimum-spanning-tree/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
