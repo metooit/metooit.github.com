@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Wiki | K.I.S.S]]></title>
   <link href="http://metooit.github.com/blog/categories/wiki/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-02-22T20:36:41+08:00</updated>
+  <updated>2013-02-22T20:43:23+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -25,11 +25,10 @@
 <li><p>s[:i] + s[i:] 相当于 s</p></li>
 <li><p>string 索引：</p>
 
-<p>+---+---+---+---+---+
-| H | e | l | p | A |
-+---+---+---+---+---+
-0   1   2   3   4   5
--5  -4  -3  -2  -1</p></li>
+<p>| H   | e   | l   | p   | A   |
+|+---+|+---+|+---+|+---+|+---+|
+| 0   | 1   | 2   | 3   | 4   |
+| -5  | -4  | -3  | -2  | -1  |</p></li>
 <li><p>通过分片操作可以实现list的： <code>替换</code>、 <code>删除</code>、 <code>插入</code>、 <code>清空</code></p></li>
 <li><p>没有returnd的操作其实也是有返回值的<code>None</code></p></li>
 <li><p>函数的默认值在运行过程中只被赋值一次</p></li>

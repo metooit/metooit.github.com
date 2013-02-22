@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Linux | K.I.S.S]]></title>
   <link href="http://metooit.github.com/blog/categories/linux/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-02-22T20:36:41+08:00</updated>
+  <updated>2013-02-22T20:43:23+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -78,26 +78,27 @@
 <li>/lib 执行文件所需要的函数库与内核所需的模块</li>
 <li><p>/sbin 重要的系统执行文件</p>
 
-<p>  /
-  ├── bin
-  ├── boot
-  ├── dev
-  ├── etc
-  ├── home
-  ├── lib
-  ├── lost+found
-  ├── media
-  ├── mnt
-  ├── opt
-  ├── proc
-  ├── root
-  ├── run
-  ├── sbin
-  ├── srv
-  ├── sys
-  ├── tmp
-  ├── usr
-  ├── var</p></li>
+<pre><code>              /
+              ├── bin
+              ├── boot
+              ├── dev
+              ├── etc
+              ├── home
+              ├── lib
+              ├── lost+found
+              ├── media
+              ├── mnt
+              ├── opt
+              ├── proc
+              ├── root
+              ├── run
+              ├── sbin
+              ├── srv
+              ├── sys
+              ├── tmp
+              ├── usr
+              ├── var
+</code></pre></li>
 </ul>
 
 

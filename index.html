@@ -258,26 +258,27 @@ F: / ? O _ o DEL
 <li>/lib 执行文件所需要的函数库与内核所需的模块</li>
 <li><p>/sbin 重要的系统执行文件</p>
 
-<p>  /
-  ├── bin
-  ├── boot
-  ├── dev
-  ├── etc
-  ├── home
-  ├── lib
-  ├── lost+found
-  ├── media
-  ├── mnt
-  ├── opt
-  ├── proc
-  ├── root
-  ├── run
-  ├── sbin
-  ├── srv
-  ├── sys
-  ├── tmp
-  ├── usr
-  ├── var</p></li>
+<pre><code>              /
+              ├── bin
+              ├── boot
+              ├── dev
+              ├── etc
+              ├── home
+              ├── lib
+              ├── lost+found
+              ├── media
+              ├── mnt
+              ├── opt
+              ├── proc
+              ├── root
+              ├── run
+              ├── sbin
+              ├── srv
+              ├── sys
+              ├── tmp
+              ├── usr
+              ├── var
+</code></pre></li>
 </ul>
 
 
@@ -411,11 +412,10 @@ tar [-] A &#8211;catenate &#8211;concatenate | c &#8211;create | d &#8211;diff &
 <li><p>s[:i] + s[i:] 相当于 s</p></li>
 <li><p>string 索引：</p>
 
-<p>+&#8212;+&#8212;+&#8212;+&#8212;+&#8212;+
-| H | e | l | p | A |
-+&#8212;+&#8212;+&#8212;+&#8212;+&#8212;+
-0   1   2   3   4   5
--5  -4  -3  -2  -1</p></li>
+<p>| H   | e   | l   | p   | A   |
+|+&#8212;+|+&#8212;+|+&#8212;+|+&#8212;+|+&#8212;+|
+| 0   | 1   | 2   | 3   | 4   |
+| -5  | -4  | -3  | -2  | -1  |</p></li>
 <li><p>通过分片操作可以实现list的： <code>替换</code>、 <code>删除</code>、 <code>插入</code>、 <code>清空</code></p></li>
 <li><p>没有returnd的操作其实也是有返回值的<code>None</code></p></li>
 <li><p>函数的默认值在运行过程中只被赋值一次</p></li>
