@@ -4,7 +4,7 @@
   <title><![CDATA[Category: memo | K.I.S.S]]></title>
   <link href="http://metooit.github.com/blog/categories/memo/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-02-22T15:33:05+08:00</updated>
+  <updated>2013-02-22T15:43:53+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -74,12 +74,14 @@
 <li>大小写转换可以用<code>shift+~</code></li>
 <li><p><code>Ctrl</code>:</p>
 
-<pre><code>  ** `Ctrl+u` 向前翻半屏
-  ** `Ctrl+d` 向后翻半屏
-  ** `Ctrl+f` 向后翻一屏
-  ** `Ctrl+b` 向前翻一屏
-  ** `Ctrl+u` 删除输入模式下输入的文本
-</code></pre></li>
+<ul>
+<li><code>Ctrl+u</code> 向前翻半屏</li>
+<li><code>Ctrl+d</code> 向后翻半屏</li>
+<li><code>Ctrl+f</code> 向后翻一屏</li>
+<li><code>Ctrl+b</code> 向前翻一屏</li>
+<li><code>Ctrl+u</code> 删除输入模式下输入的文本</li>
+</ul>
+</li>
 <li><p><code>nz``&lt;Enter&gt;</code>将第n行滚至屏幕顶部</p></li>
 <li><code>R</code>替换当前字符至其后的字符，一直到按下<code>&lt;ESC&gt;</code>键。</li>
 <li><code>S</code>删除指定数目的行，并以所输入的文本替代之。</li>
