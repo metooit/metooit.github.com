@@ -412,10 +412,37 @@ tar [-] A &#8211;catenate &#8211;concatenate | c &#8211;create | d &#8211;diff &
 <li><p>s[:i] + s[i:] 相当于 s</p></li>
 <li><p>string 索引：</p>
 
-<p>| H   | e   | l   | p   | A   |
-|+&#8212;+|+&#8212;+|+&#8212;+|+&#8212;+|+&#8212;+|
-| 0   | 1   | 2   | 3   | 4   |
-| -5  | -4  | -3  | -2  | -1  |</p></li>
+<table>
+<thead>
+<tr>
+<th></th>
+<th align="center"> H   </th>
+<th align="center"> e   </th>
+<th align="center"> l   </th>
+<th align="center"> p   </th>
+<th align="center"> A   </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td align="center"> 0   </td>
+<td align="center"> 1   </td>
+<td align="center"> 2   </td>
+<td align="center"> 3   </td>
+<td align="center"> 4   |</td>
+</tr>
+<tr>
+<td></td>
+<td align="center"> -5  </td>
+<td align="center"> -4  </td>
+<td align="center"> -3  </td>
+<td align="center"> -2  </td>
+<td align="center"> -1  |</td>
+</tr>
+</tbody>
+</table>
+</li>
 <li><p>通过分片操作可以实现list的： <code>替换</code>、 <code>删除</code>、 <code>插入</code>、 <code>清空</code></p></li>
 <li><p>没有returnd的操作其实也是有返回值的<code>None</code></p></li>
 <li><p>函数的默认值在运行过程中只被赋值一次</p></li>
