@@ -4,7 +4,7 @@
   <title><![CDATA[Category: vim | K.I.S.S]]></title>
   <link href="http://metooit.github.com/blog/categories/vim/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-02-22T10:32:21+08:00</updated>
+  <updated>2013-02-22T15:33:05+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -125,15 +125,18 @@
 <li><code>@a</code> replay 寄存器a录制的宏</li>
 <li><code>@@</code> 重复最新录制的宏</li>
 <li><code>q</code>  停止录制
-
-<blockquote><p> 实例：
+ 实例：
  事情是这样的， 我想要把C程序的<code>.h</code>文件的方法引入到<code>.c</code>文件中， 然后直接去除<code>;</code>再在下面开始写方法的主体； 所以复制过来的文本去除分号的方法用一下宏操作
- * 第一步： <code>qa</code> 开始宏录制存储到寄存器a
- * 第二步： <code>$</code>光标移动到当前行最后一个字母
- * 第三步： <code>x</code>删除当前字符
- * 第四步： <code>j</code>向下挪一行
- * 第五步： <code>q</code>结束宏的录制
- * 第六步： <code>10@a</code>或者<code>10@@</code></p></blockquote></li>
+
+<ul>
+<li>第一步： <code>qa</code> 开始宏录制存储到寄存器a</li>
+<li>第二步： <code>$</code>光标移动到当前行最后一个字母</li>
+<li>第三步： <code>x</code>删除当前字符</li>
+<li>第四步： <code>j</code>向下挪一行</li>
+<li>第五步： <code>q</code>结束宏的录制</li>
+<li>第六步： <code>10@a</code>或者<code>10@@</code></li>
+</ul>
+</li>
 </ul>
 
 

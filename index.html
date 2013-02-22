@@ -7,13 +7,8 @@
 	<meta name="author" content="metooit">
 
 	
-	<meta name="description" content="-- coding: encoding --
-交互模式下， _代表上一个命令的返回值
-两个挨着的字符串会自动地合并到一起
-Python 的 String 不能被通过索引重新赋值
-s[:i] + s[i:] 相当于 s
-string 索引：
-+&#8212;+&#8212;+&#8212;+&# &hellip;">
+	<meta name="description" content="Linux 用户与用户组 Linux 文件权限的概念 基本概念： -rw-rw-r&#8211; 1 prince prince 235 Jan 31 10:20 2013-01-30-hello-world.markdown
+[ 权限 ] [用户] [用户组][大小][修改日期] 权限部分： &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -81,11 +76,11 @@ string 索引：
 </nav>
 </br>
 
-<!--<embed type='application/x-shockwave-flash' src='/javascripts/tagcloud.swf'width='100%' height='250' bgcolor='#ffffff' id='tagcloudflash' name='tagcloudflash' quality='high' allowscriptaccess='always'flashvars="tcolor=0x00aa00&amp;tcolor2=0x00dd00&amp;hicolor=0xff3333&amp;tspeed=100&amp;distr=true&amp;mode=tags&amp;tagcloud=%3Ctags%3E%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2F-%27+style%3D%27font-size%3A+14.444444444444445%25%27%3E%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Falgorithms%27+style%3D%27font-size%3A+18.88888888888889%25%27%3EAlgorithms%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Falgorithms-%27+style%3D%27font-size%3A+50.0%25%27%3EAlgorithms%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fcode%27+style%3D%27font-size%3A+14.444444444444445%25%27%3Ecode%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fdiary%27+style%3D%27font-size%3A+18.88888888888889%25%27%3Ediary%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fgit%27+style%3D%27font-size%3A+18.88888888888889%25%27%3Egit%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fgithub%27+style%3D%27font-size%3A+23.333333333333336%25%27%3Egithub%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flearn%27+style%3D%27font-size%3A+27.77777777777778%25%27%3ELearn%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flearn%27+style%3D%27font-size%3A+27.77777777777778%25%27%3Elearn%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flearn-%27+style%3D%27font-size%3A+18.88888888888889%25%27%3ELearn%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flife%27+style%3D%27font-size%3A+18.88888888888889%25%27%3ELife%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flinux%27+style%3D%27font-size%3A+14.444444444444445%25%27%3ELinux%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fmarkdown%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EMarkdown%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fmemo%27+style%3D%27font-size%3A+14.444444444444445%25%27%3Ememo%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fnote%27+style%3D%27font-size%3A+18.88888888888889%25%27%3ENote%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fprogramming%27+style%3D%27font-size%3A+18.88888888888889%25%27%3EProgramming%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fprogramming%27+style%3D%27font-size%3A+14.444444444444445%25%27%3Eprogramming%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fprogramming-%27+style%3D%27font-size%3A+23.333333333333336%25%27%3EProgramming%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fpython%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EPython%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fpython-%27+style%3D%27font-size%3A+18.88888888888889%25%27%3EPython%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Frails-%27+style%3D%27font-size%3A+14.444444444444445%25%27%3ERails%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fruby%27+style%3D%27font-size%3A+18.88888888888889%25%27%3ERuby%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fruby-%27+style%3D%27font-size%3A+27.77777777777778%25%27%3ERuby%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fscreen-%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EScreen%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fsort%27+style%3D%27font-size%3A+32.22222222222222%25%27%3ESort%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fsort-%27+style%3D%27font-size%3A+23.333333333333336%25%27%3ESort%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fsummary%27+style%3D%27font-size%3A+14.444444444444445%25%27%3Esummary%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fvim%27+style%3D%27font-size%3A+14.444444444444445%25%27%3Evim%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fwiki%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EWiki%3C%2Fa%3E+%3C%2Ftags%3E">-->
+<!--<embed type='application/x-shockwave-flash' src='/javascripts/tagcloud.swf'width='100%' height='250' bgcolor='#ffffff' id='tagcloudflash' name='tagcloudflash' quality='high' allowscriptaccess='always'flashvars="tcolor=0x00aa00&amp;tcolor2=0x00dd00&amp;hicolor=0xff3333&amp;tspeed=100&amp;distr=true&amp;mode=tags&amp;tagcloud=%3Ctags%3E%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2F-%27+style%3D%27font-size%3A+14.444444444444445%25%27%3E%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Falgorithms%27+style%3D%27font-size%3A+18.88888888888889%25%27%3EAlgorithms%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Falgorithms-%27+style%3D%27font-size%3A+50.0%25%27%3EAlgorithms%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fcode%27+style%3D%27font-size%3A+14.444444444444445%25%27%3Ecode%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fdiary%27+style%3D%27font-size%3A+18.88888888888889%25%27%3Ediary%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fgit%27+style%3D%27font-size%3A+18.88888888888889%25%27%3Egit%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fgithub%27+style%3D%27font-size%3A+23.333333333333336%25%27%3Egithub%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flearn%27+style%3D%27font-size%3A+27.77777777777778%25%27%3ELearn%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flearn%27+style%3D%27font-size%3A+27.77777777777778%25%27%3Elearn%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flearn-%27+style%3D%27font-size%3A+18.88888888888889%25%27%3ELearn%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flife%27+style%3D%27font-size%3A+18.88888888888889%25%27%3ELife%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flinux%27+style%3D%27font-size%3A+18.88888888888889%25%27%3ELinux%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fmarkdown%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EMarkdown%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fmemo%27+style%3D%27font-size%3A+14.444444444444445%25%27%3Ememo%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fnote%27+style%3D%27font-size%3A+18.88888888888889%25%27%3ENote%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fprogramming%27+style%3D%27font-size%3A+18.88888888888889%25%27%3EProgramming%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fprogramming%27+style%3D%27font-size%3A+14.444444444444445%25%27%3Eprogramming%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fprogramming-%27+style%3D%27font-size%3A+23.333333333333336%25%27%3EProgramming%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fpython%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EPython%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fpython-%27+style%3D%27font-size%3A+18.88888888888889%25%27%3EPython%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Frails-%27+style%3D%27font-size%3A+14.444444444444445%25%27%3ERails%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fruby%27+style%3D%27font-size%3A+18.88888888888889%25%27%3ERuby%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fruby-%27+style%3D%27font-size%3A+27.77777777777778%25%27%3ERuby%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fscreen-%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EScreen%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fsort%27+style%3D%27font-size%3A+32.22222222222222%25%27%3ESort%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fsort-%27+style%3D%27font-size%3A+23.333333333333336%25%27%3ESort%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fsummary%27+style%3D%27font-size%3A+14.444444444444445%25%27%3Esummary%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fvim%27+style%3D%27font-size%3A+14.444444444444445%25%27%3Evim%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fwiki%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EWiki%3C%2Fa%3E+%3C%2Ftags%3E">-->
 <!--
 <section>
   <h1>Tag Cloud</h1>
-    <span id="tag-cloud"><embed type='application/x-shockwave-flash' src='/javascripts/tagcloud.swf'width='100%' height='250' bgcolor='#f2f2f2' id='tagcloudflash' name='tagcloudflash' quality='high' allowscriptaccess='always'flashvars="tcolor=0x333333&amp;tcolor2=0x333333&amp;hicolor=0x000000&amp;tspeed=100&amp;distr=true&amp;mode=tags&amp;tagcloud=%3Ctags%3E%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2F-%27+style%3D%27font-size%3A+14.444444444444445%25%27%3E%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Falgorithms%27+style%3D%27font-size%3A+18.88888888888889%25%27%3EAlgorithms%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Falgorithms-%27+style%3D%27font-size%3A+50.0%25%27%3EAlgorithms%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fcode%27+style%3D%27font-size%3A+14.444444444444445%25%27%3Ecode%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fdiary%27+style%3D%27font-size%3A+18.88888888888889%25%27%3Ediary%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fgit%27+style%3D%27font-size%3A+18.88888888888889%25%27%3Egit%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fgithub%27+style%3D%27font-size%3A+23.333333333333336%25%27%3Egithub%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flearn%27+style%3D%27font-size%3A+27.77777777777778%25%27%3ELearn%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flearn%27+style%3D%27font-size%3A+27.77777777777778%25%27%3Elearn%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flearn-%27+style%3D%27font-size%3A+18.88888888888889%25%27%3ELearn%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flife%27+style%3D%27font-size%3A+18.88888888888889%25%27%3ELife%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flinux%27+style%3D%27font-size%3A+14.444444444444445%25%27%3ELinux%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fmarkdown%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EMarkdown%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fmemo%27+style%3D%27font-size%3A+14.444444444444445%25%27%3Ememo%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fnote%27+style%3D%27font-size%3A+18.88888888888889%25%27%3ENote%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fprogramming%27+style%3D%27font-size%3A+18.88888888888889%25%27%3EProgramming%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fprogramming%27+style%3D%27font-size%3A+14.444444444444445%25%27%3Eprogramming%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fprogramming-%27+style%3D%27font-size%3A+23.333333333333336%25%27%3EProgramming%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fpython%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EPython%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fpython-%27+style%3D%27font-size%3A+18.88888888888889%25%27%3EPython%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Frails-%27+style%3D%27font-size%3A+14.444444444444445%25%27%3ERails%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fruby%27+style%3D%27font-size%3A+18.88888888888889%25%27%3ERuby%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fruby-%27+style%3D%27font-size%3A+27.77777777777778%25%27%3ERuby%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fscreen-%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EScreen%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fsort%27+style%3D%27font-size%3A+32.22222222222222%25%27%3ESort%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fsort-%27+style%3D%27font-size%3A+23.333333333333336%25%27%3ESort%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fsummary%27+style%3D%27font-size%3A+14.444444444444445%25%27%3Esummary%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fvim%27+style%3D%27font-size%3A+14.444444444444445%25%27%3Evim%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fwiki%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EWiki%3C%2Fa%3E+%3C%2Ftags%3E"></span>
+    <span id="tag-cloud"><embed type='application/x-shockwave-flash' src='/javascripts/tagcloud.swf'width='100%' height='250' bgcolor='#f2f2f2' id='tagcloudflash' name='tagcloudflash' quality='high' allowscriptaccess='always'flashvars="tcolor=0x333333&amp;tcolor2=0x333333&amp;hicolor=0x000000&amp;tspeed=100&amp;distr=true&amp;mode=tags&amp;tagcloud=%3Ctags%3E%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2F-%27+style%3D%27font-size%3A+14.444444444444445%25%27%3E%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Falgorithms%27+style%3D%27font-size%3A+18.88888888888889%25%27%3EAlgorithms%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Falgorithms-%27+style%3D%27font-size%3A+50.0%25%27%3EAlgorithms%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fcode%27+style%3D%27font-size%3A+14.444444444444445%25%27%3Ecode%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fdiary%27+style%3D%27font-size%3A+18.88888888888889%25%27%3Ediary%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fgit%27+style%3D%27font-size%3A+18.88888888888889%25%27%3Egit%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fgithub%27+style%3D%27font-size%3A+23.333333333333336%25%27%3Egithub%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flearn%27+style%3D%27font-size%3A+27.77777777777778%25%27%3ELearn%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flearn%27+style%3D%27font-size%3A+27.77777777777778%25%27%3Elearn%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flearn-%27+style%3D%27font-size%3A+18.88888888888889%25%27%3ELearn%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flife%27+style%3D%27font-size%3A+18.88888888888889%25%27%3ELife%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flinux%27+style%3D%27font-size%3A+18.88888888888889%25%27%3ELinux%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fmarkdown%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EMarkdown%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fmemo%27+style%3D%27font-size%3A+14.444444444444445%25%27%3Ememo%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fnote%27+style%3D%27font-size%3A+18.88888888888889%25%27%3ENote%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fprogramming%27+style%3D%27font-size%3A+18.88888888888889%25%27%3EProgramming%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fprogramming%27+style%3D%27font-size%3A+14.444444444444445%25%27%3Eprogramming%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fprogramming-%27+style%3D%27font-size%3A+23.333333333333336%25%27%3EProgramming%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fpython%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EPython%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fpython-%27+style%3D%27font-size%3A+18.88888888888889%25%27%3EPython%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Frails-%27+style%3D%27font-size%3A+14.444444444444445%25%27%3ERails%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fruby%27+style%3D%27font-size%3A+18.88888888888889%25%27%3ERuby%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fruby-%27+style%3D%27font-size%3A+27.77777777777778%25%27%3ERuby%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fscreen-%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EScreen%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fsort%27+style%3D%27font-size%3A+32.22222222222222%25%27%3ESort%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fsort-%27+style%3D%27font-size%3A+23.333333333333336%25%27%3ESort%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fsummary%27+style%3D%27font-size%3A+14.444444444444445%25%27%3Esummary%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fvim%27+style%3D%27font-size%3A+14.444444444444445%25%27%3Evim%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fwiki%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EWiki%3C%2Fa%3E+%3C%2Ftags%3E"></span>
 </section>
 
 -->
@@ -112,6 +107,126 @@ string 索引：
 			
 			<div class="mid-col-container">
 				<div id="content" class="inner">
+
+
+    <article class="post">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-02-22T14:45:00+08:00" pubdate data-updated="true">Feb 22<span>nd</span>, 2013</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/linux/'>Linux</a>
+
+
+</div>
+		
+	</div>
+	<h1 class="title"><a href="/blog/2013/02/22/linux-quick-view/">Linux 随心小记</a></h1>
+	<div class="entry-content">
+		<h2>Linux 用户与用户组</h2>
+
+<h3>Linux 文件权限的概念</h3>
+
+<h4>基本概念：</h4>
+
+<blockquote><p>-rw-rw-r&#8211;  1 prince prince  235 Jan 31 10:20 2013-01-30-hello-world.markdown
+[   权限  ]   [用户] [用户组][大小][修改日期]</p></blockquote>
+
+<ul>
+<li><p>权限部分：</p></li>
+<li><p>第一个字符： <code>d</code>代表目录、 <code>-</code>代表文件、 <code>l</code>代表连接文件</p></li>
+<li><p>剩下的九个字符： <code>r</code>代表可读、 <code>w</code>代表可写、 <code>x</code>代表可执行</p></li>
+<li><p>大小部分：
+大小部分的默认单位是<code>B</code></p></li>
+<li><p>时间部分：
+如果要查看完整的时间格式，可以使用 <code>ls -l --full-time</code></p></li>
+</ul>
+
+
+<h4>如何改变：</h4>
+
+<ul>
+<li><p>改变文件用户组： <code>chgrp</code>
+递归更改使用<code>-R</code></p></li>
+<li><p>改变文件所有者： <code>chown</code></p></li>
+<li><p>改变文件的权限： <code>chmod</code>
+两种更改方法： <code>+</code>、 <code>-</code>、 <code>=</code> 方法 和 数字方法, 其中 <code>u</code>、 <code>g</code>、 <code>o</code>、 <code>a</code> 分别代表user, group, others, all</p></li>
+</ul>
+
+
+<h4>目录与文件权限的不同意义：</h4>
+
+<h5>对于文件：</h5>
+
+<ul>
+<li><code>r</code> 可读取文件的实际内容</li>
+<li><code>w</code> 可编辑、 新增、 修改文件的内容</li>
+<li><code>x</code> 该文件有被系统执行的权限</li>
+</ul>
+
+
+<h5>对于目录</h5>
+
+<ul>
+<li><code>r</code> 读取目录结构列表的权限</li>
+<li><code>w</code> 写入目录的权限： 包括新建文件与目录； 删除已存在的文件或者目录（不论文件的权限为何）； 将已存在的文件或者目录重命名； 转移目录内的文件和目录的位置。</li>
+<li><code>x</code> 代表用户能否进入该目录成为工作目录</li>
+</ul>
+
+
+<h3>Linux 目录：</h3>
+
+<h4>几个重要的目录：</h4>
+
+<ul>
+<li>/etc 配置文件</li>
+<li>/bin 重要的可执行文件</li>
+<li>/dev 所需要的设备文件</li>
+<li>/lib 执行文件所需要的函数库与内核所需的模块</li>
+<li>/sbin 重要的系统执行文件</li>
+</ul>
+
+
+<p>/
+├── bin
+├── boot
+├── dev
+├── etc
+├── home
+├── lib
+├── lost+found
+├── media
+├── mnt
+├── opt
+├── proc
+├── root
+├── run
+├── sbin
+├── srv
+├── sys
+├── tmp
+├── usr
+├── var</p>
+
+<h4>重点目录：</h4>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -1089,104 +1204,6 @@ string 索引：
 <li><a href="http://www.wutianqi.com/?p=2430">《算法导论》学习笔记</a></li>
 </ul>
 
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<div class="meta">
-		<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-02-16T09:34:00+08:00" pubdate data-updated="true">Feb 16<span>th</span>, 2013</time></div>
-		<div class="tags">
-
-
-	<a class='category' href='/blog/categories/ruby/'>Ruby</a>
-
-
-</div>
-		
-	</div>
-	<h1 class="title"><a href="/blog/2013/02/16/ruby-style-gide/">Ruby Style</a></h1>
-	<div class="entry-content">
-		<blockquote><p>Style is what separates the good from the great.</p></blockquote>
-
-<p><a href="https://github.com/bbatsov/ruby-style-guide">Ruby Style Guide</a></p>
-
-<p><a href="https://github.com/JuanitoFatas/ruby-style-guide/blob/master/README-zhCN.md">简体版本</a></p>
-
-<h2>读书笔记：</h2>
-
-<h3>源代码排版：</h3>
-
-<ul>
-<li>使用空格来围绕操作符： 唯一的例外是使用指数操作的时候</li>
-<li>把<code>when</code>和<code>case</code>缩排在同一层</li>
-<li>在<code>def</code>之间使用空行， 并且把方法分成合乎逻辑的段落</li>
-<li>当一个方法呼叫叫的参数过长时， 排列它们</li>
-<li>长的常量数字加底线来提高可读性</li>
-<li>不要在注解区块和<code>def</code>之间放一个空行</li>
-<li>每一行限制在80个字符</li>
-<li>避免尾随的空白</li>
-</ul>
-
-
-<h3>语法：</h3>
-
-<ul>
-<li><code>def</code>接收参数时使用括号， 没有参数时省略括号</li>
-<li>永远不要使用<code>for</code>， 除非你知道为什么， 一般用迭代器来取代</li>
-<li>永远不要在多行的<code>if</code>&#8230;<code>unless</code>中使用<code>then</code></li>
-<li>偏爱三元操作符 <code>?:</code> 胜于 <code>if/then/else/end</code> 结构</li>
-<li>使用表达式来给三元操作符分支， 这意味着三元操作符不能嵌套</li>
-<li>布尔表达式使用 &amp;&amp;/||, 控制流程使用 and/or</li>
-<li>偏爱 <code>if/unless</code> 修饰符当你有单行的主体， 或者使用控制流程的 <code>and/or</code></li>
-<li>否定条件偏爱<code>unless</code> 胜于 <code>if</code></li>
-<li>永远不要使用 <code>unless</code> 搭配 <code>else</code></li>
-<li>不要使用圆括号围绕 <code>if/unless/while</code> 的条件表达式， 除非这个表达式包含了一个赋值</li>
-<li>当你有单行的主体时， 偏爱<code>while/until</code> 修饰符</li>
-<li>忽略围绕方法参数的括号</li>
-<li>单行区块偏爱<code>{...}</code> 胜于 <code>do...end</code> 多行区块避免使用 <code>{...}</code></li>
-<li>避免在不需要控制流程的场合使用 <code>return</code></li>
-<li>避免在不需要的情况使用 <code>self</code></li>
-<li>避免使用带有局域变量的 <code>shadowing</code> 方法</li>
-<li>赋予默认值给方法的参数时需要使用空格来围绕 <code>=</code></li>
-<li>使用 <code>||=</code> 来初始化变量， 不要使用该符号初始化布尔变量</li>
-<li>避免在方法名和做括号之间放一个空格</li>
-<li>如果方法的第一个参数由左括号开始， 那么方法参数应该使用括号</li>
-<li>偏好使用<code>lambda</code>新语法</li>
-<li>未使用的区块参数用 <code>_</code></li>
-</ul>
-
-
-<h3>命名：</h3>
-
-<ul>
-<li>方法与变量使用蛇底式小写</li>
-<li>类别与模组使用陀峰方式</li>
-<li>其他常数使用蛇底式大写</li>
-<li>返回布尔值的方法用 <code>?</code> 结尾</li>
-<li>若潜在危险的方法有安全的版本存在时， 应该使用 <code>!</code> 结尾</li>
-</ul>
-
-
-<hr />
-
-<p>（未完待续……）</p>
 
 		
 		

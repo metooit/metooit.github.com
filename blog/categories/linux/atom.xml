@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Linux | K.I.S.S]]></title>
   <link href="http://metooit.github.com/blog/categories/linux/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-02-22T10:32:21+08:00</updated>
+  <updated>2013-02-22T15:33:05+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -12,6 +12,100 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Linux 随心小记]]></title>
+    <link href="http://metooit.github.com/blog/2013/02/22/linux-quick-view/"/>
+    <updated>2013-02-22T14:45:00+08:00</updated>
+    <id>http://metooit.github.com/blog/2013/02/22/linux-quick-view</id>
+    <content type="html"><![CDATA[<h2>Linux 用户与用户组</h2>
+
+<h3>Linux 文件权限的概念</h3>
+
+<h4>基本概念：</h4>
+
+<blockquote><p>-rw-rw-r--  1 prince prince  235 Jan 31 10:20 2013-01-30-hello-world.markdown
+[   权限  ]   [用户] [用户组][大小][修改日期]</p></blockquote>
+
+<ul>
+<li><p>权限部分：</p></li>
+<li><p>第一个字符： <code>d</code>代表目录、 <code>-</code>代表文件、 <code>l</code>代表连接文件</p></li>
+<li><p>剩下的九个字符： <code>r</code>代表可读、 <code>w</code>代表可写、 <code>x</code>代表可执行</p></li>
+<li><p>大小部分：
+大小部分的默认单位是<code>B</code></p></li>
+<li><p>时间部分：
+如果要查看完整的时间格式，可以使用 <code>ls -l --full-time</code></p></li>
+</ul>
+
+
+<h4>如何改变：</h4>
+
+<ul>
+<li><p>改变文件用户组： <code>chgrp</code>
+递归更改使用<code>-R</code></p></li>
+<li><p>改变文件所有者： <code>chown</code></p></li>
+<li><p>改变文件的权限： <code>chmod</code>
+两种更改方法： <code>+</code>、 <code>-</code>、 <code>=</code> 方法 和 数字方法, 其中 <code>u</code>、 <code>g</code>、 <code>o</code>、 <code>a</code> 分别代表user, group, others, all</p></li>
+</ul>
+
+
+<h4>目录与文件权限的不同意义：</h4>
+
+<h5>对于文件：</h5>
+
+<ul>
+<li><code>r</code> 可读取文件的实际内容</li>
+<li><code>w</code> 可编辑、 新增、 修改文件的内容</li>
+<li><code>x</code> 该文件有被系统执行的权限</li>
+</ul>
+
+
+<h5>对于目录</h5>
+
+<ul>
+<li><code>r</code> 读取目录结构列表的权限</li>
+<li><code>w</code> 写入目录的权限： 包括新建文件与目录； 删除已存在的文件或者目录（不论文件的权限为何）； 将已存在的文件或者目录重命名； 转移目录内的文件和目录的位置。</li>
+<li><code>x</code> 代表用户能否进入该目录成为工作目录</li>
+</ul>
+
+
+<h3>Linux 目录：</h3>
+
+<h4>几个重要的目录：</h4>
+
+<ul>
+<li>/etc 配置文件</li>
+<li>/bin 重要的可执行文件</li>
+<li>/dev 所需要的设备文件</li>
+<li>/lib 执行文件所需要的函数库与内核所需的模块</li>
+<li>/sbin 重要的系统执行文件</li>
+</ul>
+
+
+<p>/
+├── bin
+├── boot
+├── dev
+├── etc
+├── home
+├── lib
+├── lost+found
+├── media
+├── mnt
+├── opt
+├── proc
+├── root
+├── run
+├── sbin
+├── srv
+├── sys
+├── tmp
+├── usr
+├── var</p>
+
+<h4>重点目录：</h4>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[The useage of SCREEN]]></title>

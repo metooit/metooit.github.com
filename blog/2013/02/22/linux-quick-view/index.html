@@ -3,11 +3,12 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>What is functional programming? - K.I.S.S</title>
+	<title>Linux 随心小记 - K.I.S.S</title>
 	<meta name="author" content="metooit">
 
 	
-	<meta name="description" content="最近看到频率很高的一个词叫做函数式编程，《黑客与画家》中作者对于『Lisp』的极力推崇让人抑制不住去了解一下函数式编程，于是今天再次从阮一峰Blog上看到函数氏编程的时候，我觉得确实应该了解一下这种很神秘很高深的领域了。想一想忽然又觉得很吓人了。 阮一峰&#8212;>函数式编程初探 &hellip;">
+	<meta name="description" content="Linux 用户与用户组 Linux 文件权限的概念 基本概念： -rw-rw-r&#8211; 1 prince prince 235 Jan 31 10:20 2013-01-30-hello-world.markdown
+[ 权限 ] [用户] [用户组][大小][修改日期] 权限部分： &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -17,7 +18,7 @@
 
 	<link href="/atom.xml" rel="alternate" title="K.I.S.S" type="application/atom+xml">
 	
-	<link rel="canonical" href="http://metooit.github.com/blog/2013/02/07/what-is-functional-programming/">
+	<link rel="canonical" href="http://metooit.github.com/blog/2013/02/22/linux-quick-view/">
 	<link href="/favicon.png" rel="shortcut icon">
 	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
 	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
@@ -106,34 +107,93 @@
 			
 			<div class="mid-col-container">
 				<div id="content" class="inner"><article class="post">
-	<h1 class="title">What Is Functional Programming?</h1>
-	<div class="entry-content"><p>最近看到频率很高的一个词叫做<code>函数式编程</code>，《黑客与画家》中作者对于『Lisp』的极力推崇让人抑制不住去了解一下<code>函数式编程</code>，于是今天再次从阮一峰Blog上看到函数氏编程的时候，我觉得确实应该了解一下这种很神秘很高深的领域了。想一想忽然又觉得很吓人了。</p>
+	<h1 class="title">Linux 随心小记</h1>
+	<div class="entry-content"><h2>Linux 用户与用户组</h2>
 
-<!-- more -->
+<h3>Linux 文件权限的概念</h3>
 
+<h4>基本概念：</h4>
 
-<h3>阮一峰&#8212;><a href="http://www.ruanyifeng.com/blog/2012/04/functional_programming.html">函数式编程初探</a></h3>
-
-<h4>函数式编程的特点</h4>
+<blockquote><p>-rw-rw-r&#8211;  1 prince prince  235 Jan 31 10:20 2013-01-30-hello-world.markdown
+[   权限  ]   [用户] [用户组][大小][修改日期]</p></blockquote>
 
 <ul>
-<li>函数可以作为参数， 赋值给其他变量或者作为另一个函数的参数</li>
-<li>只用表达式， 不用语句</li>
-<li>所有函数保持独立， 功能仅为返回一个值， 不会改变全局变量和系统变量</li>
-<li>返回值不依赖外部变量或者状态， 之一来与输入参数</li>
+<li><p>权限部分：</p></li>
+<li><p>第一个字符： <code>d</code>代表目录、 <code>-</code>代表文件、 <code>l</code>代表连接文件</p></li>
+<li><p>剩下的九个字符： <code>r</code>代表可读、 <code>w</code>代表可写、 <code>x</code>代表可执行</p></li>
+<li><p>大小部分：
+大小部分的默认单位是<code>B</code></p></li>
+<li><p>时间部分：
+如果要查看完整的时间格式，可以使用 <code>ls -l --full-time</code></p></li>
 </ul>
 
 
-<h4>函数式编程的意义</h4>
+<h4>如何改变：</h4>
 
 <ul>
-<li>代码简洁，开发快速</li>
-<li>代码易于理解</li>
-<li>代码管理方便</li>
-<li>易于并发编程</li>
-<li>可以进行热升级</li>
+<li><p>改变文件用户组： <code>chgrp</code>
+递归更改使用<code>-R</code></p></li>
+<li><p>改变文件所有者： <code>chown</code></p></li>
+<li><p>改变文件的权限： <code>chmod</code>
+两种更改方法： <code>+</code>、 <code>-</code>、 <code>=</code> 方法 和 数字方法, 其中 <code>u</code>、 <code>g</code>、 <code>o</code>、 <code>a</code> 分别代表user, group, others, all</p></li>
 </ul>
 
+
+<h4>目录与文件权限的不同意义：</h4>
+
+<h5>对于文件：</h5>
+
+<ul>
+<li><code>r</code> 可读取文件的实际内容</li>
+<li><code>w</code> 可编辑、 新增、 修改文件的内容</li>
+<li><code>x</code> 该文件有被系统执行的权限</li>
+</ul>
+
+
+<h5>对于目录</h5>
+
+<ul>
+<li><code>r</code> 读取目录结构列表的权限</li>
+<li><code>w</code> 写入目录的权限： 包括新建文件与目录； 删除已存在的文件或者目录（不论文件的权限为何）； 将已存在的文件或者目录重命名； 转移目录内的文件和目录的位置。</li>
+<li><code>x</code> 代表用户能否进入该目录成为工作目录</li>
+</ul>
+
+
+<h3>Linux 目录：</h3>
+
+<h4>几个重要的目录：</h4>
+
+<ul>
+<li>/etc 配置文件</li>
+<li>/bin 重要的可执行文件</li>
+<li>/dev 所需要的设备文件</li>
+<li>/lib 执行文件所需要的函数库与内核所需的模块</li>
+<li>/sbin 重要的系统执行文件</li>
+</ul>
+
+
+<p>/
+├── bin
+├── boot
+├── dev
+├── etc
+├── home
+├── lib
+├── lost+found
+├── media
+├── mnt
+├── opt
+├── proc
+├── root
+├── run
+├── sbin
+├── srv
+├── sys
+├── tmp
+├── usr
+├── var</p>
+
+<h4>重点目录：</h4>
 </div>
 
 </article>
@@ -183,8 +243,8 @@ Powered by <a href="http://octopress.org/">Octopress</a>
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://metooit.github.com/blog/2013/02/07/what-is-functional-programming/';
-        var disqus_url = 'http://metooit.github.com/blog/2013/02/07/what-is-functional-programming/';
+        var disqus_identifier = 'http://metooit.github.com/blog/2013/02/22/linux-quick-view/';
+        var disqus_url = 'http://metooit.github.com/blog/2013/02/22/linux-quick-view/';
         var disqus_script = 'embed.js';
       
     (function () {
