@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Linux | K.I.S.S]]></title>
   <link href="http://metooit.github.com/blog/categories/linux/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-02-22T15:43:53+08:00</updated>
+  <updated>2013-02-22T20:36:41+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -18,9 +18,7 @@
     <link href="http://metooit.github.com/blog/2013/02/22/linux-quick-view/"/>
     <updated>2013-02-22T14:45:00+08:00</updated>
     <id>http://metooit.github.com/blog/2013/02/22/linux-quick-view</id>
-    <content type="html"><![CDATA[<h2>Linux 用户与用户组</h2>
-
-<h3>Linux 文件权限的概念</h3>
+    <content type="html"><![CDATA[<h3>Linux 文件权限的概念</h3>
 
 <h4>基本概念：</h4>
 
@@ -104,6 +102,94 @@
 
 
 <h4>重点目录：</h4>
+
+<p>/usr : UNIX Software Resource， 里面放置的数据是可分享的不可变动的。
+/var : 放置经常变动的文件</p>
+
+<h4>目录相关操作：</h4>
+
+<p><code>cd</code> <code>pwd</code> <code>mkdir</code> <code>rmdir</code></p>
+
+<p>Tips:
+* <code>cd -</code> 回到上一个目录
+* <code>pwd -P</code> 不显示链接路径而是原本的完整路径
+* <code>mkdir -p</code> 创建多层目录
+* <code>mkdir -m ??? &lt;dir&gt;</code> 同时设置权限， 否则使用默认的权限
+* <code>rmdir -p</code> 连同上层的空目录一起删掉， 要比<code>rm -r</code> 安全</p>
+
+<h4>文件与目录管理：</h4>
+
+<p><code>ls</code> <code>cp</code> <code>rm</code> <code>mv</code></p>
+
+<p>Tips:
+* <code>cp -d</code> 若源文件为连接文件， 那么拷贝连接文件而不是文件本身
+* <code>cp -i</code> 覆盖前询问
+* <code>cp -l</code> 硬连接， <code>cp -s</code> 软连接
+* <code>cp -a</code> 保持各种属性不变
+* 在命令前面加上<code>\</code>, 可以忽略掉命令的<code>alias</code>指定参数</p>
+
+<h4>文件内容查询：</h4>
+
+<p><code>cat</code> <code>tac</code> <code>nl</code> <code>more</code> <code>less</code> <code>head</code> <code>tail</code> <code>od</code></p>
+
+<p>Tips:
+* <code>cat -n</code> 带行号
+* <code>od</code> 以二进制方式读取文件内容</p>
+
+<h4>文件目录的默认权限与隐藏权限：</h4>
+
+<p><code>umask</code> 目前用户在新建目录或者文件的时候权限默认值， 使用<code>umask -S</code>更加直观地显示</p>
+
+<h4>查看文件类型：</h4>
+
+<p><code>file</code> 简单地判断文件的类型</p>
+
+<h4>脚本文件名的查询：</h4>
+
+<p><code>which</code></p>
+
+<h4>文件名的查找：</h4>
+
+<p><code>whereis [bmsu] &lt;name&gt;</code> 、 <code>locate</code>、 <code>find</code></p>
+
+<p>Tips:
+* <code>locate</code> 是根据已有的数据库来查找的，比较快 /var/lib/mlocate/mlocate.db
+* <code>find [PATH] [opinion] [action]</code> ---> <code>find / -perm +7000 -exec ls -l {} \;</code></p>
+
+<h3>文件与文件系统的压缩与打包</h3>
+
+<h3>几个常见的压缩文件扩展名：</h3>
+
+<ul>
+<li>.Z compress程序压缩的文件</li>
+<li>.gz gzip程序压缩的文件</li>
+<li>.bz2 bzip2程序压缩的文件</li>
+<li>.tar tar程序打包的数据，并没有压缩过</li>
+<li>.tar.gz tar程序打包的文件，其中经过gzip的压缩</li>
+<li>.tar.bz2 tar程序打包的文件，其中经过bzip2压缩过</li>
+</ul>
+
+
+<h3>压缩、 查看与解压：</h3>
+
+<ul>
+<li><code>compress</code> <code>uncompress</code></li>
+<li><code>gzip</code> <code>zcat</code></li>
+<li><code>bzip2</code> <code>bzcat</code></li>
+</ul>
+
+
+<h3>打包：</h3>
+
+<ul>
+<li><p><code>tar</code>
+tar [-] A --catenate --concatenate | c --create | d --diff --compare | --delete | r --append | t --list | --test-label | u --update | x
+--extract --get [options] [pathname ...]</p></li>
+<li><p>压缩： <code>tar -jcv -f filename.tar.bz2 要被解压缩的文件或目录名称</code></p></li>
+<li>查询： <code>tar -jtv -f filename.tar.bz2</code></li>
+<li>解压： <code>tar -jxv -f filename.tar.bz2 -C 欲解压缩的目录</code></li>
+</ul>
+
 ]]></content>
   </entry>
   

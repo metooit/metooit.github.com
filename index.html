@@ -7,8 +7,8 @@
 	<meta name="author" content="metooit">
 
 	
-	<meta name="description" content="Linux 用户与用户组 Linux 文件权限的概念 基本概念： -rw-rw-r&#8211; 1 prince prince 235 Jan 31 10:20 2013-01-30-hello-world.markdown
-[ 权限 ] [用户] [用户组][大小][修改日期] 权限部分： &hellip;">
+	<meta name="description" content="今天， 又拾起了《C 程序设计语言》， 想再看一遍， 希望能够真正拾起一些东西吧…… 类型、运算符与表达式 变量名限制： 对内部名而言， 至少前31个字符是有效的； 对外部名而言， ANSI仅保证前六个字符的唯一性， 并且不区分大小写
+ANSI 表格： 2 3 4 5 6 7 30 40 50 &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -76,11 +76,11 @@
 </nav>
 </br>
 
-<!--<embed type='application/x-shockwave-flash' src='/javascripts/tagcloud.swf'width='100%' height='250' bgcolor='#ffffff' id='tagcloudflash' name='tagcloudflash' quality='high' allowscriptaccess='always'flashvars="tcolor=0x00aa00&amp;tcolor2=0x00dd00&amp;hicolor=0xff3333&amp;tspeed=100&amp;distr=true&amp;mode=tags&amp;tagcloud=%3Ctags%3E%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2F-%27+style%3D%27font-size%3A+14.444444444444445%25%27%3E%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Falgorithms%27+style%3D%27font-size%3A+18.88888888888889%25%27%3EAlgorithms%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Falgorithms-%27+style%3D%27font-size%3A+50.0%25%27%3EAlgorithms%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fcode%27+style%3D%27font-size%3A+14.444444444444445%25%27%3Ecode%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fdiary%27+style%3D%27font-size%3A+18.88888888888889%25%27%3Ediary%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fgit%27+style%3D%27font-size%3A+18.88888888888889%25%27%3Egit%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fgithub%27+style%3D%27font-size%3A+23.333333333333336%25%27%3Egithub%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flearn%27+style%3D%27font-size%3A+27.77777777777778%25%27%3ELearn%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flearn%27+style%3D%27font-size%3A+27.77777777777778%25%27%3Elearn%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flearn-%27+style%3D%27font-size%3A+18.88888888888889%25%27%3ELearn%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flife%27+style%3D%27font-size%3A+18.88888888888889%25%27%3ELife%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flinux%27+style%3D%27font-size%3A+18.88888888888889%25%27%3ELinux%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fmarkdown%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EMarkdown%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fmemo%27+style%3D%27font-size%3A+14.444444444444445%25%27%3Ememo%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fnote%27+style%3D%27font-size%3A+18.88888888888889%25%27%3ENote%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fprogramming%27+style%3D%27font-size%3A+18.88888888888889%25%27%3EProgramming%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fprogramming%27+style%3D%27font-size%3A+14.444444444444445%25%27%3Eprogramming%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fprogramming-%27+style%3D%27font-size%3A+23.333333333333336%25%27%3EProgramming%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fpython%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EPython%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fpython-%27+style%3D%27font-size%3A+18.88888888888889%25%27%3EPython%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Frails-%27+style%3D%27font-size%3A+14.444444444444445%25%27%3ERails%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fruby%27+style%3D%27font-size%3A+18.88888888888889%25%27%3ERuby%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fruby-%27+style%3D%27font-size%3A+27.77777777777778%25%27%3ERuby%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fscreen-%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EScreen%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fsort%27+style%3D%27font-size%3A+32.22222222222222%25%27%3ESort%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fsort-%27+style%3D%27font-size%3A+23.333333333333336%25%27%3ESort%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fsummary%27+style%3D%27font-size%3A+14.444444444444445%25%27%3Esummary%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fvim%27+style%3D%27font-size%3A+14.444444444444445%25%27%3Evim%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fwiki%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EWiki%3C%2Fa%3E+%3C%2Ftags%3E">-->
+<!--<embed type='application/x-shockwave-flash' src='/javascripts/tagcloud.swf'width='100%' height='250' bgcolor='#ffffff' id='tagcloudflash' name='tagcloudflash' quality='high' allowscriptaccess='always'flashvars="tcolor=0x00aa00&amp;tcolor2=0x00dd00&amp;hicolor=0xff3333&amp;tspeed=100&amp;distr=true&amp;mode=tags&amp;tagcloud=%3Ctags%3E%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2F-%27+style%3D%27font-size%3A+14.444444444444445%25%27%3E%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Falgorithms%27+style%3D%27font-size%3A+18.88888888888889%25%27%3EAlgorithms%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Falgorithms-%27+style%3D%27font-size%3A+50.0%25%27%3EAlgorithms%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fc%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EC%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fcode%27+style%3D%27font-size%3A+14.444444444444445%25%27%3Ecode%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fdiary%27+style%3D%27font-size%3A+18.88888888888889%25%27%3Ediary%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fgit%27+style%3D%27font-size%3A+18.88888888888889%25%27%3Egit%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fgithub%27+style%3D%27font-size%3A+23.333333333333336%25%27%3Egithub%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flearn%27+style%3D%27font-size%3A+27.77777777777778%25%27%3ELearn%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flearn%27+style%3D%27font-size%3A+27.77777777777778%25%27%3Elearn%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flearn-%27+style%3D%27font-size%3A+18.88888888888889%25%27%3ELearn%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flife%27+style%3D%27font-size%3A+18.88888888888889%25%27%3ELife%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flinux%27+style%3D%27font-size%3A+18.88888888888889%25%27%3ELinux%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fmarkdown%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EMarkdown%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fmemo%27+style%3D%27font-size%3A+14.444444444444445%25%27%3Ememo%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fnote%27+style%3D%27font-size%3A+18.88888888888889%25%27%3ENote%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fprogramming%27+style%3D%27font-size%3A+23.333333333333336%25%27%3EProgramming%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fprogramming%27+style%3D%27font-size%3A+14.444444444444445%25%27%3Eprogramming%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fprogramming-%27+style%3D%27font-size%3A+23.333333333333336%25%27%3EProgramming%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fpython%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EPython%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fpython-%27+style%3D%27font-size%3A+18.88888888888889%25%27%3EPython%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Frails-%27+style%3D%27font-size%3A+14.444444444444445%25%27%3ERails%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fruby%27+style%3D%27font-size%3A+18.88888888888889%25%27%3ERuby%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fruby-%27+style%3D%27font-size%3A+27.77777777777778%25%27%3ERuby%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fscreen-%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EScreen%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fsort%27+style%3D%27font-size%3A+32.22222222222222%25%27%3ESort%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fsort-%27+style%3D%27font-size%3A+23.333333333333336%25%27%3ESort%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fsummary%27+style%3D%27font-size%3A+14.444444444444445%25%27%3Esummary%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fvim%27+style%3D%27font-size%3A+14.444444444444445%25%27%3Evim%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fwiki%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EWiki%3C%2Fa%3E+%3C%2Ftags%3E">-->
 <!--
 <section>
   <h1>Tag Cloud</h1>
-    <span id="tag-cloud"><embed type='application/x-shockwave-flash' src='/javascripts/tagcloud.swf'width='100%' height='250' bgcolor='#f2f2f2' id='tagcloudflash' name='tagcloudflash' quality='high' allowscriptaccess='always'flashvars="tcolor=0x333333&amp;tcolor2=0x333333&amp;hicolor=0x000000&amp;tspeed=100&amp;distr=true&amp;mode=tags&amp;tagcloud=%3Ctags%3E%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2F-%27+style%3D%27font-size%3A+14.444444444444445%25%27%3E%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Falgorithms%27+style%3D%27font-size%3A+18.88888888888889%25%27%3EAlgorithms%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Falgorithms-%27+style%3D%27font-size%3A+50.0%25%27%3EAlgorithms%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fcode%27+style%3D%27font-size%3A+14.444444444444445%25%27%3Ecode%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fdiary%27+style%3D%27font-size%3A+18.88888888888889%25%27%3Ediary%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fgit%27+style%3D%27font-size%3A+18.88888888888889%25%27%3Egit%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fgithub%27+style%3D%27font-size%3A+23.333333333333336%25%27%3Egithub%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flearn%27+style%3D%27font-size%3A+27.77777777777778%25%27%3ELearn%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flearn%27+style%3D%27font-size%3A+27.77777777777778%25%27%3Elearn%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flearn-%27+style%3D%27font-size%3A+18.88888888888889%25%27%3ELearn%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flife%27+style%3D%27font-size%3A+18.88888888888889%25%27%3ELife%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flinux%27+style%3D%27font-size%3A+18.88888888888889%25%27%3ELinux%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fmarkdown%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EMarkdown%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fmemo%27+style%3D%27font-size%3A+14.444444444444445%25%27%3Ememo%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fnote%27+style%3D%27font-size%3A+18.88888888888889%25%27%3ENote%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fprogramming%27+style%3D%27font-size%3A+18.88888888888889%25%27%3EProgramming%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fprogramming%27+style%3D%27font-size%3A+14.444444444444445%25%27%3Eprogramming%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fprogramming-%27+style%3D%27font-size%3A+23.333333333333336%25%27%3EProgramming%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fpython%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EPython%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fpython-%27+style%3D%27font-size%3A+18.88888888888889%25%27%3EPython%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Frails-%27+style%3D%27font-size%3A+14.444444444444445%25%27%3ERails%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fruby%27+style%3D%27font-size%3A+18.88888888888889%25%27%3ERuby%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fruby-%27+style%3D%27font-size%3A+27.77777777777778%25%27%3ERuby%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fscreen-%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EScreen%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fsort%27+style%3D%27font-size%3A+32.22222222222222%25%27%3ESort%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fsort-%27+style%3D%27font-size%3A+23.333333333333336%25%27%3ESort%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fsummary%27+style%3D%27font-size%3A+14.444444444444445%25%27%3Esummary%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fvim%27+style%3D%27font-size%3A+14.444444444444445%25%27%3Evim%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fwiki%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EWiki%3C%2Fa%3E+%3C%2Ftags%3E"></span>
+    <span id="tag-cloud"><embed type='application/x-shockwave-flash' src='/javascripts/tagcloud.swf'width='100%' height='250' bgcolor='#f2f2f2' id='tagcloudflash' name='tagcloudflash' quality='high' allowscriptaccess='always'flashvars="tcolor=0x333333&amp;tcolor2=0x333333&amp;hicolor=0x000000&amp;tspeed=100&amp;distr=true&amp;mode=tags&amp;tagcloud=%3Ctags%3E%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2F-%27+style%3D%27font-size%3A+14.444444444444445%25%27%3E%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Falgorithms%27+style%3D%27font-size%3A+18.88888888888889%25%27%3EAlgorithms%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Falgorithms-%27+style%3D%27font-size%3A+50.0%25%27%3EAlgorithms%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fc%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EC%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fcode%27+style%3D%27font-size%3A+14.444444444444445%25%27%3Ecode%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fdiary%27+style%3D%27font-size%3A+18.88888888888889%25%27%3Ediary%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fgit%27+style%3D%27font-size%3A+18.88888888888889%25%27%3Egit%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fgithub%27+style%3D%27font-size%3A+23.333333333333336%25%27%3Egithub%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flearn%27+style%3D%27font-size%3A+27.77777777777778%25%27%3ELearn%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flearn%27+style%3D%27font-size%3A+27.77777777777778%25%27%3Elearn%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flearn-%27+style%3D%27font-size%3A+18.88888888888889%25%27%3ELearn%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flife%27+style%3D%27font-size%3A+18.88888888888889%25%27%3ELife%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flinux%27+style%3D%27font-size%3A+18.88888888888889%25%27%3ELinux%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fmarkdown%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EMarkdown%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fmemo%27+style%3D%27font-size%3A+14.444444444444445%25%27%3Ememo%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fnote%27+style%3D%27font-size%3A+18.88888888888889%25%27%3ENote%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fprogramming%27+style%3D%27font-size%3A+23.333333333333336%25%27%3EProgramming%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fprogramming%27+style%3D%27font-size%3A+14.444444444444445%25%27%3Eprogramming%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fprogramming-%27+style%3D%27font-size%3A+23.333333333333336%25%27%3EProgramming%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fpython%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EPython%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fpython-%27+style%3D%27font-size%3A+18.88888888888889%25%27%3EPython%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Frails-%27+style%3D%27font-size%3A+14.444444444444445%25%27%3ERails%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fruby%27+style%3D%27font-size%3A+18.88888888888889%25%27%3ERuby%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fruby-%27+style%3D%27font-size%3A+27.77777777777778%25%27%3ERuby%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fscreen-%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EScreen%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fsort%27+style%3D%27font-size%3A+32.22222222222222%25%27%3ESort%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fsort-%27+style%3D%27font-size%3A+23.333333333333336%25%27%3ESort%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fsummary%27+style%3D%27font-size%3A+14.444444444444445%25%27%3Esummary%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fvim%27+style%3D%27font-size%3A+14.444444444444445%25%27%3Evim%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fwiki%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EWiki%3C%2Fa%3E+%3C%2Ftags%3E"></span>
 </section>
 
 -->
@@ -123,6 +123,69 @@
   
 
 
+<time datetime="2013-02-22T20:26:00+08:00" pubdate data-updated="true">Feb 22<span>nd</span>, 2013</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/c/'>C</a>, <a class='category' href='/blog/categories/programming/'>Programming</a>
+
+
+</div>
+		
+	</div>
+	<h1 class="title"><a href="/blog/2013/02/22/c-none-complete-note/">C 语言不完全笔记</a></h1>
+	<div class="entry-content">
+		<p>今天， 又拾起了《C 程序设计语言》， 想再看一遍， 希望能够真正拾起一些东西吧……</p>
+
+<h2>类型、运算符与表达式</h2>
+
+<ol>
+<li>变量名限制： 对内部名而言， 至少前31个字符是有效的； 对外部名而言， ANSI仅保证前六个字符的唯一性， 并且不区分大小写</li>
+<li><p>ANSI 表格：</p>
+
+<pre><code>   2 3 4 5 6 7       30 40 50 60 70 80 90 100 110 120
+ -------------      ---------------------------------
+0:   0 @ P ` p     0:    (  2  &lt;  F  P  Z  d   n   x
+1: ! 1 A Q a q     1:    )  3  =  G  Q  [  e   o   y
+2: " 2 B R b r     2:    *  4  &gt;  H  R  \  f   p   z
+3: # 3 C S c s     3: !  +  5  ?  I  S  ]  g   q   {
+4: $ 4 D T d t     4: "  ,  6  @  J  T  ^  h   r   |
+5: % 5 E U e u     5: #  -  7  A  K  U  _  i   s   }
+6: &amp; 6 F V f v     6: $  .  8  B  L  V  `  j   t   ~
+7: ´ 7 G W g w     7: %  /  9  C  M  W  a  k   u  DEL
+8: ( 8 H X h x     8: &amp;  0  :  D  N  X  b  l   v
+9: ) 9 I Y i y     9: ´  1  ;  E  O  Y  c  m   w
+A: * : J Z j z
+B: + ; K [ k {
+C: , &lt; L \ l |
+D: - = M ] m }
+E: . &gt; N ^ n ~
+F: / ? O _ o DEL
+</code></pre></li>
+</ol>
+
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
 <time datetime="2013-02-22T14:45:00+08:00" pubdate data-updated="true">Feb 22<span>nd</span>, 2013</time></div>
 		<div class="tags">
 
@@ -135,9 +198,7 @@
 	</div>
 	<h1 class="title"><a href="/blog/2013/02/22/linux-quick-view/">Linux 随心小记</a></h1>
 	<div class="entry-content">
-		<h2>Linux 用户与用户组</h2>
-
-<h3>Linux 文件权限的概念</h3>
+		<h3>Linux 文件权限的概念</h3>
 
 <h4>基本概念：</h4>
 
@@ -221,6 +282,94 @@
 
 
 <h4>重点目录：</h4>
+
+<p>/usr : UNIX Software Resource， 里面放置的数据是可分享的不可变动的。
+/var : 放置经常变动的文件</p>
+
+<h4>目录相关操作：</h4>
+
+<p><code>cd</code> <code>pwd</code> <code>mkdir</code> <code>rmdir</code></p>
+
+<p>Tips:
+* <code>cd -</code> 回到上一个目录
+* <code>pwd -P</code> 不显示链接路径而是原本的完整路径
+* <code>mkdir -p</code> 创建多层目录
+* <code>mkdir -m ??? &lt;dir&gt;</code> 同时设置权限， 否则使用默认的权限
+* <code>rmdir -p</code> 连同上层的空目录一起删掉， 要比<code>rm -r</code> 安全</p>
+
+<h4>文件与目录管理：</h4>
+
+<p><code>ls</code> <code>cp</code> <code>rm</code> <code>mv</code></p>
+
+<p>Tips:
+* <code>cp -d</code> 若源文件为连接文件， 那么拷贝连接文件而不是文件本身
+* <code>cp -i</code> 覆盖前询问
+* <code>cp -l</code> 硬连接， <code>cp -s</code> 软连接
+* <code>cp -a</code> 保持各种属性不变
+* 在命令前面加上<code>\</code>, 可以忽略掉命令的<code>alias</code>指定参数</p>
+
+<h4>文件内容查询：</h4>
+
+<p><code>cat</code> <code>tac</code> <code>nl</code> <code>more</code> <code>less</code> <code>head</code> <code>tail</code> <code>od</code></p>
+
+<p>Tips:
+* <code>cat -n</code> 带行号
+* <code>od</code> 以二进制方式读取文件内容</p>
+
+<h4>文件目录的默认权限与隐藏权限：</h4>
+
+<p><code>umask</code> 目前用户在新建目录或者文件的时候权限默认值， 使用<code>umask -S</code>更加直观地显示</p>
+
+<h4>查看文件类型：</h4>
+
+<p><code>file</code> 简单地判断文件的类型</p>
+
+<h4>脚本文件名的查询：</h4>
+
+<p><code>which</code></p>
+
+<h4>文件名的查找：</h4>
+
+<p><code>whereis [bmsu] &lt;name&gt;</code> 、 <code>locate</code>、 <code>find</code></p>
+
+<p>Tips:
+* <code>locate</code> 是根据已有的数据库来查找的，比较快 /var/lib/mlocate/mlocate.db
+* <code>find [PATH] [opinion] [action]</code> &#8212;> <code>find / -perm +7000 -exec ls -l {} \;</code></p>
+
+<h3>文件与文件系统的压缩与打包</h3>
+
+<h3>几个常见的压缩文件扩展名：</h3>
+
+<ul>
+<li>.Z compress程序压缩的文件</li>
+<li>.gz gzip程序压缩的文件</li>
+<li>.bz2 bzip2程序压缩的文件</li>
+<li>.tar tar程序打包的数据，并没有压缩过</li>
+<li>.tar.gz tar程序打包的文件，其中经过gzip的压缩</li>
+<li>.tar.bz2 tar程序打包的文件，其中经过bzip2压缩过</li>
+</ul>
+
+
+<h3>压缩、 查看与解压：</h3>
+
+<ul>
+<li><code>compress</code> <code>uncompress</code></li>
+<li><code>gzip</code> <code>zcat</code></li>
+<li><code>bzip2</code> <code>bzcat</code></li>
+</ul>
+
+
+<h3>打包：</h3>
+
+<ul>
+<li><p><code>tar</code>
+tar [-] A &#8211;catenate &#8211;concatenate | c &#8211;create | d &#8211;diff &#8211;compare | &#8211;delete | r &#8211;append | t &#8211;list | &#8211;test-label | u &#8211;update | x
+&#8211;extract &#8211;get [options] [pathname &#8230;]</p></li>
+<li><p>压缩： <code>tar -jcv -f filename.tar.bz2 要被解压缩的文件或目录名称</code></p></li>
+<li>查询： <code>tar -jtv -f filename.tar.bz2</code></li>
+<li>解压： <code>tar -jxv -f filename.tar.bz2 -C 欲解压缩的目录</code></li>
+</ul>
+
 
 		
 		
@@ -639,569 +788,6 @@
 <li>第八点： 保持阳光的态度， 相信美好的东西</li>
 <li>第九点： 简单、执着</li>
 <li>第十点： 放轻松…… 再看一看前九点</li>
-</ul>
-
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<div class="meta">
-		<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-02-16T13:04:00+08:00" pubdate data-updated="true">Feb 16<span>th</span>, 2013</time></div>
-		<div class="tags">
-
-
-	<a class='category' href='/blog/categories/algorithms/'>Algorithms</a>
-
-
-</div>
-		
-	</div>
-	<h1 class="title"><a href="/blog/2013/02/16/binary-search-tree/">Binary Search Tree</a></h1>
-	<div class="entry-content">
-		<h2>Introduction:</h2>
-
-<p>二叉搜索树上的基本操作所花费的时间与树的高度成正比。对于一个有<code>n</code>个结点的二叉搜索树来说， 基本操作的最坏运行时间为<code>O(lgn)</code>。</p>
-
-<h2>1. 二叉搜索树的概念：</h2>
-
-<ul>
-<li>一棵二叉搜索树是以一棵二叉树来组织的</li>
-<li>树可以用一个链表的数据结构来表示， 其中的每一个结点就是一个对象</li>
-<li>除了<code>key</code> 和 <code>卫星数据</code> 外， 每一个结点还包含了属性 <code>left</code> <code>right</code> 和 <code>p</code>。 如果相应的属性不存在， 那么它的值就是<code>NIL</code>。 根结点是树中唯一一个父指针为NIL的结点。</li>
-<li>对于任何节点x， 它的左子树中的关键字最大不能大于x.key, 右子树中的关键字最小不能小于x.key</li>
-</ul>
-
-
-<h2>2. 二叉搜索树上的操作：</h2>
-
-<h3>2.1 如何按序打印二叉树：</h3>
-
-<ul>
-<li><p>二叉搜索树的性质决定了我们可以通过简单的<code>递归算法</code>来按顺序打印出二叉树的所有关键字。这种方法称作是<code>中序遍历</code>（inorder tree walk）</p>
-
-<p>** 中序遍历： 输出的子树根的关键字位于其左子树关键字和右子树关键字之间</p>
-
-<p>** 先序遍历： 输出的根的关键字在其左右子树关键字之前</p>
-
-<p>** 后序遍历： 输出的根的关键字在其左右子树关键字之后</p></li>
-<li><p>伪代码实现：</p></li>
-</ul>
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>INORDER-TREE-WALK(x)
-</span><span class='line'>    if x != NIL
-</span><span class='line'>        INORDER-TREE-WALK(x.left)
-</span><span class='line'>        print x.key
-</span><span class='line'>        INORDER-TREE-WALK(x.right)</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li>遍历打印一个有n个结点的二叉搜索树需要耗费O(n)的时间 （证明详见《算法导论（第三版）》）</li>
-</ul>
-
-
-<h3>2.2 查询二叉搜索树：</h3>
-
-<h4>2.2.1查找：</h4>
-
-<ul>
-<li>差找是指在一棵二叉搜索数中找到一个具有给定关键字的结点</li>
-<li>输入是一个指向树根的指针和一个关键字<code>k</code>, 如果结点存在则返回指向该关键字的指针，否则返回<code>NIL</code></li>
-<li>伪代码实现：</li>
-</ul>
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>TREE-SEARCH(x, k)
-</span><span class='line'>    if x == NIL or k == x.key
-</span><span class='line'>        return x
-</span><span class='line'>    if x &lt; x.key
-</span><span class='line'>        return TREE-SEARCH(x.left, k)
-</span><span class='line'>    else
-</span><span class='line'>        return TREE-SEARCH(x.right, k)</span></code></pre></td></tr></table></div></figure>
-
-
-<p><img src="/pictures/BSTree.jpg" title="BSTree" ></p>
-
-<ul>
-<li><p>TREE-SEARCH 的运行时间为O(h) (h 是指树的高度)</p></li>
-<li><p>我们也可以不用递归， 用<code>while</code>循环来展开</p></li>
-</ul>
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>ITERATIVE-TREE_SEARCH(x, k)
-</span><span class='line'>    whiel x != NIL and k != x.key
-</span><span class='line'>        if x &lt; x.key
-</span><span class='line'>            x = x.left
-</span><span class='line'>        else x = x.right
-</span><span class='line'>    return x</span></code></pre></td></tr></table></div></figure>
-
-
-<h4>2.2.2 最大和最小关键字元素：</h4>
-
-<ul>
-<li>查找最小关键字的元素：</li>
-</ul>
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>TREE-MINIMUM(x)
-</span><span class='line'>    while x.left != NIL
-</span><span class='line'>        x = x.left
-</span><span class='line'>    return x</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li>查找最大关键字的元素：</li>
-</ul>
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>TREE-MAXIMUM(x)
-</span><span class='line'>    while x.right != NIL
-</span><span class='line'>        x = x.right
-</span><span class='line'>    return x</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li>这两个过程的运行时间为O(h)</li>
-</ul>
-
-
-<h4>2.2.3 后继和前驱：</h4>
-
-<ul>
-<li>伪代码的实现过程：</li>
-</ul>
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>TREE-SUCCESSOR(x)
-</span><span class='line'>    if x.right != NIL
-</span><span class='line'>        return TREE-MINIMUM(x.right)
-</span><span class='line'>    y = x.p
-</span><span class='line'>    while y != NIL and x == y.right
-</span><span class='line'>        x = y
-</span><span class='line'>        y = y.p</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li><p>两种情况：
-<strong> 如果结点x的右子树为非空，那么x的后继恰好是x右子树中的最左的结点
-</strong> 如果结点x的右子树非空并且有一个后继y， 那么y就是x的有左孩子的底层祖先， 并且它也是x的一个祖先， 为了找到y， 只需要简单地从x开始沿树而上直到遇到一个其双亲有左孩子的结点</p></li>
-<li><p>执行此过程的操作时间同样是O(h)</p></li>
-</ul>
-
-
-<h3>2.3 查找和删除：</h3>
-
-<h4>2.3.1 插入：</h4>
-
-<ul>
-<li><p>前提条件： 将一个新值v插入到一棵二叉搜索树T中， 以z作为输入， 其中z.key=v, z.left=NIL, z.right=NIL</p></li>
-<li><p>伪代码实现：</p></li>
-</ul>
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>TREE-INSERT(T, z)
-</span><span class='line'>    y = NIL
-</span><span class='line'>    x = T.root
-</span><span class='line'>    while x != NIL
-</span><span class='line'>        y = x
-</span><span class='line'>        if z.key &lt; x.key
-</span><span class='line'>            x = x.left
-</span><span class='line'>        else
-</span><span class='line'>            x = x.right
-</span><span class='line'>    z.p = y
-</span><span class='line'>    if y == NIL
-</span><span class='line'>        T.root = z // tree T was empty
-</span><span class='line'>    elseif z.key &lt; y.key
-</span><span class='line'>        y.left = z
-</span><span class='line'>    else
-</span><span class='line'>        y.right = z</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li>TREE-INSERT 的运行时间为O(h)</li>
-</ul>
-
-
-<h4>2.3.2 删除：</h4>
-
-<ul>
-<li>一棵二叉搜索树中删除一个结点z的整个策略分为三种基本情况：</li>
-<li>如果z没有孩子结点， 那么只是简单地将它删除， 并且修改它的父结点， 用NIL作为孩子来替换z
-<img src="/pictures/delete1.png" title="delete1" ></li>
-<li>如果z只有一个孩子， 那么将这个孩子提升到树中z的位置上， 并且修改z的父结点， 用z的孩子来替换z
-<img src="/pictures/delete2.png" title="delete2" ></li>
-<li><p>如果z有两个孩子， 那么找到z的后继y（一定在z的右子树中）， 并且让y占据树中z的位置。 z的原来右子树部分成为y的新右子树， 并且z的左子树成为y的新的左子树。
-<img src="/pictures/delete3.png" title="delete3" ></p></li>
-<li><p>从一棵二叉搜索树中删除一个结点，如果取指向T和z的指针作为输入：</p></li>
-<li>如果z没有左孩子， 那么用其右孩子来替换z， 这个右孩子可以是NIL也可以不是. 当z的右孩子是NIL时， 这种情况就是z只有一个孩子结点的情况。 当z的右孩子非NIL时， 这种情况就是z仅有一个孩子结点的情形， 该孩子是其右孩子。</li>
-<li>如果z仅有一个孩子并且为其左孩子时， 那么用左孩子来替换z</li>
-<li>否则， z两个孩子都有。 我们要查找z的后继y，这个后继位于z的右子树中并且没有左孩子。 现在需要将y移出原来的位置进行拼接， 并替换树中的z</li>
-<li><p>如果y是z的右孩子， 那么用y替换z， 并仅留下y的右孩子</p></li>
-<li><p>为了在二叉树中移动子树， 定义TRANSPLANT， 用另一棵子树替换一棵子树并且成为其双亲的孩子结点。</p></li>
-</ul>
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>TRANSPLANT(T, u, v)
-</span><span class='line'>    if u.p == NIL
-</span><span class='line'>        T.root = v
-</span><span class='line'>    elseif u == u.p.left
-</span><span class='line'>        u.p.left = v
-</span><span class='line'>    else u.p.right = v
-</span><span class='line'>    if v != NIL
-</span><span class='line'>        v.p = u.p</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li>从二叉树中删除结点的过程伪代码：</li>
-</ul>
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>TREE-DELETE(T, z)
-</span><span class='line'>    if z.left = NIL
-</span><span class='line'>        TRANSPLANT(T, z, z.right)
-</span><span class='line'>    elseif z.right == NIL
-</span><span class='line'>        TRANSPLANT(T, z, z.left)
-</span><span class='line'>    else y = TREE-MINIMUM(z.right)
-</span><span class='line'>        if y.p != z
-</span><span class='line'>            TRANSPLANT(T, y, y.right)
-</span><span class='line'>            y.right = z.right
-</span><span class='line'>            y.right.p = y
-</span><span class='line'>        TRANSPLANT(T, z, y)
-</span><span class='line'>        y.left = z.left
-</span><span class='line'>        y.left.p = y</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li>从一棵高度为h的二叉树上删除一个结点的时间代价为O(h)</li>
-</ul>
-
-
-<h3>源代码实现：</h3>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-<span class='line-number'>33</span>
-<span class='line-number'>34</span>
-<span class='line-number'>35</span>
-<span class='line-number'>36</span>
-<span class='line-number'>37</span>
-<span class='line-number'>38</span>
-<span class='line-number'>39</span>
-<span class='line-number'>40</span>
-<span class='line-number'>41</span>
-<span class='line-number'>42</span>
-<span class='line-number'>43</span>
-<span class='line-number'>44</span>
-<span class='line-number'>45</span>
-<span class='line-number'>46</span>
-<span class='line-number'>47</span>
-<span class='line-number'>48</span>
-<span class='line-number'>49</span>
-<span class='line-number'>50</span>
-<span class='line-number'>51</span>
-<span class='line-number'>52</span>
-<span class='line-number'>53</span>
-<span class='line-number'>54</span>
-<span class='line-number'>55</span>
-<span class='line-number'>56</span>
-<span class='line-number'>57</span>
-<span class='line-number'>58</span>
-<span class='line-number'>59</span>
-<span class='line-number'>60</span>
-<span class='line-number'>61</span>
-<span class='line-number'>62</span>
-<span class='line-number'>63</span>
-<span class='line-number'>64</span>
-<span class='line-number'>65</span>
-<span class='line-number'>66</span>
-<span class='line-number'>67</span>
-<span class='line-number'>68</span>
-<span class='line-number'>69</span>
-<span class='line-number'>70</span>
-<span class='line-number'>71</span>
-<span class='line-number'>72</span>
-<span class='line-number'>73</span>
-<span class='line-number'>74</span>
-<span class='line-number'>75</span>
-<span class='line-number'>76</span>
-<span class='line-number'>77</span>
-<span class='line-number'>78</span>
-<span class='line-number'>79</span>
-<span class='line-number'>80</span>
-<span class='line-number'>81</span>
-<span class='line-number'>82</span>
-<span class='line-number'>83</span>
-<span class='line-number'>84</span>
-<span class='line-number'>85</span>
-<span class='line-number'>86</span>
-<span class='line-number'>87</span>
-<span class='line-number'>88</span>
-<span class='line-number'>89</span>
-<span class='line-number'>90</span>
-<span class='line-number'>91</span>
-<span class='line-number'>92</span>
-<span class='line-number'>93</span>
-<span class='line-number'>94</span>
-<span class='line-number'>95</span>
-<span class='line-number'>96</span>
-<span class='line-number'>97</span>
-<span class='line-number'>98</span>
-<span class='line-number'>99</span>
-<span class='line-number'>100</span>
-<span class='line-number'>101</span>
-<span class='line-number'>102</span>
-<span class='line-number'>103</span>
-<span class='line-number'>104</span>
-<span class='line-number'>105</span>
-<span class='line-number'>106</span>
-<span class='line-number'>107</span>
-<span class='line-number'>108</span>
-<span class='line-number'>109</span>
-<span class='line-number'>110</span>
-<span class='line-number'>111</span>
-<span class='line-number'>112</span>
-<span class='line-number'>113</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>/* Initialize the binary tree, generate the root node */
-</span><span class='line'>Tree_Node* TreeInit(Tree_Node_Key key)
-</span><span class='line'>{
-</span><span class='line'>    Tree_Node* Start = NULL;
-</span><span class='line'>    if ((Start = malloc(sizeof(Tree_Node))) == NULL)
-</span><span class='line'>    {
-</span><span class='line'>        fprintf(stderr, "Failed to initialize memory\n");
-</span><span class='line'>        exit(EXIT_FAILURE);
-</span><span class='line'>    }
-</span><span class='line'>    Start->key = key;
-</span><span class='line'>    Start->left = NULL;
-</span><span class='line'>    Start->right = NULL;
-</span><span class='line'>    return Start;
-</span><span class='line'>}
-</span><span class='line'>
-</span><span class='line'>/* Insert the given key to the Tree */
-</span><span class='line'>Tree_Node* TreeInsert(Tree_Node* Start, Tree_Node_Key key)
-</span><span class='line'>{
-</span><span class='line'>    if(Start == NULL) {
-</span><span class='line'>        return (TreeInit(key));
-</span><span class='line'>    }
-</span><span class='line'>    else {
-</span><span class='line'>        if(Start->key > key)
-</span><span class='line'>            Start->left = TreeInsert(Start->left, key);
-</span><span class='line'>        else
-</span><span class='line'>            Start->right = TreeInsert(Start->right, key);
-</span><span class='line'>        return Start;
-</span><span class='line'>    }
-</span><span class='line'>}
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'>/* Find the node that contains the min key */
-</span><span class='line'>Tree_Node* TreeMinimum(Tree_Node* Start)
-</span><span class='line'>{
-</span><span class='line'>    while(Start->left != NULL)
-</span><span class='line'>    {
-</span><span class='line'>        Start = Start->left;
-</span><span class='line'>    }
-</span><span class='line'>    return Start;
-</span><span class='line'>}
-</span><span class='line'>
-</span><span class='line'>/* Find the node that contains the max key */
-</span><span class='line'>Tree_Node* TreeMaximum(Tree_Node* Start)
-</span><span class='line'>{
-</span><span class='line'>    while(Start->right != NULL)
-</span><span class='line'>    {
-</span><span class='line'>        Start = Start->right;
-</span><span class='line'>    }
-</span><span class='line'>    return Start;
-</span><span class='line'>}
-</span><span class='line'>
-</span><span class='line'>/* Print the tree in order */
-</span><span class='line'>void InorderPrintTree(Tree_Node* Start)
-</span><span class='line'>{
-</span><span class='line'>    if(Start == NULL)
-</span><span class='line'>        return;
-</span><span class='line'>    InorderPrintTree(Start->left);
-</span><span class='line'>    printf("%d ", Start->key);
-</span><span class='line'>    InorderPrintTree(Start->right);
-</span><span class='line'>    return;
-</span><span class='line'>}
-</span><span class='line'>
-</span><span class='line'>/* Print the tree in postorder */
-</span><span class='line'>void PostorderPrintTree(Tree_Node* Start)
-</span><span class='line'>{
-</span><span class='line'>    if(Start == NULL)
-</span><span class='line'>        return;
-</span><span class='line'>    PostorderPrintTree(Start->left);
-</span><span class='line'>    PostorderPrintTree(Start->right);
-</span><span class='line'>    printf("%d ", Start->key);
-</span><span class='line'>    return;
-</span><span class='line'>}
-</span><span class='line'>
-</span><span class='line'>/* Using recurse to free the tree */
-</span><span class='line'>void TreeFreeRecurse(Tree_Node* Start)
-</span><span class='line'>{
-</span><span class='line'>    if(Start == NULL)
-</span><span class='line'>        return;
-</span><span class='line'>    else {
-</span><span class='line'>        TreeFreeRecurse(Start->left);
-</span><span class='line'>        TreeFreeRecurse(Start->right);
-</span><span class='line'>    }
-</span><span class='line'>    free(Start->left);
-</span><span class='line'>    free(Start->right);
-</span><span class='line'>    return;
-</span><span class='line'>}
-</span><span class='line'>
-</span><span class='line'>/* Free the space of the tree */
-</span><span class='line'>void TreeFree(Tree_Node* Start)
-</span><span class='line'>{
-</span><span class='line'>    TreeFreeRecurse(Start);
-</span><span class='line'>    free(Start);
-</span><span class='line'>    return;
-</span><span class='line'>}
-</span><span class='line'>
-</span><span class='line'>/* Return the tree size */
-</span><span class='line'>int TreeSize(Tree_Node* Start)
-</span><span class='line'>{
-</span><span class='line'>    if (Start == NULL) return 0;
-</span><span class='line'>    else return 1 + TreeSize(Start->left) + TreeSize(Start->right);
-</span><span class='line'>}
-</span><span class='line'>
-</span><span class='line'>/* Return the max depth of the tree */
-</span><span class='line'>int TreeMaxDepth(Tree_Node* Start)
-</span><span class='line'>{
-</span><span class='line'>    if(Start == NULL)
-</span><span class='line'>        return 0;
-</span><span class='line'>
-</span><span class='line'>    if(TreeMaxDepth(Start->left) >= TreeMaxDepth(Start->right))
-</span><span class='line'>        return TreeMaxDepth(Start->left) + 1;
-</span><span class='line'>    else
-</span><span class='line'>        return TreeMaxDepth(Start->right) + 1;
-</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
-
-
-<hr />
-
-<h3>References:</h3>
-
-<ul>
-<li><a href="http://www.qmatica.com/DataStructures/Trees/AVL/AVLTree.html">动画演示</a></li>
-<li><a href="http://cslibrary.stanford.edu/110/BinaryTrees.html">Binary Trees</a></li>
-<li><a href="http://lonelycoder.org/?p=142">A simple introduction to Binary Search Tree</a></li>
-<li><a href="http://www.wutianqi.com/?p=2430">《算法导论》学习笔记</a></li>
 </ul>
 
 

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Programming | K.I.S.S]]></title>
   <link href="http://metooit.github.com/blog/categories/programming/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-02-22T15:43:53+08:00</updated>
+  <updated>2013-02-22T20:36:41+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -12,6 +12,43 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[C 语言不完全笔记]]></title>
+    <link href="http://metooit.github.com/blog/2013/02/22/c-none-complete-note/"/>
+    <updated>2013-02-22T20:26:00+08:00</updated>
+    <id>http://metooit.github.com/blog/2013/02/22/c-none-complete-note</id>
+    <content type="html"><![CDATA[<p>今天， 又拾起了《C 程序设计语言》， 想再看一遍， 希望能够真正拾起一些东西吧……</p>
+
+<h2>类型、运算符与表达式</h2>
+
+<ol>
+<li>变量名限制： 对内部名而言， 至少前31个字符是有效的； 对外部名而言， ANSI仅保证前六个字符的唯一性， 并且不区分大小写</li>
+<li><p>ANSI 表格：</p>
+
+<pre><code>   2 3 4 5 6 7       30 40 50 60 70 80 90 100 110 120
+ -------------      ---------------------------------
+0:   0 @ P ` p     0:    (  2  &lt;  F  P  Z  d   n   x
+1: ! 1 A Q a q     1:    )  3  =  G  Q  [  e   o   y
+2: " 2 B R b r     2:    *  4  &gt;  H  R  \  f   p   z
+3: # 3 C S c s     3: !  +  5  ?  I  S  ]  g   q   {
+4: $ 4 D T d t     4: "  ,  6  @  J  T  ^  h   r   |
+5: % 5 E U e u     5: #  -  7  A  K  U  _  i   s   }
+6: &amp; 6 F V f v     6: $  .  8  B  L  V  `  j   t   ~
+7: ´ 7 G W g w     7: %  /  9  C  M  W  a  k   u  DEL
+8: ( 8 H X h x     8: &amp;  0  :  D  N  X  b  l   v
+9: ) 9 I Y i y     9: ´  1  ;  E  O  Y  c  m   w
+A: * : J Z j z
+B: + ; K [ k {
+C: , &lt; L \ l |
+D: - = M ] m }
+E: . &gt; N ^ n ~
+F: / ? O _ o DEL
+</code></pre></li>
+</ol>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[想对算法做点什么]]></title>
