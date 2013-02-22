@@ -4,7 +4,7 @@
   <title><![CDATA[K.I.S.S]]></title>
   <link href="http://metooit.github.com/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-02-22T01:41:17+08:00</updated>
+  <updated>2013-02-22T10:29:56+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -44,7 +44,11 @@
 <li><p>zip() 方便地矩阵转置</p></li>
 <li><p>如何读入系统参数： sys.argv[1]</p></li>
 <li><p><a href="http://docs.python.org/2/tutorial/inputoutput.html">print 表格</a></p></li>
-<li><p>&#8230;</p></li>
+<li><p>try&#8230;except&#8230; 工作机制： 首先， try后的语句被执行， 如果没有异常发生， except被跳过； 如果有异常发生并且异常的类型与except中的相同， 就用except后的语句进行异常处理。</p></li>
+<li><p>可以直接用 x=Class() 来返回一个Class的实例</p></li>
+<li><p>这段话要好好理解： Since there is a valid use-case for class-private members (namely to avoid name clashes of names with names defined by subclasses), there is limited support for such a mechanism, called name mangling. Any identifier of the form <strong>spam (at least two leading underscores, at most one trailing underscore) is textually replaced with _classname</strong>spam, where classname is the current class name with leading underscore(s) stripped. This mangling is done without regard to the syntactic position of the identifier, as long as it occurs within the definition of a class.</p></li>
+<li><p>实例方法对象拥有变量： m.im_self  m.im_func</p></li>
+<li><p><a href="http://docs.python.org/2/tutorial/stdlib.html">标准库</a></p></li>
 </ul>
 
 ]]></content>
