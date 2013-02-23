@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Programming | K.I.S.S]]></title>
   <link href="http://metooit.github.com/blog/categories/programming/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-02-23T02:22:27+08:00</updated>
+  <updated>2013-02-23T22:37:13+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -54,6 +54,12 @@ F: / ? O _ o DEL
 <li>赋值是要进行类型转换， 右边的值需要转换成左边的类型</li>
 <li>自增运算符与自减运算符只能作用于变量</li>
 <li>在不需要任何具体值且仅需要递增变量的情况下， 前缀方式和后缀方式效果相同</li>
+<li><code>,</code>运算符是C语言中优先级最低的。某些情况下的逗号并不是逗号运算符， 比如分隔函数参数的逗号， 分隔声明中变量的逗号等， 这些逗号并不保证各个表达式从左到右求值。</li>
+<li>函数的返回的表达式将被返回为函数的返回值类型</li>
+<li>C语言中一个函数中不允许定义其他函数， 因此函数本身是外部的</li>
+<li>如果要在外部变量定义之前使用该变量， 或者外部变量的定义与变量的使用不在同一个文件中，那么必须在相应的变量声明中强制地使用<code>extern</code></li>
+<li><code>register</code>声明告诉编译器它所声明的变量在程序中使用的频率较高， 放到寄存器中使程序更小， 执行速度更快</li>
+<li>初始化数组时：如果初始化表达式的个数比数组元素少， 则数组后面的元素被初始化为0； 如果初始化表达式的个数比数组元素多， 是错误的</li>
 </ol>
 
 ]]></content>
