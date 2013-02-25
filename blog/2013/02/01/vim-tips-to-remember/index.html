@@ -234,7 +234,7 @@
 <h1>偶尔用到但是很实用篇：</h1>
 
 <ul>
-<li><code>:%s/\s\+$//</code> 删除每行的多余空格。
+<li><p><code>:%s/\s\+$//</code> 删除每行的多余空格。</p>
 
 <blockquote><p>说到多余的空格，其实还有挺多要说的：
 行首 $  +++>
@@ -243,6 +243,10 @@
   +++>
 行首空格： \s+$  +++>
 行尾空格： ^+\s  +++></p></blockquote></li>
+<li><p>vim中search过后如何取消高亮呢？
+<a href="http://stackoverflow.com/questions/657447/vim-clear-last-search-highlighting">Stack Overflow</a>
+<code>let @/ = ""</code>
+<code>:noh</code></p></li>
 </ul>
 
 </div>

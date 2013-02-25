@@ -4,7 +4,7 @@
   <title><![CDATA[Category: C | K.I.S.S]]></title>
   <link href="http://metooit.github.com/blog/categories/c/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-02-23T22:37:13+08:00</updated>
+  <updated>2013-02-25T09:45:17+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -60,6 +60,26 @@ F: / ? O _ o DEL
 <li>如果要在外部变量定义之前使用该变量， 或者外部变量的定义与变量的使用不在同一个文件中，那么必须在相应的变量声明中强制地使用<code>extern</code></li>
 <li><code>register</code>声明告诉编译器它所声明的变量在程序中使用的频率较高， 放到寄存器中使程序更小， 执行速度更快</li>
 <li>初始化数组时：如果初始化表达式的个数比数组元素少， 则数组后面的元素被初始化为0； 如果初始化表达式的个数比数组元素多， 是错误的</li>
+<li>指针只能指向某种特定类型的对象， odi类型的指针可以存放指向任意类型的指针， 但是它不能间接引用其自身</li>
+<li>对于数组a[]来讲， &amp;a[i] 与 a + i等价</li>
+<li>数组名和指针之间的一个重要区别就是：指针是变量，因此赋值和递增都是合法的； 但是数组名不是变量</li>
+<li>在函数定义中的形式参数char s[] 与 char *s 是等价的</li>
+<li>C语言保证， 0不是有效的数据地址， 因此返回值0可以用来表示发生了异常事件。*</li>
+<li>指针和整数之间不能相互转换， 但是0是唯一的例外</li>
+<li>进栈和出栈的标准用法：
+<div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>stack      </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='c'><span class='line'><span class="o">&lt;</span><span class="n">em</span><span class="o">&gt;</span><span class="n">p</span><span class="o">++</span> <span class="o">=</span> <span class="n">val</span><span class="p">;</span> <span class="o">/&lt;/</span><span class="n">em</span><span class="o">&gt;</span><span class="err">将</span><span class="n">val</span><span class="err">压入栈</span><span class="o">&lt;</span><span class="n">em</span><span class="o">&gt;/</span>
+</span><span class='line'><span class="n">val</span> <span class="o">=</span> <span class="o">&lt;/</span><span class="n">em</span><span class="o">&gt;--</span><span class="n">p</span><span class="p">;</span> <span class="o">/&lt;</span><span class="n">em</span><span class="o">&gt;</span> <span class="err">将栈顶元素弹出到</span><span class="n">val</span><span class="err">中</span><span class="o">&lt;/</span><span class="n">em</span><span class="o">&gt;/</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></li>
+<li>当数组的行数无关紧要时： f(int daytab[][13]) {...} 与 f(int (<em>daytab)[13]) {...} 是等价的， 注意第二种方式的int (</em>daytab)[13]中的括号不能去掉。</li>
+<li>指针数组的一个重要优点在于数组每一行的长度可以不同</li>
+<li>调用主函数main时， 他有两个参数， 第一个参数习惯上成为(argc, 用于参数计算)的值表示运行程序时命令行中参数的数量; 第二个参数(成为argv, 用于参数向量)是一个指向字符串数组的指针，其中每一个字符串对应一个参数， 我们常用多级指针来处理这些字符串。</li>
+<li>C语言中，函数本身不是变量，但是可以定义指向函数的指针</li>
+<li>结构体<code>struct</code>后面的变量名是可选的，成为结构标记</li>
+<li>如果结构声明后面不带变量表， 则不需要为它分配存储空间， 它仅仅描述了一个结构模板或者轮廓</li>
+<li>不要认为结构的长度等于各个成员的长度和， 因为不同的对象有不同的对齐要求， 结构中可能会出现空穴。</li>
 </ol>
 
 ]]></content>
