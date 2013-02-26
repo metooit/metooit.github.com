@@ -7,8 +7,7 @@
 	<meta name="author" content="metooit">
 
 	
-	<meta name="description" content="今天， 又拾起了《C 程序设计语言》， 想再看一遍， 希望能够真正拾起一些东西吧…… 类型、运算符与表达式 变量名限制： 对内部名而言， 至少前31个字符是有效的； 对外部名而言， ANSI仅保证前六个字符的唯一性， 并且不区分大小写
-ANSI 表格： 2 3 4 5 6 7 30 40 50 &hellip;">
+	<meta name="description" content=" ">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -107,6 +106,74 @@ ANSI 表格： 2 3 4 5 6 7 30 40 50 &hellip;">
 			
 			<div class="mid-col-container">
 				<div id="content" class="inner">
+
+
+    <article class="post">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-02-26T14:57:00+08:00" pubdate data-updated="true">Feb 26<span>th</span>, 2013</time></div>
+		<div class="tags">
+
+</div>
+		
+	</div>
+	<h1 class="title"><a href="/blog/2013/02/26/make-a-program-print-itself/">Make a Program Print Itself</a></h1>
+	<div class="entry-content">
+		
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-02-25T09:52:00+08:00" pubdate data-updated="true">Feb 25<span>th</span>, 2013</time></div>
+		<div class="tags">
+
+</div>
+		
+	</div>
+	<h1 class="title"><a href="/blog/2013/02/25/what-should-i-know-about-web-development/">What Should I Know About Web Development</a></h1>
+	<div class="entry-content">
+		<p>其实我一早就很想知道一个网站的开发流程是怎样的， 或许真正去开发一下才会知道， 作为一个程序员到底应该知道那些关于网络开发的事情呢？也许有很多……</p>
+
+<p><a href="http://coolshell.cn/articles/6043.html">Web 开发中需要了解的东西</a>
+这就篇文章写了很多关于web开发中很重要也很细节的东西， 可是作为一个初学者我应该知道更为基础的东西。</p>
+
+<p><a href="http://coolshell.cn/articles/4795.html">开源中的一些web资源</a>
+总结的这些很全面的web开发资源都很好啊， 收藏在这里先。</p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -656,208 +723,6 @@ tar [-] A &#8211;catenate &#8211;concatenate | c &#8211;create | d &#8211;diff &
 
 
 <p><img src="/pictures/historical_tragedy_thum.gif" title="" ></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<div class="meta">
-		<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-02-18T13:43:00+08:00" pubdate data-updated="true">Feb 18<span>th</span>, 2013</time></div>
-		<div class="tags">
-
-
-	<a class='category' href='/blog/categories/-/'>,</a>, <a class='category' href='/blog/categories/learn/'>Learn</a>, <a class='category' href='/blog/categories/python/'>Python</a>
-
-
-</div>
-		
-	</div>
-	<h1 class="title"><a href="/blog/2013/02/18/notes-for-learning-python-2/">『python 3 程序开发指南』读书笔记 2</a></h1>
-	<div class="entry-content">
-		<ul>
-<li>python的序列类型：
-
-<ul>
-<li>元组： <code>,</code>
-
-<ul>
-<li>不能替换删除其中的数据项。可以用list()转换函数将其转换为列表</li>
-<li>元组提供了两种方法： count()返回出现次数， index()返回出现位置。</li>
-</ul>
-</li>
-<li>列表： <code>[]</code>
-
-<ul>
-<li>列表是可变的</li>
-<li>列表的方法，<code>help(list)</code></li>
-<li>任意可迭代的列表元组等都可以使用序列拆分操作符进行拆分<code>*</code></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>>>> first, *rest = [1, 2, 3, 4, 5, 6]
-</span><span class='line'>>>> first, rest
-</span><span class='line'>(1, [2, 3, 4, 5, 6])
-</span><span class='line'>>>> first, *mid, last = [1, 2, 3, 4, 5, 6]
-</span><span class='line'>>>> first, mid, last
-</span><span class='line'>(1, [2, 3, 4, 5], 6)</span></code></pre></td></tr></table></div></figure>
-
-
-<pre><code>    * 下面两段代码等价：
-</code></pre>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>>>> words[2:4] = []
-</span><span class='line'>>>> del words[2:4]</span></code></pre></td></tr></table></div></figure>
-
-
-<pre><code>    * 带步距的列表：
-</code></pre>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>>>> x = [1,2,3,4,5,6,7,8,9,10]
-</span><span class='line'>>>> print(x[1::2])
-</span><span class='line'>[2, 4, 6, 8, 10]
-</span><span class='line'>>>> x[1::2] = [0] * len(x[1::2])
-</span><span class='line'>>>> print(x)
-</span><span class='line'>[1, 0, 3, 0, 5, 0, 7, 0, 9, 0]</span></code></pre></td></tr></table></div></figure>
-
-
-<pre><code>    * 列表内涵：
-</code></pre>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>>>> leaps = [ y for y in range(1900, 1940)
-</span><span class='line'>... if(y % 4 == 0 and y % 100 != 0 or y % 400 == 0)]
-</span><span class='line'>>>> print(leaps)
-</span><span class='line'>[1904, 1908, 1912, 1916, 1920, 1924, 1928, 1932, 1936]</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li>集合： <code>{}</code>
-
-<ul>
-<li>集合是可变的</li>
-<li>集合的方法：<code>help(set)</code></li>
-<li>| &amp; \ ^ 操作</li>
-<li>集合内涵：</li>
-<li>固定集合</li>
-</ul>
-</li>
-</ul>
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>>>> html = {x for x in files if x.lower().endswith((".html", "htm"))}</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li>映射类型：
-
-<ul>
-<li>字典：
-
-<ul>
-<li>dict是一种无序的组合数据类型</li>
-<li>dict()可作为函数调用</li>
-<li>字典的键是独一无二的</li>
-<li>字典方法： help(dict)</li>
-<li>有序字典：</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>>>> d = collections.OrderedDict(['z', -4], ('e', 19))</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<div class="meta">
-		<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-02-16T22:55:00+08:00" pubdate data-updated="true">Feb 16<span>th</span>, 2013</time></div>
-		<div class="tags">
-
-
-	<a class='category' href='/blog/categories/life/'>Life</a>
-
-
-</div>
-		
-	</div>
-	<h1 class="title"><a href="/blog/2013/02/16/talk-to-my-heart/">Talk to My Heart</a></h1>
-	<div class="entry-content">
-		<p>忽然觉得应该和自己好好聊一聊， 主要是有几点要提醒一下自己， 算是自我激励或者自我省查吧。</p>
-
-<ul>
-<li>第一点： 大多数时候当你决定做一件事情的时候， 要非常非常认真的去做， 要把这件事情当成一件大事去做</li>
-<li>第二点： 学习这件事情其实就是自己的事情， 学会这件事情也不是说说那么简单</li>
-<li>第三点： 兴趣是最好的老师， 但猎奇不是兴趣， 尝鲜也不是兴趣， 它们只是你在某个无聊的时候找的一些无用的事情来做罢了</li>
-<li>第四点： 学会掌控， 学会把握， 每一个结果都有它的原因， 每一次的成功都不是偶然， 所以你要努力尝试去掌控自己的人生</li>
-<li>第五点： 做有用的事情， do something that make sense, make difference. 说不好， 自己体会</li>
-<li>第六点： 坚持下去不容易， 保持下去有时候很容易， 但是， 你还年轻除了保持不住的青春年华之外其实你没有什么要保持的， 除了…… （比如自信？）， 所以， 大胆去尝试， 大胆去做吧， 做你想做的事</li>
-<li>第七点： 如果不是堕落， 其实做你想做的事还是挺难的， 因为有想法不是那么容易的一件事， 所以先要有想法， 然后付诸实施吧！</li>
-<li>第八点： 保持阳光的态度， 相信美好的东西</li>
-<li>第九点： 简单、执着</li>
-<li>第十点： 放轻松…… 再看一看前九点</li>
-</ul>
-
 
 		
 		

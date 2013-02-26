@@ -7,8 +7,7 @@
 	<meta name="author" content="metooit">
 
 	
-	<meta name="description" content=" 2012还是过去了，作为一个成功跨入新纪元的人类，我由衷感到庆幸和激动，不得不说，我感到了自己身上肩负某种伟大的使命，哈哈，也许
-还是心有余悸，我觉得至少应该写下点什么来记录这过去的2012以让后代的考古学家们能有所收获，这也许是冥冥中的伟大使命吧～ Read on &rarr; ">
+	<meta name="description" content="Vim 是我最最常用的文本编辑器， 我想要在这里记录一下Vim的快捷键，我会不定期地加入我经常使用或者新发现的快捷键， 没办法， 好记性不如烂笔头， 希望我能在不断的使用和温习中逐渐越来越熟练吧 :) 插件篇 NERDTree 快速启动NERDTree: leader+e &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -107,6 +106,218 @@
 			
 			<div class="mid-col-container">
 				<div id="content" class="inner">
+
+
+    <article class="post">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-02-01T19:25:00+08:00" pubdate data-updated="true">Feb 1<span>st</span>, 2013</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/memo/'>memo</a>, <a class='category' href='/blog/categories/vim/'>vim</a>
+
+
+</div>
+		
+	</div>
+	<h1 class="title"><a href="/blog/2013/02/01/vim-tips-to-remember/">Vim 快捷键备忘</a></h1>
+	<div class="entry-content">
+		<p>Vim 是我最最常用的文本编辑器， 我想要在这里记录一下<code>Vim</code>的快捷键，我会不定期地加入我经常使用或者新发现的快捷键， 没办法， 好记性不如烂笔头， 希望我能在不断的使用和温习中逐渐越来越熟练吧 :)</p>
+
+<h1>插件篇</h1>
+
+<h2>NERDTree</h2>
+
+<ul>
+<li>快速启动NERDTree:               <code>leader</code>+<code>e</code></li>
+<li>显示与隐藏NERDTree：            <code>Ctrl</code>+<code>E</code></li>
+<li>NERDTree查找模式：              <code>leader</code>+<code>e</code> 或者 <code>leader</code>+<code>nt</code></li>
+</ul>
+
+
+<hr />
+
+<h2>NERDCommenter</h2>
+
+<ul>
+<li><code>leader</code>+<code>cc</code>:                  仅注释。（普通模式下是注释当前行，可视模式下是注释选中的文字）</li>
+<li><code>leader</code>+<code>c</code>+<code>Space</code>:           注释或者取消注释。</li>
+<li><code>leader</code>+&#8217;cs&#8217;:                  性感的注释。
+更多详细的内容在文档中，<code>help NERDCommenter</code></li>
+</ul>
+
+
+<hr />
+
+<h2>EasyMotion</h2>
+
+<ul>
+<li>快速启动按键：                <code>leader</code>+<code>leader</code></li>
+<li>词间快速移动：                <code>leader</code>+<code>leader</code>+<code>w</code></li>
+<li>行间快速移动：                <code>leader</code>+<code>leader</code>+<code>j</code></li>
+</ul>
+
+
+<hr />
+
+<h2>Ctags</h2>
+
+<ul>
+<li>快速启动按键：                <code>leader</code>+<code>tt</code></li>
+<li>快速定位到tag：               <code>Ctrl</code>+<code>]</code></li>
+</ul>
+
+
+<hr />
+
+<h1>技巧篇：</h1>
+
+<ul>
+<li>不退出<code>vim</code>进入<code>shell</code>，使用<code>:shell</code>，工作结束后，再用命令<code>exit</code>回到<code>vim</code>。</li>
+<li>直接再<code>vim</code>中运行命令<code>:!*comand*</code>, 同时可以结合使用<code>:r</code>来将运行命令的结果插入到<code>vim</code>中。</li>
+<li>大小写转换可以用<code>shift+~</code></li>
+<li><p><code>Ctrl</code>:</p>
+
+<ul>
+<li><code>Ctrl+u</code> 向前翻半屏</li>
+<li><code>Ctrl+d</code> 向后翻半屏</li>
+<li><code>Ctrl+f</code> 向后翻一屏</li>
+<li><code>Ctrl+b</code> 向前翻一屏</li>
+<li><code>Ctrl+u</code> 删除输入模式下输入的文本</li>
+</ul>
+</li>
+<li><p><code>nz``&lt;Enter&gt;</code>将第n行滚至屏幕顶部</p></li>
+<li><code>R</code>替换当前字符至其后的字符，一直到按下<code>&lt;ESC&gt;</code>键。</li>
+<li><code>S</code>删除指定数目的行，并以所输入的文本替代之。</li>
+<li><code>/patten</code> 向文件尾部搜索</li>
+<li><code>?patten</code> 向文件首部搜索</li>
+<li><code>N</code>反方向搜索</li>
+<li><code>s/word1/word2/g</code> 当前行中word1用word2代替</li>
+<li><code>n1,n2s/word1/word2/g</code> n1到n2的所有行中的word1用word2代替</li>
+<li><p><code>g/word1/s//word2/g</code> 全文替换</p></li>
+<li><p><code>di(</code> #这里的(还可以是&#8221; [ { &lt; # 等等#  删除() {} [] &lt; 之间的内容, x显然这里的<code>i</code>是inside的意思
+在这个基础上，举一反三——> <code>y</code> 是复制  <code>v</code> 是高亮选择</p></li>
+<li><p><code>dtm</code> 删除字符直到遇见一个<code>m</code>
+同样可以举一反三 ：-）</p></li>
+</ul>
+
+
+<h1>移动操作：</h1>
+
+<ul>
+<li><code>z&lt;Enter&gt;</code> 移动当前行到窗口的顶部</li>
+<li><code>z.</code> 移动当前行到屏幕的中部</li>
+<li><code>z-</code> 移动当前行到屏幕的底部</li>
+<li><code>''</code> 回到原来的位置</li>
+</ul>
+
+
+<h1>窗口操作：</h1>
+
+<ul>
+<li><code>Ctrl+w</code> + <code>s</code> 上下分屏</li>
+<li><code>Ctrl+w</code> + <code>v</code> 左右分屏</li>
+<li><code>Ctrl+w</code> + <code>c</code> 关闭窗口</li>
+<li><code>Ctrl+w</code> + <code>q</code> 关闭窗口（如果只剩下最后一个窗口， 则退出vim）</li>
+<li><code>:sp file</code> 上下分屏， 并且打开一个新文件</li>
+<li><code>:vsp file</code> 左右分屏， 并且打开一个新文件</li>
+</ul>
+
+
+<h1>宏操作：</h1>
+
+<ul>
+<li><code>qa</code> 将录制的宏放入寄存器a</li>
+<li><code>@a</code> replay 寄存器a录制的宏</li>
+<li><code>@@</code> 重复最新录制的宏</li>
+<li><code>q</code>  停止录制
+ 实例：
+ 事情是这样的， 我想要把C程序的<code>.h</code>文件的方法引入到<code>.c</code>文件中， 然后直接去除<code>;</code>再在下面开始写方法的主体； 所以复制过来的文本去除分号的方法用一下宏操作
+
+<ul>
+<li>第一步： <code>qa</code> 开始宏录制存储到寄存器a</li>
+<li>第二步： <code>$</code>光标移动到当前行最后一个字母</li>
+<li>第三步： <code>x</code>删除当前字符</li>
+<li>第四步： <code>j</code>向下挪一行</li>
+<li>第五步： <code>q</code>结束宏的录制</li>
+<li>第六步： <code>10@a</code>或者<code>10@@</code></li>
+</ul>
+</li>
+</ul>
+
+
+<h1>偶尔用到但是很实用篇：</h1>
+
+<ul>
+<li><p><code>:%s/\s\+$//</code> 删除每行的多余空格。</p>
+
+<blockquote><p>说到多余的空格，其实还有挺多要说的：
+行首 $  +++>
+行尾 ^  +++>
+空格 \s  +++>
+  +++>
+行首空格： \s+$  +++>
+行尾空格： ^+\s  +++></p></blockquote></li>
+<li><p>vim中search过后如何取消高亮呢？
+<a href="http://stackoverflow.com/questions/657447/vim-clear-last-search-highlighting">Stack Overflow</a>
+<code>let @/ = ""</code>
+<code>:noh</code></p></li>
+</ul>
+
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-02-01T07:37:00+08:00" pubdate data-updated="true">Feb 1<span>st</span>, 2013</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/markdown/'>Markdown</a>, <a class='category' href='/blog/categories/github/'>github</a>
+
+
+</div>
+		
+	</div>
+	<h1 class="title"><a href="/blog/2013/02/01/markdown-cheat-sheet/">Markdown Cheat Sheet</a></h1>
+	<div class="entry-content">
+		<p>大早上一起来忽然想起来要解决一点问题，然后就求助google，结果问题没有解决，却解决了我另一件烦心的事儿，那就是<code>Markdown</code>的语法问题，本来就很在意写博客的格式，但是不会<code>Markdown</code>的语法，我不会排版啊，汗……</p>
+
+
+		
+		<a href="/blog/2013/02/01/markdown-cheat-sheet/" class="more-link">Read on &rarr;</a>
+	</div>
+
+</article>
 
 
     <article class="post">
