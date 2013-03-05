@@ -4,7 +4,7 @@
   <title><![CDATA[K.I.S.S]]></title>
   <link href="http://metooit.github.com/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-03-04T07:34:08+08:00</updated>
+  <updated>2013-03-05T20:53:15+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -12,6 +12,23 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Hug Arch Linux]]></title>
+    <link href="http://metooit.github.com/blog/2013/03/05/hug-arc-linux/"/>
+    <updated>2013-03-05T20:30:00+08:00</updated>
+    <id>http://metooit.github.com/blog/2013/03/05/hug-arc-linux</id>
+    <content type="html"><![CDATA[<p>来到学校之后， 我觉得最终要的一件事情就是要配置好自己的机器， 然后开始一个学期的生活。 然后， 我想到了Arch， 事实上真正决定我一定要安装ArchLinux的就是它的理念：简洁。 因为这正是我想要的， Keep it simple, stupid! 这句话着实应该大声的喊出来。 选择ArcLinux也是要选择一种生活与工作的态度吧！</p>
+
+<p>然后， 我就开始了我的ArchLinux之旅。</p>
+
+<h2>第一步： 安装</h2>
+
+<p>第一步当然是安装系统啦， <a href="https://wiki.archlinux.org/">Arch的文档</a> 真是全面而贴心啊， 我觉得写这些文档的人是真心可爱啊， 尤其是读到Arch的历史与目标的时候， 我忽然间觉得自己像是在做一件自己人生中的大事一样， 有些小小的激动了呢！</p>
+
+<p><a href="https://wiki.archlinux.org/index.php/The_Arch_Way">The Arch Way</a> 写了Arch的哲学， 重点写了它的简洁，开放，自由等…… 如果想要理解和使用Arch， 这篇文章是一定要通读的。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[The New Term Begin]]></title>
@@ -2666,148 +2683,6 @@ tar [-] A &#8211;catenate &#8211;concatenate | c &#8211;create | d &#8211;diff &
 <p><img src="http://metooit.github.com/pictures/merge-sort-py.png" title="MERGE_SORT" ></p>
 
 <p>好吧， 归并排序就告一段落啦。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Learn Algorithms : Sort --- Insertion Sort]]></title>
-    <link href="http://metooit.github.com/blog/2013/02/13/learn-algorithms-sort-insertion-sort/"/>
-    <updated>2013-02-13T09:24:00+08:00</updated>
-    <id>http://metooit.github.com/blog/2013/02/13/learn-algorithms-sort-insertion-sort</id>
-    <content type="html"><![CDATA[<p>今天认真地把《算法导论》上其他的排序算法整理一下， 当然从最开始介绍的 <em>插入排序</em> 开始了。</p>
-
-<hr />
-
-<h3>插入排序基本性能分析：</h3>
-
-<table>
-<thead>
-<tr>
-<th></th>
-<th> 最坏情况时间复杂度    </th>
-<th align="left"> 期望时间复杂度   </th>
-<th align="left"> 空间复杂度</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td> O(n<sup>2)</sup>                </td>
-<td align="left"> O(n<sup>2)</sup>           </td>
-<td align="left"> O(n)</td>
-</tr>
-</tbody>
-</table>
-
-
-<ul>
-<li>插入排序的特点：
-
-<blockquote><ol>
-<li>对于少量的元素， 它是一个非常有效的算法。</li>
-<li>该算法原址排序输入的数： 算法在数组A中重排这些数， 在任何时候， 最多只有常数个数字存储在数组外面。</li>
-</ol>
-</blockquote></li>
-</ul>
-
-
-<!-- more -->
-
-
-<h3>插入排序的伪代码实现：</h3>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>INSERTION-SORT(A)
-</span><span class='line'>1   for j = 2 to A.length
-</span><span class='line'>2       key = A[j]
-</span><span class='line'>3       // Insert A[j] into the  sorted sequence A[1..j-1]
-</span><span class='line'>4       i = j - 1
-</span><span class='line'>5       while i > 0 and A[i] > key
-</span><span class='line'>6           A[i + 1] = A[i]
-</span><span class='line'>7           i = i - 1
-</span><span class='line'>8       A[i + 1] = key</span></code></pre></td></tr></table></div></figure>
-
-
-<h3>插入排序的C语言实现：</h3>
-
-<figure class='code'><figcaption><span>insertion_sort    insertion_sort </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-</pre></td><td class='code'><pre><code class='c'><span class='line'><span class="kt">void</span> <span class="nf">insertion_sort</span><span class="p">(</span><span class="kt">int</span> <span class="n">array</span><span class="p">[],</span> <span class="kt">int</span> <span class="n">length</span><span class="p">)</span>
-</span><span class='line'><span class="p">{</span>
-</span><span class='line'>    <span class="kt">int</span> <span class="n">store_index</span><span class="p">;</span>
-</span><span class='line'>    <span class="k">for</span><span class="p">(</span><span class="n">store_index</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">store_index</span> <span class="o">&lt;</span> <span class="n">length</span><span class="p">;</span> <span class="o">++</span><span class="n">store_index</span><span class="p">)</span>
-</span><span class='line'>    <span class="p">{</span>
-</span><span class='line'>        <span class="kt">int</span> <span class="n">store_key</span> <span class="o">=</span> <span class="n">array</span><span class="p">[</span><span class="n">store_index</span><span class="p">];</span>
-</span><span class='line'>
-</span><span class='line'>        <span class="kt">int</span> <span class="n">sort_index</span> <span class="o">=</span> <span class="n">store_index</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
-</span><span class='line'>        <span class="k">while</span> <span class="p">(</span><span class="n">sort_index</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="n">array</span><span class="p">[</span><span class="n">sort_index</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">store_key</span><span class="p">)</span>
-</span><span class='line'>        <span class="p">{</span>
-</span><span class='line'>            <span class="n">array</span><span class="p">[</span><span class="n">sort_index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">array</span><span class="p">[</span><span class="n">sort_index</span><span class="p">];</span>
-</span><span class='line'>            <span class="n">sort_index</span> <span class="o">=</span> <span class="n">sort_index</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
-</span><span class='line'>        <span class="p">}</span>
-</span><span class='line'>        <span class="n">array</span><span class="p">[</span><span class="n">sort_index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">store_key</span><span class="p">;</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><img src="http://metooit.github.com/pictures/insertion_sort.png" title="Insertion_sort" ></p>
-
-<hr />
-
-<h3>插入排序的Python实现：</h3>
-
-<figure class='code'><figcaption><span>insertion_sort     insertion_sort </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="k">def</span> <span class="nf">sort</span><span class="p">(</span><span class="n">seq</span><span class="p">):</span>
-</span><span class='line'>    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">seq</span><span class="p">)):</span>
-</span><span class='line'>        <span class="n">item</span> <span class="o">=</span> <span class="n">seq</span><span class="p">[</span><span class="n">n</span><span class="p">]</span>
-</span><span class='line'>        <span class="n">hole</span> <span class="o">=</span> <span class="n">n</span>
-</span><span class='line'>        <span class="k">while</span> <span class="n">hole</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">seq</span><span class="p">[</span><span class="n">hole</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">item</span><span class="p">:</span>
-</span><span class='line'>            <span class="n">seq</span><span class="p">[</span><span class="n">hole</span><span class="p">]</span> <span class="o">=</span> <span class="n">seq</span><span class="p">[</span><span class="n">hole</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
-</span><span class='line'>            <span class="n">hole</span> <span class="o">=</span> <span class="n">hole</span> <span class="o">-</span> <span class="mi">1</span>
-</span><span class='line'>        <span class="n">seq</span><span class="p">[</span><span class="n">hole</span><span class="p">]</span> <span class="o">=</span> <span class="n">item</span>
-</span><span class='line'>    <span class="k">return</span> <span class="n">seq</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><img src="http://metooit.github.com/pictures/insertion_sort2.png" title="insertion_sort2" ></p>
-
-<ul>
-<li>后记： 虽然这些东西的实现过程相对简单， 文章也没有什么分量， 但是将这些点滴总结在一起也是一个学习的过程吧， 所以要坚持下去～～</li>
-</ul>
-
 ]]></content>
   </entry>
   

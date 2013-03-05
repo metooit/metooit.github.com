@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Linux, | K.I.S.S]]></title>
+  <link href="http://metooit.github.com/blog/categories/linux-/atom.xml" rel="self"/>
+  <link href="http://metooit.github.com/"/>
+  <updated>2013-03-05T20:53:15+08:00</updated>
+  <id>http://metooit.github.com/</id>
+  <author>
+    <name><![CDATA[metooit]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Hug Arch Linux]]></title>
+    <link href="http://metooit.github.com/blog/2013/03/05/hug-arc-linux/"/>
+    <updated>2013-03-05T20:30:00+08:00</updated>
+    <id>http://metooit.github.com/blog/2013/03/05/hug-arc-linux</id>
+    <content type="html"><![CDATA[<p>来到学校之后， 我觉得最终要的一件事情就是要配置好自己的机器， 然后开始一个学期的生活。 然后， 我想到了Arch， 事实上真正决定我一定要安装ArchLinux的就是它的理念：简洁。 因为这正是我想要的， Keep it simple, stupid! 这句话着实应该大声的喊出来。 选择ArcLinux也是要选择一种生活与工作的态度吧！</p>
+
+<p>然后， 我就开始了我的ArchLinux之旅。</p>
+
+<h2>第一步： 安装</h2>
+
+<p>第一步当然是安装系统啦， <a href="https://wiki.archlinux.org/">Arch的文档</a> 真是全面而贴心啊， 我觉得写这些文档的人是真心可爱啊， 尤其是读到Arch的历史与目标的时候， 我忽然间觉得自己像是在做一件自己人生中的大事一样， 有些小小的激动了呢！</p>
+
+<p><a href="https://wiki.archlinux.org/index.php/The_Arch_Way">The Arch Way</a> 写了Arch的哲学， 重点写了它的简洁，开放，自由等…… 如果想要理解和使用Arch， 这篇文章是一定要通读的。</p>
+]]></content>
+  </entry>
+  
+</feed>
