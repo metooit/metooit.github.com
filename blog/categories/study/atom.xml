@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Study | K.I.S.S]]></title>
+  <link href="http://metooit.github.com/blog/categories/study/atom.xml" rel="self"/>
+  <link href="http://metooit.github.com/"/>
+  <updated>2013-03-05T22:08:35+08:00</updated>
+  <id>http://metooit.github.com/</id>
+  <author>
+    <name><![CDATA[metooit]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[For more education or For some practice]]></title>
+    <link href="http://metooit.github.com/blog/2013/03/05/for-more-education-or-for-some-practice/"/>
+    <updated>2013-03-05T21:13:00+08:00</updated>
+    <id>http://metooit.github.com/blog/2013/03/05/for-more-education-or-for-some-practice</id>
+    <content type="html"><![CDATA[<p>考研还是工作？</p>
+
+<p>这是这个学期开始两天来同学们问得最多的一个问题， 对于这个问题， 我还时要问自己一句： 你真的想过了吗？</p>
+]]></content>
+  </entry>
+  
+</feed>
