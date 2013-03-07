@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: git | K.I.S.S]]></title>
+  <title><![CDATA[Category: Git | K.I.S.S]]></title>
   <link href="http://metooit.github.com/blog/categories/git/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-03-07T07:00:57+08:00</updated>
+  <updated>2013-03-07T12:48:14+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -14,153 +14,113 @@
 
   
   <entry>
-    <title type="html"><![CDATA[继续学习 Git]]></title>
-    <link href="http://metooit.github.com/blog/2013/02/05/dive-into-git/"/>
-    <updated>2013-02-05T00:46:00+08:00</updated>
-    <id>http://metooit.github.com/blog/2013/02/05/dive-into-git</id>
-    <content type="html"><![CDATA[<p>我可不想做标题党，我当时可是真的想要认认真真地读一遍英文文档，然后好好总结一下，所以才斗胆写了一句“深入学习 Git”。</p>
+    <title type="html"><![CDATA[Git 工作流程]]></title>
+    <link href="http://metooit.github.com/blog/2013/03/07/git-work-flow/"/>
+    <updated>2013-03-07T11:46:00+08:00</updated>
+    <id>http://metooit.github.com/blog/2013/03/07/git-work-flow</id>
+    <content type="html"><![CDATA[<p>Git是我最常用的版本控制工具， 当然也是我喜欢的工具之一， 我想要写一篇系统的文章来总结一下我在平时使用中总是要用到的一些<code>Git</code>的命令和技巧等， 来记录使用<code>Git</code>工作的流程。</p>
 
 <hr />
 
-<p>直到我发现了这个<a href="http://rogerdudler.github.com/git-guide/index.zh.html">Git简易指南</a></p>
+<h2>Why Git?</h2>
 
-<hr />
+<p><code>Git</code>的起源和开源运动的进行颇有渊源， 它就诞生于<code>Linux</code>兴起的那个伟大的时代， <code>Git</code>的出现正是<code>黑客精神</code>的体现， 代表了黑客们对于自由分享的向往和不懈地执着地努力！</p>
 
-<p>我忽然觉得整个世界都美好了，居然写的这么清晰易懂（当然也有中文的因素在里面），但是这篇文档无论从结构还是排版配图，都是很养眼的啊，所以我也就没有必要劳神费思在想去dive了，我觉得只要够用就好，所以就先好好的看一下这篇文档好了。我把文章的名字改成<code>继续学习 Git</code>了。囧</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[学习 Git]]></title>
-    <link href="http://metooit.github.com/blog/2013/02/04/learning-git/"/>
-    <updated>2013-02-04T12:59:00+08:00</updated>
-    <id>http://metooit.github.com/blog/2013/02/04/learning-git</id>
-    <content type="html"><![CDATA[<p>寒假里的日子，有点让人觉得不知到要做什么，我很怕自己浪费时间，所以觉得要学会自己找事情做，然后我觉得有必要认真的学习一下git。Google了一下，找到了这个<a href="http://learn.github.com/p/intro.html">git官方学习指南</a>，我就照着这个先看一看git吧。：-）</p>
+<blockquote><p>Git起源：
+Linux内核最初的维护工作都是提交补丁和保存归档， 但是从2002年开始使用分布式版本管理系统<code>BitKeeper</code>来管理， 但是后者于2005年收回了Linux开源社区免费使用的权利， 于是， 为了避免重蹈复辙， Linus Torvalds 决定开发一套开源的版本控制系统， 然后Git就此诞生了， 不得不佩服这样一群黑客的伟大创举， 再次向他们致敬！</p></blockquote>
 
-<hr />
+<h3>Git 的原则：</h3>
 
-<h3>关于Git</h3>
+<p>说到Git的原则， 我不禁想到了<code>Unix</code>的原则， 可以说它们在某些方面是一脉相乘的：
+* 简洁
+* 速度
+* 分布式
+* 并发支持</p>
 
-<h4>首先，看一下我的git版本吧：</h4>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ git --version</span></code></pre></td></tr></table></div></figure></notextile></div>
-git version 1.7.10.4
-这应该是最新的版本了吧。</p>
-
-<h4>然后，如何取得帮助呢？</h4>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ git log --help
-</span><span class='line'>$ git help log</span></code></pre></td></tr></table></div></figure></notextile></div></p>
-
-<p><img class="git" src="/pictures/git-lang.png" title="git-lang" ></p>
-
-<h4>Git的特点：</h4>
+<h3>Git 很方便：</h3>
 
 <ul>
-<li>几乎可以离线工作，并且很快（相对与SVN来说）</li>
-<li>安装体积小</li>
-<li>基于snapshot（快照），而不是changesets
-<img class="git" src="/pictures/snapshots.png" title="snapshots" ></li>
-<li>如果要更加深入的了解git，请看<a href="http://eagain.net/articles/git-for-computer-scientists/">Git for Computer Scitentists</a></li>
-<li>分支的代价更小，合并方便</li>
+<li>直接记录快照， 而不关心具体的数据变化</li>
+<li>近乎所有的操作都在本地执行</li>
+<li>时刻保持数据完整性</li>
+<li>多数操作仅仅是添加数据</li>
 </ul>
 
 
-<hr />
-
-<h3>Git的初始化设置</h3>
-
-<p>第一次使用Git时，首先要学会设置好一些东西，比如名字和邮件地址。设置的命令是<code>git config</code>,如果加上<code>--global</code>,这个命令会将设置信息存储在<code>~/.gitconfig</code>。
-<div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>git-config </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ git -config --global user.name "your name here"
-</span><span class='line'>$ git -config --global user.email "your email here"</span></code></pre></td></tr></table></div></figure></notextile></div>
-git也可以设定用户默认的文本编辑器，比如emacs
-<div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>git-editor </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ git -config --global core.editor 'emacs'</span></code></pre></td></tr></table></div></figure></notextile></div>
-可以运行以下命令来查看当前的设置情况：
-<div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>git-check </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>git config user.name</span></code></pre></td></tr></table></div></figure></notextile></div>
-或者呢，你可以自己查看，git首先会读取<code>/etc/gitconfig</code>,然后再读取<code>~/.gitconfig</code>，最后是<code>.git/config</code>。</p>
+<p>Git 有如此多的Sexy的特性， 让人怎么能够不喜欢呢？ 正是因为有了这些特性， Git让版本控制变得不再让人头疼。</p>
 
 <hr />
 
-<h3>初始化新的repo</h3>
+<h2>How To Install Git?</h2>
 
-<p>要初始化一个repo，在相应目录中使用<code>git init</code>。
-<div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>repo-init </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ mkdir myproject
-</span><span class='line'>$ cd myproject
-</span><span class='line'>$ git init</span></code></pre></td></tr></table></div></figure></notextile></div>
-现在我们建立了一个新的code repo，在这个目录中拥有自己的<code>.git</code>目录，有一些自己的设置。
-然后我们可以用
-<div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>add-commit </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ git add .
-</span><span class='line'>$ git commit -m "initial commit"</span></code></pre></td></tr></table></div></figure></notextile></div>
-现在我们拥有了一个新的project，其中有一个commit，如何查看这个项目的状态呢？
-<div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>git-log </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ git log</span></code></pre></td></tr></table></div></figure></notextile></div></p>
-
-<hr />
-
-<h3>克隆一个git repo</h3>
-
-<p>git可以和多个端口链接，其中最常使用的是<code>ssh</code>、<code>http</code>、<code>git protocol</code>。其格式是 <code>git clone [url]</code>, 其中的<code>url</code>的格式是<code>git://(hostname)/(path).git</code>。
-<div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>git-clone </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ git clone git://github.com/schacon/mungit.git
-</span><span class='line'>$ cd mungit
-</span><span class='line'>$ ls</span></code></pre></td></tr></table></div></figure></notextile></div>
-同样，在很多的情况下，你也可以使用http来clone：
-<div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>git-clone </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ git clone http://github.com/schacon/mungit.git</span></code></pre></td></tr></table></div></figure></notextile></div></p>
-
-<hr />
-
-<h3>通常的工作流程</h3>
-
-<p>现在该设置的都设置好了，项目也会建了，然后做什么呢？
-通常的工作流程是：
-* 修改文件
-* 看看你改变了什么
-* 阶段性的看看你希望commit的改变
-* commit你的阶段性成果
-* 重新来过……
-最简单的工作流程是：
-* 修改文件
-* commit你的改变
-* 重复……
-最简单的example：
-Edit files, <code>git commit -a</code>, repeat.</p>
-
-<p>用到了<code>staging area</code>:
+<p>在<code>Linux</code>系统上的安装很简单：只要调用系统默认的软件包管理器使用命令安装就好了
+比如：
 <div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ git status</span></code></pre></td></tr></table></div></figure></notextile></div>
-然后我们可以看到一个<code>changed but not updated</code>区域，这里的文件就是<code>unstaged</code>的文件。你必须stage一个文件，然后再commit。</p>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>ubuntu系统：&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;blockquote>&lt;p>sudo apt-get install git
+</span><span class='line'>fedora系统：
+</span><span class='line'>sudo yum install git</span></code></pre></td></tr></table></div></figure></notextile></div></p></blockquote>
 
-<p><img class="git" src="/pictures/localoperations.png" title="localoperations" ></p>
+<h2>And The Configuration?</h2>
 
-<p>Git用户使用<code>git add</code>命令来既tracking文件也stage changes。
-如果在staging阶段你不仅想看到什么文件被修改了或者staged，并且比较文件可以使用<code>git diff</code>.</p>
+<p>Git 的配置文件可以分为三个层级：
+* /etc/gitconfig 中所配置的是系统中所有用户的通用配置。
+如果使用：
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;blockquote>&lt;p>git config --system</span></code></pre></td></tr></table></div></figure></notextile></div>
+修改的就是这个文件了</p></blockquote>
 
 <ul>
-<li><a href="https://github.com/MarkLodato/visual-git-guide">可视化学习</a></li>
+<li><p>~/gitconfig 中所做的配置只是针对当前的用户
+如果使用：
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;blockquote>&lt;p>git config --global</span></code></pre></td></tr></table></div></figure></notextile></div>
+修改的就是这个文件了</p></blockquote></li>
+<li><p>最后一级就是当前项目中<code>.git</code>文件夹下的<code>config</code>配置文件了， 这个配置仅对当前项目有效。</p></li>
 </ul>
+
+
+<p>所以， 安装<code>Git</code>完成后， 就需要对<code>Git</code>进行配置了：</p>
+
+<h3>用户信息：</h3>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ git config --global user.name "xxxx"
+</span><span class='line'>$ git config --global user.email "xxxx@xxxx.xxx"</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<h3>文本编辑器：</h3>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ git config --global core.editor vi</span></code></pre></td></tr></table></div></figure></notextile></div>
+当然是选择我最喜欢的<code>Vim</code>啦！～</p>
+
+<h3>差异分析工具：</h3>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ git config --global merge.tool vimdiff</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<h3>查看当前的配置信息：</h3>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ git config --list</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<hr />
+
+<!-- more -->
 
 ]]></content>
   </entry>
