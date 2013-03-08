@@ -4,7 +4,7 @@
   <title><![CDATA[K.I.S.S]]></title>
   <link href="http://metooit.github.com/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-03-07T20:19:09+08:00</updated>
+  <updated>2013-03-09T00:09:01+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -12,6 +12,23 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Follow the professional way]]></title>
+    <link href="http://metooit.github.com/blog/2013/03/08/follow-the-professional-way/"/>
+    <updated>2013-03-08T23:14:00+08:00</updated>
+    <id>http://metooit.github.com/blog/2013/03/08/follow-the-professional-way</id>
+    <content type="html"><![CDATA[<p>这两天一直在跟着两个Dinael的脚步实现<code>game-of-life</code>， 从中我学到了很多东西， 我最感激两位Dinael的一点是： 你们让我看到了<code>Pair Programming</code>的好处， 最重要的是你们让我看到了专业的程序员的工作流程， 也让我学到了一些思考、编码、测试的方法， 真的是很感谢你们！</p>
+
+<p>记得假期的时候看了一个台湾程序员的博客， 其中写到： 如果你打算从事这个行业， 那你就不能是业余地去学习， 而是要把它当成自己的专业去努力去钻研！（大体是这个意思） 作者写到自己在工作的前几年去了一个和自己喜欢的编程工作关系不大的公司， 怀着自己利用业余时间去学习编程的想法， 作者的工作生活并不开心， 然后他开始思考并毅然绝然的辞去了工作， 选择了做一个<code>Ruby</code>程序员， 然后现在的他成功了！</p>
+
+<p>所以， 我在心里不断告诉自己： 你要知道自己想要什么， 想成为一个怎样的人， 想要朝着怎样的目标努力。 有时候我会怪自己， 觉得自己不够有主见， 所以我也会一直告诉自己， 做自己吧！不要在乎其他人的想法， 不要在意别人的眼光！ 其实呢， 除了最亲的人和最好的朋友， 其他人又在意你的什么呢？ 就像我的语文老师曾经给我们看得一首诗一样： 注定， 每个人都是过客。 梦想是注定孤独的旅程， 让支持我的与嘲笑我的人都看到最真实的我， 无论如何， 我始终在走着自己的路， 谢谢你们的陪伴或擦肩而过， 让我体会到这真真实实的人生。</p>
+
+<p>记得小时候的我总会想自己以后会做什么， 现在的我最想时刻提醒自己的却是： 你要明白你现在在干什么。 至于将来， 相信那句话吧： 天道酬勤！ 总是在内心里告诉自己， 你还差得很远， 你还不行…… 但是， 为什么不告诉自己： 你很好， 坚持下去， 也许你还不够好， 但只要你够勤奋……</p>
+
+<p>我的未来取决与我的现在</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Git 工作流程]]></title>
@@ -1863,141 +1880,6 @@ tar [-] A &#8211;catenate &#8211;concatenate | c &#8211;create | d &#8211;diff &
 <p>没有想到还挺费劲的啊， 不过结果还是出来了；</p>
 
 <p><img src="http://metooit.github.com/pictures/bucket-sort.png"></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Learning Algorithms : Sort --- Radix Sort]]></title>
-    <link href="http://metooit.github.com/blog/2013/02/14/learning-algorithms-sort-radix-sort/"/>
-    <updated>2013-02-14T14:48:00+08:00</updated>
-    <id>http://metooit.github.com/blog/2013/02/14/learning-algorithms-sort-radix-sort</id>
-    <content type="html"><![CDATA[<p><em>基数排序</em>是老式卡片排序机上的算法，为了保证基数排序的正确性， 一位数排序的算法必须是稳定的。</p>
-
-<p><img src="http://metooit.github.com/pictures/radix-sort.jpg" title="" ></p>
-
-<h2>关于排序的稳定性：</h2>
-
-<ul>
-<li>排序的稳定性是指： 如果存在具有多个相同排序码的记录， 经过排序后，这些排序码的相对次序仍然保持不变。</li>
-</ul>
-
-
-<p>** 插入排序、 冒泡排序、 归并排序、 桶排序、 基数排序 都是稳定的排序算法</p>
-
-<p>** 不稳定的排序算法: 选择排序、 堆排序、 shell排序、 快速排序都是不稳定的排序</p>
-
-<h2>基数排序的实现过程：</h2>
-
-<!-- more -->
-
-
-<p><img src="http://metooit.github.com/pictures/radix-sort2.jpg"></p>
-
-<p>用编程来实现：</p>
-
-<figure class='code'><figcaption><span>radix-sort    radix-sort </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-<span class='line-number'>33</span>
-<span class='line-number'>34</span>
-<span class='line-number'>35</span>
-<span class='line-number'>36</span>
-<span class='line-number'>37</span>
-<span class='line-number'>38</span>
-<span class='line-number'>39</span>
-<span class='line-number'>40</span>
-<span class='line-number'>41</span>
-<span class='line-number'>42</span>
-<span class='line-number'>43</span>
-<span class='line-number'>44</span>
-<span class='line-number'>45</span>
-<span class='line-number'>46</span>
-<span class='line-number'>47</span>
-</pre></td><td class='code'><pre><code class='c'><span class='line'><span class="c1">// 找到数组中的最大元素</span>
-</span><span class='line'><span class="kt">int</span> <span class="nf">maxElement</span><span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="n">L</span><span class="p">,</span> <span class="kt">int</span> <span class="n">length</span><span class="p">){</span>
-</span><span class='line'>    <span class="kt">int</span> <span class="n">i</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">mov</span><span class="p">;</span>
-</span><span class='line'>    <span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
-</span><span class='line'>        <span class="k">if</span><span class="p">(</span><span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">k</span><span class="p">){</span>
-</span><span class='line'>            <span class="n">k</span> <span class="o">=</span> <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
-</span><span class='line'>            <span class="n">mov</span><span class="o">++</span><span class="p">;</span>
-</span><span class='line'>        <span class="p">}</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'>    <span class="k">return</span> <span class="n">k</span><span class="p">;</span>
-</span><span class='line'><span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'><span class="kt">void</span> <span class="nf">radixSort</span><span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="n">L</span><span class="p">,</span> <span class="kt">int</span> <span class="n">length</span><span class="p">){</span>
-</span><span class='line'>    <span class="kt">int</span> <span class="n">d</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
-</span><span class='line'>    <span class="kt">int</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="n">maxElement</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="n">length</span><span class="p">);</span>
-</span><span class='line'>    <span class="kt">int</span> <span class="o">*</span><span class="n">temp_array</span><span class="p">,</span> <span class="o">*</span><span class="n">result</span><span class="p">,</span> <span class="n">mult</span><span class="p">;</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="cm">/*分配临时数组存储相同大小的元素的个数*/</span>
-</span><span class='line'>    <span class="n">temp_array</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="p">)</span> <span class="n">malloc</span><span class="p">(</span><span class="n">k</span><span class="o">*</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">));</span>
-</span><span class='line'>    <span class="cm">/*分配数组c用来存储排序后的数组*/</span>
-</span><span class='line'>    <span class="n">result</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="p">)</span> <span class="n">malloc</span><span class="p">(</span><span class="n">length</span> <span class="o">*</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">));</span>
-</span><span class='line'>    <span class="n">mult</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="cm">/*用计数排序作为稳定的排序算法, 分别对每一位进行排序。*/</span>
-</span><span class='line'>    <span class="k">for</span><span class="p">(</span><span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">j</span><span class="o">&lt;</span><span class="n">d</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">){</span>
-</span><span class='line'>
-</span><span class='line'>        <span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;=</span><span class="n">k</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
-</span><span class='line'>            <span class="n">temp_array</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
-</span><span class='line'>
-</span><span class='line'>        <span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
-</span><span class='line'>            <span class="n">temp_array</span><span class="p">[</span><span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">%</span> <span class="p">(</span><span class="mi">10</span> <span class="o">*</span> <span class="n">mult</span><span class="p">)]</span><span class="o">++</span><span class="p">;</span>
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'>        <span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;=</span><span class="n">k</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
-</span><span class='line'>            <span class="n">temp_array</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">temp_array</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">temp_array</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">];</span>
-</span><span class='line'>
-</span><span class='line'>        <span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="n">length</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">--</span><span class="p">){</span>
-</span><span class='line'>            <span class="n">result</span><span class="p">[</span><span class="n">temp_array</span><span class="p">[</span><span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">%</span><span class="p">(</span><span class="mi">10</span><span class="o">*</span><span class="n">mult</span><span class="p">)]</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
-</span><span class='line'>            <span class="n">temp_array</span><span class="p">[</span><span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">%</span><span class="p">(</span><span class="mi">10</span><span class="o">*</span><span class="n">mult</span><span class="p">)]</span><span class="o">--</span><span class="p">;</span>
-</span><span class='line'>        <span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'>        <span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
-</span><span class='line'>            <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
-</span><span class='line'>        <span class="p">}</span>
-</span><span class='line'>        <span class="n">mult</span> <span class="o">*=</span> <span class="mi">10</span><span class="p">;</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h2>基数排序的结果验证：</h2>
-
-<p><img src="http://metooit.github.com/pictures/radix-sort3.png"></p>
-
-<p><img src="http://metooit.github.com/pictures/radix-sort-final.png"></p>
 ]]></content>
   </entry>
   

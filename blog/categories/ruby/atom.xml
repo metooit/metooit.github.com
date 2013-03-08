@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ruby | K.I.S.S]]></title>
   <link href="http://metooit.github.com/blog/categories/ruby/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-03-07T20:19:09+08:00</updated>
+  <updated>2013-03-09T00:09:01+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -12,6 +12,23 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Follow the professional way]]></title>
+    <link href="http://metooit.github.com/blog/2013/03/08/follow-the-professional-way/"/>
+    <updated>2013-03-08T23:14:00+08:00</updated>
+    <id>http://metooit.github.com/blog/2013/03/08/follow-the-professional-way</id>
+    <content type="html"><![CDATA[<p>这两天一直在跟着两个Dinael的脚步实现<code>game-of-life</code>， 从中我学到了很多东西， 我最感激两位Dinael的一点是： 你们让我看到了<code>Pair Programming</code>的好处， 最重要的是你们让我看到了专业的程序员的工作流程， 也让我学到了一些思考、编码、测试的方法， 真的是很感谢你们！</p>
+
+<p>记得假期的时候看了一个台湾程序员的博客， 其中写到： 如果你打算从事这个行业， 那你就不能是业余地去学习， 而是要把它当成自己的专业去努力去钻研！（大体是这个意思） 作者写到自己在工作的前几年去了一个和自己喜欢的编程工作关系不大的公司， 怀着自己利用业余时间去学习编程的想法， 作者的工作生活并不开心， 然后他开始思考并毅然绝然的辞去了工作， 选择了做一个<code>Ruby</code>程序员， 然后现在的他成功了！</p>
+
+<p>所以， 我在心里不断告诉自己： 你要知道自己想要什么， 想成为一个怎样的人， 想要朝着怎样的目标努力。 有时候我会怪自己， 觉得自己不够有主见， 所以我也会一直告诉自己， 做自己吧！不要在乎其他人的想法， 不要在意别人的眼光！ 其实呢， 除了最亲的人和最好的朋友， 其他人又在意你的什么呢？ 就像我的语文老师曾经给我们看得一首诗一样： 注定， 每个人都是过客。 梦想是注定孤独的旅程， 让支持我的与嘲笑我的人都看到最真实的我， 无论如何， 我始终在走着自己的路， 谢谢你们的陪伴或擦肩而过， 让我体会到这真真实实的人生。</p>
+
+<p>记得小时候的我总会想自己以后会做什么， 现在的我最想时刻提醒自己的却是： 你要明白你现在在干什么。 至于将来， 相信那句话吧： 天道酬勤！ 总是在内心里告诉自己， 你还差得很远， 你还不行…… 但是， 为什么不告诉自己： 你很好， 坚持下去， 也许你还不够好， 但只要你够勤奋……</p>
+
+<p>我的未来取决与我的现在</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Ruby Style]]></title>
