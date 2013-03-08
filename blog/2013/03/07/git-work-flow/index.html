@@ -218,6 +218,183 @@ Linux内核最初的维护工作都是提交补丁和保存归档， 但是从20
 
 <!-- more -->
 
+
+<h2>To Start Work With Git</h2>
+
+<hr />
+
+<h3>新建Project并开始使用Git管理：</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>1. 创建工作目录:
+</span><span class='line'>$ mkdir `工作目录名称`
+</span><span class='line'>
+</span><span class='line'>2. 切换到工作目录：
+</span><span class='line'>$ cd `工作目录名称`
+</span><span class='line'>
+</span><span class='line'>3. 初始化工作目录：（Git初始化）
+</span><span class='line'>$ git init</span></code></pre></td></tr></table></div></figure>
+
+
+<p>这几步就可以新建一个工程， 并初始化使用<code>Git</code>管理了。执行完<code>git init</code>后工作目录下多了一个<code>.git</code>文件夹， 其中包含了各种设置信息等。<code>git init</code> 文件同时也执行了 <code>git add .</code> 这样的话， 如果你的目录中之前有文件的话， 那么执行这样的一条命令之后， 当前目录的文件会自动加入工程之中。</p>
+
+<h3>添加文件纳入Git版本控制：</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>1. 创建文件： （多种方式）
+</span><span class='line'>$ touch `文件名称`
+</span><span class='line'>
+</span><span class='line'>2. 添加文件： （多种方式）
+</span><span class='line'>$ git add `文件名称`
+</span><span class='line'>
+</span><span class='line'>3. Commit:
+</span><span class='line'>$ git commit -m `INFORMARION`</span></code></pre></td></tr></table></div></figure>
+
+
+<p>通常， 添加文件时我会使用<code>git add .</code>, 当然这也分情况而定。</p>
+
+<blockquote><p>注：这里通常要新建一个<code>README.md</code>文件， 以让其他人了解你的项目， 同时也记录一些自己的项目进展和bug status等等.</p>
+
+<pre><code>  另外， 可能需要一个`.gitignore`来忽略某些文件.
+</code></pre></blockquote>
+
+<h3>克隆现有项目：</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ git clone #url# [自定义名称]</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<h2>Convenience With Git</h2>
+
+<h3>查看当前文件状态：</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ git status</span></code></pre></td></tr></table></div></figure>
+
+
+<p>这条命令太常用了， 你可以时刻通过这样一条简单的命令掌控每一个文件的状态， 真心方便已极。</p>
+
+<h3>暂存更新：</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ git add [修改后的文件]</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>查看具体的修改状况：</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>1. 查看未暂存的文件更新了那些部分：
+</span><span class='line'>$ git diff
+</span><span class='line'>
+</span><span class='line'>2. 查看已暂存文件和上次提交的快照的差异：
+</span><span class='line'>$ git diff --cached [--staged]</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<h2>The Exciting Time</h2>
+
+<h3>提交更改：</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>1. 提交准备：
+</span><span class='line'>$ git status
+</span><span class='line'>
+</span><span class='line'>2. 提交更改：
+</span><span class='line'>$ git commit</span></code></pre></td></tr></table></div></figure>
+
+
+<p>注意： 每次提交之前要运行一下<code>git status</code>, 看看是否已经暂存， 这是一个好习惯。</p>
+
+<p>另外， 提交时也可以包含一些信息：</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ git commit -m "提交信息（如Bug修正等）"</span></code></pre></td></tr></table></div></figure>
+
+
+<p>提交的记录只是放在暂存区的快照， 每次提交之后， 你还可以通过快照回溯到以前的状态。 多牛啊！</p>
+
+<h3>更快捷的提交：</h3>
+
+<p>Git 提供了一个命令选项用来简化提交操作， 这个命令选项简化了<code>git add</code>这一步：</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ git commit -a</span></code></pre></td></tr></table></div></figure>
+
+
+<p>对了！ 就是这个<code>-a</code>选项， 同时你也可以使用<code>-m</code>添加消息：</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ git commit -am "提交信息"</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>移除文件：</h3>
+
+<p>要移除某个文件， 必须从已经暂存的文件中将文件去除：</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ git rm [移除的文件名称]</span></code></pre></td></tr></table></div></figure>
+
+
+<p>如果删除之前修改过， 并且已经放到暂存区域的话， 那么要使用强制删除选项： <code>-f</code></p>
+
+<p>如果要将文件从Git仓库删除（暂存区域删除）， 但是仍保留在当前目录中， 即： 去除跟踪但是不删除文件， 一边在<code>.gitignore</code>中补上： <code>--cached</code></p>
+
+<h3>移动文件：</h3>
+
+<p>Git 并不跟踪文件的移动操作， 但是它可以判断出发生了什么：</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ git mv [源文件名] [目标文件名]</span></code></pre></td></tr></table></div></figure>
+
+
+<p>实际上， 运行<code>git mv</code>相当与运行三个命令：</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ mv [源文件名] [目标文件名]
+</span><span class='line'>$ git rm [源文件名]
+</span><span class='line'>$ git add [目标文件名]</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>查看提交历史：</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ git log</span></code></pre></td></tr></table></div></figure>
+
+
+<p>不带参数时， 会按时间列出所有的更新。</p>
+
+<blockquote><p><code>-p</code> 选项展开显示每次提交的差异
+<code>-数字</code> 选项选择最近的N次更新
+<code>--stat</code> 选项仅显示简要的增改行数统计
+<code>--pretty</code>
+<code>--oneline</code> 或 <code>--pretty</code> 结合 <code>--graph</code>使用， 会显示ASCII 字符画</p></blockquote>
 </div>
 
 </article>
