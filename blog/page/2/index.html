@@ -7,7 +7,7 @@
 	<meta name="author" content="metooit">
 
 	
-	<meta name="description" content="新学期开始了， 本来想要昨天写这篇文章的， 可是昨天实在是太累了…… 今天早上起来终于有力气吐槽了…… @#$$%%^&amp;&amp;#$$%&amp;**$%$%!#@$$%%^&amp;…… 算了， 让昨天的一切都烟消云散吧， 今天是一个美好的开始。 新学期的计划 关于学习 考不考研？ &hellip;">
+	<meta name="description" content="来到学校之后， 我觉得最终要的一件事情就是要配置好自己的机器， 然后开始一个学期的生活。 然后， 我想到了Arch， 事实上真正决定我一定要安装ArchLinux的就是它的理念：简洁。 因为这正是我想要的， Keep it simple, stupid! 这句话着实应该大声的喊出来。 &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -106,6 +106,61 @@
 			
 			<div class="mid-col-container">
 				<div id="content" class="inner">
+
+
+    <article class="post">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-03-05T20:30:00+08:00" pubdate data-updated="true">Mar 5<span>th</span>, 2013</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/arch/'>Arch</a>, <a class='category' href='/blog/categories/linux-/'>Linux,</a>
+
+
+</div>
+		
+	</div>
+	<h1 class="title"><a href="/blog/2013/03/05/hug-arc-linux/">Hug Arch Linux</a></h1>
+	<div class="entry-content">
+		<p>来到学校之后， 我觉得最终要的一件事情就是要配置好自己的机器， 然后开始一个学期的生活。 然后， 我想到了Arch， 事实上真正决定我一定要安装ArchLinux的就是它的理念：简洁。 因为这正是我想要的， Keep it simple, stupid! 这句话着实应该大声的喊出来。 选择ArcLinux也是要选择一种生活与工作的态度吧！</p>
+
+<p>然后， 我就开始了我的ArchLinux之旅。</p>
+
+<h2>第一步： 安装</h2>
+
+<p>第一步当然是安装系统啦， <a href="https://wiki.archlinux.org/">Arch的文档</a> 真是全面而贴心啊， 我觉得写这些文档的人是真心可爱啊， 尤其是读到Arch的历史与目标的时候， 我忽然间觉得自己像是在做一件自己人生中的大事一样， 有些小小的激动了呢！</p>
+
+<p><a href="https://wiki.archlinux.org/index.php/The_Arch_Way">The Arch Way</a> 写了Arch的哲学， 重点写了它的简洁，开放，自由等…… 如果想要理解和使用Arch， 这篇文章是一定要通读的。</p>
+
+<p>我就从初学者手册开始吧！ <a href="https://wiki.archlinux.org/index.php/Beginners%27_Guide">Beginners Guide</a></p>
+
+<p>因为我的台式机没有光驱， 所以最简单的方法莫过于U盘安装啦！ 然后， 我觉得这件事情再简单不过了， 所以没有往下看， 就没有按照初学者手册中所写去使用<code>dd</code>命令， 想到以前的经验， 觉得使用<code>UtralISO</code>再简单不过， 然后就莫名其妙的悲剧了， 我开机进入<code>BIOS</code>调整好启动顺序后， 虽然顺利的进入了Arch的欢
+迎界面， 但是居然不能<code>Enter</code>进入安装过程， 本来我想就此问题Google之， 想到Arch的文档， 我决定还是要仔细读一下文档才好，果然， 在<a href="https://wiki.archlinux.org/index.php/Installation_Guide">Installation Guide</a> 中就有关于如何用U盘安装的部分， 真是汗颜啊！！！</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ dd if=&lt;path of Archlinux.iso> of=/dev/sdb bs=4M</span></code></pre></td></tr></table></div></figure>
+
+
+<p>一条命令执行完后，重启， 真的是一下子就成功了， 都不知道Arch是怎么办到的， 居然这样都可以， 真的是很人性化的设计， 那么继续安装吧……
+还有一件事情值得一题， 我本来以为<code>shell</code>会是大多数<code>Linux</code>发行版都安装的<code>Bash</code>呢， 没有想到是我最喜欢的<code>Zsh</code>， 这算是又一个意外的惊喜吧！ 而且这个zsh还是配置过一点的， 执行错了命令的时候会出现一个:-(  真是好玩， 嘻嘻。</p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -591,99 +646,6 @@ tar [-] A &#8211;catenate &#8211;concatenate | c &#8211;create | d &#8211;diff &
 <li><p>压缩： <code>tar -jcv -f filename.tar.bz2 要被解压缩的文件或目录名称</code></p></li>
 <li>查询： <code>tar -jtv -f filename.tar.bz2</code></li>
 <li>解压： <code>tar -jxv -f filename.tar.bz2 -C 欲解压缩的目录</code></li>
-</ul>
-
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<div class="meta">
-		<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-02-21T23:41:00+08:00" pubdate data-updated="true">Feb 21<span>st</span>, 2013</time></div>
-		<div class="tags">
-
-
-	<a class='category' href='/blog/categories/programming-/'>Programming,</a>, <a class='category' href='/blog/categories/python-/'>Python,</a>, <a class='category' href='/blog/categories/wiki/'>Wiki</a>
-
-
-</div>
-		
-	</div>
-	<h1 class="title"><a href="/blog/2013/02/21/lovely-python/">Lovely Python</a></h1>
-	<div class="entry-content">
-		<ul>
-<li><p>交互模式下， <code>_</code>代表上一个命令的返回值</p></li>
-<li><p>两个挨着的字符串会自动地合并到一起</p></li>
-<li><p>Python 的 String 不能被通过索引重新赋值</p></li>
-<li><p>s[:i] + s[i:] 相当于 s</p></li>
-<li><p>string 索引：</p>
-
-<table>
-<thead>
-<tr>
-<th></th>
-<th align="center"> H   </th>
-<th align="center"> e   </th>
-<th align="center"> l   </th>
-<th align="center"> p   </th>
-<th align="center"> A   </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td align="center"> 0   </td>
-<td align="center"> 1   </td>
-<td align="center"> 2   </td>
-<td align="center"> 3   </td>
-<td align="center"> 4   |</td>
-</tr>
-<tr>
-<td></td>
-<td align="center"> -5  </td>
-<td align="center"> -4  </td>
-<td align="center"> -3  </td>
-<td align="center"> -2  </td>
-<td align="center"> -1  |</td>
-</tr>
-</tbody>
-</table>
-</li>
-<li><p>通过分片操作可以实现list的： <code>替换</code>、 <code>删除</code>、 <code>插入</code>、 <code>清空</code></p></li>
-<li><p>没有returnd的操作其实也是有返回值的<code>None</code></p></li>
-<li><p>函数的默认值在运行过程中只被赋值一次</p></li>
-<li><p><code>*</code> 和 <code>**</code></p></li>
-<li><p><code>*</code> 可以解包list或者 tumple 作为函数传入的参数</p></li>
-<li><p><code>**</code> 可以解包出字典里的key</p></li>
-<li><p><code>lambda</code> 形式： 可以创建小的匿名的方法</p></li>
-<li><p><code>list</code> 可以被用作： &#8211;> <code>Stacks</code>(pop)  <code>Queues</code>(popleft)</p></li>
-<li><p>函数式编程工具：</p>
-
-<blockquote><p>三个内建的可被用在list中的函数： filter(), map(), reduce()</p></blockquote></li>
-<li><p>zip() 方便地矩阵转置</p></li>
-<li><p>如何读入系统参数： sys.argv[1]</p></li>
-<li><p><a href="http://docs.python.org/2/tutorial/inputoutput.html">print 表格</a></p></li>
-<li><p>try&#8230;except&#8230; 工作机制： 首先， try后的语句被执行， 如果没有异常发生， except被跳过； 如果有异常发生并且异常的类型与except中的相同， 就用except后的语句进行异常处理。</p></li>
-<li><p>可以直接用 x=Class() 来返回一个Class的实例</p></li>
-<li><p>这段话要好好理解： Since there is a valid use-case for class-private members (namely to avoid name clashes of names with names defined by subclasses), there is limited support for such a mechanism, called name mangling. Any identifier of the form <strong>spam (at least two leading underscores, at most one trailing underscore) is textually replaced with _classname</strong>spam, where classname is the current class name with leading underscore(s) stripped. This mangling is done without regard to the syntactic position of the identifier, as long as it occurs within the definition of a class.</p></li>
-<li><p>实例方法对象拥有变量： m.im_self  m.im_func</p></li>
-<li><p><a href="http://docs.python.org/2/tutorial/stdlib.html">标准库</a></p></li>
 </ul>
 
 
