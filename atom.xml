@@ -4,7 +4,7 @@
   <title><![CDATA[K.I.S.S]]></title>
   <link href="http://metooit.github.com/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-03-13T12:42:55+08:00</updated>
+  <updated>2013-03-14T06:49:06+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -12,6 +12,17 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[不得不面对的一切]]></title>
+    <link href="http://metooit.github.com/blog/2013/03/14/something-you-have-to-face/"/>
+    <updated>2013-03-14T06:41:00+08:00</updated>
+    <id>http://metooit.github.com/blog/2013/03/14/something-you-have-to-face</id>
+    <content type="html"><![CDATA[<p>今天听说了一个算是很不好的消息， 我的一个好朋友要退学了， 这让我忽然间感觉到世事无常， 如此让人伤感， 有些事情， 放下要比接受起来更难……</p>
+
+<p>如果这个传闻是真的， 那我对中国的教育体制感到失望， 为我的同学感到可惜， 同时有些事情也值得我们去深思……</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Git —— 如何让我不爱你]]></title>
@@ -1759,159 +1770,6 @@ tar [-] A &#8211;catenate &#8211;concatenate | c &#8211;create | d &#8211;diff &
     <content type="html"><![CDATA[<p><a href="http://ruby.learncodethehardway.org/book/">Learn Ruby The Hard Way</a></p>
 
 <p>所谓笨方法学习就是通过不断地实践练习去学习一门新的知识， 但是这应该不算是笨的方法吧。 编程不是有一个一万小时定律吗？ 这应该是学习的正确方法吧。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Learning Algorithms : Sort --- Bubble. etc]]></title>
-    <link href="http://metooit.github.com/blog/2013/02/15/learning-algorithms-sort-bubble-etc/"/>
-    <updated>2013-02-15T16:18:00+08:00</updated>
-    <id>http://metooit.github.com/blog/2013/02/15/learning-algorithms-sort-bubble-etc</id>
-    <content type="html"><![CDATA[<p>显然， 这是一篇水文， 这只是一个患有强迫症的人的需求 ： 必须把自己知道的东西都列在一起才算完整。 我今天就是来完成这一步的， 将我知道的另外几个排序算法罗列在这里， 也许很多算法都没有必要再说但是呢…… 但是……</p>
-
-<hr />
-
-<p>这里有一个<a href="http://caterpillar.onlyfun.net/Gossip/AlgorithmGossip/SelectionInsertionBubble.htm">选择插入冒泡排序的比较</a></p>
-
-<h2>首先冒泡排序：</h2>
-
-<h3>冒泡排序基本性能分析：</h3>
-
-<table>
-<thead>
-<tr>
-<th></th>
-<th> 最坏情况时间复杂度    </th>
-<th align="left"> 期望时间复杂度   </th>
-<th align="left"> 空间复杂度   </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td> O(n<sup>2)</sup>                </td>
-<td align="left"> O(n<sup>2)</sup>           </td>
-<td></td>
-</tr>
-</tbody>
-</table>
-
-
-<figure class='code'><figcaption><span>bubble-sort      </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-</pre></td><td class='code'><pre><code class='c'><span class='line'><span class="kt">void</span> <span class="nf">bubbleSort</span><span class="p">(</span><span class="kt">int</span><span class="o">*</span> <span class="n">array</span><span class="p">,</span> <span class="kt">int</span> <span class="n">length</span><span class="p">){</span>
-</span><span class='line'>    <span class="kt">int</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">;</span>
-</span><span class='line'>    <span class="kt">int</span> <span class="n">temp</span><span class="p">;</span>
-</span><span class='line'>    <span class="kt">int</span> <span class="n">flag</span><span class="p">;</span>
-</span><span class='line'>    <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
-</span><span class='line'>    <span class="k">do</span><span class="p">{</span>
-</span><span class='line'>        <span class="n">flag</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-</span><span class='line'>        <span class="k">for</span><span class="p">(</span><span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">j</span><span class="o">&lt;</span><span class="n">length</span><span class="o">-</span><span class="n">i</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">){</span>
-</span><span class='line'>            <span class="k">if</span><span class="p">(</span><span class="n">array</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">&gt;</span><span class="n">array</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]){</span>
-</span><span class='line'>                    <span class="n">temp</span> <span class="o">=</span> <span class="n">array</span><span class="p">[</span><span class="n">j</span><span class="p">];</span>
-</span><span class='line'>                    <span class="n">array</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">array</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">];</span>
-</span><span class='line'>                    <span class="n">array</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
-</span><span class='line'>                <span class="n">flag</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-</span><span class='line'>            <span class="p">}</span>
-</span><span class='line'>        <span class="p">}</span>
-</span><span class='line'>        <span class="n">display</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="mi">6</span><span class="p">);</span>
-</span><span class='line'>        <span class="n">i</span><span class="o">++</span><span class="p">;</span>
-</span><span class='line'>    <span class="p">}</span><span class="k">while</span><span class="p">(</span><span class="n">flag</span><span class="p">);</span>
-</span><span class='line'>    <span class="k">return</span><span class="p">;</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>*</p>
-
-<p><img src="http://metooit.github.com/pictures/bubble-sort-c.png" title="" ></p>
-
-<p>Python 实现方法：</p>
-
-<figure class='code'><figcaption><span>bubble-sort      </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="k">def</span> <span class="nf">bubble</span><span class="p">(</span><span class="n">lst</span><span class="p">):</span>
-</span><span class='line'>    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">val1</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">lst</span><span class="p">):</span>
-</span><span class='line'>        <span class="k">for</span> <span class="n">j</span><span class="p">,</span> <span class="n">val2</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">lst</span><span class="p">):</span>
-</span><span class='line'>            <span class="k">if</span> <span class="n">lst</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">lst</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span>
-</span><span class='line'>               <span class="n">lst</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">lst</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">lst</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">lst</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-</span><span class='line'>    <span class="k">return</span> <span class="n">lst</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h2>选择排序：</h2>
-
-<h3>选择排序基本性能分析：</h3>
-
-<table>
-<thead>
-<tr>
-<th></th>
-<th> 最坏情况时间复杂度    </th>
-<th align="left"> 期望时间复杂度   </th>
-<th align="left"> 空间复杂度   </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td> O(n<sup>2)</sup>                </td>
-<td align="left">                  </td>
-<td></td>
-</tr>
-</tbody>
-</table>
-
-
-<figure class='code'><figcaption><span>selectionsort      </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="k">def</span> <span class="nf">selectionsort</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
-</span><span class='line'>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">L</span><span class="p">)):</span>
-</span><span class='line'>        <span class="n">minor</span> <span class="o">=</span> <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-</span><span class='line'>        <span class="n">minor_pos</span> <span class="o">=</span> <span class="n">i</span>
-</span><span class='line'>        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">L</span><span class="p">)):</span>
-</span><span class='line'>            <span class="k">if</span> <span class="n">l</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">minor</span><span class="p">:</span>
-</span><span class='line'>                <span class="n">minor</span> <span class="o">=</span> <span class="n">l</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
-</span><span class='line'>                <span class="n">minor_pos</span> <span class="o">=</span> <span class="n">j</span>
-</span><span class='line'>        <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">L</span><span class="p">[</span><span class="n">minor_pos</span><span class="p">]</span> <span class="o">=</span> <span class="n">minor</span><span class="p">,</span> <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-</span><span class='line'>    <span class="k">return</span> <span class="n">L</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
 ]]></content>
   </entry>
   
