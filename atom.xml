@@ -4,7 +4,7 @@
   <title><![CDATA[K.I.S.S]]></title>
   <link href="http://metooit.github.com/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-03-14T06:49:06+08:00</updated>
+  <updated>2013-03-15T17:32:37+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -12,6 +12,25 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[For You And For Me]]></title>
+    <link href="http://metooit.github.com/blog/2013/03/15/for-you-and-for-me/"/>
+    <updated>2013-03-15T16:49:00+08:00</updated>
+    <id>http://metooit.github.com/blog/2013/03/15/for-you-and-for-me</id>
+    <content type="html"><![CDATA[<p>学习编程对于我来说就是一种生活，但是我所期待的另一种生活是能够用编程来改变人们的生活！</p>
+
+<p>这算是我的一个宏愿吧，但是我还是一直为此而努力着。因为不是有一句话叫做不想当将军的士兵不是好士兵吗？我想对于一个程序员来讲，不想去实现这样一个愿望便枉自为程序员吧！</p>
+
+<p>看到一个关于编程的公益广告<a href="http://video.sina.com.cn/v/b/98166519-2036021381.html">视频地址</a>,里面有好多我所崇拜的大牛，看完视频感觉到他们是计算机世界里的英雄，也是我们生活中的英雄，因为他们正是那些用编程来改变人们生活的人！</p>
+
+<p>虽然是一个小菜程序员，但是我还是因为自己当时选择编程这条道路感到庆幸，因为是编程让我真正爱上了生活！以前的我以为自己喜欢的是电子行业，因为我看到电子产品以惊人的速度进入并改变着人们的生活。所以大学我选择了电子信息工程专业，但是我的兴趣却逐渐转向了编程领域，最初的C语言实现一个小程序实现输出“Hello World！”的时候，我觉得兴奋异常，怎么说呢？这样一种兴奋来自一种成就感或者说来自一种探索欲，我开始觉得自己能够操纵机器去做一些事情，那个说的酸溜溜一点就是一点小幸福吧！o(∩∩)o&#8230;哈哈，总之我就是这样不可救药的喜欢上了编程！</p>
+
+<p>为什么我对编程这么着迷吗？我想对你说：学习编程吧，哪怕你只是想多了解一点计算机，然后你就会懂我了，这是一个可以作为爱好的事情！</p>
+
+<p>这篇文章，For you and for me， enjoy Programming, enjoy Life!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[不得不面对的一切]]></title>
@@ -1759,17 +1778,6 @@ tar [-] A &#8211;catenate &#8211;concatenate | c &#8211;create | d &#8211;diff &
 <hr />
 
 <p>（未完待续……）</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Learn Ruby the hard way]]></title>
-    <link href="http://metooit.github.com/blog/2013/02/15/learn-ruby-the-hard-way/"/>
-    <updated>2013-02-15T19:23:00+08:00</updated>
-    <id>http://metooit.github.com/blog/2013/02/15/learn-ruby-the-hard-way</id>
-    <content type="html"><![CDATA[<p><a href="http://ruby.learncodethehardway.org/book/">Learn Ruby The Hard Way</a></p>
-
-<p>所谓笨方法学习就是通过不断地实践练习去学习一门新的知识， 但是这应该不算是笨的方法吧。 编程不是有一个一万小时定律吗？ 这应该是学习的正确方法吧。</p>
 ]]></content>
   </entry>
   
