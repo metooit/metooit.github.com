@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Learn | K.I.S.S]]></title>
   <link href="http://metooit.github.com/blog/categories/learn/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-03-15T17:32:37+08:00</updated>
+  <updated>2013-03-17T07:32:01+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -12,6 +12,15 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Learn the hard way]]></title>
+    <link href="http://metooit.github.com/blog/2013/03/17/learn-the-hard-way/"/>
+    <updated>2013-03-17T07:22:00+08:00</updated>
+    <id>http://metooit.github.com/blog/2013/03/17/learn-the-hard-way</id>
+    <content type="html"><![CDATA[<p>看了一个系列的教程，learn xx the hard way。觉得还挺不错的，主要是作者的一些理念正适合我。我又思考了一下自己的学习，有时候总是想要有个计划，但是没有计划的时候心情不爽，有了计划之后没有执行又是很不爽。我开始觉得制定计划是一个需要慎重考虑的事情，就像前两天我给自己制定的一些小计划：比如，每天总结一条<code>Linux</code>命令啊，坚持看算法啊，坚持看手册啊…… 想起来又有点惭愧了 所以，干脆我就来个<code>Learn the hard way</code>,笨方法的学习，按部就班，一步一个脚印，我想也许坚持真的不是那么容易……</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[『python 3 程序开发指南』读书笔记 2]]></title>
