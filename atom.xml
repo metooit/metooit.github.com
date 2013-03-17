@@ -4,7 +4,7 @@
   <title><![CDATA[K.I.S.S]]></title>
   <link href="http://metooit.github.com/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-03-17T07:32:01+08:00</updated>
+  <updated>2013-03-17T17:55:01+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -60,6 +60,8 @@
     <content type="html"><![CDATA[<p>要想要知道一个朋友如何， 那你就应该多去了解他， 如果想要知道Git如何， 那么多多地去接触它， 深入的去了解它吧！ Git是美丽由内而外的美。</p>
 
 <p>上一篇《Git 工作流程》还没有写完， 时隔几天， 我还要把没有总结学习过得步骤继续完善在这里：</p>
+
+<p>Git</p>
 ]]></content>
   </entry>
   
