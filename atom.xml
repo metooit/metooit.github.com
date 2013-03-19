@@ -4,7 +4,7 @@
   <title><![CDATA[K.I.S.S]]></title>
   <link href="http://metooit.github.com/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-03-19T12:58:40+08:00</updated>
+  <updated>2013-03-19T19:04:57+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -18,7 +18,14 @@
     <link href="http://metooit.github.com/blog/2013/03/19/think-in-vim/"/>
     <updated>2013-03-19T12:58:00+08:00</updated>
     <id>http://metooit.github.com/blog/2013/03/19/think-in-vim</id>
-    <content type="html"><![CDATA[
+    <content type="html"><![CDATA[<p>Vim是一个可以让人着迷的编辑器，它的美需要你去认真地体会！</p>
+
+<p>曾经我也是一个喜欢各种IDE（比如VS， ECLIPSE）而不是文本编辑器的人，最初知道VIM是因为Linux的缘故，说实话，我对VIM不是一见倾心，这种间很多次的情感转折
+，不过VIM还是以它强大的美丽征服了我。初见VIM，是从学习Linux开始的，因为Linux中经常要编辑一些配置文件，查到的资料都是要<code>vim xxxx</code>， 我当时在看的书是
+《鸟哥的linux私房菜》，里面有专门介绍Vim的一章，我的Vim旅程就此开始。</p>
+
+<p>说说我的感觉吧，第一次打开Vim是黑乎乎的一片，然后是几行字，我甚是怀疑这就是一些前辈口中的神器，总之我敲进了第一条命令<code>:help</code>，简单的看了一下之后，我
+就敲下了第二个命令<code>:q</code>，这样的相遇不免让人尴尬，就好象听说了一个久赋盛名的美女却发现不是我喜欢的那一款，也只好一笑了之。</p>
 ]]></content>
   </entry>
   
