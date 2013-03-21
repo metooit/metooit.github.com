@@ -122,12 +122,29 @@
 <li><code>JavaScript</code>的解释器并不改变原始的<code>HTML</code>和<code>CSS</code>文件，只是在浏览器的缓存中更改<code>DOM</code>的表示。</li>
 <li><code>$</code>符号代表的是<code>jQuery</code>方法，即表示<code>$</code>&#8212;><code>jQuery()</code>。</li>
 <li><code>jQuery</code>选择元素的方式和<code>CSS</code>是一样的：
-
-<pre><code>                                  ** `tag selector` ---&gt; 名称
-                                  ** `class selector` ---&gt; `.`加上名称
-                                  ** `ID selector` ---&gt; `#`加上名称
-</code></pre></li>
+  <strong> <code>tag selector</code> &#8212;> 名称
+  </strong> <code>class selector</code> &#8212;> <code>.</code>加上名称
+  ** <code>ID selector</code> &#8212;> <code>#</code>加上名称</li>
+<li>如何写一个script:</li>
 </ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;script>
+</span><span class='line'>        $(document).ready(function() {
+</span><span class='line'>            $("div").click(function() {
+</span><span class='line'>                alert("You clicked me.");
+</span><span class='line'>            });
+</span><span class='line'>        }); 
+</span><span class='line'>    &lt;/script></span></code></pre></td></tr></table></div></figure>
+
+
 
 </div>
 
