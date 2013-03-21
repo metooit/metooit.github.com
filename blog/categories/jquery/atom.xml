@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: jQuery | K.I.S.S]]></title>
+  <link href="http://metooit.github.com/blog/categories/jquery/atom.xml" rel="self"/>
+  <link href="http://metooit.github.com/"/>
+  <updated>2013-03-21T19:09:11+08:00</updated>
+  <id>http://metooit.github.com/</id>
+  <author>
+    <name><![CDATA[metooit]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Learning jQuery In Process]]></title>
+    <link href="http://metooit.github.com/blog/2013/03/20/learning-jquery-in-process/"/>
+    <updated>2013-03-20T20:59:00+08:00</updated>
+    <id>http://metooit.github.com/blog/2013/03/20/learning-jquery-in-process</id>
+    <content type="html"><![CDATA[<p>这几天都在看关于JavaScript和jQuery的东西，我觉得还挺好玩的，jQuery的感觉就像是第一次知道coffeeScript时的感觉一样，让人感到世界又美好了一点，总之，
+我看完<code>CodeSchool</code>的『Try jQuery』之后，很是喜欢jQuery,于是我又借了一本《Head First jQuery》，目前也在看这本书呢！(*<sup>__<sup>*)</sup></sup> 嘻嘻…… 喜欢Head First
+的书。</p>
+
+<hr />
+
+<p>那么我就在这里记录一下比较重要的东东吧 ：-）</p>
+
+<h3>jQuery基础：</h3>
+
+<ul>
+<li><code>JavaScript</code>的解释器并不改变原始的<code>HTML</code>和<code>CSS</code>文件，只是在浏览器的缓存中更改<code>DOM</code>的表示。</li>
+<li><code>$</code>符号代表的是<code>jQuery</code>方法，即表示<code>$</code>---><code>jQuery()</code>。</li>
+<li><code>jQuery</code>选择元素的方式和<code>CSS</code>是一样的：
+
+<pre><code>                                  ** `tag selector` ---&gt; 名称
+                                  ** `class selector` ---&gt; `.`加上名称
+                                  ** `ID selector` ---&gt; `#`加上名称
+</code></pre></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>
