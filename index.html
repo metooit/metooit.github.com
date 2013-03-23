@@ -7,7 +7,8 @@
 	<meta name="author" content="metooit">
 
 	
-	<meta name="description" content=" ">
+	<meta name="description" content="NATIVE-STRING-MATCHER 字符串 T = abcabaabcabac，字符串 P = abaa，判断P是否是T的子串，就是字符串匹配问题了，T 叫做文本
+（Text） ，P 叫做模式（Pattern），所以正确描述是，找出所有在文本 T = abcabaabcabac 中模式 &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -75,11 +76,11 @@
 </nav>
 </br>
 
-<!--<embed type='application/x-shockwave-flash' src='/javascripts/tagcloud.swf'width='100%' height='250' bgcolor='#ffffff' id='tagcloudflash' name='tagcloudflash' quality='high' allowscriptaccess='always'flashvars="tcolor=0x00aa00&amp;tcolor2=0x00dd00&amp;hicolor=0xff3333&amp;tspeed=100&amp;distr=true&amp;mode=tags&amp;tagcloud=%3Ctags%3E%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2F-%27+style%3D%27font-size%3A+14.444444444444445%25%27%3E%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Falgorithms%27+style%3D%27font-size%3A+18.88888888888889%25%27%3EAlgorithms%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Falgorithms-%27+style%3D%27font-size%3A+50.0%25%27%3EAlgorithms%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Farch%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EArch%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fc%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EC%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fcode%27+style%3D%27font-size%3A+14.444444444444445%25%27%3Ecode%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fdiary%27+style%3D%27font-size%3A+18.88888888888889%25%27%3Ediary%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fgit%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EGit%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fgit%27+style%3D%27font-size%3A+18.88888888888889%25%27%3Egit%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fgithub%27+style%3D%27font-size%3A+23.333333333333336%25%27%3Egithub%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fjquery%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EjQuery%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flearn%27+style%3D%27font-size%3A+27.77777777777778%25%27%3Elearn%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flearn%27+style%3D%27font-size%3A+32.22222222222222%25%27%3ELearn%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flearn-%27+style%3D%27font-size%3A+18.88888888888889%25%27%3ELearn%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flife%27+style%3D%27font-size%3A+36.66666666666667%25%27%3ELife%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flife-%27+style%3D%27font-size%3A+14.444444444444445%25%27%3ELife%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flinux%27+style%3D%27font-size%3A+18.88888888888889%25%27%3ELinux%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flinux-%27+style%3D%27font-size%3A+14.444444444444445%25%27%3ELinux%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fmarkdown%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EMarkdown%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fmemo%27+style%3D%27font-size%3A+14.444444444444445%25%27%3Ememo%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fnote%27+style%3D%27font-size%3A+18.88888888888889%25%27%3ENote%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fprogram%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EProgram%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fprogramming%27+style%3D%27font-size%3A+14.444444444444445%25%27%3Eprogramming%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fprogramming%27+style%3D%27font-size%3A+32.22222222222222%25%27%3EProgramming%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fprogramming-%27+style%3D%27font-size%3A+23.333333333333336%25%27%3EProgramming%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fpython%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EPython%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fpython-%27+style%3D%27font-size%3A+18.88888888888889%25%27%3EPython%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Frails-%27+style%3D%27font-size%3A+14.444444444444445%25%27%3ERails%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fruby%27+style%3D%27font-size%3A+23.333333333333336%25%27%3ERuby%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fruby-%27+style%3D%27font-size%3A+27.77777777777778%25%27%3ERuby%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fscreen-%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EScreen%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fsort%27+style%3D%27font-size%3A+32.22222222222222%25%27%3ESort%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fsort-%27+style%3D%27font-size%3A+23.333333333333336%25%27%3ESort%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fstudy%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EStudy%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fsummary%27+style%3D%27font-size%3A+14.444444444444445%25%27%3Esummary%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fvim%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EVim%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fvim%27+style%3D%27font-size%3A+14.444444444444445%25%27%3Evim%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fwiki%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EWiki%3C%2Fa%3E+%3C%2Ftags%3E">-->
+<!--<embed type='application/x-shockwave-flash' src='/javascripts/tagcloud.swf'width='100%' height='250' bgcolor='#ffffff' id='tagcloudflash' name='tagcloudflash' quality='high' allowscriptaccess='always'flashvars="tcolor=0x00aa00&amp;tcolor2=0x00dd00&amp;hicolor=0xff3333&amp;tspeed=100&amp;distr=true&amp;mode=tags&amp;tagcloud=%3Ctags%3E%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2F-%27+style%3D%27font-size%3A+14.444444444444445%25%27%3E%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Falgorithms%27+style%3D%27font-size%3A+23.333333333333336%25%27%3EAlgorithms%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Falgorithms-%27+style%3D%27font-size%3A+50.0%25%27%3EAlgorithms%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Farch%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EArch%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fc%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EC%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fcode%27+style%3D%27font-size%3A+14.444444444444445%25%27%3Ecode%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fdiary%27+style%3D%27font-size%3A+18.88888888888889%25%27%3Ediary%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Ffind%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EFind%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fgit%27+style%3D%27font-size%3A+18.88888888888889%25%27%3Egit%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fgit%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EGit%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fgithub%27+style%3D%27font-size%3A+23.333333333333336%25%27%3Egithub%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fjquery%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EjQuery%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flearn%27+style%3D%27font-size%3A+32.22222222222222%25%27%3ELearn%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flearn%27+style%3D%27font-size%3A+27.77777777777778%25%27%3Elearn%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flearn-%27+style%3D%27font-size%3A+18.88888888888889%25%27%3ELearn%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flife%27+style%3D%27font-size%3A+36.66666666666667%25%27%3ELife%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flife-%27+style%3D%27font-size%3A+14.444444444444445%25%27%3ELife%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flinux%27+style%3D%27font-size%3A+23.333333333333336%25%27%3ELinux%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flinux-%27+style%3D%27font-size%3A+14.444444444444445%25%27%3ELinux%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fmarkdown%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EMarkdown%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fmemo%27+style%3D%27font-size%3A+14.444444444444445%25%27%3Ememo%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fnote%27+style%3D%27font-size%3A+18.88888888888889%25%27%3ENote%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fprogram%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EProgram%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fprogramming%27+style%3D%27font-size%3A+32.22222222222222%25%27%3EProgramming%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fprogramming%27+style%3D%27font-size%3A+14.444444444444445%25%27%3Eprogramming%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fprogramming-%27+style%3D%27font-size%3A+23.333333333333336%25%27%3EProgramming%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fpython%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EPython%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fpython-%27+style%3D%27font-size%3A+18.88888888888889%25%27%3EPython%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Frails-%27+style%3D%27font-size%3A+14.444444444444445%25%27%3ERails%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fruby%27+style%3D%27font-size%3A+23.333333333333336%25%27%3ERuby%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fruby-%27+style%3D%27font-size%3A+27.77777777777778%25%27%3ERuby%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fscreen-%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EScreen%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fsort%27+style%3D%27font-size%3A+32.22222222222222%25%27%3ESort%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fsort-%27+style%3D%27font-size%3A+23.333333333333336%25%27%3ESort%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fstudy%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EStudy%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fsummary%27+style%3D%27font-size%3A+14.444444444444445%25%27%3Esummary%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fvim%27+style%3D%27font-size%3A+14.444444444444445%25%27%3Evim%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fvim%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EVim%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fwiki%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EWiki%3C%2Fa%3E+%3C%2Ftags%3E">-->
 <!--
 <section>
   <h1>Tag Cloud</h1>
-    <span id="tag-cloud"><embed type='application/x-shockwave-flash' src='/javascripts/tagcloud.swf'width='100%' height='250' bgcolor='#f2f2f2' id='tagcloudflash' name='tagcloudflash' quality='high' allowscriptaccess='always'flashvars="tcolor=0x333333&amp;tcolor2=0x333333&amp;hicolor=0x000000&amp;tspeed=100&amp;distr=true&amp;mode=tags&amp;tagcloud=%3Ctags%3E%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2F-%27+style%3D%27font-size%3A+14.444444444444445%25%27%3E%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Falgorithms%27+style%3D%27font-size%3A+18.88888888888889%25%27%3EAlgorithms%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Falgorithms-%27+style%3D%27font-size%3A+50.0%25%27%3EAlgorithms%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Farch%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EArch%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fc%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EC%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fcode%27+style%3D%27font-size%3A+14.444444444444445%25%27%3Ecode%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fdiary%27+style%3D%27font-size%3A+18.88888888888889%25%27%3Ediary%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fgit%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EGit%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fgit%27+style%3D%27font-size%3A+18.88888888888889%25%27%3Egit%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fgithub%27+style%3D%27font-size%3A+23.333333333333336%25%27%3Egithub%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fjquery%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EjQuery%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flearn%27+style%3D%27font-size%3A+27.77777777777778%25%27%3Elearn%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flearn%27+style%3D%27font-size%3A+32.22222222222222%25%27%3ELearn%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flearn-%27+style%3D%27font-size%3A+18.88888888888889%25%27%3ELearn%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flife%27+style%3D%27font-size%3A+36.66666666666667%25%27%3ELife%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flife-%27+style%3D%27font-size%3A+14.444444444444445%25%27%3ELife%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flinux%27+style%3D%27font-size%3A+18.88888888888889%25%27%3ELinux%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flinux-%27+style%3D%27font-size%3A+14.444444444444445%25%27%3ELinux%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fmarkdown%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EMarkdown%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fmemo%27+style%3D%27font-size%3A+14.444444444444445%25%27%3Ememo%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fnote%27+style%3D%27font-size%3A+18.88888888888889%25%27%3ENote%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fprogram%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EProgram%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fprogramming%27+style%3D%27font-size%3A+14.444444444444445%25%27%3Eprogramming%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fprogramming%27+style%3D%27font-size%3A+32.22222222222222%25%27%3EProgramming%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fprogramming-%27+style%3D%27font-size%3A+23.333333333333336%25%27%3EProgramming%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fpython%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EPython%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fpython-%27+style%3D%27font-size%3A+18.88888888888889%25%27%3EPython%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Frails-%27+style%3D%27font-size%3A+14.444444444444445%25%27%3ERails%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fruby%27+style%3D%27font-size%3A+23.333333333333336%25%27%3ERuby%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fruby-%27+style%3D%27font-size%3A+27.77777777777778%25%27%3ERuby%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fscreen-%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EScreen%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fsort%27+style%3D%27font-size%3A+32.22222222222222%25%27%3ESort%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fsort-%27+style%3D%27font-size%3A+23.333333333333336%25%27%3ESort%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fstudy%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EStudy%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fsummary%27+style%3D%27font-size%3A+14.444444444444445%25%27%3Esummary%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fvim%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EVim%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fvim%27+style%3D%27font-size%3A+14.444444444444445%25%27%3Evim%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fwiki%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EWiki%3C%2Fa%3E+%3C%2Ftags%3E"></span>
+    <span id="tag-cloud"><embed type='application/x-shockwave-flash' src='/javascripts/tagcloud.swf'width='100%' height='250' bgcolor='#f2f2f2' id='tagcloudflash' name='tagcloudflash' quality='high' allowscriptaccess='always'flashvars="tcolor=0x333333&amp;tcolor2=0x333333&amp;hicolor=0x000000&amp;tspeed=100&amp;distr=true&amp;mode=tags&amp;tagcloud=%3Ctags%3E%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2F-%27+style%3D%27font-size%3A+14.444444444444445%25%27%3E%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Falgorithms%27+style%3D%27font-size%3A+23.333333333333336%25%27%3EAlgorithms%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Falgorithms-%27+style%3D%27font-size%3A+50.0%25%27%3EAlgorithms%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Farch%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EArch%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fc%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EC%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fcode%27+style%3D%27font-size%3A+14.444444444444445%25%27%3Ecode%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fdiary%27+style%3D%27font-size%3A+18.88888888888889%25%27%3Ediary%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Ffind%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EFind%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fgit%27+style%3D%27font-size%3A+18.88888888888889%25%27%3Egit%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fgit%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EGit%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fgithub%27+style%3D%27font-size%3A+23.333333333333336%25%27%3Egithub%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fjquery%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EjQuery%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flearn%27+style%3D%27font-size%3A+32.22222222222222%25%27%3ELearn%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flearn%27+style%3D%27font-size%3A+27.77777777777778%25%27%3Elearn%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flearn-%27+style%3D%27font-size%3A+18.88888888888889%25%27%3ELearn%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flife%27+style%3D%27font-size%3A+36.66666666666667%25%27%3ELife%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flife-%27+style%3D%27font-size%3A+14.444444444444445%25%27%3ELife%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flinux%27+style%3D%27font-size%3A+23.333333333333336%25%27%3ELinux%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Flinux-%27+style%3D%27font-size%3A+14.444444444444445%25%27%3ELinux%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fmarkdown%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EMarkdown%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fmemo%27+style%3D%27font-size%3A+14.444444444444445%25%27%3Ememo%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fnote%27+style%3D%27font-size%3A+18.88888888888889%25%27%3ENote%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fprogram%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EProgram%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fprogramming%27+style%3D%27font-size%3A+32.22222222222222%25%27%3EProgramming%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fprogramming%27+style%3D%27font-size%3A+14.444444444444445%25%27%3Eprogramming%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fprogramming-%27+style%3D%27font-size%3A+23.333333333333336%25%27%3EProgramming%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fpython%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EPython%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fpython-%27+style%3D%27font-size%3A+18.88888888888889%25%27%3EPython%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Frails-%27+style%3D%27font-size%3A+14.444444444444445%25%27%3ERails%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fruby%27+style%3D%27font-size%3A+23.333333333333336%25%27%3ERuby%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fruby-%27+style%3D%27font-size%3A+27.77777777777778%25%27%3ERuby%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fscreen-%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EScreen%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fsort%27+style%3D%27font-size%3A+32.22222222222222%25%27%3ESort%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fsort-%27+style%3D%27font-size%3A+23.333333333333336%25%27%3ESort%2C%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fstudy%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EStudy%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fsummary%27+style%3D%27font-size%3A+14.444444444444445%25%27%3Esummary%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fvim%27+style%3D%27font-size%3A+14.444444444444445%25%27%3Evim%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fvim%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EVim%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fmetooit.github.com%2Fblog%2Fcategories%2Fwiki%27+style%3D%27font-size%3A+14.444444444444445%25%27%3EWiki%3C%2Fa%3E+%3C%2Ftags%3E"></span>
 </section>
 
 -->
@@ -122,15 +123,536 @@
   
 
 
-<time datetime="2013-03-23T12:37:00+08:00" pubdate data-updated="true">Mar 23<span>rd</span>, 2013</time></div>
+<time datetime="2013-03-23T14:44:00+08:00" pubdate data-updated="true">Mar 23<span>rd</span>, 2013</time></div>
 		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/algorithms/'>Algorithms</a>
+
 
 </div>
 		
 	</div>
-	<h1 class="title"><a href="/blog/2013/03/23/find-command-in-linux/">Find Command in Linux</a></h1>
+	<h1 class="title"><a href="/blog/2013/03/23/string-match-algorithms/">字符串匹配算法</a></h1>
 	<div class="entry-content">
+		<h3>NATIVE-STRING-MATCHER</h3>
+
+<p>字符串 T = abcabaabcabac，字符串 P = abaa，判断P是否是T的子串，就是字符串匹配问题了，T 叫做文本
+（Text） ，P 叫做模式（Pattern），所以正确描述是，找出所有在文本 T = abcabaabcabac 中模式 P = abaa
+的所有出现。</p>
+
+<p><img src="/pictures/string_match.png" title="" ></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>NATIVE-STRING-MATCHER(T, P)
+</span><span class='line'>    n=T.length
+</span><span class='line'>    m=P.length
+</span><span class='line'>    for s = 0 to n -m
+</span><span class='line'>        if P[1..m] == T[s+1..s+m]
+</span><span class='line'>            print "Pattern occurs with shift"</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>#include&lt;iostream>
+</span><span class='line'>#include&lt;cstdio>
+</span><span class='line'>#include&lt;cstring>
+</span><span class='line'>using namespace std;
+</span><span class='line'> 
+</span><span class='line'>void NativeStringMatcher(const char *T, const char *P) {
+</span><span class='line'>    int n = strlen(T);
+</span><span class='line'>    int m = strlen(P);
+</span><span class='line'>    for (int j, i = 0; i &lt; n - m; i++) {
+</span><span class='line'>        for (j = 0; j &lt; m; j++) {
+</span><span class='line'>            if (T[i + j] != P[j]) {
+</span><span class='line'>                break;
+</span><span class='line'>            }
+</span><span class='line'>        }
+</span><span class='line'>        if (j == m) {
+</span><span class='line'>            printf("朴素算法，匹配位置是：%d\n", i + 1);
+</span><span class='line'>        }
+</span><span class='line'>    }
+</span><span class='line'>}
+</span><span class='line'> 
+</span><span class='line'>int main() {
+</span><span class='line'>    const char *T = "2359023141526739921";
+</span><span class='line'>    const char *P = "31415";
+</span><span class='line'>    NativeStringMatcher(T, P);
+</span><span class='line'>    return 0;
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<p>Useful Tips:
+* 用 Σ* 表示用字母表Σ中的所有有限长度的字符串的集合
+* 字符串 x 的长度用 |x| 表示
+* x 和 y 的连接表示为 xy，长度为| x |+| y |
+* x = yw，y 是 x 的前缀，w 是 x 的后缀</p>
+
+<h3>Rabin-Karp算法</h3>
+
+<p>Rabin-Karp算法由 Rabin 和 Karp 提出，预处理时间为 O（m），最坏情况下运行时间为O((n – m + 1)m)，和
+朴素算法差不多，但是平均情况很好。</p>
+
+<p>已知模式 P[1..m]，设 p 表示其相应十进制数地值，类似地， 对于给定的文本T[1..n]. 用 ts 表示长度为
+m 的子字符串 T[s + 1 ‥ s + m]（ s = 0, 1, &#8230; , n – m）， ts = p 当且仅当 [s + 1..s + m] =
+P[1..m]；因此s是有效位移当且仅当 ts = p，可以通过把 p 与每一个 ts 值进行比较。</p>
+
+<blockquote><p>可以用霍纳规则(Horner’s rule) 在Θ(m) 的时间内计算p的值 ：</p>
+
+<pre><code>                   p = P[m] + 10 (P[m - 1] + 10(P[m - 2] + · · · + 10(P[2] + 10P[1]) ))
+</code></pre></blockquote>
+
+<p>类似地，可以在Θ(m)时间内，根据T[1..m]计算出t0 的值。为了在Θ(n – m) 时间内计算出剩余的值t1, t2,
+&#8230; , tn-m 可以在常数的时间内根据ts计算出ts+1，总结出公式：</p>
+
+<blockquote><pre><code>            t(s + 1) = 10 （ts – 10^m*1 T[s + 1]） + T[s + m + 1]
+</code></pre></blockquote>
+
+<p>还有一个问题，计算中 p 和 ts 的值可能太大，超出计算机字长，不能方便地进行处理。如果 p 包含m
+个字符，那么， 关于在 p 上地每次算术运算需要“常数”时间这一假设就不合理了，幸运的是，对这一问题存在
+一个简单的补救方法，对一个合适的模 q 来计算 p 和 ts 的模，每个字符是一个十进制数，因为 p 和 t0  以
+及 公式1 计算过程都可以对模 q 进行，所以可以在 Θ(m) 时间内计算出模 q 的 p 值，在 Θ(n – m + 1) 时间
+内计算出模 q 的所有 ts 值，通常选模 q 为一个素数，使得 10q 正好为一个计算机字长，单精度算术运算就可
+以执行所有必要的运算过程。 一般情况下，采用d进制的字母表{0, 1, &#8230; , d – 1}, 所选的 q 要满足 d *
+q &lt; 字长，调整 公式1， 使其为：</p>
+
+<blockquote><pre><code>          ts + 1 = （d（ts – T[s + 1] * h） + T[s + m + 1]） mod q
+</code></pre></blockquote>
+
+<p>其中的h = d<sup>m-1</sup> (mod q)，但是加入模q后，由ts ≡ p (mod q)不能说明 ts = p. 但ts  p (mod q), 可以说明
+ts ≠ p，因此当ts ≡ p (mod q)时， 再用朴素的字符串匹配算法验证ts = p。. 如果q足够大，可以期望伪命中
+很少出现。</p>
+
+<p><img src="/pictures/Rabin-Karp.png" title="" ></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>RABIN-KARP-MATCHER(T, P, d, q)
+</span><span class='line'>    n ← length[T]
+</span><span class='line'>    m ← length[P]
+</span><span class='line'>    h ← dm-1 mod q
+</span><span class='line'>    p ← 0
+</span><span class='line'>    t0 ← 0
+</span><span class='line'>    for i ← 1 to m           ▹ Preprocessing.
+</span><span class='line'>        do p ← (dp + P[i]) mod q
+</span><span class='line'>           t0 ← (dt0 + T[i]) mod q
+</span><span class='line'>    for s ← 0 to n – m       ▹ Matching.
+</span><span class='line'>         do if p = ts
+</span><span class='line'>               then if P[1 ‥ m] = T [s + 1 ‥ s + m]
+</span><span class='line'>                       then print "Pattern occurs with shift" s
+</span><span class='line'>            if s &lt; n – m
+</span><span class='line'>               then ts+1 ← (d(ts – T[s + 1]h) + T[s + m + 1]) mod q</span></code></pre></td></tr></table></div></figure>
+
+
+<p>代码实现：</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>#include&lt;iostream>
+</span><span class='line'>#include&lt;cstdio>
+</span><span class='line'>#include&lt;cstring>
+</span><span class='line'>#include&lt;cmath>
+</span><span class='line'>#include&lt;algorithm>
+</span><span class='line'>using namespace std;
+</span><span class='line'> 
+</span><span class='line'>//朴素匹配算法，用于RabinKarp调用
+</span><span class='line'>bool NativeStringMatcher(const char *T, const char *P) {
+</span><span class='line'>    int n = strlen(T);
+</span><span class='line'>    int m = strlen(P);
+</span><span class='line'>    for (int j, i = 0; i &lt; n - m; i++) {
+</span><span class='line'>        for (j = 0; j &lt; m; j++) {
+</span><span class='line'>            if (T[i + j] != P[j]) {
+</span><span class='line'>                break;
+</span><span class='line'>            }
+</span><span class='line'>        }
+</span><span class='line'>        if (j == m) {
+</span><span class='line'>            return true;
+</span><span class='line'>        }
+</span><span class='line'>    }
+</span><span class='line'>    return false;
+</span><span class='line'>}
+</span><span class='line'> 
+</span><span class='line'>//RabinKarp算法
+</span><span class='line'>void RabinKarp(const char *T, const char *P, int d, int q) {
+</span><span class='line'>    int n = strlen(T);
+</span><span class='line'>    int m = strlen(P);
+</span><span class='line'> 
+</span><span class='line'>    int h = 1;
+</span><span class='line'>    for (int i = 0; i &lt; m - 1; i++) {
+</span><span class='line'>        h *= d;//pow可能会越界，所以用乘法
+</span><span class='line'>        if (h >= q) {
+</span><span class='line'>            h %= q;
+</span><span class='line'>        }
+</span><span class='line'>    }
+</span><span class='line'> 
+</span><span class='line'>    int p = 0;
+</span><span class='line'>    int t = 0;
+</span><span class='line'>    for (int i = 0; i &lt; m; i++) {
+</span><span class='line'>        p = (d * p + (P[i] - '0')) % q;
+</span><span class='line'>        t = (d * t + (T[i] - '0')) % q;        
+</span><span class='line'>    }
+</span><span class='line'> 
+</span><span class='line'>    for (int i = 0; i &lt; n - m; i++) {
+</span><span class='line'>        printf("t%d = %d\n", i + 1, t);
+</span><span class='line'>        if (p == t) {
+</span><span class='line'>            if (NativeStringMatcher(T + i, P)) {
+</span><span class='line'>                printf("匹配位置是：%d\n", NativeStringMatcher(T + i, P) + i);
+</span><span class='line'>            } else {
+</span><span class='line'>                printf("伪命中点：%d\n", i + 1);
+</span><span class='line'>            }
+</span><span class='line'>        } 
+</span><span class='line'> 
+</span><span class='line'>        if (i &lt; n - m) {
+</span><span class='line'>            t = (d * (t - h * (T[i] - '0')) + T[i + m] - '0') % q;
+</span><span class='line'>            if (t &lt; 0) {
+</span><span class='line'>                t += q;
+</span><span class='line'>            }
+</span><span class='line'>        }
+</span><span class='line'>    }
+</span><span class='line'>}
+</span><span class='line'> 
+</span><span class='line'>int main() {
+</span><span class='line'>    const char *T = "2359023141526739921";
+</span><span class='line'>    const char *P = "31415";
+</span><span class='line'>    RabinKarp(T, P, 10, 13);
+</span><span class='line'>    return 0;
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Knuth-Morris-Pratt算法</h3>
+
+<p>KMP算法预处理时间Θ（m），匹配时间Θ（n），KMP算法用到了一个辅助数组π[1，m]，这个数组记录模式与其自身的
+位移进行匹配的信息，这些信息可以避免在朴素匹配算法中的无用位移测试，KMP算法的精髓和高效之处全在这个
+辅助数组。</p>
+
+<p><img src="/pictures/KMP.png" title="" ></p>
+
+<p>首先来看一下前缀蛮力匹配算法的代码（代码linux源码string.h），模式串和母串的比较是从左到右进行
+（strncmp()），如果找不到和模式串相同的子串，则从左到右移动模式串，距离为1（s++）</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>char * strstr(register const char *s, register const char *wanted)
+</span><span class='line'>{
+</span><span class='line'>    register const size_t len = strlen(wanted);
+</span><span class='line'>    if (len == 0) return (char *)s;
+</span><span class='line'>    while (*s != *wanted || strncmp(s, wanted, len))
+</span><span class='line'>        if (*s++ == '\0')
+</span><span class='line'>            return (char *)NULL;
+</span><span class='line'>    return (char *)s;
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<p>KMP算法中的KMP分别是指三个人名：Knuth、Morris、Pratt，其本质也是前缀匹配算法，对比前缀蛮力匹配算法
+，区别在于它会动态调整每次模式串的移动距离，而不仅仅是加一，从而加快匹配过程。下图通过一个直观的例
+子展示前缀蛮力匹配算法和KMP算法的区别，前文提过，这二者唯一的不同在于模式串移动距离。</p>
+
+<p><img src="/pictures/KMP2.png" title="" ></p>
+
+<p>上图中，前缀蛮力匹配算法发现匹配不上，就向右移动距离1，而KMP算法根据已经比较过的前缀信息，了解到应
+该移动距离为2；换句话说针对母串的下一个匹配字符，KMP算法了解它下回应该匹配模式串的哪个位置，比如上
+图中，针对母串的第i+1个字符，KMP算法了解它应该匹配模式串的第k+1个字符。为什么会是这样，这是因为母串
+的子串T[i-k, i]=aba，而模式串的子串P[0,k]=aba，这二者正好相等。所以模式串应该移动到这个位置，从而让
+母串的第i+1个字符和模式串的第k+1个字符继续比较。</p>
+
 		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-03-23T12:37:00+08:00" pubdate data-updated="true">Mar 23<span>rd</span>, 2013</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/find/'>Find</a>, <a class='category' href='/blog/categories/linux/'>Linux</a>
+
+
+</div>
+		
+	</div>
+	<h1 class="title"><a href="/blog/2013/03/23/find-command-in-linux/">Linux中的查找命令</a></h1>
+	<div class="entry-content">
+		<p>今天是一个很好的周六啊，为什么很好呢？可能是因为心情比较好所以天气比较好所以世界比较美好，o(∩∩)o&#8230;哈哈！总之呢，在这个大好的日子里，我觉得很有一点
+做些什么的必要啦！</p>
+
+<hr />
+
+<p>早晨六点钟（确切的说是6：25）分的时候起床，然后就和同学一起去打羽毛球啦（PS：这件事情已经坚持了一周了，继续努力），后来还吃了早饭（窃喜：-），然后开
+始了崭新的一天……</p>
+
+<hr />
+
+<p>今天呢，我很想总结一下<code>Linux</code>中会用到的各种的查找命令，<code>Linux</code>中的查找包括文件、命令、历史等的查找，希望我能够将自己用到的一些东西尽数总结出来，回
+顾也是学习：</p>
+
+<h3>文件的查找：</h3>
+
+<blockquote><p><code>whereis</code> <code>locate</code> <code>find</code></p></blockquote>
+
+<p><code>whereis</code> <code>locate</code>是利用数据库来查找相关文件，所以速度会比使用<code>find</code>命令来的快一些。</p>
+
+<h4>whereis</h4>
+
+<p>使用方法：</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>whereis [-bmsu] 文件或者目录名
+</span><span class='line'>
+</span><span class='line'>-b  ： 只是查找二进制格式的文件
+</span><span class='line'>-m  ： 只是查找在说明文件manual路径下的文件
+</span><span class='line'>-s  ： 只是查找source源文件
+</span><span class='line'>-u  ： 查找不在上述三个选项中的其他特殊文件</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>注意： 使用不同的用户（普通用户和根用户），查找到的文件位置可能是不一样的，因为毕竟不同等级的用户他们的命令的执行路径不同，这个和$PATH有关。</li>
+</ul>
+
+
+<h4>locate</h4>
+
+<p>使用方法：</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>locate [-ir] 关键字
+</span><span class='line'>
+</span><span class='line'>-i  ： 忽略大小写
+</span><span class='line'>-r  ： 正则表达式查找</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>注意： 这个命令的特点在于它能够根据部分文件名，这个特点也带来了另一个方面的考虑，就是只要是包含你要查找的名称，即使是比它长，也会显示出来。</li>
+<li>PS： <code>locate</code>查找的文件是从已经建立的数据库<code>/var/lib/mlocate/</code>里面的数据查找来的，新建文件后查找该文件的话有可能数据库还没有更新呢！手动更新数据
+库的话，需要用到一条指令<code>updatedb</code>。这个时间就要长一点了，你懂的。</li>
+</ul>
+
+
+<h4>find</h4>
+
+<p>说到<code>find</code>呢，那要说的就多了啊……</p>
+
+<p>使用方法：</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>find [PATH] [option] [action]</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li><p>与时间相关的参数：</p>
+
+<blockquote><p>-atime -mtime -ctime
+-mtime  n : n为数字，意义为在n天之前的“一天之内”修改过得文件
+-mtime +n : 列出n天之前（不含n天本身）被更改过的文件
+-mtime -n : 列出n天之内（含n天本身）被更改过的文件
+-newer file : 列出比file更新的文件</p></blockquote></li>
+<li><p>与用户有关的参数：</p>
+
+<blockquote><p>-uid n
+-gid n
+-user name
+-group name
+-nouser
+-nogroup
+这些命令吧，我觉的从字面意思来看就很明白它的意思了，所以不再赘述。</p></blockquote></li>
+<li><p>与文件权限及名称有关的参数：</p>
+
+<blockquote><p>-name 文件名 : 查找相应的文件名
+-size [+-] SIZE : 查找比SIZE大或小的文件
+-type TYPE : 文件的类型有： 一般正规文件（f）、设备文件（b、c）、目录（d）、连接文件（l）、socket（s）、FIFO（p）
+-perm mode : 查找文件权限等于mode的文件
+-perm -mode
+-perm +mode</p></blockquote></li>
+</ul>
+
+
+<p>还有一个很重要的-exec:</p>
+
+<p>怎么说呢？ 我很喜欢这个命令， 就像我在解压一堆文件的时候， 我只能说： 我很喜欢。</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>find / -perm +7000 -exec ls -l {}\;</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>命令的查找：</h3>
+
+<blockquote><p><code>which</code> <code>type</code></p></blockquote>
+
+<h4>which</h4>
+
+<p>使用方法：</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>which -a 命令
+</span><span class='line'>
+</span><span class='line'>-a  ： 将所有由PATH目录中可以找到的命令均列出，而不是只有第一个被找到的命令的名称。</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>注意： 这里同样有一个问题，和PATH有关的，就是不同身份（是吧，身份很重要）。</li>
+</ul>
+
+
+<h4>type</h4>
+
+<p>type的作用是区别一个命令是<code>shell</code>自带的，还是外部扩展的命令。如果一个命令是外部扩展的名令，那么加一个<code>-p</code>就可以找到可执行的二进制文件的位置（相当
+于which）
+使用方法：</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>type -p 命令名称
+</span><span class='line'>
+</span><span class='line'>-p  ： 找到可执行的二进制文件的位置。（相当于which)</span></code></pre></td></tr></table></div></figure>
+
+
+
 
 		
 		
@@ -339,43 +861,6 @@
 <p>为什么我对编程这么着迷吗？我想对你说：学习编程吧，哪怕你只是想多了解一点计算机，然后你就会懂我了，这是一个可以作为爱好的事情！</p>
 
 <p>这篇文章，For you and for me， enjoy Programming, enjoy Life!</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<div class="meta">
-		<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-03-14T06:41:00+08:00" pubdate data-updated="true">Mar 14<span>th</span>, 2013</time></div>
-		<div class="tags">
-
-
-	<a class='category' href='/blog/categories/life/'>Life</a>
-
-
-</div>
-		
-	</div>
-	<h1 class="title"><a href="/blog/2013/03/14/something-you-have-to-face/">不得不面对的一切</a></h1>
-	<div class="entry-content">
-		<p>今天听说了一个算是很不好的消息， 我的一个好朋友要退学了， 这让我忽然间感觉到世事无常， 如此让人伤感， 有些事情， 放下要比接受起来更难……</p>
-
-<p>如果这个传闻是真的， 那我对中国的教育体制感到失望， 为我的同学感到可惜， 同时有些事情也值得我们去深思……</p>
 
 		
 		

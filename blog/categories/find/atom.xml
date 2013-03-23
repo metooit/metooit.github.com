@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Find | K.I.S.S]]></title>
+  <link href="http://metooit.github.com/blog/categories/find/atom.xml" rel="self"/>
+  <link href="http://metooit.github.com/"/>
+  <updated>2013-03-23T18:24:07+08:00</updated>
+  <id>http://metooit.github.com/</id>
+  <author>
+    <name><![CDATA[metooit]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Linux中的查找命令]]></title>
+    <link href="http://metooit.github.com/blog/2013/03/23/find-command-in-linux/"/>
+    <updated>2013-03-23T12:37:00+08:00</updated>
+    <id>http://metooit.github.com/blog/2013/03/23/find-command-in-linux</id>
+    <content type="html"><![CDATA[<p>今天是一个很好的周六啊，为什么很好呢？可能是因为心情比较好所以天气比较好所以世界比较美好，o(∩∩)o...哈哈！总之呢，在这个大好的日子里，我觉得很有一点
+做些什么的必要啦！</p>
+
+<hr />
+
+<p>早晨六点钟（确切的说是6：25）分的时候起床，然后就和同学一起去打羽毛球啦（PS：这件事情已经坚持了一周了，继续努力），后来还吃了早饭（窃喜：-），然后开
+始了崭新的一天……</p>
+
+<hr />
+
+<p>今天呢，我很想总结一下<code>Linux</code>中会用到的各种的查找命令，<code>Linux</code>中的查找包括文件、命令、历史等的查找，希望我能够将自己用到的一些东西尽数总结出来，回
+顾也是学习：</p>
+
+<h3>文件的查找：</h3>
+
+<blockquote><p><code>whereis</code> <code>locate</code> <code>find</code></p></blockquote>
+
+<p><code>whereis</code> <code>locate</code>是利用数据库来查找相关文件，所以速度会比使用<code>find</code>命令来的快一些。</p>
+
+<h4>whereis</h4>
+
+<p>使用方法：
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>whereis [-bmsu] 文件或者目录名&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>-b  ： 只是查找二进制格式的文件
+</span><span class='line'>-m  ： 只是查找在说明文件manual路径下的文件
+</span><span class='line'>-s  ： 只是查找source源文件
+</span><span class='line'>-u  ： 查找不在上述三个选项中的其他特殊文件</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<ul>
+<li>注意： 使用不同的用户（普通用户和根用户），查找到的文件位置可能是不一样的，因为毕竟不同等级的用户他们的命令的执行路径不同，这个和$PATH有关。</li>
+</ul>
+
+
+<h4>locate</h4>
+
+<p>使用方法：
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>locate [-ir] 关键字&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>-i  ： 忽略大小写
+</span><span class='line'>-r  ： 正则表达式查找</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<ul>
+<li>注意： 这个命令的特点在于它能够根据部分文件名，这个特点也带来了另一个方面的考虑，就是只要是包含你要查找的名称，即使是比它长，也会显示出来。</li>
+<li>PS： <code>locate</code>查找的文件是从已经建立的数据库<code>/var/lib/mlocate/</code>里面的数据查找来的，新建文件后查找该文件的话有可能数据库还没有更新呢！手动更新数据
+库的话，需要用到一条指令<code>updatedb</code>。这个时间就要长一点了，你懂的。</li>
+</ul>
+
+
+<h4>find</h4>
+
+<p>说到<code>find</code>呢，那要说的就多了啊……</p>
+
+<p>使用方法：
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>find [PATH] [option] [action]</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<ul>
+<li><p>与时间相关的参数：</p>
+
+<blockquote><p>-atime -mtime -ctime
+-mtime  n : n为数字，意义为在n天之前的“一天之内”修改过得文件
+-mtime +n : 列出n天之前（不含n天本身）被更改过的文件
+-mtime -n : 列出n天之内（含n天本身）被更改过的文件
+-newer file : 列出比file更新的文件</p></blockquote></li>
+<li><p>与用户有关的参数：</p>
+
+<blockquote><p>-uid n
+-gid n
+-user name
+-group name
+-nouser
+-nogroup
+这些命令吧，我觉的从字面意思来看就很明白它的意思了，所以不再赘述。</p></blockquote></li>
+<li><p>与文件权限及名称有关的参数：</p>
+
+<blockquote><p>-name 文件名 : 查找相应的文件名
+-size [+-] SIZE : 查找比SIZE大或小的文件
+-type TYPE : 文件的类型有： 一般正规文件（f）、设备文件（b、c）、目录（d）、连接文件（l）、socket（s）、FIFO（p）
+-perm mode : 查找文件权限等于mode的文件
+-perm -mode
+-perm +mode</p></blockquote></li>
+</ul>
+
+
+<p>还有一个很重要的-exec:</p>
+
+<p>怎么说呢？ 我很喜欢这个命令， 就像我在解压一堆文件的时候， 我只能说： 我很喜欢。</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>find / -perm +7000 -exec ls -l {}\;</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<h3>命令的查找：</h3>
+
+<blockquote><p><code>which</code> <code>type</code></p></blockquote>
+
+<h4>which</h4>
+
+<p>使用方法：
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>which -a 命令&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>-a  ： 将所有由PATH目录中可以找到的命令均列出，而不是只有第一个被找到的命令的名称。</span></code></pre></td></tr></table></div></figure></notextile></div>
+* 注意： 这里同样有一个问题，和PATH有关的，就是不同身份（是吧，身份很重要）。</p>
+
+<h4>type</h4>
+
+<p>type的作用是区别一个命令是<code>shell</code>自带的，还是外部扩展的命令。如果一个命令是外部扩展的名令，那么加一个<code>-p</code>就可以找到可执行的二进制文件的位置（相当
+于which）
+使用方法：
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>type -p 命令名称&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>-p  ： 找到可执行的二进制文件的位置。（相当于which)</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+]]></content>
+  </entry>
+  
+</feed>
