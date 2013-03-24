@@ -4,7 +4,7 @@
   <title><![CDATA[K.I.S.S]]></title>
   <link href="http://metooit.github.com/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-03-23T20:53:08+08:00</updated>
+  <updated>2013-03-24T18:22:03+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -910,7 +910,7 @@ ts ≠ p，因此当ts ≡ p (mod q)时， 再用朴素的字符串匹配算法�
 </span><span class='line'>-p  ： 找到可执行的二进制文件的位置。（相当于which)</span></code></pre></td></tr></table></div></figure>
 
 
-
+<p>题目起的有点大了，恐怕我知道的没有那么全面，这样算是一个小小的总结而已吧……</p>
 ]]></content>
   </entry>
   
