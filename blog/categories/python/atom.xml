@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Python | K.I.S.S]]></title>
   <link href="http://metooit.github.com/blog/categories/python/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-03-25T23:24:58+08:00</updated>
+  <updated>2013-03-26T19:08:49+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -12,6 +12,15 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Python yield]]></title>
+    <link href="http://metooit.github.com/blog/2013/03/26/python-yield/"/>
+    <updated>2013-03-26T19:05:00+08:00</updated>
+    <id>http://metooit.github.com/blog/2013/03/26/python-yield</id>
+    <content type="html"><![CDATA[<p>一直没有认真去体会一下<code>Python yield</code>，今天就来更多的了解一下这个所谓的生成器吧。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[『python 3 程序开发指南』读书笔记 2]]></title>

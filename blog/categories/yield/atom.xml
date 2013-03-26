@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: yield | K.I.S.S]]></title>
+  <link href="http://metooit.github.com/blog/categories/yield/atom.xml" rel="self"/>
+  <link href="http://metooit.github.com/"/>
+  <updated>2013-03-26T19:08:49+08:00</updated>
+  <id>http://metooit.github.com/</id>
+  <author>
+    <name><![CDATA[metooit]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Python yield]]></title>
+    <link href="http://metooit.github.com/blog/2013/03/26/python-yield/"/>
+    <updated>2013-03-26T19:05:00+08:00</updated>
+    <id>http://metooit.github.com/blog/2013/03/26/python-yield</id>
+    <content type="html"><![CDATA[<p>一直没有认真去体会一下<code>Python yield</code>，今天就来更多的了解一下这个所谓的生成器吧。</p>
+]]></content>
+  </entry>
+  
+</feed>
