@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Wiki | K.I.S.S]]></title>
+  <title><![CDATA[Category: WiKi | K.I.S.S]]></title>
   <link href="http://metooit.github.com/blog/categories/wiki/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-03-26T21:09:24+08:00</updated>
+  <updated>2013-03-27T19:01:10+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -14,69 +14,11 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Lovely Python]]></title>
-    <link href="http://metooit.github.com/blog/2013/02/21/lovely-python/"/>
-    <updated>2013-02-21T23:41:00+08:00</updated>
-    <id>http://metooit.github.com/blog/2013/02/21/lovely-python</id>
-    <content type="html"><![CDATA[<ul>
-<li><p>交互模式下， <code>_</code>代表上一个命令的返回值</p></li>
-<li><p>两个挨着的字符串会自动地合并到一起</p></li>
-<li><p>Python 的 String 不能被通过索引重新赋值</p></li>
-<li><p>s[:i] + s[i:] 相当于 s</p></li>
-<li><p>string 索引：</p>
-
-<table>
-<thead>
-<tr>
-<th></th>
-<th align="center"> H   </th>
-<th align="center"> e   </th>
-<th align="center"> l   </th>
-<th align="center"> p   </th>
-<th align="center"> A   </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td align="center"> 0   </td>
-<td align="center"> 1   </td>
-<td align="center"> 2   </td>
-<td align="center"> 3   </td>
-<td align="center"> 4   |</td>
-</tr>
-<tr>
-<td></td>
-<td align="center"> -5  </td>
-<td align="center"> -4  </td>
-<td align="center"> -3  </td>
-<td align="center"> -2  </td>
-<td align="center"> -1  |</td>
-</tr>
-</tbody>
-</table>
-</li>
-<li><p>通过分片操作可以实现list的： <code>替换</code>、 <code>删除</code>、 <code>插入</code>、 <code>清空</code></p></li>
-<li><p>没有returnd的操作其实也是有返回值的<code>None</code></p></li>
-<li><p>函数的默认值在运行过程中只被赋值一次</p></li>
-<li><p><code>*</code> 和 <code>**</code></p></li>
-<li><p><code>*</code> 可以解包list或者 tumple 作为函数传入的参数</p></li>
-<li><p><code>**</code> 可以解包出字典里的key</p></li>
-<li><p><code>lambda</code> 形式： 可以创建小的匿名的方法</p></li>
-<li><p><code>list</code> 可以被用作： --> <code>Stacks</code>(pop)  <code>Queues</code>(popleft)</p></li>
-<li><p>函数式编程工具：</p>
-
-<blockquote><p>三个内建的可被用在list中的函数： filter(), map(), reduce()</p></blockquote></li>
-<li><p>zip() 方便地矩阵转置</p></li>
-<li><p>如何读入系统参数： sys.argv[1]</p></li>
-<li><p><a href="http://docs.python.org/2/tutorial/inputoutput.html">print 表格</a></p></li>
-<li><p>try...except... 工作机制： 首先， try后的语句被执行， 如果没有异常发生， except被跳过； 如果有异常发生并且异常的类型与except中的相同， 就用except后的语句进行异常处理。</p></li>
-<li><p>可以直接用 x=Class() 来返回一个Class的实例</p></li>
-<li><p>这段话要好好理解： Since there is a valid use-case for class-private members (namely to avoid name clashes of names with names defined by subclasses), there is limited support for such a mechanism, called name mangling. Any identifier of the form <strong>spam (at least two leading underscores, at most one trailing underscore) is textually replaced with _classname</strong>spam, where classname is the current class name with leading underscore(s) stripped. This mangling is done without regard to the syntactic position of the identifier, as long as it occurs within the definition of a class.</p></li>
-<li><p>实例方法对象拥有变量： m.im_self  m.im_func</p></li>
-<li><p><a href="http://docs.python.org/2/tutorial/stdlib.html">标准库</a></p></li>
-</ul>
-
+    <title type="html"><![CDATA[How About Mataining A WiKi]]></title>
+    <link href="http://metooit.github.com/blog/2013/03/27/how-about-mataining-a-wiki/"/>
+    <updated>2013-03-27T18:56:00+08:00</updated>
+    <id>http://metooit.github.com/blog/2013/03/27/how-about-mataining-a-wiki</id>
+    <content type="html"><![CDATA[
 ]]></content>
   </entry>
   
