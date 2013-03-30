@@ -4,7 +4,7 @@
   <title><![CDATA[K.I.S.S]]></title>
   <link href="http://metooit.github.com/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-03-28T18:39:13+08:00</updated>
+  <updated>2013-03-30T20:34:40+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -14,11 +14,11 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Programming Pearls 1]]></title>
+    <title type="html"><![CDATA[『编程珠玑』（一）]]></title>
     <link href="http://metooit.github.com/blog/2013/03/28/programming-pearls-1/"/>
     <updated>2013-03-28T18:39:00+08:00</updated>
     <id>http://metooit.github.com/blog/2013/03/28/programming-pearls-1</id>
-    <content type="html"><![CDATA[
+    <content type="html"><![CDATA[<p>『编程珠玑』这本书其实早就买了，也看过一遍了，经典的书看一遍总是不够的嘛，现在要敦促自己再看一遍！</p>
 ]]></content>
   </entry>
   
