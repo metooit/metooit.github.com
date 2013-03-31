@@ -4,7 +4,7 @@
   <title><![CDATA[K.I.S.S]]></title>
   <link href="http://metooit.github.com/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-03-30T20:34:40+08:00</updated>
+  <updated>2013-03-31T22:09:43+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -12,6 +12,15 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[In Memory Of Leslie]]></title>
+    <link href="http://metooit.github.com/blog/2013/03/31/in-memory-of-leslie/"/>
+    <updated>2013-03-31T22:09:00+08:00</updated>
+    <id>http://metooit.github.com/blog/2013/03/31/in-memory-of-leslie</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[『编程珠玑』（一）]]></title>
@@ -1718,46 +1727,6 @@ Linux内核最初的维护工作都是提交补丁和保存归档， 但是从20
 
 
 <p>时间紧迫， 先写到这里， 该去上课了……</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Make a program print itself]]></title>
-    <link href="http://metooit.github.com/blog/2013/02/26/make-a-program-print-itself/"/>
-    <updated>2013-02-26T14:57:00+08:00</updated>
-    <id>http://metooit.github.com/blog/2013/02/26/make-a-program-print-itself</id>
-    <content type="html"><![CDATA[<p>不知道前一段时间在哪里看到这样一个问题， 让一个程序能够打印自身。 刚刚看到这个问题时， 我的第一反应是这还不简单？ 让一个程序打印自身的话， 无非就是
-让程序读取自身的文件， 然后逐行打印出来就完了？ 仔细想过之后才发现我有点天真了……</p>
-
-<p>到底让一个程序打印自身难在了哪里呢？</p>
-
-<p>以我的思路来看， 打印自身的程序从文件读取自身然后打印出来涉及到了格式化的问题， 内存分配的问题等； 如果不是这样想， 而是程序本身就包含一个字符串代表
-程序本身， 这样打印出来格式化也是首先要考虑的事情吧。</p>
-
-<p>先来看Google给出的几个比较精妙的例子吧：</p>
-
-<ul>
-<li>当然， python不负众望， 给出了一个让人很惊艳的解法</li>
-</ul>
-
-
-<figure class='code'><figcaption><span>print-self.py  </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">_</span><span class="o">=</span><span class="s">&#39;_=</span><span class="si">%r</span><span class="s">;print _</span><span class="si">%%</span><span class="s">_&#39;</span><span class="p">;</span><span class="k">print</span> <span class="n">_</span><span class="o">%</span><span class="n">_</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><a href="http://blog.amir.rachum.com/post/28779584872/self-printing-programs-in-python">self-printing-programs-in-python</a></p>
-
-<ul>
-<li>然后， 我发现了原来这是一个比较有渊源的程序问题<em>QUINE</em>：
-<a href="http://www.nyx.net/~gthompso/quine.htm">The Quine Page</a></li>
-</ul>
-
-
-<p><a href="http://lifegoo.pluskid.org/wiki/Quine.html">打印自身的程序</a></p>
-
-<p><a href="http://notabdc.vip.sina.com/Program/printself.htm">打印自身程序杂谈</a></p>
 ]]></content>
   </entry>
   

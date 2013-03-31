@@ -7,7 +7,7 @@
 	<meta name="author" content="metooit">
 
 	
-	<meta name="description" content="这两天一直在跟着两个Dinael的脚步实现game-of-life， 从中我学到了很多东西， 我最感激两位Dinael的一点是： 你们让我看到了Pair Programming的好处， 最重要的是你们让我看到了专业的程序员的工作流程， 也让我学到了一些思考、编码、测试的方法， 真的是很感谢你们 &hellip;">
+	<meta name="description" content=" 要想要知道一个朋友如何， 那你就应该多去了解他， 如果想要知道Git如何， 那么多多地去接触它， 深入的去了解它吧！ Git是美丽由内而外的美。 上一篇《Git 工作流程》还没有写完， 时隔几天， 我还要把没有总结学习过得步骤继续完善在这里： Git ">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -106,6 +106,41 @@
 			
 			<div class="mid-col-container">
 				<div id="content" class="inner">
+
+
+    <article class="post">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-03-11T18:54:00+08:00" pubdate data-updated="true">Mar 11<span>th</span>, 2013</time></div>
+		<div class="tags">
+
+</div>
+		
+	</div>
+	<h1 class="title"><a href="/blog/2013/03/11/what-are-you-doing/">Git —— 如何让我不爱你</a></h1>
+	<div class="entry-content">
+		<p>要想要知道一个朋友如何， 那你就应该多去了解他， 如果想要知道Git如何， 那么多多地去接触它， 深入的去了解它吧！ Git是美丽由内而外的美。</p>
+
+<p>上一篇《Git 工作流程》还没有写完， 时隔几天， 我还要把没有总结学习过得步骤继续完善在这里：</p>
+
+<p>Git</p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -435,61 +470,6 @@ Linux内核最初的维护工作都是提交补丁和保存归档， 但是从20
 <h2>学会取舍</h2>
 
 <p>你要知道， 上帝给了每个人不同的天赋， 你要问问自己的内心， 到底你应该去做什么。</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<div class="meta">
-		<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-03-05T20:30:00+08:00" pubdate data-updated="true">Mar 5<span>th</span>, 2013</time></div>
-		<div class="tags">
-
-
-	<a class='category' href='/blog/categories/arch/'>Arch</a>, <a class='category' href='/blog/categories/linux-/'>Linux,</a>
-
-
-</div>
-		
-	</div>
-	<h1 class="title"><a href="/blog/2013/03/05/hug-arc-linux/">Hug Arch Linux</a></h1>
-	<div class="entry-content">
-		<p>来到学校之后， 我觉得最终要的一件事情就是要配置好自己的机器， 然后开始一个学期的生活。 然后， 我想到了Arch， 事实上真正决定我一定要安装ArchLinux的就是它的理念：简洁。 因为这正是我想要的， Keep it simple, stupid! 这句话着实应该大声的喊出来。 选择ArcLinux也是要选择一种生活与工作的态度吧！</p>
-
-<p>然后， 我就开始了我的ArchLinux之旅。</p>
-
-<h2>第一步： 安装</h2>
-
-<p>第一步当然是安装系统啦， <a href="https://wiki.archlinux.org/">Arch的文档</a> 真是全面而贴心啊， 我觉得写这些文档的人是真心可爱啊， 尤其是读到Arch的历史与目标的时候， 我忽然间觉得自己像是在做一件自己人生中的大事一样， 有些小小的激动了呢！</p>
-
-<p><a href="https://wiki.archlinux.org/index.php/The_Arch_Way">The Arch Way</a> 写了Arch的哲学， 重点写了它的简洁，开放，自由等…… 如果想要理解和使用Arch， 这篇文章是一定要通读的。</p>
-
-<p>我就从初学者手册开始吧！ <a href="https://wiki.archlinux.org/index.php/Beginners%27_Guide">Beginners Guide</a></p>
-
-<p>因为我的台式机没有光驱， 所以最简单的方法莫过于U盘安装啦！ 然后， 我觉得这件事情再简单不过了， 所以没有往下看， 就没有按照初学者手册中所写去使用<code>dd</code>命令， 想到以前的经验， 觉得使用<code>UtralISO</code>再简单不过， 然后就莫名其妙的悲剧了， 我开机进入<code>BIOS</code>调整好启动顺序后， 虽然顺利的进入了Arch的欢
-迎界面， 但是居然不能<code>Enter</code>进入安装过程， 本来我想就此问题Google之， 想到Arch的文档， 我决定还是要仔细读一下文档才好，果然， 在<a href="https://wiki.archlinux.org/index.php/Installation_Guide">Installation Guide</a> 中就有关于如何用U盘安装的部分， 真是汗颜啊！！！</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ dd if=&lt;path of Archlinux.iso> of=/dev/sdb bs=4M</span></code></pre></td></tr></table></div></figure>
-
-
-<p>一条命令执行完后，重启， 真的是一下子就成功了， 都不知道Arch是怎么办到的， 居然这样都可以， 真的是很人性化的设计， 那么继续安装吧……
-还有一件事情值得一题， 我本来以为<code>shell</code>会是大多数<code>Linux</code>发行版都安装的<code>Bash</code>呢， 没有想到是我最喜欢的<code>Zsh</code>， 这算是又一个意外的惊喜吧！ 而且这个zsh还是配置过一点的， 执行错了命令的时候会出现一个:-(  真是好玩， 嘻嘻。</p>
 
 		
 		

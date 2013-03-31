@@ -7,8 +7,11 @@
 	<meta name="author" content="metooit">
 
 	
-	<meta name="description" content="最小生成树的形成： 问题的前提： 假设有一个连通的无向图G=(V, E)和权重函数w: E->R, 我们希望找到图G中的一棵最小生成树。
-主要思想： 我们使用贪心策略来解决此问题。该策略在每个时刻生长最小生成树的一条边，并在整个过程中管理一个边的集合A， 其中A遵守以下循环不变式: &hellip;">
+	<meta name="description" content="交互模式下， _代表上一个命令的返回值
+两个挨着的字符串会自动地合并到一起
+Python 的 String 不能被通过索引重新赋值
+s[:i] + s[i:] 相当于 s
+string 索引： H e l p A 0 1 2 3 4 | -5 -4 -3 -2 -1 | &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -107,6 +110,99 @@
 			
 			<div class="mid-col-container">
 				<div id="content" class="inner">
+
+
+    <article class="post">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-02-21T23:41:00+08:00" pubdate data-updated="true">Feb 21<span>st</span>, 2013</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/programming-/'>Programming,</a>, <a class='category' href='/blog/categories/python-/'>Python,</a>, <a class='category' href='/blog/categories/wiki/'>Wiki</a>
+
+
+</div>
+		
+	</div>
+	<h1 class="title"><a href="/blog/2013/02/21/lovely-python/">Lovely Python</a></h1>
+	<div class="entry-content">
+		<ul>
+<li><p>交互模式下， <code>_</code>代表上一个命令的返回值</p></li>
+<li><p>两个挨着的字符串会自动地合并到一起</p></li>
+<li><p>Python 的 String 不能被通过索引重新赋值</p></li>
+<li><p>s[:i] + s[i:] 相当于 s</p></li>
+<li><p>string 索引：</p>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th align="center"> H   </th>
+<th align="center"> e   </th>
+<th align="center"> l   </th>
+<th align="center"> p   </th>
+<th align="center"> A   </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td align="center"> 0   </td>
+<td align="center"> 1   </td>
+<td align="center"> 2   </td>
+<td align="center"> 3   </td>
+<td align="center"> 4   |</td>
+</tr>
+<tr>
+<td></td>
+<td align="center"> -5  </td>
+<td align="center"> -4  </td>
+<td align="center"> -3  </td>
+<td align="center"> -2  </td>
+<td align="center"> -1  |</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p>通过分片操作可以实现list的： <code>替换</code>、 <code>删除</code>、 <code>插入</code>、 <code>清空</code></p></li>
+<li><p>没有returnd的操作其实也是有返回值的<code>None</code></p></li>
+<li><p>函数的默认值在运行过程中只被赋值一次</p></li>
+<li><p><code>*</code> 和 <code>**</code></p></li>
+<li><p><code>*</code> 可以解包list或者 tumple 作为函数传入的参数</p></li>
+<li><p><code>**</code> 可以解包出字典里的key</p></li>
+<li><p><code>lambda</code> 形式： 可以创建小的匿名的方法</p></li>
+<li><p><code>list</code> 可以被用作： &#8211;> <code>Stacks</code>(pop)  <code>Queues</code>(popleft)</p></li>
+<li><p>函数式编程工具：</p>
+
+<blockquote><p>三个内建的可被用在list中的函数： filter(), map(), reduce()</p></blockquote></li>
+<li><p>zip() 方便地矩阵转置</p></li>
+<li><p>如何读入系统参数： sys.argv[1]</p></li>
+<li><p><a href="http://docs.python.org/2/tutorial/inputoutput.html">print 表格</a></p></li>
+<li><p>try&#8230;except&#8230; 工作机制： 首先， try后的语句被执行， 如果没有异常发生， except被跳过； 如果有异常发生并且异常的类型与except中的相同， 就用except后的语句进行异常处理。</p></li>
+<li><p>可以直接用 x=Class() 来返回一个Class的实例</p></li>
+<li><p>这段话要好好理解： Since there is a valid use-case for class-private members (namely to avoid name clashes of names with names defined by subclasses), there is limited support for such a mechanism, called name mangling. Any identifier of the form <strong>spam (at least two leading underscores, at most one trailing underscore) is textually replaced with _classname</strong>spam, where classname is the current class name with leading underscore(s) stripped. This mangling is done without regard to the syntactic position of the identifier, as long as it occurs within the definition of a class.</p></li>
+<li><p>实例方法对象拥有变量： m.im_self  m.im_func</p></li>
+<li><p><a href="http://docs.python.org/2/tutorial/stdlib.html">标准库</a></p></li>
+</ul>
+
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -1115,43 +1211,6 @@
 <hr />
 
 <p>（未完待续……）</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<div class="meta">
-		<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-02-15T19:23:00+08:00" pubdate data-updated="true">Feb 15<span>th</span>, 2013</time></div>
-		<div class="tags">
-
-
-	<a class='category' href='/blog/categories/learn-/'>Learn,</a>, <a class='category' href='/blog/categories/ruby/'>Ruby</a>
-
-
-</div>
-		
-	</div>
-	<h1 class="title"><a href="/blog/2013/02/15/learn-ruby-the-hard-way/">Learn Ruby the Hard Way</a></h1>
-	<div class="entry-content">
-		<p><a href="http://ruby.learncodethehardway.org/book/">Learn Ruby The Hard Way</a></p>
-
-<p>所谓笨方法学习就是通过不断地实践练习去学习一门新的知识， 但是这应该不算是笨的方法吧。 编程不是有一个一万小时定律吗？ 这应该是学习的正确方法吧。</p>
 
 		
 		
