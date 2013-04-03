@@ -4,7 +4,7 @@
   <title><![CDATA[K.I.S.S]]></title>
   <link href="http://metooit.github.com/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-04-03T23:06:44+08:00</updated>
+  <updated>2013-04-04T00:41:09+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -12,6 +12,64 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Things I Know About Bitcoin]]></title>
+    <link href="http://metooit.github.com/blog/2013/04/04/things-i-know-about-bitcoin/"/>
+    <updated>2013-04-04T00:07:00+08:00</updated>
+    <id>http://metooit.github.com/blog/2013/04/04/things-i-know-about-bitcoin</id>
+    <content type="html"><![CDATA[<p>首先感谢@hayeah让我知道了这么好玩的东东，我今天晚上才第一次听说了<code>Bitcoin</code>,我承认第一眼看到满篇的英文文档时我的表情是复杂的，因为我看到里面的配图
+还有一些小程序时我以为这是一篇讲解复杂数据结构的文档，我胆战心惊的看完概述之后才晓得这篇论文大概讲的是某种在线支付系统，心下少安～～～ 然后果断
+<code>Google</code>之……</p>
+
+<p>我<code>Google</code>到的一些链接我觉得比较好的放在下面的<strong>LINKS</strong>里面。下面我看到的和理解的一些东西来尝试着写一写，都算不得是一家之言吧<sup>-<sup>(笑)</sup></sup></p>
+
+<p>说实话，我是在看了三个小时的各种介绍之后才敢再次翻开这篇文档的(PS:所谓这篇文档在36Kr的文章里有写到)<a href="http://lnch.is/bitcoin-manifesto">链接</a>,发现
+顿时明朗了许多，但是还是有些地方难以理解的。</p>
+
+<p>好，下面就是我要说的话了：</p>
+
+<hr />
+
+<h3>各种知识积累：</h3>
+
+<ul>
+<li><p>What is bitcoin?
+一言以毕之，The so called <code>Bitcoin</code> is 一种以文件形式存在的虚拟货币。</p></li>
+<li><p>Why is it special?
+这就要引用一下36Kr所引述的<code>LAUNCH</code>团队的调查分析结果了：</p>
+
+<blockquote><ul>
+<li>技术靠谱</li>
+<li>无法停止，除非终端用户起诉</li>
+<li>有史以来最危险的开源项目 (看到这里，我默默地去Github给这个牛X的项目加了一个Star，虽然我还不了解它)</li>
+<li>可能是有互联网依赖最危险的开源项目</li>
+<li>是科技自由主义者的一次政治声明（我想到了Hacker精神，崇敬中……）</li>
+<li>将改变世界（乔帮主用过没有？），除非政府通过眼里的惩罚措施制止（政府绝对干的出来……Nothing about policy）</li>
+</ul>
+</blockquote></li>
+<li><p>Why is it so good?</p>
+
+<blockquote><ul>
+<li>不会冻结</li>
+<li>无法跟踪，不可跟踪的密码学网络支付系统</li>
+<li>不用纳税</li>
+<li>交易成本极低</li>
+<li>只能被它的真实拥有者使用，且只能使用一次</li>
+</ul>
+</blockquote></li>
+</ul>
+
+
+<p><strong>LINKS</strong>
+<a href="http://bitcoin.org/en/">Bitcoin</a>
+<a href="https://en.bitcoin.it/wiki/FAQ">Bitcoin Wiki FAQ</a>
+<a href="https://www.weusecoins.com/">What Is Bitcoin</a>
+<a href="http://zh.wikipedia.org/wiki/Bitcoin">Wikipedia</a>
+<a href="http://www.36kr.com/p/24387.html">36Kr的文章</a>
+<a href="http://blog.codingnow.com/2011/05/bitcoin.html">云风的Blog</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Happy For Something]]></title>
@@ -1663,35 +1721,6 @@ Linux内核最初的维护工作都是提交补丁和保存归档， 但是从20
 <h2>学会取舍</h2>
 
 <p>你要知道， 上帝给了每个人不同的天赋， 你要问问自己的内心， 到底你应该去做什么。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Hug Arch Linux]]></title>
-    <link href="http://metooit.github.com/blog/2013/03/05/hug-arc-linux/"/>
-    <updated>2013-03-05T20:30:00+08:00</updated>
-    <id>http://metooit.github.com/blog/2013/03/05/hug-arc-linux</id>
-    <content type="html"><![CDATA[<p>来到学校之后， 我觉得最终要的一件事情就是要配置好自己的机器， 然后开始一个学期的生活。 然后， 我想到了Arch， 事实上真正决定我一定要安装ArchLinux的就是它的理念：简洁。 因为这正是我想要的， Keep it simple, stupid! 这句话着实应该大声的喊出来。 选择ArcLinux也是要选择一种生活与工作的态度吧！</p>
-
-<p>然后， 我就开始了我的ArchLinux之旅。</p>
-
-<h2>第一步： 安装</h2>
-
-<p>第一步当然是安装系统啦， <a href="https://wiki.archlinux.org/">Arch的文档</a> 真是全面而贴心啊， 我觉得写这些文档的人是真心可爱啊， 尤其是读到Arch的历史与目标的时候， 我忽然间觉得自己像是在做一件自己人生中的大事一样， 有些小小的激动了呢！</p>
-
-<p><a href="https://wiki.archlinux.org/index.php/The_Arch_Way">The Arch Way</a> 写了Arch的哲学， 重点写了它的简洁，开放，自由等…… 如果想要理解和使用Arch， 这篇文章是一定要通读的。</p>
-
-<p>我就从初学者手册开始吧！ <a href="https://wiki.archlinux.org/index.php/Beginners%27_Guide">Beginners Guide</a></p>
-
-<p>因为我的台式机没有光驱， 所以最简单的方法莫过于U盘安装啦！ 然后， 我觉得这件事情再简单不过了， 所以没有往下看， 就没有按照初学者手册中所写去使用<code>dd</code>命令， 想到以前的经验， 觉得使用<code>UtralISO</code>再简单不过， 然后就莫名其妙的悲剧了， 我开机进入<code>BIOS</code>调整好启动顺序后， 虽然顺利的进入了Arch的欢
-迎界面， 但是居然不能<code>Enter</code>进入安装过程， 本来我想就此问题Google之， 想到Arch的文档， 我决定还是要仔细读一下文档才好，果然， 在<a href="https://wiki.archlinux.org/index.php/Installation_Guide">Installation Guide</a> 中就有关于如何用U盘安装的部分， 真是汗颜啊！！！</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ dd if=&lt;path of Archlinux.iso> of=/dev/sdb bs=4M</span></code></pre></td></tr></table></div></figure>
-
-
-<p>一条命令执行完后，重启， 真的是一下子就成功了， 都不知道Arch是怎么办到的， 居然这样都可以， 真的是很人性化的设计， 那么继续安装吧……
-还有一件事情值得一题， 我本来以为<code>shell</code>会是大多数<code>Linux</code>发行版都安装的<code>Bash</code>呢， 没有想到是我最喜欢的<code>Zsh</code>， 这算是又一个意外的惊喜吧！ 而且这个zsh还是配置过一点的， 执行错了命令的时候会出现一个:-(  真是好玩， 嘻嘻。</p>
 ]]></content>
   </entry>
   

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Programming | K.I.S.S]]></title>
   <link href="http://metooit.github.com/blog/categories/programming/atom.xml" rel="self"/>
   <link href="http://metooit.github.com/"/>
-  <updated>2013-04-03T23:06:44+08:00</updated>
+  <updated>2013-04-04T00:41:09+08:00</updated>
   <id>http://metooit.github.com/</id>
   <author>
     <name><![CDATA[metooit]]></name>
@@ -12,6 +12,64 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Things I Know About Bitcoin]]></title>
+    <link href="http://metooit.github.com/blog/2013/04/04/things-i-know-about-bitcoin/"/>
+    <updated>2013-04-04T00:07:00+08:00</updated>
+    <id>http://metooit.github.com/blog/2013/04/04/things-i-know-about-bitcoin</id>
+    <content type="html"><![CDATA[<p>首先感谢@hayeah让我知道了这么好玩的东东，我今天晚上才第一次听说了<code>Bitcoin</code>,我承认第一眼看到满篇的英文文档时我的表情是复杂的，因为我看到里面的配图
+还有一些小程序时我以为这是一篇讲解复杂数据结构的文档，我胆战心惊的看完概述之后才晓得这篇论文大概讲的是某种在线支付系统，心下少安～～～ 然后果断
+<code>Google</code>之……</p>
+
+<p>我<code>Google</code>到的一些链接我觉得比较好的放在下面的<strong>LINKS</strong>里面。下面我看到的和理解的一些东西来尝试着写一写，都算不得是一家之言吧<sup>-<sup>(笑)</sup></sup></p>
+
+<p>说实话，我是在看了三个小时的各种介绍之后才敢再次翻开这篇文档的(PS:所谓这篇文档在36Kr的文章里有写到)<a href="http://lnch.is/bitcoin-manifesto">链接</a>,发现
+顿时明朗了许多，但是还是有些地方难以理解的。</p>
+
+<p>好，下面就是我要说的话了：</p>
+
+<hr />
+
+<h3>各种知识积累：</h3>
+
+<ul>
+<li><p>What is bitcoin?
+一言以毕之，The so called <code>Bitcoin</code> is 一种以文件形式存在的虚拟货币。</p></li>
+<li><p>Why is it special?
+这就要引用一下36Kr所引述的<code>LAUNCH</code>团队的调查分析结果了：</p>
+
+<blockquote><ul>
+<li>技术靠谱</li>
+<li>无法停止，除非终端用户起诉</li>
+<li>有史以来最危险的开源项目 (看到这里，我默默地去Github给这个牛X的项目加了一个Star，虽然我还不了解它)</li>
+<li>可能是有互联网依赖最危险的开源项目</li>
+<li>是科技自由主义者的一次政治声明（我想到了Hacker精神，崇敬中……）</li>
+<li>将改变世界（乔帮主用过没有？），除非政府通过眼里的惩罚措施制止（政府绝对干的出来……Nothing about policy）</li>
+</ul>
+</blockquote></li>
+<li><p>Why is it so good?</p>
+
+<blockquote><ul>
+<li>不会冻结</li>
+<li>无法跟踪，不可跟踪的密码学网络支付系统</li>
+<li>不用纳税</li>
+<li>交易成本极低</li>
+<li>只能被它的真实拥有者使用，且只能使用一次</li>
+</ul>
+</blockquote></li>
+</ul>
+
+
+<p><strong>LINKS</strong>
+<a href="http://bitcoin.org/en/">Bitcoin</a>
+<a href="https://en.bitcoin.it/wiki/FAQ">Bitcoin Wiki FAQ</a>
+<a href="https://www.weusecoins.com/">What Is Bitcoin</a>
+<a href="http://zh.wikipedia.org/wiki/Bitcoin">Wikipedia</a>
+<a href="http://www.36kr.com/p/24387.html">36Kr的文章</a>
+<a href="http://blog.codingnow.com/2011/05/bitcoin.html">云风的Blog</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Learning jQuery In Process]]></title>
@@ -167,34 +225,6 @@ F: / ? O _ o DEL
 <hr />
 
 <p>（未完待续……）</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[继续学习Ruby]]></title>
-    <link href="http://metooit.github.com/blog/2013/02/07/continue-learning-ruby/"/>
-    <updated>2013-02-07T14:39:00+08:00</updated>
-    <id>http://metooit.github.com/blog/2013/02/07/continue-learning-ruby</id>
-    <content type="html"><![CDATA[<p>今天翻看了一下阳志平的网络日志，偶然发现了他很推崇<code>Ruby</code>，然后我就发现了这篇文章<a href="http://www.yangzhiping.com/tech/ruby-worldmap-1.html">Ruby 闲话一二</a>, 看后了解了一下<code>Ruby</code>的处境和氛围， 就像《黑客与画家》里面说的， 编程语言很重要！ <code>Ruby</code> 是优美的，简单的，符合K.I.S.S原则，那我就觉得<code>Ruby</code>是一门好的语言。所以我想要了解它。</p>
-
-<hr />
-
-<p>如何学习一门编程语言呢？ 这个问题或许是很多新手程序员的心声，当然我也有过曾经的疑问，找到一种快速学会编程语言的方法可能是很多人想要的，<a href="http://www.yangzhiping.com/tech/learn-program-psychology.html">在学习区刻意练习</a>或许不是最聪明的方法，但是可能是真正想要学会编程的人应该有的一种执着和毅力，阳老师的这篇文章使我受益匪浅，如果想要去做好一件事情，那就用百分之百的热情和努力去做吧！相信自己能够成功的！我觉得这篇文章好还有另外的原因，就是觉得这篇文章说的话击中了我的弱点：</p>
-
-<blockquote><ul>
-<li>提升行动力 : 把自己的思维模式改成 if ... then ...</li>
-<li>编程是个人行为 ： 不要忙于社交， 聊天， 发帖， 下载盗版学习资源， 争议语言好坏等等
-真的， 如果我想学会<code>Ruby</code>，那就从一点以滴开始努力吧！</li>
-</ul>
-</blockquote>
-
-<hr />
-
-<p>昨天我写了关于<code>Ruby</code>的<a href="http://metooit.github.com/blog/2013/02/06/get-to-know-ruby/">Get to know Ruby</a>,今天才发现了阳老师的这篇文章：<a href="http://www.yangzhiping.com/tech/why-ruby-text.html">为什么是<code>Ruby</code></a>, 发现比我写的要简练有力的多，同时覆盖的面也要广的多。</p>
-
-<hr />
-
-<p>好了，关于文章的收获就是这些。</p>
 ]]></content>
   </entry>
   
